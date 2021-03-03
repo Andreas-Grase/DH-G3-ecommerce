@@ -3,3 +3,30 @@
     margin: 0;
     padding: 0;
 }
+
+body, input, button, select, textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+a{text-decoration: none;} 
+a:link{color:#6A26CD}   
+a:visited{color:#6A26CD}
+a:hover{color: #431488}  
+a:active{color: #6A26CD} 
+
+/* seção "OFERTAS" */
+.slideshow-promo {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.botoes-promo{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.slide-promo {
+    display:none;
+}
