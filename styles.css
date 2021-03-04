@@ -1,5 +1,46 @@
 *{
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+article {
+    align-items: center;
+    display: flex;
+    margin-bottom: 16px; 
+    justify-content: space-evenly;
+}
+
+.title-marcas {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.title2-marcas {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.ver-marcas {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.img-marcas {
+    max-width: 100%;
+    display: block;
+}
+
+.marcas {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.marcas > div {
+    flex: 1 1 200px;
+    margin: 10px;
+
 }
