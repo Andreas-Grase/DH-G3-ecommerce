@@ -22,6 +22,51 @@ nav .icon{
     font-weight: 800;
     color: rgb(22, 22, 22);
     cursor: pointer;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+article {
+    align-items: center;
+    display: flex;
+    margin-bottom: 16px; 
+    justify-content: space-evenly;
+}
+
+.title-marcas {
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.title2-marcas {
+    text-align: center;
+    margin-top: 100px;
+    padding: 20px;
+}
+
+.ver-marcas {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+
+.img-marcas {
+    max-width: 100%;
+    display: block;
+}
+
+.marcas {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.marcas > div {
+    flex: 1 1 200px;
+    margin: 10px;
 }
 
 nav ol{
@@ -30,9 +75,11 @@ nav ol{
     list-style: none;
     margin: auto 0;
 } 
+
 nav ol li{
     margin: 0 1px;
 }
+
 nav ol li a {
     color: #222222;
     font-size: 18px;
@@ -41,16 +88,19 @@ nav ol li a {
     letter-spacing: 1px;
     padding: 5px 10px;
 }
+
 nav ol li:hover a{
     background: #d2d2d2 ;
     color: #3d3d3d
 }
+
 nav .search_box{
     display: flex;
     margin: auto 0;
     height: 35px;
     line-height: 35px; 
 }
+
 nav .search_box input{
     border: none;
     outline: none;
@@ -60,6 +110,7 @@ nav .search_box input{
     font-size: 20px;
     width: 350px;
 }
+
 nav .search_box span{
     color: ;
     font-size: 20px;
@@ -70,9 +121,11 @@ nav .search_box span{
     cursor: pointer;
     z-index: 1;
 }
+
 nav .search_box span:hover{
     color: ;
 }
+
 nav .search_box span::after{
     height: 100%;
     width: 100%;
@@ -84,9 +137,11 @@ nav .search_box span::after{
     z-index: -1;
     transition: 0.3s;
 }
+
 nav .search_box span:hover::after{
     width: 100%;
 }
+
 body,
 input,
 button,
@@ -131,5 +186,18 @@ a:active {
 }
 
 .slide-promo {
+<<<<<<< HEAD
     display: none;
 }
+=======
+    display:none;
+}
+
+
+footer{
+    background-color: rgb(75, 75, 75);
+    color: honeydew;
+    font-size: 0.8em;
+}
+>>>>>>> 9349c5c0adc2a2677c5daa2d0c40fbd5d65b20b8
+>>>>>>> 81139953d5bf890ccc08e5dead0d67d9d1e596b7
