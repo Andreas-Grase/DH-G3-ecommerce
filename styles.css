@@ -186,18 +186,14 @@ a:active {
 }
 
 .slide-promo {
-<<<<<<< HEAD
-    display: none;
-}
-=======
     display:none;
 }
 
 
-footer{
+footer {
     background-color: rgb(75, 75, 75);
     color: honeydew;
     font-size: 0.8em;
 }
->>>>>>> 9349c5c0adc2a2677c5daa2d0c40fbd5d65b20b8
+
 >>>>>>> 81139953d5bf890ccc08e5dead0d67d9d1e596b7
