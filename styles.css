@@ -1,18 +1,121 @@
-*{
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
-body, input, button, select, textarea {
+nav{
+    display: flex;
+    width: 100%;
+    background: #d4d4d4;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+nav .icon{
+    font-size: 50 px;
+    font-weight: 800;
+    color: rgb(22, 22, 22);
+    cursor: pointer;
+}
+
+nav ol{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: auto 0;
+} 
+nav ol li{
+    margin: 0 1px;
+}
+nav ol li a {
+    color: #222222;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+}
+nav ol li:hover a{
+    background: #d2d2d2 ;
+    color: #3d3d3d
+}
+nav .search_box{
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px; 
+}
+nav .search_box input{
+    border: none;
+    outline: none;
+    background: #fff;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 350px;
+}
+nav .search_box span{
+    color: ;
+    font-size: 20px;
+    background: ;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+nav .search_box span:hover{
+    color: ;
+}
+nav .search_box span::after{
+    height: 100%;
+    width: 100%;
+    content: '';
+    background: ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+nav .search_box span:hover::after{
+    width: 100%;
+}
+body,
+input,
+button,
+select,
+textarea {
     font-family: 'Roboto', sans-serif;
 }
 
-a{text-decoration: none;} 
-a:link{color:#6A26CD}   
-a:visited{color:#6A26CD}
-a:hover{color: #431488}  
-a:active{color: #6A26CD} 
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #6A26CD
+}
+
+a:visited {
+    color: #6A26CD
+}
+
+a:hover {
+    color: #431488
+}
+
+a:active {
+    color: #6A26CD
+}
+
+
 
 /* seção "OFERTAS" */
 .slideshow-promo {
@@ -21,12 +124,12 @@ a:active{color: #6A26CD}
     margin: auto;
 }
 
-.botoes-promo{
+.botoes-promo {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
 }
 
 .slide-promo {
-    display:none;
+    display: none;
 }
