@@ -30,3 +30,10 @@ a:active{color: #6A26CD}
 .slide-promo {
     display:none;
 }
+
+
+footer{
+    background-color: rgb(75, 75, 75);
+    color: honeydew;
+    font-size: 0.8em;
+}
