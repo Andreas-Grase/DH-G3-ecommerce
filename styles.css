@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
+
 * {
     margin: 0;
     padding: 0;
@@ -22,12 +23,8 @@ nav .icon{
     font-weight: 800;
     color: rgb(22, 22, 22);
     cursor: pointer;
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
 }
+
 
 article {
     align-items: center;
@@ -112,9 +109,9 @@ nav .search_box input{
 }
 
 nav .search_box span{
-    color: ;
+    color:#000 ;
     font-size: 20px;
-    background: ;
+    background: rgb(224, 13, 214) ;
     height: 100%;
     padding: 8px;
     position: relative;
@@ -123,14 +120,14 @@ nav .search_box span{
 }
 
 nav .search_box span:hover{
-    color: ;
+    color: yellow ;
 }
 
 nav .search_box span::after{
     height: 100%;
     width: 100%;
     content: '';
-    background: ;
+    background: red ;
     position: absolute;
     top: 0;
     left: 0;
@@ -196,4 +193,4 @@ footer {
     font-size: 0.8em;
 }
 
->>>>>>> 81139953d5bf890ccc08e5dead0d67d9d1e596b7
+
