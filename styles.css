@@ -188,9 +188,35 @@ a:active {
 
 
 footer {
+    padding: 0 30px;
     background-color: rgb(75, 75, 75);
     color: honeydew;
     font-size: 0.8em;
 }
 
+.footer-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.footer-col{
+   max-width: 400px;
+}
+
+.social-media {
+    inline-size: 35px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 40px;
+}
+
+ .footer-logo {
+     display: flex;
+}
+
+.novidades {
+    width: 300px;
+    line-height : 18px;
+    margin-bottom: 20px;
+}
 
