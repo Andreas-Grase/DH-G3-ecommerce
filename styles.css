@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+/* RESET */
+* {
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: inherit;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+/* RESET */
+
+body,
+input,
+button,
+select,
+textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    display: flex;
+    width: 100%;
+    background: #d4d4d4;
+    position: relative;
+    justify-content: space-between;
+    text-align: center;
+    padding: 10px 20px;
+}
+
+nav .icon{
+    font-size: 50 px;
+    font-weight: 800;
+    color: rgb(22, 22, 22);
+    cursor: pointer;
+}
+
+
+#fornecedores > div {
+    max-width: 800px;
+    margin: 10px auto;
+    display: flex;
+    align-items:center;
+}
+
+#fornecedores h2 {
+    font-size: 3.5rem;
+    color: #24273c;
+    font-weight: 300;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+#fornecedores h4 {
+    font-size: 1.2rem;
+    color: #24273c;
+    font-weight: 400;
+    border: 5px;
+    margin: 20px;
+    padding: 5px;
+    text-align: left;
+}
+
+#marcas {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 10px auto;
+}
+#marcas > div {
+    /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 200 (flex-basis: 200px (tamanho mínimo da imagem)) */
+    flex: 1 1 200px;
+    margin: 10px;
+    border: 1px solid #616161;
+}
+
+#marcas div img {
+    max-width: 100%;
+    display: block;
+    background-color: white;
+    transition: transform .8s ease-in-out;
+}
+
+#marcas div img:hover {
+    transform: rotatey(360deg);
+    max-width: 100%;
+    display: block;
+    background-color: white;
+}
+
+#marcas + a div {
+    max-width: 800px;
+    text-align: center;
+    border: 10px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#marcas + a img {
+    display: block;
+    border: 1px;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+nav ol{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: auto 0;
+} 
+
+nav ol li{
+    margin: 0 1px;
+}
+
+nav ol li a {
+    color: #222222;
+    font-size: 18px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+}
+
+nav ol li:hover a{
+    background: #d2d2d2 ;
+    color: #3d3d3d
+}
+
+nav .search_box{
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px; 
+}
+
+nav .search_box input{
+    border: none;
+    outline: none;
+    background: #fff;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 20px;
+    width: 350px;
+}
+
+nav .search_box span{
+    color:#000 ;
+    font-size: 20px;
+    background: rgb(224, 13, 214) ;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+nav .search_box span:hover{
+    color: yellow ;
+}
+
+nav .search_box span::after{
+    height: 100%;
+    width: 100%;
+    content: '';
+    background: red ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.3s;
+}
+
+nav .search_box span:hover::after{
+    width: 100%;
+}
+
+
+
+a:link {
+    color: #6A26CD
+}
+
+a:visited {
+    color: #6A26CD
+}
+
+a:hover {
+    color: #431488
+}
+
+a:active {
+    color: #6A26CD
+}
+
+
+
+/* seção "OFERTAS" */
+.slideshow-promo {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.botoes-promo {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.slide-promo {
+    display:none;
+}
+
+
+footer {
+    padding: 0 30px;
+    background-color: rgb(75, 75, 75);
+    color: honeydew;
+    font-size: 0.8em;
+}
+
+.footer-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.footer-col{
+   max-width: 400px;
+}
+
+.social-media {
+    inline-size: 35px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 40px;
+}
+
+ .footer-logo {
+     display: flex;
+}
+
+.novidades {
+    width: 300px;
+    line-height : 18px;
+    margin-bottom: 20px;
+}
+
