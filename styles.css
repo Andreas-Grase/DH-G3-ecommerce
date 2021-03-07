@@ -1,11 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
+/* RESET */
 * {
+    box-sizing: border-box;
+    font-size: 16px;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
+}
+
+a {
+    color: inherit;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+/* RESET */
+
+body,
+input,
+button,
+select,
+textarea {
+    font-family: 'Roboto', sans-serif;
 }
 
 nav{
@@ -26,44 +46,73 @@ nav .icon{
 }
 
 
-article {
-    align-items: center;
+#fornecedores > div {
+    max-width: 800px;
+    margin: 10px auto;
     display: flex;
-    margin-bottom: 16px; 
-    justify-content: space-evenly;
+    align-items:center;
 }
 
-.title-marcas {
-    margin-top: 100px;
-    padding: 20px;
+#fornecedores h2 {
+    font-size: 3.5rem;
+    color: #24273c;
+    font-weight: 300;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
 }
 
-.title2-marcas {
-    text-align: center;
-    margin-top: 100px;
-    padding: 20px;
-}
-
-.ver-marcas {
-    text-align: center;
-    padding: 20px;
+#fornecedores h4 {
+    font-size: 1.2rem;
+    color: #24273c;
+    font-weight: 400;
+    border: 5px;
     margin: 20px;
+    padding: 5px;
+    text-align: left;
 }
 
-.img-marcas {
-    max-width: 100%;
-    display: block;
-}
-
-.marcas {
+#marcas {
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
-.marcas > div {
+#marcas > div {
+    /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 200 (flex-basis: 200px (tamanho mínimo da imagem)) */
     flex: 1 1 200px;
     margin: 10px;
+    border: 1px solid #616161;
+}
+
+#marcas div img {
+    max-width: 100%;
+    display: block;
+    background-color: white;
+    transition: transform .8s ease-in-out;
+}
+
+#marcas div img:hover {
+    transform: rotatey(360deg);
+    max-width: 100%;
+    display: block;
+    background-color: white;
+}
+
+#marcas + a div {
+    max-width: 800px;
+    text-align: center;
+    border: 10px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+#marcas + a img {
+    display: block;
+    border: 1px;
+    margin: 10px auto;
+    padding: 5px;
 }
 
 nav ol{
@@ -139,17 +188,7 @@ nav .search_box span:hover::after{
     width: 100%;
 }
 
-body,
-input,
-button,
-select,
-textarea {
-    font-family: 'Roboto', sans-serif;
-}
 
-a {
-    text-decoration: none;
-}
 
 a:link {
     color: #6A26CD
