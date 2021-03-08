@@ -18,6 +18,7 @@ ul,
 ol {
     list-style: none;
 }
+
 /* RESET */
 
 body,
@@ -28,7 +29,7 @@ textarea {
     font-family: 'Roboto', sans-serif;
 }
 
-nav{
+nav {
     display: flex;
     width: 100%;
     background: #d4d4d4;
@@ -38,22 +39,25 @@ nav{
     padding: 10px 20px;
 }
 
-nav .icon{
+nav .icon {
     font-size: 50 px;
     font-weight: 800;
     color: rgb(22, 22, 22);
     cursor: pointer;
 }
 
-
-#fornecedores > div {
+/* INICIO NOSSAS MARCAS */
+/* INICIO TITULOS MARCAS */
+.titulo-marcas>div {
+    align-items: center;
+    display: flex;
+    /* flex-flow = flex-direction: row; flex-wrap: wrap; */
+    flex-flow: row wrap;
     max-width: 800px;
     margin: 10px auto;
-    display: flex;
-    align-items:center;
 }
 
-#fornecedores h2 {
+.titulo-marcas h2 {
     font-size: 3.5rem;
     color: #24273c;
     font-weight: 300;
@@ -63,66 +67,117 @@ nav .icon{
     text-align: left;
 }
 
-#fornecedores h4 {
+.titulo-marcas h4 {
     font-size: 1.2rem;
     color: #24273c;
     font-weight: 400;
     border: 5px;
-    margin: 20px;
+    margin: 5px;
     padding: 5px;
     text-align: left;
 }
 
+/* FIM TITULOS MARCAS*/
+/* INICIO IMAGENS MARCAS*/
 #marcas {
     display: flex;
     flex-wrap: wrap;
     max-width: 800px;
     margin: 10px auto;
 }
-#marcas > div {
-    /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 200 (flex-basis: 200px (tamanho mínimo da imagem)) */
-    flex: 1 1 200px;
+
+.imagem {
+    /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 200 (flex-basis: 148px (tamanho mínimo da imagem)) */
+    flex: 1 1 148px;
     margin: 10px;
+    width: 148px;
+    height: 148px;
+    position: relative;
+    /* overflow: hidden; */
+    /* transition: opacity 500ms; */
+}
+
+.imagem img {
     border: 1px solid #616161;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 0.8s ease-out 0s;
 }
 
-#marcas div img {
-    max-width: 100%;
-    display: block;
-    background-color: white;
-    transition: transform .8s ease-in-out;
-}
+  .imagem .frente {
+    z-index: 1;
+    transform: rotateY(0deg);
+  }
+  
+  .imagem .verso {
+    z-index: 0;
+    /* opacity: 0; */
+    transform: rotateY(180deg);
+  }
+  
+  .imagem:hover .frente {
+    /* opacity: 0; */
+    transform: rotateY(180deg);
 
-#marcas div img:hover {
-    transform: rotatey(360deg);
-    max-width: 100%;
-    display: block;
-    background-color: white;
-}
+  }
+  
+  .imagem:hover .verso {
+    /* opacity: 1; */
+    transform: rotateY(0deg);
 
-#marcas + a div {
+  }
+
+/* FIM IMAGENS MARCAS*/
+/* INICIO VER TODAS MARCAS */
+.ver-marcas {
     max-width: 800px;
     text-align: center;
-    border: 10px;
-    margin: 10px auto;
-    padding: 10px;
-}
-
-#marcas + a img {
+    align-items: center;
     display: block;
-    border: 1px;
+    border: 5px;
     margin: 10px auto;
-    padding: 5px;
+    padding: 4px;
 }
 
-nav ol{
+.ver-marcas h6 {
+    font-size: .8rem;
+    border: 5px;
+    padding: 4px;
+    margin: 10px auto;
+}
+
+.btn-ver-marcas {
+    max-width: 800px;
+    padding: 2px 4px;
+    border: #fff;
+    margin: 0 auto;
+    color: #000;
+    background-color: white;
+    display: inline-block;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.btn-ver-marcas:hover {
+    border-color: white;
+    background-color: #000;
+    color: white;
+}
+/* FIM VER TOAS AS MARCAS */
+/* FIM NOSSSAS MARCAS */
+nav ol {
     display: flex;
     flex-direction: column;
     list-style: none;
     margin: auto 0;
-} 
+}
 
-nav ol li{
+nav ol li {
     margin: 0 1px;
 }
 
@@ -135,19 +190,19 @@ nav ol li a {
     padding: 5px 10px;
 }
 
-nav ol li:hover a{
-    background: #d2d2d2 ;
+nav ol li:hover a {
+    background: #d2d2d2;
     color: #3d3d3d
 }
 
-nav .search_box{
+nav .search_box {
     display: flex;
     margin: auto 0;
     height: 35px;
-    line-height: 35px; 
+    line-height: 35px;
 }
 
-nav .search_box input{
+nav .search_box input {
     border: none;
     outline: none;
     background: #fff;
@@ -157,10 +212,10 @@ nav .search_box input{
     width: 350px;
 }
 
-nav .search_box span{
-    color:#000 ;
+nav .search_box span {
+    color: #000;
     font-size: 20px;
-    background: rgb(224, 13, 214) ;
+    background: rgb(224, 13, 214);
     height: 100%;
     padding: 8px;
     position: relative;
@@ -168,15 +223,15 @@ nav .search_box span{
     z-index: 1;
 }
 
-nav .search_box span:hover{
-    color: yellow ;
+nav .search_box span:hover {
+    color: yellow;
 }
 
-nav .search_box span::after{
+nav .search_box span::after {
     height: 100%;
     width: 100%;
     content: '';
-    background: red ;
+    background: red;
     position: absolute;
     top: 0;
     left: 0;
@@ -184,7 +239,7 @@ nav .search_box span::after{
     transition: 0.3s;
 }
 
-nav .search_box span:hover::after{
+nav .search_box span:hover::after {
     width: 100%;
 }
 
@@ -222,7 +277,7 @@ a:active {
 }
 
 .slide-promo {
-    display:none;
+    display: none;
 }
 
 
@@ -238,8 +293,8 @@ footer {
     margin-bottom: 10px;
 }
 
-.footer-col{
-   max-width: 400px;
+.footer-col {
+    max-width: 400px;
 }
 
 .social-media {
@@ -249,13 +304,12 @@ footer {
     margin-bottom: 40px;
 }
 
- .footer-logo {
-     display: flex;
+.footer-logo {
+    display: flex;
 }
 
 .novidades {
     width: 300px;
-    line-height : 18px;
+    line-height: 18px;
     margin-bottom: 20px;
 }
-
