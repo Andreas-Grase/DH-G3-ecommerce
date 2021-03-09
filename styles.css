@@ -1,14 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
+/* RESET */
 * {
+    box-sizing: border-box;
+    font-size: 16px;
     margin: 0;
     padding: 0;
+<<<<<<< HEAD
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+=======
+>>>>>>> bd493087783130dbff121f8cd437575b4c0607f9
+}
+
+a {
+    color: inherit;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* RESET */
+
+body,
+input,
+button,
+select,
+textarea {
     font-family: 'Roboto', sans-serif;
 }
 
-nav{
+nav {
     display: flex;
     width: 100%;
     background: #d4d4d4;
@@ -18,27 +44,159 @@ nav{
     padding: 10px 20px;
 }
 
+<<<<<<< HEAD
 nav .icon{
     font-size: 50px;
     font-weight: 1000;
+=======
+nav .icon {
+    font-size: 50 px;
+    font-weight: 800;
+>>>>>>> bd493087783130dbff121f8cd437575b4c0607f9
     color: rgb(22, 22, 22);
     cursor: pointer;
     margin: auto 0;
 }
+<<<<<<< HEAD
 nav .icon b{
     font-size: 30px;
     font-weight: 500;
     text-align: center; 
+=======
+
+/* INICIO NOSSAS MARCAS */
+/* INICIO TITULOS MARCAS */
+.titulo-marcas>div {
+    align-items: center;
+    display: flex;
+    /* flex-flow = flex-direction: row; flex-wrap: wrap; */
+    flex-flow: row wrap;
+    max-width: 800px;
+    margin: 10px auto;
 }
 
-nav ol{
+.titulo-marcas h2 {
+    font-size: 3.5rem;
+    color: #24273c;
+    font-weight: 300;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+.titulo-marcas h4 {
+    font-size: 1.2rem;
+    color: #24273c;
+    font-weight: 400;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+/* FIM TITULOS MARCAS*/
+/* INICIO IMAGENS MARCAS*/
+#marcas {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.imagem {
+    /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 200 (flex-basis: 148px (tamanho mínimo da imagem)) */
+    flex: 1 1 148px;
+    margin: 10px;
+    width: 148px;
+    height: 148px;
+    position: relative;
+    /* overflow: hidden; */
+    /* transition: opacity 500ms; */
+}
+
+.imagem img {
+    border: 1px solid #616161;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 0.8s ease-out 0s;
+}
+
+  .imagem .frente {
+    z-index: 1;
+    transform: rotateY(0deg);
+  }
+  
+  .imagem .verso {
+    z-index: 0;
+    /* opacity: 0; */
+    transform: rotateY(180deg);
+  }
+  
+  .imagem:hover .frente {
+    /* opacity: 0; */
+    transform: rotateY(180deg);
+
+  }
+  
+  .imagem:hover .verso {
+    /* opacity: 1; */
+    transform: rotateY(0deg);
+
+  }
+
+/* FIM IMAGENS MARCAS*/
+/* INICIO VER TODAS MARCAS */
+.ver-marcas {
+    max-width: 800px;
+    text-align: center;
+    align-items: center;
+    display: block;
+    border: 5px;
+    margin: 10px auto;
+    padding: 4px;
+}
+
+.ver-marcas h6 {
+    font-size: .8rem;
+    border: 5px;
+    padding: 4px;
+    margin: 10px auto;
+}
+
+.btn-ver-marcas {
+    max-width: 800px;
+    padding: 2px 4px;
+    border: #fff;
+    margin: 0 auto;
+    color: #000;
+    background-color: white;
+    display: inline-block;
+    cursor: pointer;
+    justify-content: center;
+>>>>>>> bd493087783130dbff121f8cd437575b4c0607f9
+}
+
+.btn-ver-marcas:hover {
+    border-color: white;
+    background-color: #000;
+    color: white;
+}
+/* FIM VER TOAS AS MARCAS */
+/* FIM NOSSSAS MARCAS */
+nav ol {
     display: flex;
     flex-direction: column;
     list-style: none;
     margin: auto 0;
-} 
+}
 
-nav ol li{
+nav ol li {
     margin: 0 1px;
 }
 
@@ -50,6 +208,7 @@ nav ol li b {
     padding: 5px 10px;
 }
 
+<<<<<<< HEAD
 .cart {
     display: flex;
     margin: auto 0;
@@ -68,16 +227,21 @@ nav ol li b {
 #login:hover {
     background: #5a5a5a ;
     color: #e2e1e1
+=======
+nav ol li:hover a {
+    background: #d2d2d2;
+    color: #3d3d3d
+>>>>>>> bd493087783130dbff121f8cd437575b4c0607f9
 }
 
-nav .search_box{
+nav .search_box {
     display: flex;
     margin: auto 0;
     height: 35px;
-    line-height: 35px; 
+    line-height: 35px;
 }
 
-nav .search_box input{
+nav .search_box input {
     border: none;
     outline: none;
     background: #fff;
@@ -88,10 +252,17 @@ nav .search_box input{
     border-radius: 50px;
 }
 
+<<<<<<< HEAD
 nav .search_box span{
     color:#000 ;
     font-size: 16px;
     background: rgb(255, 255, 255) ;
+=======
+nav .search_box span {
+    color: #000;
+    font-size: 20px;
+    background: rgb(224, 13, 214);
+>>>>>>> bd493087783130dbff121f8cd437575b4c0607f9
     height: 100%;
     padding: 8px;
     position: relative;
@@ -101,15 +272,24 @@ nav .search_box span{
     border-radius: 50px;
 }
 
+<<<<<<< HEAD
 nav .search_box span:hover{
     color: #fff;
+=======
+nav .search_box span:hover {
+    color: yellow;
+>>>>>>> bd493087783130dbff121f8cd437575b4c0607f9
 }
 
-nav .search_box span::after{
+nav .search_box span::after {
     height: 100%;
     width: 0%;
     content: '';
+<<<<<<< HEAD
     background: rgb(117, 117, 117) ;
+=======
+    background: red;
+>>>>>>> bd493087783130dbff121f8cd437575b4c0607f9
     position: absolute;
     top: 0;
     left: 0;
@@ -118,10 +298,11 @@ nav .search_box span::after{
     border-radius: 50px;
 }
 
-nav .search_box span:hover::after{
+nav .search_box span:hover::after {
     width: 100%;
 }
 
+<<<<<<< HEAD
 nav .bar{
     position: relative;
     margin: auto;
@@ -245,10 +426,9 @@ select,
 textarea {
     font-family: 'Roboto', sans-serif;
 }
+=======
+>>>>>>> bd493087783130dbff121f8cd437575b4c0607f9
 
-a {
-    text-decoration: none;
-}
 
 a:link {
     color: #6A26CD
@@ -282,14 +462,39 @@ a:active {
 }
 
 .slide-promo {
-    display:none;
+    display: none;
 }
 
 
 footer {
+    padding: 0 30px;
     background-color: rgb(75, 75, 75);
     color: honeydew;
     font-size: 0.8em;
 }
 
+.footer-row {
+    display: flex;
+    margin-bottom: 10px;
+}
 
+.footer-col {
+    max-width: 400px;
+}
+
+.social-media {
+    inline-size: 35px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+}
+
+.novidades {
+    width: 300px;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
