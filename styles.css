@@ -466,22 +466,62 @@ a:active {
 
 
 /* seção "OFERTAS" */
-.slideshow-promo {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
+/* responsável: ANDREAS */
 
-.botoes-promo {
+.container-botoes {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
 }
 
-.slide-promo {
-    display: none;
+.botao-ofertas, .botao-mv {
+    text-align: center;
+    padding: 5px;
+    margin:5px;
+    border-bottom: 1px solid #ddbcbc;
+    user-select: none;
 }
 
+.container-botoes a:hover {
+    border-bottom: 2px solid #a00f22;
+    cursor: pointer;
+}
+
+.slide-ofertas {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+}
+
+.slide-mais-vendidos {
+    display: none;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+}
+
+.produto-slide-promo {
+    margin: 20px;
+}
+
+.produto-slide-promo p{
+    text-align: center;
+}
+
+.slide-promo-img {
+    width: 200px;
+    height: 300px;
+}
+
+/* animação */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
 
 /* seção "NOSSOS PRODUTOS" */
 
@@ -649,7 +689,6 @@ div.footer-row ul {
     position: relative;
     padding-left: 0;
     padding-bottom: 25px;
-    display:
 }
 
 #categories a {
