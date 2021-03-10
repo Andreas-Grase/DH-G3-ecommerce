@@ -443,34 +443,42 @@ footer {
     text-align: center;
     padding: 200px;
     margin: 20px;
-    display: flexbox;
+    display: inline-block;
     background-color: white;
     margin: auto;
+    align-items: center;
+    align-content: space-between;
 }
 
 #ladoalado {
     max-width: 100%;
-    display: block;
+    display: flex;
+    flex-flow: row nowrap;
+
 }    
 
 .img-produtos1 {
-    max-width: 100%;
-    display: flexbox;
+    height: 336px;
+    width: 248px;
     position: relative;
     margin-top: 20px;
 }
 
 .img-produtos {
-    max-width: 100%;
-    display: flexbox;
+    height: 336px;
+    width: 224px;
     position: relative;
+}
+
+#conheca-categoria {
+    background-color: #d2d2d2;
+    display: block;
 }
 
 #h2-produtos {
     text-align: center;
     padding: 20px;
     margin: 20px;
-    background-color: #d2d2d2;
     font-size: 17px;
     font-style: inherit;
     align-content: flex-end;
