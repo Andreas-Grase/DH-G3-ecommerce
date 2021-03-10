@@ -193,4 +193,41 @@ footer {
     font-size: 0.8em;
 }
 
+/* seção "NOSSOS PRODUTOS" */
 
+#produtos {
+    text-align: center;
+    padding: 200px;
+    margin: 20px;
+    display: flexbox;
+    background-color: white;
+    margin: auto;
+}
+
+#ladoalado {
+    max-width: 100%;
+    display: block;
+}    
+
+.img-produtos1 {
+    max-width: 100%;
+    display: flexbox;
+    position: relative;
+    margin-top: 20px;
+}
+
+.img-produtos {
+    max-width: 100%;
+    display: flexbox;
+    position: relative;
+}
+
+#h2-produtos {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: #d2d2d2;
+    font-size: 17px;
+    font-style: inherit;
+    align-content: flex-end;
+}
