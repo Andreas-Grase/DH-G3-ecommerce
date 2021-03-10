@@ -2,208 +2,216 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="styles.css" />
-  <title>Kabellos</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Kabellos</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/67c66657c7.js"></script>
 </head>
 
 <body>
-  <header>
-    <!-- NavBar -->
-    <nav>
-      <div class="icon">K<b style="color: #222222">bellos</b></div>
-      <div class="search_box">
-        <input type="search" placeholder="Procure aqui" />
-        <span class="fa fa-search"></span>
-      </div>
-      <ol>
-        <li><a href="#">Olá, visitante</a></li>
-        <li><a href="#">Entre em sua conta</a></li>
-      </ol>
-      <label for="check" class="bar">
-        <span class="fa fa-bars" id="bars"></span>
-        <span class="fa fa-times" id="times"></span>
-      </label>
-    </nav>
-  </header>
+    <header>
+        <!-- NavBar -->
+        <input type="checkbox" id="check">
+        <nav>
+            <div class="icon" href="">K<b style="color: #222222;">bellos</b></div>
+            <div class="search_box">
+                <input type="search" placeholder="Procure seus produtos" />
+                <span class="fa fa-search"></span>
+            </div>
+            <ol>
+                <li><b href="#">Olá, visitante</b></li>
+                <li><a href="#" id="login">Entre em sua conta</a></li>
+            </ol>
+            <label for="check" class="bar">
+                <span class="fa fa-bars" id="bars"></span>
+                <span class="fa fa-times" id="times"></span>
+            </label>
+            <a class="cart" href="#"><img src="assets/icons/shopping-cart.svg"></a>
+        </nav>
+    </header>
 
-  <main>
-    <div class="container-fluid">
-      <div id="mainSlider" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <ol class="carousel-indicators">
-          <li data-bs-target="#mainSlider" data-bs-slide-to="0" class="active"></li>
-          <li data-bs-target="#mainSlider" data-bs-slide-to="1"></li>
-          <li data-bs-target="#mainSlider" data-bs-slide-to="2"></li>
-          <li data-bs-target="#mainSlider" data-bs-slide-to="3"></li>
-          <li data-bs-target="#mainSlider" data-bs-slide-to="4"></li>
-        </ol>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="./imagens/cupom.png" class="d-block w-100" alt="Cupom" height="650" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Cupom Primeira compra</h5>
-              <p class="subtitle">Cupom de desconto para novos clientes.</p>
-              <button type="button" class="btn btn-success">Botão.</button>
+    <!--carrosel-->
+
+    <main>
+        <div id="itens-wrapper">
+            <div id="itens">
+                <div class="item"><img class="img-jp" src="./imagens/promoçao.jpg" />
+                    <p>Promoções Imperdives.</p>
+                </div>
+                <div class="item"><img class="img-jp" src="./imagens/cupom 2.png" />
+                    <p>Cupons de Desconto.</p>
+                </div>
+                <div class="item"><img class="img-jp" src="./imagens/kit.jpg" />
+                    <p>Kits de Cabelereiro.</p>
+                </div>
+                <div class="item"><img class="img-jp" src="./imagens/produtos.jpg" />
+                    <p>Produtos para Cabelo.</p>
+                </div>
             </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./imagens/promoçao.jpg" class="d-block w-100" alt="Promoção" height="650" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Promoção</h5>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-              <button type="button" class="btn btn-info">Botão</button>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./imagens/kit.png" class="d-block w-100" alt="Kit" height="650" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Kit de Tratamento</h5>
-              <p>
-                Praesent commodo cursus magna, vel scelerisque nisl
-                consectetur.
-              </p>
-              <button type="button" class="btn btn-warning">Botão</button>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="./imagens/style.webp" class="d-block w-100" alt="Style" height="650" />
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Linha Profissional</h5>
-              <p>Linha Profissional.</p>
-              <button type="button" class="btn btn-info">Botão</button>
-            </div>
-          </div>
-          <button class="carousel-control-prev" data-bs-target="#mainSlider" role="button" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only"></span>
-          </button>
-          <button class="carousel-control-next" data-bs-target="#mainSlider" role="button" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only"></span>
-          </button>
         </div>
-      </div>
-    </div>
-  </main>
-  <section id="produtos">
-    <h2>Nossos Produtos</h2>
-    <div id="ladoalado">
-      <img src="imagens/produto_teste (1).jpg" /><img src="imagens/produto_teste (4).jpg" />
-    </div>
-    <br />
-    <div id="ladoalado">
-      <img src="imagens/produto_teste (3).jpg" /><img src="imagens/produto_teste (2).jpg" />
-    </div>
-  </section>
+    </main>
 
-  <!-- seção: OFERTAS -->
-  <!-- responsável: ANDREAS -->
-  <!-- fontes: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-  <section class="promo">
-    <!-- slideshow container -->
-    <div class="slideshow-promo">
-      <!-- botões -->
-      <div class="botoes-promo">
-        <a class="ver-ofertas">
-          <h2>Ofertas</h2>
-        </a>
-        <a class="ver-mais-vendidos">
-          <h2>Mais Vendidos</h2>
-        </a>
-      </div>
+    <section id="produtos">
+        <h2 id="h2-produtos">Nossos Produtos</h2>
+        <div id="ladoalado">
+            <a href="shampoo.html"><img class="img-produtos1" src="imagens/imagemteste1.jpg" alt="shampoo" /></a>
+            <a href="condicionador.html"><img class="img-produtos" src="imagens/imagemteste2.jpg"
+                    alt="condicionador" /></a>
+            <a href="mascara.html"><img class="img-produtos1" src="imagens/imagemteste3.jpg" alt="mascaras" /></a>
+            <a href="cremes"><img class="img-produtos" src="imagens/imagemteste4.jpg" alt="cremes" /></a>
+            <a href="barbearia"><img class="img-produtos1" src="imagens/imagemteste5.jpg" alt="barbearia" /></a>
+        </div>
+        <div id="conheca-categoria">
+            <h2 id="h2-produtos">Conheça todas as nossas categorias!</h2>
+        </div>
+    </section>
+    <br>
+    <!-- seção: OFERTAS -->
+    <!-- responsável: ANDREAS -->
+    <!-- fontes: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+    <section class="promo">
+        <!-- slideshow container -->
+        <div class="slideshow-promo">
+            <!-- botões -->
+            <div class="botoes-promo">
+                <a class="ver-ofertas">
+                    <h2>Ofertas</h2>
+                </a>
+                <a class="ver-mais-vendidos">
+                    <h2>Mais Vendidos</h2>
+                </a>
+            </div>
 
-      <!-- slide "ofertas" -->
-      <div class="slide-promo">
-        <img />
-        <p>Marca</p>
-        <p>Produto</p>
-        <p>Preço</p>
-      </div>
+            <!-- slide "ofertas" -->
+            <div class="slide-promo">
+                <img />
+                <p>Marca</p>
+                <p>Produto</p>
+                <p>Preço</p>
+            </div>
+        </div>
+        </main>
 
-      <!-- slide "mais vendidos" -->
-      <div class="slide-promo">
-        <img />
-        <p>Marca</p>
-        <p>Produto</p>
-        <p>Preço</p>
-      </div>
-    </div>
-  </section>
+        <!-- seção: OFERTAS -->
+        <!-- responsável: ANDREAS -->
+        <!-- fontes: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+        <section class="promo">
+            <!-- slideshow container -->
+            <div class="slideshow-promo">
+                <!-- botões -->
+                <div class="botoes-promo">
+                    <a class="ver-ofertas">
+                        <h2>Ofertas</h2>
+                    </a>
+                    <a class="ver-mais-vendidos">
+                        <h2>Mais Vendidos</h2>
+                    </a>
+                </div>
 
-  <!-- seção: OFERTAS -->
-  <!-- responsável: ANDREAS -->
-  <!-- fontes: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-  <section class="promo">
-    <!-- slideshow container -->
-    <div class="slideshow-promo">
-      <!-- botões -->
-      <div class="botoes-promo">
-        <a class="ver-ofertas">
-          <h2>Ofertas</h2>
-        </a>
-        <a class="ver-mais-vendidos">
-          <h2>Mais Vendidos</h2>
-        </a>
-      </div>
+                <!-- slide "ofertas" -->
+                <div class="slide-promo">
+                    <img />
+                    <p>Marca</p>
+                    <p>Produto</p>
+                    <p>Preço</p>
+                </div>
 
-      <!-- slide "ofertas" -->
-      <div class="slide-promo">
-        <img />
-        <p>Marca</p>
-        <p>Produto</p>
-        <p>Preço</p>
-      </div>
+                <!-- slide "mais vendidos" -->
+                <div class="slide-promo">
+                    <img />
+                    <p>Marca</p>
+                    <p>Produto</p>
+                    <p>Preço</p>
+                </div>
+            </div>
+        </section>
 
-      <!-- slide "mais vendidos" -->
-      <div class="slide-promo">
-        <img />
-        <p>Marca</p>
-        <p>Produto</p>
-        <p>Preço</p>
-      </div>
-    </div>
-  </section>
+        <!-- seção: OFERTAS -->
+        <!-- responsável: ANDREAS -->
+        <!-- fontes: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+        <section class="promo">
+            <!-- slideshow container -->
+            <div class="slideshow-promo">
+                <!-- botões -->
+                <div class="botoes-promo">
+                    <a class="ver-ofertas">
+                        <h2>Ofertas</h2>
+                    </a>
+                    <a class="ver-mais-vendidos">
+                        <h2>Mais Vendidos</h2>
+                    </a>
+                </div>
 
-  <article>
-    <h1 class="title-marcas">Nossas Marcas</h1>
-    <h2 class="title2-marcas">Encontre as melhores marcas</h2>
-  </article>
-  <section class="marcas">
-    <div>
-      <img class="img-marcas" src="./assets/img/marcas/marca1.png" alt="" />
-      <p>legenda</p>
-    </div>
-    <div>
-      <img class="img-marcas" src="./assets/img/marcas/marca2.png" alt="" />
-      <p>legenda</p>
-    </div>
-    <div>
-      <img class="img-marcas" src="./assets/img/marcas/marca3.png" alt="" />
-      <p>legenda</p>
-    </div>
-    <div>
-      <img class="img-marcas" src="./assets/img/marcas/marca4.png" alt="" />
-      <p>legenda</p>
-    </div>
-    <div>
-      <img class="img-marcas" src="./assets/img/marcas/marca5.png" alt="" />
-      <p>legenda</p>
-    </div>
-    <div>
-      <img class="img-marcas" src="./assets/img/marcas/marca6.png" alt="" />
-      <p>legenda</p>
-    </div>
-  </section>
-  <nav class="ver-marcas">
-    <ul>
-      <li><a href="/">Ver todas as marcas</a></li>
-    </ul>
-  </nav>
+                <!-- slide "ofertas" -->
+                <div class="slide-promo">
+                    <img />
+                    <p>Marca</p>
+                    <p>Produto</p>
+                    <p>Preço</p>
+                </div>
 
-
-  <!-----FOOTER-----------------------------FOOTER-------------------------------------FOOTER-------------------->
+                <!-- slide "mais vendidos" -->
+                <div class="slide-promo">
+                    <img />
+                    <p>Marca</p>
+                    <p>Produto</p>
+                    <p>Preço</p>
+                </div>
+            </div>
+        </section>
+        <!-- Início nossas marcas -->
+        <section class="titulo-marcas">
+            <div>
+                <h2>Nossas Marcas</h2>
+                <h4>Encontre as melhores marcas</h4>
+            </div>
+            <div id="marcas">
+                <div class="imagem">
+                    <img class="frente" src="./assets/img/marcas/marca1.png" alt="" />
+                    <img class="verso" src="./assets/img/marcas/produtomarca1.png" alt="" />
+                </div>
+                <div class="imagem">
+                    <img class="frente" src="./assets/img/marcas/marca3.png" alt="" />
+                    <img class="verso" src="./assets/img/marcas/produtomarca3.png" alt="" />
+                </div>
+                <div class="imagem">
+                    <img class="frente" src="./assets/img/marcas/marca5.png" alt="" />
+                    <img class="verso" src="./assets/img/marcas/produtomarca5.png" alt="" />
+                </div>
+                <div class="imagem">
+                    <img class="frente" src="./assets/img/marcas/marca7.png" alt="" />
+                    <img class="verso" src="./assets/img/marcas/produtomarca7.png" alt="" />
+                </div>
+                <div class="imagem">
+                    <img class="frente" src="./assets/img/marcas/marca9.png" alt="" />
+                    <img class="verso" src="./assets/img/marcas/produtomarca9.png" alt="" />
+                </div>
+                <div class="imagem">
+                    <img class="frente" src="./assets/img/marcas/marca11.png" alt="" />
+                    <img class="verso" src="./assets/img/marcas/produtomarca11.png" alt="" />
+                </div>
+                <div class="imagem">
+                    <img class="frente" src="./assets/img/marcas/marca2.png" alt="" />
+                    <img class="verso" src="./assets/img/marcas/produtomarca2.png" alt="" />
+                </div>
+                <div class="imagem">
+                    <img class="frente" src="./assets/img/marcas/marca4.png" alt="" />
+                    <img class="verso" src="./assets/img/marcas/produtomarca4.png" alt="" />
+                </div>
+                <a class="ver-marcas" href="/">
+                    <button type="button" class="btn-ver-marcas">
+                        <i class="fas fa-binoculars fa-3x"></i>
+                    </button>
+                    <h6>Ver todas as marcas
+                    </h6>
+                </a>
+        </section>
+        <!-- Fim nosas marcas -->
+     <!-----FOOTER-----------------------------FOOTER-------------------------------------FOOTER-------------------->
   <footer>
     <div class="container">
 
@@ -324,7 +332,7 @@
   
        <div class="footer-row">
         <div id="categories">
-          <a href="" >VISUALIZAR TODAS AS CATEGORIAS<img src="assets/img/footer/seta-categorias.png" alt="todas as categorias" width= "20px"></a></li>
+          <a href="" >VISUALIZAR TODAS AS CATEGORIAS >></a></li>
         </div>
       </div>
 
@@ -341,13 +349,20 @@
           
         </div>
       </div>
+      <div class="copyright">
+        <p>
+          Equipe 3  ©  2021 -  Todos os direitos reservados
+        </p>
+      </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-      crossorigin="anonymous"></script>
+      integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+    </script>
     <script src="scripts.js"></script>
   </footer>
 </body>
 
 </html>
+
+
