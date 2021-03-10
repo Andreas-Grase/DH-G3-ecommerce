@@ -1,14 +1,37 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-
+/* RESET */
 * {
+    box-sizing: border-box;
+    font-size: 16px;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
-nav{
+a {
+    color: inherit;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* RESET */
+
+body,
+input,
+button,
+select,
+textarea {
+    font-family: 'Roboto', sans-serif;
+}
+
+nav {
     display: flex;
     width: 100%;
     background: #d4d4d4;
@@ -19,12 +42,306 @@ nav{
 }
 
 nav .icon{
-    font-size: 50 px;
-    font-weight: 800;
+    font-size: 50px;
+    font-weight: 1000;
     color: rgb(22, 22, 22);
     cursor: pointer;
+    margin: auto 0;
+}
+nav .icon b{
+    font-size: 30px;
+    font-weight: 500;
+    text-align: center; 
 }
 
+/* INICIO NOSSAS MARCAS */
+/* INICIO TITULOS MARCAS */
+.titulo-marcas>div {
+    align-items: center;
+    display: flex;
+    /* flex-flow = flex-direction: row; flex-wrap: wrap; */
+    flex-flow: row wrap;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.titulo-marcas h2 {
+    font-size: 3.5rem;
+    color: #24273c;
+    font-weight: 300;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+.titulo-marcas h4 {
+    font-size: 1.2rem;
+    color: #24273c;
+    font-weight: 400;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+/* FIM TITULOS MARCAS*/
+/* INICIO IMAGENS MARCAS*/
+#marcas {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.imagem {
+    /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 200 (flex-basis: 148px (tamanho mínimo da imagem)) */
+    flex: 1 1 148px;
+    margin: 10px;
+    width: 148px;
+    height: 148px;
+    position: relative;
+    /* overflow: hidden; */
+    /* transition: opacity 500ms; */
+}
+
+.imagem img {
+    border: 1px solid #616161;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 0.8s ease-out 0s;
+}
+
+  .imagem .frente {
+    z-index: 1;
+    transform: rotateY(0deg);
+  }
+  
+  .imagem .verso {
+    z-index: 0;
+    /* opacity: 0; */
+    transform: rotateY(180deg);
+  }
+  
+  .imagem:hover .frente {
+    /* opacity: 0; */
+    transform: rotateY(180deg);
+
+  }
+  
+  .imagem:hover .verso {
+    /* opacity: 1; */
+    transform: rotateY(0deg);
+
+  }
+
+/* FIM IMAGENS MARCAS*/
+/* INICIO VER TODAS MARCAS */
+.ver-marcas {
+    max-width: 800px;
+    text-align: center;
+    align-items: center;
+    display: block;
+    border: 5px;
+    margin: 10px auto;
+    padding: 4px;
+}
+
+.ver-marcas h6 {
+    font-size: .8rem;
+    border: 5px;
+    padding: 4px;
+    margin: 10px auto;
+}
+
+.btn-ver-marcas {
+    max-width: 800px;
+    padding: 2px 4px;
+    border: #fff;
+    margin: 0 auto;
+    color: #000;
+    background-color: white;
+    display: inline-block;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.btn-ver-marcas:hover {
+    border-color: white;
+    background-color: #000;
+    color: white;
+}
+/* FIM VER TOAS AS MARCAS */
+/* FIM NOSSSAS MARCAS */
+nav ol {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: auto 0;
+}
+
+nav ol li {
+    margin: 0 1px;
+}
+
+nav ol li b {
+    color: #313131;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+}
+
+.cart {
+    display: flex;
+    margin: auto 0;
+}
+
+#login {
+    color: #313131;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    padding: 1px 5px;
+    border-radius: 10px;
+}
+
+#login:hover {
+    background: #5a5a5a ;
+    color: #e2e1e1
+}
+
+nav .search_box {
+    display: flex;
+    margin: auto 0;
+    height: 35px;
+    line-height: 35px;
+}
+
+nav .search_box input {
+    border: none;
+    outline: none;
+    background: #fff;
+    height: 100%;
+    padding: 0 10px;
+    font-size: 16px;
+    width: 350px;
+    border-radius: 50px;
+}
+
+nav .search_box span{
+    color:#000 ;
+    font-size: 16px;
+    background: rgb(255, 255, 255) ;
+    height: 100%;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    margin: 0px 0px 0px 10px;
+    border-radius: 50px;
+}
+
+nav .search_box span:hover{
+    color: #fff;
+}
+
+nav .search_box span::after {
+    height: 100%;
+    width: 0%;
+    content: '';
+    background: rgb(117, 117, 117) ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+    border-radius: 50px;
+}
+
+nav .search_box span:hover::after {
+    width: 100%;
+}
+
+nav .bar{
+    position: relative;
+    margin: auto;
+    display: none;
+}
+
+nav .bar span{
+    position: absolute;
+    color: #fff;
+    font-size: 35px;
+}
+
+input[type="checkbox"]{
+    -webkit-appearance: none;
+    display: none;
+}
+
+@media screen and (max-width: 1250px){
+    nav{
+        display: block;
+        padding: 0;
+    }
+    nav .icon{
+        display: inline-block;
+        padding: 15px 30px;
+    }
+    nav .search_box{
+        width: 100%;
+        display: inline-flex;
+        justify-content: center;
+        margin-bottom: 15px;
+    }
+    nav .search_box input{
+        width: 90%;
+    }
+    nav ol{
+        display: flex;
+        flex-direction: column;
+        background: #fff;
+        height: 0;
+        visibility: hidden;
+        transition: 0.5s;
+    }
+    nav ol li{
+        text-align: center;
+    }
+    nav ol li a{
+        color: #000;
+        font-size: 16px;
+        padding: 10px;
+        display: block;
+    }
+    nav .bar{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 80px;
+        cursor: pointer;
+    }
+    nav .bar #times{
+        display:none;
+    }
+    #check:checked ~ nav .bar #times{
+        display: none;
+    }
+    #check:checked ~ nav .bar #bars{
+        display: none;
+    }
+    #check:checked ~ nav ol{
+        visibility: visible;
+        height: 465px;
+    }
+}
 
 article {
     align-items: center;
@@ -66,78 +383,7 @@ article {
     margin: 10px;
 }
 
-nav ol{
-    display: flex;
-    flex-direction: column;
-    list-style: none;
-    margin: auto 0;
-} 
 
-nav ol li{
-    margin: 0 1px;
-}
-
-nav ol li a {
-    color: #222222;
-    font-size: 18px;
-    text-decoration: none;
-    text-transform: capitalize;
-    letter-spacing: 1px;
-    padding: 5px 10px;
-}
-
-nav ol li:hover a{
-    background: #d2d2d2 ;
-    color: #3d3d3d
-}
-
-nav .search_box{
-    display: flex;
-    margin: auto 0;
-    height: 35px;
-    line-height: 35px; 
-}
-
-nav .search_box input{
-    border: none;
-    outline: none;
-    background: #fff;
-    height: 100%;
-    padding: 0 10px;
-    font-size: 20px;
-    width: 350px;
-}
-
-nav .search_box span{
-    color:#000 ;
-    font-size: 20px;
-    background: rgb(224, 13, 214) ;
-    height: 100%;
-    padding: 8px;
-    position: relative;
-    cursor: pointer;
-    z-index: 1;
-}
-
-nav .search_box span:hover{
-    color: yellow ;
-}
-
-nav .search_box span::after{
-    height: 100%;
-    width: 100%;
-    content: '';
-    background: red ;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: 0.3s;
-}
-
-nav .search_box span:hover::after{
-    width: 100%;
-}
 
 body,
 input,
@@ -147,9 +393,6 @@ textarea {
     font-family: 'Roboto', sans-serif;
 }
 
-a {
-    text-decoration: none;
-}
 
 a:link {
     color: #6A26CD
@@ -183,16 +426,18 @@ a:active {
 }
 
 .slide-promo {
-    display:none;
+    display: none;
 }
 
 
 footer {
+    padding: 0 30px;
     background-color: rgb(75, 75, 75);
     color: honeydew;
     font-size: 0.8em;
 }
 
+<<<<<<< HEAD
 /* seção "NOSSOS PRODUTOS" */
 
 #produtos {
@@ -231,3 +476,30 @@ footer {
     font-style: inherit;
     align-content: flex-end;
 }
+=======
+.footer-row {
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.footer-col {
+    max-width: 400px;
+}
+
+.social-media {
+    inline-size: 35px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    display: flex;
+}
+
+.novidades {
+    width: 300px;
+    line-height: 18px;
+    margin-bottom: 20px;
+}
+>>>>>>> fe9a29cdefdbce759cf4bfd53f551601bb5c5821
