@@ -483,13 +483,6 @@ a:active {
 }
 
 
-footer {
-    padding: 0 30px;
-    background-color: rgb(75, 75, 75);
-    color: honeydew;
-    font-size: 0.8em;
-}
-
 /* seção "NOSSOS PRODUTOS" */
 
 #produtos {
@@ -534,28 +527,149 @@ footer {
     font-style: inherit;
     align-content: flex-end;
 }
+
+/*-------------------------------Estilos gerais--------------------------------------------*/
+
+footer {
+    width: 100%;
+    padding: 0 30px;
+    background-color: rgb(75, 75, 75);
+    color: honeydew;
+    font-size: 10em;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/*-------------------------------Estilos primer nivel--------------------------------------*/
+
 .footer-row {
     display: flex;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-bottom: 1px solid rgb(173, 172, 172);
 }
 
 .footer-col {
-    max-width: 400px;
+    max-width: 300px;
+}
+
+/*-------------------------------Estilos específicos--------------------------------------*/
+
+.row1 {
+    margin-bottom: 15px;
+    border-bottom: none;
+}
+
+#footer-logo {
+    display: flex;
+} 
+
+footer section ul, h3 {
+    line-height: 30px;
+    list-style: none;
+}
+
+section.footer-subrow-social {
+    margin-right:auto;
+}
+
+section.footer-col {
+    margin: 0 2em;
 }
 
 .social-media {
     inline-size: 35px;
     display: inline-block;
-    margin-right: 15px;
+    margin-right: 10px;
     margin-bottom: 40px;
 }
 
-.footer-logo {
-    display: flex;
+.footer-subrow-newsletter {
+    width: 300px;
+    line-height : 20px;
+    margin-bottom: 15px;
 }
 
-.novidades {
+.tbox input {
+    background-color: rgb(197, 197, 197);
+    height: 30px;
+    border-radius: 8px;
+    padding-left: 10px;
+    border-style:solid;
+    border-color: rgb(161, 161, 161);
+    border-width: 0.1em;
+    font-size: 0.8em
+}
+
+#name {
     width: 300px;
-    line-height: 18px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#email {
+    width: 170px;
+    margin-right: 5px
+}
+
+#submit {
+    width: 120px;
+    background-color: transparent;
+    color: honeydew;
+    border-radius: 25px;
+    padding: 4px;
+    border-width: 0.2em;
+    border-color: rgb(201, 16, 16);
+    margin-bottom: 15px;
+    font-size: 0.9em;
+}
+
+#submit:hover {
+    background-color: rgba(240, 255, 240, 0.5);
+    color: rgb(8, 4, 4);
+    border-color:rgb(209, 209, 72);
+    font-weight: 400;
+    text-shadow: .1em .1em gray;
+}
+
+div.footer-row ul {
+    list-style: none;
+    margin-top: 15px;
+    margin-bottom: 50px;
+    line-height: 1.5em;
+}
+
+/*------------------NAVEGADOR FOOTER /CATEGORIAS-------------------*/
+
+#categories {
+    background:transparent;
+    position: relative;
+    padding-left: 0;
+    padding-bottom: 25px;
+    display:
+}
+
+#categories a {
+    color: honeydew;
+    margin-right: 20px;
+}
+
+.copyright {
+    margin: auto;
+    background-color: honeydew;
+    color: black;
+    width: 100%;
+    font-size: 0.5em;
+}
+
+.footer-row .footer-col img {
     margin-bottom: 20px;
 }
+
+
+
+
+
