@@ -437,46 +437,52 @@ footer {
     font-size: 0.8em;
 }
 
-<<<<<<< HEAD
 /* seção "NOSSOS PRODUTOS" */
 
 #produtos {
     text-align: center;
     padding: 200px;
     margin: 20px;
-    display: flexbox;
+    display: inline-block;
     background-color: white;
     margin: auto;
+    align-items: center;
+    align-content: space-between;
 }
 
 #ladoalado {
     max-width: 100%;
-    display: block;
+    display: flex;
+    flex-flow: row nowrap;
+
 }    
 
 .img-produtos1 {
-    max-width: 100%;
-    display: flexbox;
+    height: 336px;
+    width: 248px;
     position: relative;
     margin-top: 20px;
 }
 
 .img-produtos {
-    max-width: 100%;
-    display: flexbox;
+    height: 336px;
+    width: 224px;
     position: relative;
+}
+
+#conheca-categoria {
+    background-color: #d2d2d2;
+    display: block;
 }
 
 #h2-produtos {
     text-align: center;
     padding: 20px;
     margin: 20px;
-    background-color: #d2d2d2;
     font-size: 17px;
     font-style: inherit;
     align-content: flex-end;
 }
-=======
 .footer-row {
     display: flex;
     margin-bottom: 10px;
@@ -502,4 +508,3 @@ footer {
     line-height: 18px;
     margin-bottom: 20px;
 }
->>>>>>> fe9a29cdefdbce759cf4bfd53f551601bb5c5821
