@@ -69,99 +69,68 @@
     </div>
   </section>
   <br>
-  <!-- seção: OFERTAS -->
-  <!-- responsável: ANDREAS -->
-  <!-- fontes: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-  <section class="promo">
-    <!-- slideshow container -->
-    <div class="slideshow-promo">
+
+    <!-- seção: OFERTAS -->
+    <!-- responsável: ANDREAS -->
+    <!-- fontes: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+    <section class="promo">
       <!-- botões -->
-      <div class="botoes-promo">
-        <a class="ver-ofertas">
+      <div class="container-botoes">
+        <a class="botao-ofertas" onclick="mudarSlidePromo(1)">
           <h2>Ofertas</h2>
         </a>
-        <a class="ver-mais-vendidos">
+        <a class="botao-mv" onclick="mudarSlidePromo(2)">
           <h2>Mais Vendidos</h2>
         </a>
       </div>
-
-      <!-- slide "ofertas" -->
-      <div class="slide-promo">
-        <img />
-        <p>Marca</p>
-        <p>Produto</p>
-        <p>Preço</p>
-      </div>
-    </div>
-    </main>
-
-    <!-- seção: OFERTAS -->
-    <!-- responsável: ANDREAS -->
-    <!-- fontes: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-    <section class="promo">
       <!-- slideshow container -->
-      <div class="slideshow-promo">
-        <!-- botões -->
-        <div class="botoes-promo">
-          <a class="ver-ofertas">
-            <h2>Ofertas</h2>
-          </a>
-          <a class="ver-mais-vendidos">
-            <h2>Mais Vendidos</h2>
-          </a>
-        </div>
-
+      <div class="slideshow-promo-container">
         <!-- slide "ofertas" -->
-        <div class="slide-promo">
-          <img />
-          <p>Marca</p>
-          <p>Produto</p>
-          <p>Preço</p>
+        <div class="slide-ofertas fade">
+          <div class=produto-slide-promo>
+            <img class="slide-promo-img" src="imagens/imagemteste1.jpg" alt="shampoo" />
+            <p>Marca: <strong>Head and Shoulders</strong></p>
+            <p>Produto: <strong>Cabelos lisos 3000</strong></p>
+            <p>Preço: <strong>R$ 499,99</strong></p>
+          </div>
+          <div class=produto-slide-promo>
+            <img class="slide-promo-img" src="imagens/imagemteste1.jpg" alt="shampoo" />
+            <p>Marca: <strong>Head and Shoulders</strong></p>
+            <p>Produto: <strong>Cabelos lisos 3000</strong></p>
+            <p>Preço: <strong>R$ 499,99</strong></p>
+          </div>
+          <div class=produto-slide-promo>
+            <img class="slide-promo-img" src="imagens/imagemteste1.jpg" alt="shampoo" />
+            <p>Marca: <strong>Head and Shoulders</strong></p>
+            <p>Produto: <strong>Cabelos lisos 3000</strong></p>
+            <p>Preço: <strong>R$ 499,99</strong></p>
+          </div>
         </div>
-
-        <!-- slide "mais vendidos" -->
-        <div class="slide-promo">
-          <img />
-          <p>Marca</p>
-          <p>Produto</p>
-          <p>Preço</p>
+        <!-- slide "mais vendidos"-->
+        <div class="slide-mais-vendidos fade">
+          <div class=produto-slide-promo>
+            <img class="slide-promo-img" src="imagens/imagemteste3.jpg" alt="shampoo" />
+            <p>Marca: <strong>Head and Shoulders</strong></p>
+            <p>Produto: <strong>Cabelos lisos 3000</strong></p>
+            <p>Preço: <strong>R$ 499,99</strong></p>
+          </div>
+          <div class=produto-slide-promo>
+            <img class="slide-promo-img" src="imagens/imagemteste3.jpg" alt="shampoo" />
+            <p>Marca: <strong>Head and Shoulders</strong></p>
+            <p>Produto: <strong>Cabelos lisos 3000</strong></p>
+            <p>Preço: <strong>R$ 499,99</strong></p>
+          </div>
+          <div class=produto-slide-promo>
+            <img class="slide-promo-img" src="imagens/imagemteste3.jpg" alt="shampoo" />
+            <p>Marca: <strong>Head and Shoulders</strong></p>
+            <p>Produto: <strong>Cabelos lisos 3000</strong></p>
+            <p>Preço: <strong>R$ 499,99</strong></p>
+          </div>
         </div>
       </div>
     </section>
+    <!-- Section ending -->
 
-    <!-- seção: OFERTAS -->
-    <!-- responsável: ANDREAS -->
-    <!-- fontes: https://www.w3schools.com/howto/howto_js_slideshow.asp -->
-    <section class="promo">
-      <!-- slideshow container -->
-      <div class="slideshow-promo">
-        <!-- botões -->
-        <div class="botoes-promo">
-          <a class="ver-ofertas">
-            <h2>Ofertas</h2>
-          </a>
-          <a class="ver-mais-vendidos">
-            <h2>Mais Vendidos</h2>
-          </a>
-        </div>
-
-        <!-- slide "ofertas" -->
-        <div class="slide-promo">
-          <img />
-          <p>Marca</p>
-          <p>Produto</p>
-          <p>Preço</p>
-        </div>
-
-        <!-- slide "mais vendidos" -->
-        <div class="slide-promo">
-          <img />
-          <p>Marca</p>
-          <p>Produto</p>
-          <p>Preço</p>
-        </div>
-      </div>
-    </section>
     <!-- Início nossas marcas -->
     <section class="marcas">
       <div class="titulo-marcas">
@@ -204,6 +173,7 @@
             <img class="frente" src="./assets/img/marcas/marca12.png" alt="" />
             <img class="verso" src="./assets/img/marcas/produtomarca12.png" alt="" />
         </div>
+
         </a>
         <div class="imagem">
           <a href="">
@@ -354,40 +324,37 @@
             </ul>
           </div>
         </div>
-
-        <!------------------------------------------ROW 4------------------------------------------------------------->
-
+<!------------------------------------------ROW 4------------------------------------------------------------->
         <div class="footer-row">
           <div id="categories">
             <a href="">VISUALIZAR TODAS AS CATEGORIAS >></a></li>
           </div>
-        </div>
-
-        <!------------------------------------------ROW 5------------------------------------------------------------->
-        <div class="footer-row">
-          <div class="footer-col">
-            <p>Formas de Pagamento</p>
-            <img src="assets/img/footer/formas-de-pagamento.png" alt="cartoes-aceitos" width="200px">
-
+<!------------------------------------------ROW 4------------------------------------------------------------->
+          <div class="footer-row">
+            <div id="categories">
+              <a href="">VISUALIZAR TODAS AS CATEGORIAS >></a></li>
+            </div>
+<!------------------------------------------ROW 5------------------------------------------------------------->
+            <div class="footer-row">
+              <div class="footer-col">
+                <p>Formas de Pagamento</p>
+                <img src="assets/img/footer/formas-de-pagamento.png" alt="cartoes-aceitos" width="200px">
+              </div>
+              <div class="footer-col">
+                <p>Ambiente Protegido</p>
+                <img src="assets/img/footer/ambiente-protegido.png" alt="ambiente-protegido" width="200px">
+              </div>
+            </div>
+            <div class="copyright">
+              <p>
+                Equipe 3 © 2021 - Todos os direitos reservados
+              </p>
+            </div>
           </div>
-          <div class="footer-col">
-            <p>Ambiente Protegido</p>
-            <img src="assets/img/footer/ambiente-protegido.png" alt="ambiente-protegido" width="200px">
-
-          </div>
-        </div>
-        <div class="copyright">
-          <p>
-            Equipe 3 © 2021 - Todos os direitos reservados
-          </p>
-        </div>
-      </div>
-
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
-      </script>
-      <script src="scripts.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous">
+          </script>
+          <script src="scripts.js"></script>
     </footer>
 </body>
-
 </html>
