@@ -578,35 +578,26 @@ a:active {
     align-content: flex-end;
 }
 
-/*-------------------------------Estilos gerais--------------------------------------------*/
-
 footer {
-    width: 100%;
-    padding: 0 30px;
-    background-color: rgb(75, 75, 75);
     color: honeydew;
-    font-size: 10em;
+    width: 100%;
+    padding: 0;
 }
+
 
 .container {
     width: 100%;
     max-width: 1200px;
+    padding: 0;
+    font-size: 0.5em;
 }
-
-/*-------------------------------Estilos primer nivel--------------------------------------*/
 
 .footer-row {
     display: flex;
     justify-content: space-between;
-    margin-top: 20px;
+    margin-top: 10px;
     border-bottom: 1px solid rgb(173, 172, 172);
 }
-
-.footer-col {
-    max-width: 300px;
-}
-
-/*-------------------------------Estilos específicos--------------------------------------*/
 
 .row1 {
     margin-bottom: 15px;
@@ -620,27 +611,21 @@ footer {
 footer section ul, h3 {
     line-height: 30px;
     list-style: none;
-}
-
-section.footer-subrow-social {
-    margin-right:auto;
-}
-
-section.footer-col {
-    margin: 0 2em;
+    color: honeydew;
+    padding-left: 0;
 }
 
 .social-media {
-    inline-size: 35px;
+    inline-size: 30px;
     display: inline-block;
-    margin-right: 10px;
-    margin-bottom: 40px;
+ 
 }
 
 .footer-subrow-newsletter {
     width: 300px;
     line-height : 20px;
     margin-bottom: 15px;
+    margin-left: 0;
 }
 
 .tbox input {
