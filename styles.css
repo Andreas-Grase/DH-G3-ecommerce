@@ -447,8 +447,6 @@ main {
     align-content: flex-end;
 }
 
-<<<<<<< HEAD
-=======
 /* FIM NOSSOS PRODUTOS - ALINE */
 
 /* INÍCIO OFERTAS - ANDREAS */
@@ -591,32 +589,25 @@ main {
 /* FIM NOSSSAS MARCAS - DANIEL */
 
 /* INÍCIO FOOTER - TATI */
-/*-------------------------------Estilos gerais--------------------------------------------*/
 
->>>>>>> fe90c8f8bc6353c8672b39702f409acf8740dcea
 footer {
-    color: honeydew;
+    color: var(--cor1);
     width: 100%;
-    padding: 0;
 }
 
-
-.container {
+footer .container {
     width: 100%;
-    max-width: 1200px;
-    padding: 0;
-    font-size: 0.5em;
+    /*max-width: 1200px;*/
 }
 
 .footer-row {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    padding: 20px;
     border-bottom: 1px solid rgb(173, 172, 172);
 }
 
 .row1 {
-    margin-bottom: 15px;
     border-bottom: none;
 }
 
@@ -624,14 +615,19 @@ footer {
     display: flex;
 }
 
+.social-media {
+    inline-size: 50px;
+    display: inline-block;
+}
+
 footer section ul,
 h3 {
-    line-height: 30px;
+    margin-left: 0;
+    line-height: 5px;
+    font-weight: 100;
     list-style: none;
-<<<<<<< HEAD
-    color: honeydew;
-    padding-left: 0;
-=======
+    font-size: 0.9rem;
+    color: var(--cor1);
 }
 
 section.footer-subrow-social {
@@ -640,13 +636,6 @@ section.footer-subrow-social {
 
 section.footer-col {
     margin: 0 2em;
->>>>>>> fe90c8f8bc6353c8672b39702f409acf8740dcea
-}
-
-.social-media {
-    inline-size: 30px;
-    display: inline-block;
- 
 }
 
 .footer-subrow-newsletter {
@@ -654,6 +643,14 @@ section.footer-col {
     line-height: 20px;
     margin-bottom: 15px;
     margin-left: 0;
+}
+
+.footer-subrow-newsletter > p {
+    font-size: 0.9em;
+}
+
+.footer-subrow-newsletter > h3 {
+    font-size: 1.1rem;
 }
 
 .tbox input {
@@ -681,54 +678,57 @@ section.footer-col {
 #submit {
     width: 120px;
     background-color: transparent;
-    color: honeydew;
+    color: var(--cor1);
     border-radius: 25px;
     padding: 4px;
     border-width: 0.2em;
     border-color: rgb(201, 16, 16);
-    margin-bottom: 15px;
     font-size: 0.9em;
 }
 
 #submit:hover {
     background-color: rgba(240, 255, 240, 0.5);
-    color: rgb(8, 4, 4);
+    color: var(--cor2);
     border-color: rgb(209, 209, 72);
     font-weight: 400;
-    text-shadow: .1em .1em gray;
 }
+
+.footer-row ul > li > a {
+    font-size: 0.85em;
+} 
+
+.footer-row ul > li > a:hover {
+    font-size: 0.85em;
+    color: var(--cor3);
+} 
+
+.footer-row > div > ul > li {
+    font-size: 0.85em;
+} 
 
 div.footer-row ul {
     list-style: none;
-    margin-top: 15px;
-    margin-bottom: 50px;
     line-height: 1.5em;
-}
-
-/*------------------NAVEGADOR FOOTER /CATEGORIAS-------------------*/
-
-#categories {
-    background: transparent;
-    position: relative;
-    padding-left: 0;
-    padding-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 #categories a {
-    color: honeydew;
-    margin-right: 20px;
+    font-weight: 200;
 }
 
-.copyright {
-    margin: auto;
-    background-color: honeydew;
-    color: black;
-    width: 100%;
-    font-size: 0.5em;
+.footer-col p {
+    line-height: 1.5em;
+    margin-bottom: 15px;
 }
 
-.footer-row .footer-col img {
-    margin-bottom: 20px;
+.copyright { 
+    background-color: var(--cor1);
+    color: var(--cor2);
+    width: 100%;    
 }
 
+#copyright {
+    margin-left: 40%;
+    font-size: 0.9em;
+}
 /* FIM FOOTER - TATI */
