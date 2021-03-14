@@ -27,8 +27,7 @@ footer {
     background-color: var(--cor2);
 }
 
-header,
-/* header,
+/*header,
 aside,
 main,
 section,
@@ -74,13 +73,13 @@ h3 {
     font-size: 1.1 rem;
 }
 
-/* p {
+p {
     color: var(--cor4);
     font-size: 1rem;
-    line-height: espaço entre linhas
+   /* line-height: espaço entre linhas */
     line-height: 24px;
     margin: 8px auto;
-} */
+}
 
 /* FIM ESTILOS PADRÕES */
 
