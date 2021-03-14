@@ -28,7 +28,7 @@ footer {
 }
 
 header,
-asside,
+aside,
 main,
 section,
 article,
@@ -74,7 +74,7 @@ h3 {
 }
 
 p {
-    color: ;
+    color: var(--cor4);
     font-size: 1rem;
     /* line-height: espaço entre linhas */
     line-height: 24px;
@@ -537,7 +537,8 @@ a:active {
 
 #produtos {
     text-align: center;
-    display: inline-block;
+    display: flex;
+    flex-flow: row wrap;
     background-color: white;
     margin: auto;
     align-items: center;
@@ -545,9 +546,11 @@ a:active {
 }
 
 #ladoalado {
-    max-width: 100%;
-    display: flex;
+    max-width: 100vw;
+    display: inline-block;
+    margin-inline: auto;
     flex-flow: row nowrap;
+    text-align: center;
 
 }    
 
@@ -556,6 +559,7 @@ a:active {
     width: 248px;
     position: relative;
     margin-top: 20px;
+    vertical-align: top;
 }
 
 .img-produtos {
@@ -566,15 +570,18 @@ a:active {
 
 #conheca-categoria {
     background-color: #d2d2d2;
-    display: block;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+    align-items: center;
 }
 
 #h2-produtos {
     text-align: center;
     padding: 20px;
     margin: 20px;
-    font-size: 17px;
     font-style: inherit;
+    font-size: 30px;
     align-content: flex-end;
 }
 
@@ -699,7 +706,6 @@ div.footer-row ul {
     position: relative;
     padding-left: 0;
     padding-bottom: 25px;
-    display:
 }
 
 #categories a {
