@@ -361,9 +361,21 @@ main {
     user-select: none;
 }
 
+.titulo-promo {
+    font-size: 1.6rem;
+}
+
+.titulo-promo:hover {
+    color: var(--cor3);
+}
+
 .container-botoes a:hover {
     border-bottom: 2px solid #a00f22;
     cursor: pointer;
+}
+
+.slideshow-promo-container {
+    margin: 0 auto;
 }
 
 .slide-ofertas {
@@ -384,11 +396,6 @@ main {
 
 .produto-slide-promo p{
     text-align: center;
-}
-
-.slide-promo-img {
-    width: 200px;
-    height: 300px;
 }
 
 /* animação */
