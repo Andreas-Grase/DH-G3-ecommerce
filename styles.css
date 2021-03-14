@@ -6,10 +6,7 @@
     --cor2: #000;
     --cor3: #af8048;
     --cor4: #585555;
-    --bg1: ;
-    --bg2: ;
-    --bg3: ;
-    --padding: 24px;
+    --padding: 20px;
 }
 
 * {
@@ -22,20 +19,23 @@
 }
 
 /* FIM RESET*/
+
+/* INÍCIO ESTILOS PADRÕES */
+
 header,
 footer {
     background-color: var(--cor2);
 }
 
-header,
-asside,
+/* header,
+aside,
 main,
 section,
 article,
 div,
 footer {
     padding: var(--padding);
-}
+} */
 
 ul,
 ol {
@@ -73,161 +73,42 @@ h3 {
     font-size: 1.1 rem;
 }
 
-p {
-    color: ;
+/* p {
+    color: var(--cor4);
     font-size: 1rem;
-    /* line-height: espaço entre linhas */
+    line-height: espaço entre linhas
     line-height: 24px;
     margin: 8px auto;
-}
+} */
+
+/* FIM ESTILOS PADRÕES */
+
+/* INÍCIO HEADER - EDUARDO */
 
 nav {
     display: flex;
     width: 100%;
-    background:grey;
+    background: var(--cor4);
     position: relative;
     justify-content: space-between;
     text-align: center;
     padding: 0px;
 }
 
-nav .icon{
+nav .icon {
     font-size: 50px;
     font-weight: 1000;
-    color: rgb(22, 22, 22);
+    color: var(--cor2);
     cursor: pointer;
     margin: auto 0;
 }
-nav .icon b{
-    font-size: 30px;
+
+nav .icon b {
+    font-size: 1.8rem;
     font-weight: 500;
-    text-align: center; 
-}
-
-/* INICIO NOSSAS MARCAS */
-/* INICIO TITULOS MARCAS */
-.titulo-marcas>div {
-    align-items: center;
-    display: flex;
-    /* flex-flow = flex-direction: row; flex-wrap: wrap; */
-    flex-flow: row wrap;
-    max-width: 800px;
-    margin: 10px auto;
-}
-
-.titulo-marcas h2 {
-    font-size: 3.5rem;
-    color: #24273c;
-    font-weight: 300;
-    border: 5px;
-    margin: 5px;
-    padding: 5px;
-    text-align: left;
-}
-
-.titulo-marcas h4 {
-    font-size: 1.2rem;
-    color: #24273c;
-    font-weight: 400;
-    border: 5px;
-    margin: 5px;
-    padding: 5px;
-    text-align: left;
-}
-
-/* FIM TITULOS MARCAS*/
-/* INICIO IMAGENS MARCAS*/
-#marcas {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 10px auto;
-}
-
-.imagem {
-    /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 200 (flex-basis: 148px (tamanho mínimo da imagem)) */
-    flex: 1 1 148px;
-    margin: 10px;
-    width: 148px;
-    height: 148px;
-    position: relative;
-    /* overflow: hidden; */
-    /* transition: opacity 500ms; */
-}
-
-.imagem img {
-    border: 1px solid #616161;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    transition: all 0.8s ease-out 0s;
-}
-
-  .imagem .frente {
-    z-index: 1;
-    transform: rotateY(0deg);
-  }
-  
-  .imagem .verso {
-    z-index: 0;
-    /* opacity: 0; */
-    transform: rotateY(180deg);
-  }
-  
-  .imagem:hover .frente {
-    /* opacity: 0; */
-    transform: rotateY(180deg);
-
-  }
-  
-  .imagem:hover .verso {
-    /* opacity: 1; */
-    transform: rotateY(0deg);
-
-  }
-
-/* FIM IMAGENS MARCAS*/
-/* INICIO VER TODAS MARCAS */
-.ver-marcas {
-    max-width: 800px;
     text-align: center;
-    align-items: center;
-    display: block;
-    border: 5px;
-    margin: 10px auto;
-    padding: 4px;
 }
 
-.ver-marcas h6 {
-    font-size: .8rem;
-    border: 5px;
-    padding: 4px;
-    margin: 10px auto;
-}
-
-.btn-ver-marcas {
-    max-width: 800px;
-    padding: 2px 4px;
-    border: #fff;
-    margin: 0 auto;
-    color: #000;
-    background-color: white;
-    display: inline-block;
-    cursor: pointer;
-    justify-content: center;
-}
-
-.btn-ver-marcas:hover {
-    border-color: white;
-    background-color: #000;
-    color: white;
-}
-/* FIM VER TOAS AS MARCAS */
-/* FIM NOSSSAS MARCAS */
 nav ol {
     display: flex;
     flex-direction: column;
@@ -240,8 +121,8 @@ nav ol li {
 }
 
 nav ol li b {
-    color: #313131;
-    font-size: 16px;
+    color: var(--cor4);
+    font-size: 1rem;
     text-decoration: none;
     letter-spacing: 1px;
     padding: 5px 10px;
@@ -253,8 +134,8 @@ nav ol li b {
 }
 
 #login {
-    color: #313131;
-    font-size: 16px;
+    color: var(--cor4);
+    font-size: 1rem;
     text-decoration: none;
     text-transform: capitalize;
     letter-spacing: 1px;
@@ -263,8 +144,8 @@ nav ol li b {
 }
 
 #login:hover {
-    background: #5a5a5a ;
-    color: #e2e1e1
+    background: var(--cor4);
+    color: var(--cor1);
 }
 
 nav .search_box {
@@ -285,10 +166,10 @@ nav .search_box input {
     border-radius: 50px;
 }
 
-nav .search_box span{
-    color:#000 ;
+nav .search_box span {
+    color: #000;
     font-size: 16px;
-    background: rgb(255, 255, 255) ;
+    background: rgb(255, 255, 255);
     height: 100%;
     padding: 8px;
     position: relative;
@@ -298,7 +179,7 @@ nav .search_box span{
     border-radius: 50px;
 }
 
-nav .search_box span:hover{
+nav .search_box span:hover {
     color: #fff;
 }
 
@@ -306,7 +187,7 @@ nav .search_box span::after {
     height: 100%;
     width: 0%;
     content: '';
-    background: rgb(117, 117, 117) ;
+    background: rgb(117, 117, 117);
     position: absolute;
     top: 0;
     left: 0;
@@ -319,42 +200,46 @@ nav .search_box span:hover::after {
     width: 100%;
 }
 
-nav .bar{
+nav .bar {
     position: relative;
     margin: auto;
     display: none;
 }
 
-nav .bar span{
+nav .bar span {
     position: absolute;
     color: #fff;
     font-size: 35px;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     -webkit-appearance: none;
     display: none;
 }
 
-@media screen and (max-width: 1250px){
-    nav{
+@media screen and (max-width: 1250px) {
+    nav {
         display: block;
         padding: 0;
     }
-    nav .icon{
+
+    nav .icon {
         display: inline-block;
         padding: 15px 30px;
     }
-    nav .search_box{
+
+    nav .search_box {
         width: 100%;
         display: inline-flex;
         justify-content: center;
         margin-bottom: 15px;
     }
-    nav .search_box input{
+
+    nav .search_box input {
         width: 90%;
     }
-    nav ol{
+
+    nav ol {
         display: flex;
         flex-direction: column;
         background: #fff;
@@ -362,125 +247,68 @@ input[type="checkbox"]{
         visibility: hidden;
         transition: 0.5s;
     }
-    nav ol li{
+
+    nav ol li {
         text-align: center;
     }
-    nav ol li a{
+
+    nav ol li a {
         color: #000;
         font-size: 16px;
         padding: 10px;
         display: block;
     }
-    nav .bar{
+
+    nav .bar {
         display: block;
         position: absolute;
         top: 20px;
         right: 80px;
         cursor: pointer;
     }
-    nav .bar #times{
-        display:none;
-    }
-    #check:checked ~ nav .bar #times{
+
+    nav .bar #times {
         display: none;
     }
-    #check:checked ~ nav .bar #bars{
+
+    #check:checked~nav .bar #times {
         display: none;
     }
-    #check:checked ~ nav ol{
+
+    #check:checked~nav .bar #bars {
+        display: none;
+    }
+
+    #check:checked~nav ol {
         visibility: visible;
         height: 465px;
     }
 }
 
-article {
-    align-items: center;
-    display: flex;
-    margin-bottom: 16px; 
-    justify-content: space-evenly;
-}
+/* FIM HEADER - EDUARDO */
 
-.title-marcas {
-    margin-top: 100px;
-    padding: 20px;
-}
-
-.title2-marcas {
-    text-align: center;
-    margin-top: 100px;
-    padding: 20px;
-}
-
-.ver-marcas {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-}
-
-.img-marcas {
-    max-width: 100%;
-    display: block;
-}
-
-.marcas {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto;
-}
-.marcas > div {
-    flex: 1 1 200px;
-    margin: 10px;
-}
-
-
-
-body,
-input,
-button,
-select,
-textarea {
-    font-family: 'Roboto', sans-serif;
-}
-
-
-a:link {
-    color: #6A26CD
-}
-
-a:visited {
-    color: #6A26CD
-}
-
-a:hover {
-    color: #431488
-}
-
-a:active {
-    color: #6A26CD
-}
-
+/* INÍCIO CAROUSEL - JOÃO PAULO */
 /* carrocel */
 
- main{
+main {
     display: grid;
     place-items: center;
     width: 100vw;
 }
 
-#itens-wrapper{
-  width: 100vw;
-  
+#itens-wrapper {
+    width: 100vw;
+
 }
 
-#itens{
+#itens {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    
+
 }
 
-.item{
+.item {
     flex: none;
     width: 100%;
     height: 400px;
@@ -488,23 +316,23 @@ a:active {
     color: #a00f22;
     display: flex;
     position: relative;
-   justify-content: center;
-   align-items: flex-end;
+    justify-content: center;
+    align-items: flex-end;
 
 }
 
-.item *{ 
- z-index: 5;
+.item * {
+    z-index: 5;
 }
 
-.item p{ 
+.item p {
     margin-bottom: 0px;
     font-size: 30px;
     position: absolute;
-   }
+}
 
 
-.img-jp{
+.img-jp {
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -513,25 +341,66 @@ a:active {
 }
 
 /* carrosel */
+/* FIM CAROUSEL - JOÃO PAULO */
 
 
 /* seção "OFERTAS" */
-.slideshow-promo {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
-}
+/* responsável: ANDREAS */
 
-.botoes-promo {
+.container-botoes {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     flex-direction: row;
 }
 
-.slide-promo {
-    display: none;
+.botao-ofertas, .botao-mv {
+    text-align: center;
+    padding: 5px;
+    margin:5px;
+    border-bottom: 1px solid #ddbcbc;
+    user-select: none;
 }
 
+.container-botoes a:hover {
+    border-bottom: 2px solid #a00f22;
+    cursor: pointer;
+}
+
+.slide-ofertas {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+}
+
+.slide-mais-vendidos {
+    display: none;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+}
+
+.produto-slide-promo {
+    margin: 20px;
+}
+
+.produto-slide-promo p{
+    text-align: center;
+}
+
+.slide-promo-img {
+    width: 200px;
+    height: 300px;
+}
+
+/* animação */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
 
 /* seção "NOSSOS PRODUTOS" */
 
@@ -549,7 +418,7 @@ a:active {
     display: flex;
     flex-flow: row nowrap;
 
-}    
+}
 
 .img-produtos1 {
     height: 336px;
@@ -578,6 +447,153 @@ a:active {
     align-content: flex-end;
 }
 
+<<<<<<< HEAD
+=======
+/* FIM NOSSOS PRODUTOS - ALINE */
+
+/* INÍCIO OFERTAS - ANDREAS */
+/* seção "OFERTAS" */
+.slideshow-promo {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.botoes-promo {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.slide-promo {
+    display: none;
+}
+
+/* FIM OFERTAS - ANDREAS */
+
+/* INICIO NOSSAS MARCAS - DANIEL*/
+
+.marcas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+/* INICIO TITULOS MARCAS */
+.titulo-marcas {
+    background-color: var(--cor2);
+    display: flex;
+    /* flex-flow = flex-direction: row; flex-wrap: wrap; */
+    flex-flow: row wrap;
+    flex: 1 1 auto;
+    min-width: 576px;
+    margin: 10px auto;
+    padding: var(--padding);
+    align-items: center;
+}
+
+.titulo-marcas h2 {
+    font-size: 3.5rem;
+    color: var(--cor1);
+    font-weight: 300;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+.titulo-marcas h4 {
+    font-size: 1.2rem;
+    color: var(--cor1);
+    font-weight: 400;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+/* FIM TITULOS MARCAS*/
+/* INICIO IMAGENS MARCAS*/
+.img-marcas {
+    max-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 576px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.imagem {
+    /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 230 (flex-basis: auto (tamanho mínimo)) */
+    flex: 1 1 230;
+    margin: 10px;
+    width: 230px;
+    height: 230px;
+    position: relative;
+    /* overflow: hidden; */
+    /* transition: opacity 500ms; */
+}
+
+.imagem img {
+    border: 1px solid var(--cor4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 0.8s ease-out 0s;
+}
+
+.imagem .frente {
+    z-index: 1;
+    transform: rotateY(0deg);
+}
+
+.imagem .verso {
+    z-index: 0;
+    /* opacity: 0; */
+    transform: rotateY(180deg);
+}
+
+.imagem:hover .frente {
+    /* opacity: 0; */
+    transform: rotateY(180deg);
+
+}
+
+.imagem:hover .verso {
+    /* opacity: 1; */
+    transform: rotateY(0deg);
+
+}
+
+/* FIM IMAGENS MARCAS*/
+/* INICIO VER TODAS MARCAS */
+.btn-ver-marcas {
+    border: 1px solid var(--cor1);
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+    text-transform: uppercase;
+    background-color: var(--cor2);
+    color:var(--cor1)
+}
+
+.btn-ver-marcas:hover {
+    border: 1px solid var(--cor3);
+    background-color: var(--cor1);
+    color: var(--cor3);
+
+}
+
+/* FIM VER TOAS AS MARCAS */
+/* FIM NOSSSAS MARCAS - DANIEL */
+
+/* INÍCIO FOOTER - TATI */
+/*-------------------------------Estilos gerais--------------------------------------------*/
+
+>>>>>>> fe90c8f8bc6353c8672b39702f409acf8740dcea
 footer {
     color: honeydew;
     width: 100%;
@@ -606,13 +622,25 @@ footer {
 
 #footer-logo {
     display: flex;
-} 
+}
 
-footer section ul, h3 {
+footer section ul,
+h3 {
     line-height: 30px;
     list-style: none;
+<<<<<<< HEAD
     color: honeydew;
     padding-left: 0;
+=======
+}
+
+section.footer-subrow-social {
+    margin-right: auto;
+}
+
+section.footer-col {
+    margin: 0 2em;
+>>>>>>> fe90c8f8bc6353c8672b39702f409acf8740dcea
 }
 
 .social-media {
@@ -623,7 +651,7 @@ footer section ul, h3 {
 
 .footer-subrow-newsletter {
     width: 300px;
-    line-height : 20px;
+    line-height: 20px;
     margin-bottom: 15px;
     margin-left: 0;
 }
@@ -633,7 +661,7 @@ footer section ul, h3 {
     height: 30px;
     border-radius: 8px;
     padding-left: 10px;
-    border-style:solid;
+    border-style: solid;
     border-color: rgb(161, 161, 161);
     border-width: 0.1em;
     font-size: 0.8em
@@ -665,7 +693,7 @@ footer section ul, h3 {
 #submit:hover {
     background-color: rgba(240, 255, 240, 0.5);
     color: rgb(8, 4, 4);
-    border-color:rgb(209, 209, 72);
+    border-color: rgb(209, 209, 72);
     font-weight: 400;
     text-shadow: .1em .1em gray;
 }
@@ -680,11 +708,10 @@ div.footer-row ul {
 /*------------------NAVEGADOR FOOTER /CATEGORIAS-------------------*/
 
 #categories {
-    background:transparent;
+    background: transparent;
     position: relative;
     padding-left: 0;
     padding-bottom: 25px;
-    display:
 }
 
 #categories a {
@@ -704,7 +731,4 @@ div.footer-row ul {
     margin-bottom: 20px;
 }
 
-
-
-
-
+/* FIM FOOTER - TATI */
