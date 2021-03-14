@@ -1,13 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-/* RESET */
+/* INÍCIO RESET */
+:root {
+    --cor1: #fff;
+    --cor2: #000;
+    --cor3: #af8048;
+    --cor4: #585555;
+    --padding: 20px;
+}
+
 * {
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* FIM RESET*/
+
+/* INÍCIO ESTILOS PADRÕES */
+
+header,
+footer {
+    background-color: var(--cor2);
+}
+
+/*header,
+aside,
+main,
+section,
+article,
+div,
+footer {
+    padding: var(--padding);
+} */
+
+ul,
+ol {
+    list-style: none;
 }
 
 a {
@@ -16,168 +48,67 @@ a {
     text-decoration: none;
 }
 
-ul,
-ol {
-    list-style: none;
+h1 {
+    color: var(--cor4);
+    font-family: 'Anton', Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    font-weight: 300;
+    margin: 24px auto;
+    text-align: center;
+    text-transform: uppercase;
 }
 
-/* RESET */
-
-body,
-input,
-button,
-select,
-textarea {
-    font-family: 'Roboto', sans-serif;
+h2,
+h3 {
+    color: var(--cor4);
+    margin: 24px auto 16px;
+    width: fit-content;
 }
+
+h2 {
+    font-size: 1.25 rem;
+}
+
+h3 {
+    font-size: 1.1 rem;
+}
+
+p {
+    color: var(--cor4);
+    font-size: 1rem;
+   /* line-height: espaço entre linhas */
+    line-height: 24px;
+    margin: 8px auto;
+}
+
+/* FIM ESTILOS PADRÕES */
+
+/* INÍCIO HEADER - EDUARDO */
 
 nav {
     display: flex;
     width: 100%;
-    background:grey;
+    background: var(--cor4);
     position: relative;
     justify-content: space-between;
     text-align: center;
     padding: 0px;
 }
 
-nav .icon{
+nav .icon {
     font-size: 50px;
     font-weight: 1000;
-    color: rgb(22, 22, 22);
+    color: var(--cor2);
     cursor: pointer;
     margin: auto 0;
 }
-nav .icon b{
-    font-size: 30px;
+
+nav .icon b {
+    font-size: 1.8rem;
     font-weight: 500;
-    text-align: center; 
-}
-
-/* INICIO NOSSAS MARCAS */
-/* INICIO TITULOS MARCAS */
-.titulo-marcas>div {
-    align-items: center;
-    display: flex;
-    /* flex-flow = flex-direction: row; flex-wrap: wrap; */
-    flex-flow: row wrap;
-    max-width: 800px;
-    margin: 10px auto;
-}
-
-.titulo-marcas h2 {
-    font-size: 3.5rem;
-    color: #24273c;
-    font-weight: 300;
-    border: 5px;
-    margin: 5px;
-    padding: 5px;
-    text-align: left;
-}
-
-.titulo-marcas h4 {
-    font-size: 1.2rem;
-    color: #24273c;
-    font-weight: 400;
-    border: 5px;
-    margin: 5px;
-    padding: 5px;
-    text-align: left;
-}
-
-/* FIM TITULOS MARCAS*/
-/* INICIO IMAGENS MARCAS*/
-#marcas {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 10px auto;
-}
-
-.imagem {
-    /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 200 (flex-basis: 148px (tamanho mínimo da imagem)) */
-    flex: 1 1 148px;
-    margin: 10px;
-    width: 148px;
-    height: 148px;
-    position: relative;
-    /* overflow: hidden; */
-    /* transition: opacity 500ms; */
-}
-
-.imagem img {
-    border: 1px solid #616161;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    transform-style: preserve-3d;
-    backface-visibility: hidden;
-    transition: all 0.8s ease-out 0s;
-}
-
-  .imagem .frente {
-    z-index: 1;
-    transform: rotateY(0deg);
-  }
-  
-  .imagem .verso {
-    z-index: 0;
-    /* opacity: 0; */
-    transform: rotateY(180deg);
-  }
-  
-  .imagem:hover .frente {
-    /* opacity: 0; */
-    transform: rotateY(180deg);
-
-  }
-  
-  .imagem:hover .verso {
-    /* opacity: 1; */
-    transform: rotateY(0deg);
-
-  }
-
-/* FIM IMAGENS MARCAS*/
-/* INICIO VER TODAS MARCAS */
-.ver-marcas {
-    max-width: 800px;
     text-align: center;
-    align-items: center;
-    display: block;
-    border: 5px;
-    margin: 10px auto;
-    padding: 4px;
 }
 
-.ver-marcas h6 {
-    font-size: .8rem;
-    border: 5px;
-    padding: 4px;
-    margin: 10px auto;
-}
-
-.btn-ver-marcas {
-    max-width: 800px;
-    padding: 2px 4px;
-    border: #fff;
-    margin: 0 auto;
-    color: #000;
-    background-color: white;
-    display: inline-block;
-    cursor: pointer;
-    justify-content: center;
-}
-
-.btn-ver-marcas:hover {
-    border-color: white;
-    background-color: #000;
-    color: white;
-}
-/* FIM VER TOAS AS MARCAS */
-/* FIM NOSSSAS MARCAS */
 nav ol {
     display: flex;
     flex-direction: column;
@@ -190,8 +121,8 @@ nav ol li {
 }
 
 nav ol li b {
-    color: #313131;
-    font-size: 16px;
+    color: var(--cor4);
+    font-size: 1rem;
     text-decoration: none;
     letter-spacing: 1px;
     padding: 5px 10px;
@@ -203,8 +134,8 @@ nav ol li b {
 }
 
 #login {
-    color: #313131;
-    font-size: 16px;
+    color: var(--cor4);
+    font-size: 1rem;
     text-decoration: none;
     text-transform: capitalize;
     letter-spacing: 1px;
@@ -213,8 +144,8 @@ nav ol li b {
 }
 
 #login:hover {
-    background: #5a5a5a ;
-    color: #e2e1e1
+    background: var(--cor4);
+    color: var(--cor1);
 }
 
 nav .search_box {
@@ -235,10 +166,10 @@ nav .search_box input {
     border-radius: 50px;
 }
 
-nav .search_box span{
-    color:#000 ;
+nav .search_box span {
+    color: #000;
     font-size: 16px;
-    background: rgb(255, 255, 255) ;
+    background: rgb(255, 255, 255);
     height: 100%;
     padding: 8px;
     position: relative;
@@ -248,7 +179,7 @@ nav .search_box span{
     border-radius: 50px;
 }
 
-nav .search_box span:hover{
+nav .search_box span:hover {
     color: #fff;
 }
 
@@ -256,7 +187,7 @@ nav .search_box span::after {
     height: 100%;
     width: 0%;
     content: '';
-    background: rgb(117, 117, 117) ;
+    background: rgb(117, 117, 117);
     position: absolute;
     top: 0;
     left: 0;
@@ -269,42 +200,46 @@ nav .search_box span:hover::after {
     width: 100%;
 }
 
-nav .bar{
+nav .bar {
     position: relative;
     margin: auto;
     display: none;
 }
 
-nav .bar span{
+nav .bar span {
     position: absolute;
     color: #fff;
     font-size: 35px;
 }
 
-input[type="checkbox"]{
+input[type="checkbox"] {
     -webkit-appearance: none;
     display: none;
 }
 
-@media screen and (max-width: 1250px){
-    nav{
+@media screen and (max-width: 1250px) {
+    nav {
         display: block;
         padding: 0;
     }
-    nav .icon{
+
+    nav .icon {
         display: inline-block;
         padding: 15px 30px;
     }
-    nav .search_box{
+
+    nav .search_box {
         width: 100%;
         display: inline-flex;
         justify-content: center;
         margin-bottom: 15px;
     }
-    nav .search_box input{
+
+    nav .search_box input {
         width: 90%;
     }
-    nav ol{
+
+    nav ol {
         display: flex;
         flex-direction: column;
         background: #fff;
@@ -312,104 +247,47 @@ input[type="checkbox"]{
         visibility: hidden;
         transition: 0.5s;
     }
-    nav ol li{
+
+    nav ol li {
         text-align: center;
     }
-    nav ol li a{
+
+    nav ol li a {
         color: #000;
         font-size: 16px;
         padding: 10px;
         display: block;
     }
-    nav .bar{
+
+    nav .bar {
         display: block;
         position: absolute;
         top: 20px;
         right: 80px;
         cursor: pointer;
     }
-    nav .bar #times{
-        display:none;
-    }
-    #check:checked ~ nav .bar #times{
+
+    nav .bar #times {
         display: none;
     }
-    #check:checked ~ nav .bar #bars{
+
+    #check:checked~nav .bar #times {
         display: none;
     }
-    #check:checked ~ nav ol{
+
+    #check:checked~nav .bar #bars {
+        display: none;
+    }
+
+    #check:checked~nav ol {
         visibility: visible;
         height: 465px;
     }
 }
 
-article {
-    align-items: center;
-    display: flex;
-    margin-bottom: 16px; 
-    justify-content: space-evenly;
-}
+/* FIM HEADER - EDUARDO */
 
-.title-marcas {
-    margin-top: 100px;
-    padding: 20px;
-}
-
-.title2-marcas {
-    text-align: center;
-    margin-top: 100px;
-    padding: 20px;
-}
-
-.ver-marcas {
-    text-align: center;
-    padding: 20px;
-    margin: 20px;
-}
-
-.img-marcas {
-    max-width: 100%;
-    display: block;
-}
-
-.marcas {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 800px;
-    margin: 0 auto;
-}
-.marcas > div {
-    flex: 1 1 200px;
-    margin: 10px;
-}
-
-
-
-body,
-input,
-button,
-select,
-textarea {
-    font-family: 'Roboto', sans-serif;
-}
-
-
-a:link {
-    color: #6A26CD
-}
-
-a:visited {
-    color: #6A26CD
-}
-
-a:hover {
-    color: #431488
-}
-
-a:active {
-    color: #6A26CD
-}
-
+/* INÍCIO CAROUSEL - JOÃO PAULO */
 /* carrocel */
 
 main{
@@ -480,6 +358,126 @@ main{
 
 
 /* seção "OFERTAS" */
+/* responsável: ANDREAS */
+
+.container-botoes {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.botao-ofertas, .botao-mv {
+    text-align: center;
+    padding: 5px;
+    margin:5px;
+    border-bottom: 1px solid #ddbcbc;
+    user-select: none;
+}
+
+.titulo-promo {
+    font-size: 1.6rem;
+}
+
+.titulo-promo:hover {
+    color: var(--cor3);
+}
+
+.container-botoes a:hover {
+    border-bottom: 2px solid #a00f22;
+    cursor: pointer;
+}
+
+.slideshow-promo-container {
+    margin: 0 auto;
+}
+
+.slide-ofertas {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+}
+
+.slide-mais-vendidos {
+    display: none;
+    justify-content: space-around;
+    flex-flow: row nowrap;
+}
+
+.produto-slide-promo {
+    margin: 20px;
+}
+
+.produto-slide-promo p{
+    text-align: center;
+}
+
+/* animação */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+@keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+}
+
+/* seção "NOSSOS PRODUTOS" */
+
+#produtos {
+    text-align: center;
+    display: flex;
+    flex-flow: row wrap;
+    background-color: white;
+    margin: auto;
+    align-items: center;
+    align-content: space-between;
+}
+
+#ladoalado {
+    max-width: 100vw;
+    display: inline-block;
+    margin-inline: auto;
+    flex-flow: row nowrap;
+    text-align: center;
+
+}
+
+.img-produtos1 {
+    height: 336px;
+    width: 248px;
+    position: relative;
+    margin-top: 20px;
+    vertical-align: top;
+}
+
+.img-produtos {
+    height: 336px;
+    width: 224px;
+    position: relative;
+}
+
+#conheca-categoria {
+    background-color: #d2d2d2;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+#h2-produtos {
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    font-style: inherit;
+    font-size: 30px;
+    align-content: flex-end;
+}
+
+/* FIM NOSSOS PRODUTOS - ALINE */
+
+/* INÍCIO OFERTAS - ANDREAS */
+/* seção "OFERTAS" */
 .slideshow-promo {
     max-width: 1000px;
     position: relative;
@@ -496,80 +494,268 @@ main{
     display: none;
 }
 
+/* FIM OFERTAS - ANDREAS */
 
-footer {
-    padding: 0 30px;
-    background-color: rgb(75, 75, 75);
-    color: honeydew;
-    font-size: 0.8em;
+/* INICIO NOSSAS MARCAS - DANIEL*/
+
+.marcas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
-/* seção "NOSSOS PRODUTOS" */
-
-#produtos {
-    text-align: center;
-    display: inline-block;
-    background-color: white;
-    margin: auto;
+/* INICIO TITULOS MARCAS */
+.titulo-marcas {
+    background-color: var(--cor2);
+    display: flex;
+    /* flex-flow = flex-direction: row; flex-wrap: wrap; */
+    flex-flow: row wrap;
+    flex: 1 1 auto;
+    min-width: 576px;
+    margin: 10px auto;
+    padding: var(--padding);
     align-items: center;
-    align-content: space-between;
 }
 
-#ladoalado {
+.titulo-marcas h2 {
+    font-size: 3.5rem;
+    color: var(--cor1);
+    font-weight: 300;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+.titulo-marcas h4 {
+    font-size: 1.2rem;
+    color: var(--cor1);
+    font-weight: 400;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+/* FIM TITULOS MARCAS*/
+/* INICIO IMAGENS MARCAS*/
+.img-marcas {
     max-width: 100%;
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
+    min-width: 576px;
+    padding: 10px;
+    justify-content: center;
+}
 
-}    
-
-.img-produtos1 {
-    height: 336px;
-    width: 248px;
+.imagem {
+    /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 230 (flex-basis: auto (tamanho mínimo)) */
+    flex: 1 1 230;
+    margin: 10px;
+    width: 230px;
+    height: 230px;
     position: relative;
-    margin-top: 20px;
+    /* overflow: hidden; */
+    /* transition: opacity 500ms; */
 }
 
-.img-produtos {
-    height: 336px;
-    width: 224px;
-    position: relative;
+.imagem img {
+    border: 1px solid var(--cor4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 0.8s ease-out 0s;
 }
 
-#conheca-categoria {
-    background-color: #d2d2d2;
-    display: block;
+.imagem .frente {
+    z-index: 1;
+    transform: rotateY(0deg);
 }
 
-#h2-produtos {
+.imagem .verso {
+    z-index: 0;
+    /* opacity: 0; */
+    transform: rotateY(180deg);
+}
+
+.imagem:hover .frente {
+    /* opacity: 0; */
+    transform: rotateY(180deg);
+
+}
+
+.imagem:hover .verso {
+    /* opacity: 1; */
+    transform: rotateY(0deg);
+
+}
+
+/* FIM IMAGENS MARCAS*/
+/* INICIO VER TODAS MARCAS */
+.btn-ver-marcas {
+    border: 1px solid var(--cor1);
+    border-radius: 10px;
     text-align: center;
-    padding: 20px;
-    margin: 20px;
-    font-size: 17px;
-    font-style: inherit;
-    align-content: flex-end;
+    vertical-align: middle;
+    width: 100px;
+    text-transform: uppercase;
+    background-color: var(--cor2);
+    color:var(--cor1)
 }
+
+.btn-ver-marcas:hover {
+    border: 1px solid var(--cor3);
+    background-color: var(--cor1);
+    color: var(--cor3);
+
+}
+
+/* FIM VER TOAS AS MARCAS */
+/* FIM NOSSSAS MARCAS - DANIEL */
+
+/* INÍCIO FOOTER - TATI */
+
+footer {
+    color: var(--cor1);
+    width: 100%;
+}
+
+footer .container {
+    width: 100%;
+    /*max-width: 1200px;*/
+}
+
 .footer-row {
     display: flex;
-    margin-bottom: 10px;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid rgb(173, 172, 172);
 }
 
-.footer-col {
-    max-width: 400px;
+.row1 {
+    border-bottom: none;
+}
+
+#footer-logo {
+    display: flex;
 }
 
 .social-media {
-    inline-size: 35px;
+    inline-size: 50px;
     display: inline-block;
-    margin-right: 15px;
-    margin-bottom: 40px;
 }
 
-.footer-logo {
-    display: flex;
+footer section ul,
+h3 {
+    margin-left: 0;
+    line-height: 5px;
+    font-weight: 100;
+    list-style: none;
+    font-size: 0.9rem;
+    color: var(--cor1);
 }
 
-.novidades {
+section.footer-subrow-social {
+    margin-right: auto;
+}
+
+section.footer-col {
+    margin: 0 2em;
+}
+
+.footer-subrow-newsletter {
     width: 300px;
-    line-height: 18px;
-    margin-bottom: 20px;
+    line-height: 20px;
+    margin-bottom: 15px;
+    margin-left: 0;
 }
+
+.footer-subrow-newsletter > p {
+    font-size: 0.9em;
+}
+
+.footer-subrow-newsletter > h3 {
+    font-size: 1.1rem;
+}
+
+.tbox input {
+    background-color: rgb(197, 197, 197);
+    height: 30px;
+    border-radius: 8px;
+    padding-left: 10px;
+    border-style: solid;
+    border-color: rgb(161, 161, 161);
+    border-width: 0.1em;
+    font-size: 0.8em
+}
+
+#name {
+    width: 300px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#email {
+    width: 170px;
+    margin-right: 5px
+}
+
+#submit {
+    width: 120px;
+    background-color: transparent;
+    color: var(--cor1);
+    border-radius: 25px;
+    padding: 4px;
+    border-width: 0.2em;
+    border-color: rgb(201, 16, 16);
+    font-size: 0.9em;
+}
+
+#submit:hover {
+    background-color: rgba(240, 255, 240, 0.5);
+    color: var(--cor2);
+    border-color: rgb(209, 209, 72);
+    font-weight: 400;
+}
+
+.footer-row ul > li > a {
+    font-size: 0.85em;
+} 
+
+.footer-row ul > li > a:hover {
+    font-size: 0.85em;
+    color: var(--cor3);
+} 
+
+.footer-row > div > ul > li {
+    font-size: 0.85em;
+} 
+
+div.footer-row ul {
+    list-style: none;
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+
+#categories a {
+    font-weight: 200;
+}
+
+.footer-col p {
+    line-height: 1.5em;
+    margin-bottom: 15px;
+}
+
+.copyright { 
+    background-color: var(--cor1);
+    color: var(--cor2);
+    width: 100%;    
+}
+
+#copyright {
+    margin-left: 40%;
+    font-size: 0.9em;
+}
+/* FIM FOOTER - TATI */
