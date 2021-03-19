@@ -1,0 +1,113 @@
+.marcas {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+/* INICIO TITULOS MARCAS */
+.titulo-marcas {
+    background-color: var(--cor2);
+    display: flex;
+    /* flex-flow = flex-direction: row; flex-wrap: wrap; */
+    flex-flow: row wrap;
+    flex: 1 1 auto;
+    min-width: 576px;
+    margin: 10px auto;
+    padding: var(--padding);
+    align-items: center;
+}
+
+.titulo-marcas h2 {
+    font-size: 3.5rem;
+    color: var(--cor1);
+    font-weight: 300;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+.titulo-marcas h4 {
+    font-size: 1.2rem;
+    color: var(--cor1);
+    font-weight: 400;
+    border: 5px;
+    margin: 5px;
+    padding: 5px;
+    text-align: left;
+}
+
+/* FIM TITULOS MARCAS*/
+/* INICIO IMAGENS MARCAS*/
+.img-marcas {
+    max-width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    min-width: 576px;
+    padding: 10px;
+    justify-content: center;
+}
+
+.imagem {
+    /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 230 (flex-basis: auto (tamanho mínimo)) */
+    flex: 1 1 230;
+    margin: 10px;
+    width: 230px;
+    height: 230px;
+    position: relative;
+    /* overflow: hidden; */
+    /* transition: opacity 500ms; */
+}
+
+.imagem img {
+    border: 1px solid var(--cor4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    transition: all 0.8s ease-out 0s;
+}
+
+.imagem .frente {
+    z-index: 1;
+    transform: rotateY(0deg);
+}
+
+.imagem .verso {
+    z-index: 0;
+    /* opacity: 0; */
+    transform: rotateY(180deg);
+}
+
+.imagem:hover .frente {
+    /* opacity: 0; */
+    transform: rotateY(180deg);
+
+}
+
+.imagem:hover .verso {
+    /* opacity: 1; */
+    transform: rotateY(0deg);
+
+}
+
+/* FIM IMAGENS MARCAS*/
+/* INICIO VER TODAS MARCAS */
+.btn-ver-marcas {
+    border: 1px solid var(--cor1);
+    border-radius: 10px;
+    text-align: center;
+    vertical-align: middle;
+    width: 100px;
+    text-transform: uppercase;
+    background-color: var(--cor2);
+    color:var(--cor1)
+}
+
+.btn-ver-marcas:hover {
+    border: 1px solid var(--cor3);
+    background-color: var(--cor1);
+    color: var(--cor3);
+
+}

@@ -1,11 +1,12 @@
+import Marcas from "../../components/Marcas";
 import "./styles.css";
 
-function Home() {
+const Home = () => {
   return (
     <div className="">
-      <header className="">
-       <h1>Hello World</h1>
-      </header>
+      <marcas className="">
+          <Marcas />
+      </marcas>
     </div>
   );
 }
