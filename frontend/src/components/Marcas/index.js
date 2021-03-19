@@ -1,5 +1,23 @@
 import marca1 from '../../assets/img/marcas/marca1.png'
 import produtomarca1 from '../../assets/img/marcas/produtomarca1.png'
+import marca10 from '../../assets/img/marcas/marca10.png'
+import produtomarca10 from '../../assets/img/marcas/produtomarca10.png'
+import marca5 from '../../assets/img/marcas/marca5.png'
+import produtomarca5 from '../../assets/img/marcas/produtomarca5.png'
+import marca7 from '../../assets/img/marcas/marca7.png'
+import produtomarca7 from '../../assets/img/marcas/produtomarca7.png'
+import marca9 from '../../assets/img/marcas/marca9.png'
+import produtomarca9 from '../../assets/img/marcas/produtomarca9.png'
+import marca12 from '../../assets/img/marcas/marca12.png'
+import produtomarca12 from '../../assets/img/marcas/produtomarca12.png'
+import marca2 from '../../assets/img/marcas/marca2.png'
+import produtomarca2 from '../../assets/img/marcas/produtomarca2.png'
+import marca4 from '../../assets/img/marcas/marca4.png'
+import produtomarca4 from '../../assets/img/marcas/produtomarca4.png'
+import marca6 from '../../assets/img/marcas/marca6.png'
+import produtomarca6 from '../../assets/img/marcas/produtomarca6.png'
+import marca8 from '../../assets/img/marcas/marca8.png'
+import produtomarca8 from '../../assets/img/marcas/produtomarca8.png'
 import "./style.css";
 
 const Marcas = () => {
@@ -28,12 +46,12 @@ const Marcas = () => {
           <a href="">
             <img
               className="frente"
-              src="../../assets/img/marcas/marca10.png"
+              src={marca10}
               alt=""
             />
             <img
               className="verso"
-              src="../../assets/img/marcas/produtomarca10.png"
+              src={produtomarca10}
               alt=""
             />
           </a>
@@ -42,12 +60,12 @@ const Marcas = () => {
           <a href="">
             <img
               className="frente"
-              src="../../assets/img/marcas/marca5.png"
+              src={marca5}
               alt=""
             />
             <img
               className="verso"
-              src="../../assets/img/marcas/produtomarca5.png"
+              src={produtomarca5}
               alt=""
             />
           </a>
@@ -56,12 +74,12 @@ const Marcas = () => {
           <a href="">
             <img
               className="frente"
-              src="../../assets/img/marcas/marca7.png"
+              src={marca7}
               alt=""
             />
             <img
               className="verso"
-              src="../../assets/img/marcas/produtomarca7.png"
+              src={produtomarca7}
               alt=""
             />
           </a>
@@ -70,12 +88,12 @@ const Marcas = () => {
           <a href="">
             <img
               className="frente"
-              src="../../assets/img/marcas/marca9.png"
+              src={marca9}
               alt=""
             />
             <img
               className="verso"
-              src="../../assets/img/marcas/produtomarca9.png"
+              src={produtomarca9}
               alt=""
             />
           </a>
@@ -84,12 +102,12 @@ const Marcas = () => {
           <a href="">
             <img
               className="frente"
-              src="../../assets/img/marcas/marca12.png"
+              src={marca12}
               alt=""
             />
             <img
               className="verso"
-              src="../../assets/img/marcas/produtomarca12.png"
+              src={produtomarca12}
               alt=""
             />
           </a>
@@ -98,12 +116,12 @@ const Marcas = () => {
           <a href="">
             <img
               className="frente"
-              src="../../assets/img/marcas/marca2.png"
+              src={marca2}
               alt=""
             />
             <img
               className="verso"
-              src="../../assets/img/marcas/produtomarca2.png"
+              src={produtomarca2}
               alt=""
             />
           </a>
@@ -112,12 +130,12 @@ const Marcas = () => {
           <a href="">
             <img
               className="frente"
-              src="../../assets/img/marcas/marca4.png"
+              src={marca4}
               alt=""
             />
             <img
               className="verso"
-              src="../../assets/img/marcas/produtomarca4.png"
+              src={produtomarca4}
               alt=""
             />
           </a>
@@ -126,12 +144,12 @@ const Marcas = () => {
           <a href="">
             <img
               className="frente"
-              src="../../assets/img/marcas/marca6.png"
+              src={marca6}
               alt=""
             />
             <img
               className="verso"
-              src="../../assets/img/marcas/produtomarca6.png"
+              src={produtomarca6}
               alt=""
             />
           </a>
@@ -140,12 +158,12 @@ const Marcas = () => {
           <a href="">
             <img
               className="frente"
-              src="../../assets/img/marcas/marca8.png"
+              src={marca8}
               alt=""
             />
             <img
               className="verso"
-              src="../../assets/img/marcas/produtomarca8.png"
+              src={produtomarca8}
               alt=""
             />
           </a>

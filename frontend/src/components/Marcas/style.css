@@ -102,7 +102,7 @@
     width: 100px;
     text-transform: uppercase;
     background-color: var(--cor2);
-    color:var(--cor1)
+    color: var(--cor1);
 }
 
 .btn-ver-marcas:hover {
