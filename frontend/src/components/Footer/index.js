@@ -16,23 +16,23 @@ const Footer = () => {
             <div className="linha-footer">
                 {/* Columna 1 */}
                 {/* <div className="newsletter"> */}
-                    <div className="coluna-footer  newsletter">
-                        <div className="footer-subrow-social">
-                            <i class="fab fa-facebook fa-2x"></i>
-                            <i class="fab fa-instagram fa-2x"></i>
-                            <i class="fab fa-pinterest fa-2x"></i>
-                            <i class="fab fa-twitter fa-2x"></i>
-                            <i class="fab fa-youtube fa-2x"></i>
-                        </div>
-                        <div className="footer-subrow-newsletter">
-                            <form action="/" className="tbox">
-                                <legend className="form__content__legend">Novidades e Promoções</legend>
-                                <p className="texto-newsletter">Assine nossa newsletter para ficar por dentro das novidades e receber promoções exclusivas</p>
-                                <input type="text" className="form__content__input" name="nome" id="nome" value="Insira seu nome" />
-                                <input type="text" className="form__content__input" name="email" id="email" value="Insira seu e-mail" />
-                                <button className="form__content__btn">Quero desconto!</button>
-                            </form>
-                        </div>
+                <div className="coluna-footer  newsletter">
+                    <div className="footer-subrow-social">
+                        <i class="fab fa-facebook fa-2x"></i>
+                        <i class="fab fa-instagram fa-2x"></i>
+                        <i class="fab fa-pinterest fa-2x"></i>
+                        <i class="fab fa-twitter fa-2x"></i>
+                        <i class="fab fa-youtube fa-2x"></i>
+                    </div>
+                    <div className="footer-subrow-newsletter">
+                        <form action="/" className="tbox">
+                            <legend className="form__content__legend">Novidades e Promoções</legend>
+                            <p className="texto-newsletter">Assine nossa newsletter para ficar por dentro das novidades e receber promoções exclusivas</p>
+                            <input type="text" className="form__content__input" name="nome" id="nome" value="Insira seu nome" />
+                            <input type="text" className="form__content__input" name="email" id="email" value="Insira seu e-mail" />
+                            <button className="form__content__btn">Quero desconto!</button>
+                        </form>
+                    </div>
                     {/* </div> */}
                 </div>
                 {/* Columna 2 */}
@@ -68,33 +68,33 @@ const Footer = () => {
             {/* Linha 3 */}
             <div className="linha-footer contato">
                 {/* Columna 1 */}
-         
-                    <div className="coluna-footer">
-                        <h4>Endereço</h4>
-                        <ul className="lista">
-                            <li>Av. Domingos Odália Filho, 301</li>
-                            <li>Centro, Osasco - SP, 06010-067</li>
-                        </ul>
-                    </div>
-                    {/* Columna 2 */}
-                    <div className="coluna-footer">
-                        <h4>Atenção ao cliente</h4>
-                        <ul className="lista">
-                            <li>Telefones: 0800 XXXX-XXXX</li>
-                            <li>E-mail: sac@kabellos.com.br</li>
-                            <li>Segunda a Sexta das 9h às 17h</li>
-                        </ul>
-                    </div>
-                    {/* Columna 3 */}
-                    <div className="coluna-footer">
-                        <h4>Ajuda com a sua compra</h4>
-                        <ul className="lista">
-                            <li>Telefones: 0800 XXXX-XXXX</li>
-                            <li>E-mail: sac@kabellos.com.br</li>
-                            <li>Segunda a Sexta das 9h às 17h</li>
-                        </ul>
-                    </div>
-         
+
+                <div className="coluna-footer">
+                    <h4>Endereço</h4>
+                    <ul className="lista">
+                        <li>Av. Domingos Odália Filho, 301</li>
+                        <li>Centro, Osasco - SP, 06010-067</li>
+                    </ul>
+                </div>
+                {/* Columna 2 */}
+                <div className="coluna-footer">
+                    <h4>Atenção ao cliente</h4>
+                    <ul className="lista">
+                        <li>Telefones: 0800 XXXX-XXXX</li>
+                        <li>E-mail: sac@kabellos.com.br</li>
+                        <li>Segunda a Sexta das 9h às 17h</li>
+                    </ul>
+                </div>
+                {/* Columna 3 */}
+                <div className="coluna-footer">
+                    <h4>Ajuda com a sua compra</h4>
+                    <ul className="lista">
+                        <li>Telefones: 0800 XXXX-XXXX</li>
+                        <li>E-mail: sac@kabellos.com.br</li>
+                        <li>Segunda a Sexta das 9h às 17h</li>
+                    </ul>
+                </div>
+
             </div>
             {/* Linha 4 */}
             <div className="linha-footer categorias">

@@ -87,7 +87,6 @@ footer  p {
 }
 
 .contato {
-    width: 100vw;
     display: flex;
     justify-content: space-around;
     min-width: 70%
@@ -102,17 +101,18 @@ footer  p {
 }
 
 .trans {
-    width: 100%;
     display: flex;
     justify-content: space-between;
 }
 
 .cartoes i {
     margin-right: 5px;
+    display: inline-block;
 }
 
 .ambiente-protegido i {
     margin-left: 10px;
+    display: inline-block;
 }
 
 .linha-footer > p {
