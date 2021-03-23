@@ -46,7 +46,6 @@
     margin-inline: auto;
     flex-flow: row nowrap;
     text-align: center;
-
 }
 
 .img-produtos1 {
@@ -55,12 +54,15 @@
     position: relative;
     margin-top: 20px;
     vertical-align: top;
+    background-color: lightgray;
+    
 }
 
 .img-produtos {
     height: 336px;
     width: 224px;
     position: relative;
+    background-color: black;
 }
 
 #h2-produtos {
