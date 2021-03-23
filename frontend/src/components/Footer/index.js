@@ -15,8 +15,8 @@ const Footer = () => {
             {/* Linha 2 */}
             <div className="linha-footer">
                 {/* Columna 1 */}
-                <div className="newsletter">
-                    <div className="coluna-footer">
+                {/* <div className="newsletter"> */}
+                    <div className="coluna-footer  newsletter">
                         <div className="footer-subrow-social">
                             <i class="fab fa-facebook fa-2x"></i>
                             <i class="fab fa-instagram fa-2x"></i>
@@ -26,15 +26,14 @@ const Footer = () => {
                         </div>
                         <div className="footer-subrow-newsletter">
                             <form action="/" className="tbox">
-                                <legend className="form__content__fieldset__legend">Novidades e Promoções</legend>
+                                <legend className="form__content__legend">Novidades e Promoções</legend>
                                 <p className="texto-newsletter">Assine nossa newsletter para ficar por dentro das novidades e receber promoções exclusivas</p>
                                 <input type="text" className="form__content__input" name="nome" id="nome" value="Insira seu nome" />
-                                <br></br>
                                 <input type="text" className="form__content__input" name="email" id="email" value="Insira seu e-mail" />
                                 <button className="form__content__btn">Quero desconto!</button>
                             </form>
                         </div>
-                    </div>
+                    {/* </div> */}
                 </div>
                 {/* Columna 2 */}
                 <div className="footer-nav">
@@ -67,9 +66,9 @@ const Footer = () => {
                 </div>
             </div>
             {/* Linha 3 */}
-            <div className="linha-footer">
+            <div className="linha-footer contato">
                 {/* Columna 1 */}
-                <div className="linha-footer-contato">
+         
                     <div className="coluna-footer">
                         <h4>Endereço</h4>
                         <ul className="lista">
@@ -95,11 +94,11 @@ const Footer = () => {
                             <li>Segunda a Sexta das 9h às 17h</li>
                         </ul>
                     </div>
-                </div>
+         
             </div>
             {/* Linha 4 */}
-            <div className="linha-footer">
-                <h4 className="categorias">Visualizar todas as categorias&nbsp;</h4>
+            <div className="linha-footer categorias">
+                <h4 className="">Visualizar todas as categorias&nbsp;</h4>
                 <i class="fas fa-angle-double-right fa-2x"></i>
             </div>
             {/* Linha 5 */}
