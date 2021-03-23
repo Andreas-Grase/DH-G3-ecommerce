@@ -1,0 +1,132 @@
+.linha-footer {
+    margin: 10px;
+    display: flex;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.coluna-footer {
+    padding: 5px;
+    margin: 10px;
+
+}
+ .coluna-footer ul {
+     width: 180px;
+ }
+
+.footer-logo {
+    margin: 10px;
+    width: 280px;
+    height: 170px;
+}
+
+.newsletter {
+    width: 400px;
+}
+
+.footer-subrow-social {
+    margin-bottom: 25px; 
+    min-width: 160px;
+}
+
+.footer-subrow-newsletter {
+    margin: 25px 0;
+    line-height: 20px;
+    margin-left: 0;
+    min-width: 400px; 
+}
+
+footer  p {
+    color:  var(--cor1);
+    margin: 0;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: flex-end;
+    margin: 8px 0 8px auto;
+}
+
+.footer-subrow-social i {
+    margin-right: 25px;
+}
+
+.tbox input {
+    background-color: rgb(197, 197, 197);
+    height: 30px;
+    border-radius: 25px;
+    padding-left: 10px;
+    border-style: solid;
+    border-color: rgb(161, 161, 161);
+    border-width: 0.1em;
+    font-size: 0.8em
+}
+
+#nome {
+    width: 360px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#email {
+    width: 200px;
+    margin-right: 15px
+}
+
+.form__content__btn {
+    width: 140px;
+    background-color: transparent;
+    color: var(--cor1);
+    border-radius: 25px;
+    padding: 4px;
+    border-width: 0.3em;
+    border-color: rgb(201, 16, 16);
+    font-size: 0.9em;
+}
+
+.form__content__btn:hover {
+    background-color: rgba(240, 255, 240, 0.5);
+    border-color: rgb(209, 209, 72);
+    font-weight: 400;
+}
+
+.linha-footer-contato {
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    min-width: 70%
+}
+
+.linha-footer-contato ul {
+    min-width: 250px
+}
+
+.categorias {
+    min-width: 340px;
+}
+
+.trans {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartoes i {
+    margin-right: 5px;
+}
+
+.ambiente-protegido i {
+    margin-left: 10px;
+}
+
+.linha-footer > p {
+    margin: 0;
+    color: var(--cor2);
+    text-align: center;
+    width: 100vw;
+    margin: 0;
+    background-color: var(--cor1);
+}
+
+.linha-footer-final {
+    margin: 0;
+}

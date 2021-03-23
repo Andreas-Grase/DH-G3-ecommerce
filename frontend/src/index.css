@@ -25,6 +25,14 @@
 header,
 footer {
     background-color: var(--cor2);
+    color: var(--cor1);
+}
+
+footer {
+    margin-top: 45px;
+    width: 100vw;
+    display: flex;
+    flex-flow: wrap;
 }
 
 /*header,
