@@ -25,6 +25,7 @@
 header,
 footer {
     background-color: var(--cor2);
+    color: var(--cor1);
 }
 
 /*header,
