@@ -1,12 +1,12 @@
 import Marcas from "../../components/Marcas";
+import Categorias from "../../components/Categorias"
 import "./styles.css";
 
 const Home = () => {
   return (
     <div className="">
-      <marcas className="">
+          <Categorias />
           <Marcas />
-      </marcas>
     </div>
   );
 }
