@@ -1,0 +1,92 @@
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 0%;
+}
+
+.slider{
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    
+  }
+
+  .text{
+      font-size: 20px;
+  }
+  
+  .images {
+    display: flex;
+    width: 100%;
+  }
+  
+  .images img {
+    height:400px;
+    width: 100%;
+    transition: all 0.15s ease;
+  }
+  
+  .images input{
+    display: none;
+  }
+
+  .prev, .next{
+      cursor: pointer;
+      position: absolute;
+      top: 40%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: #d2d2d2;
+      font-weight: bolder;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+     }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color:var(--cor4);
+  }
+  
+  .dots {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+  }
+  
+  .dots label {
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: solid rgb(3, 0, 0) 3px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    margin: 5px;
+
+}
+
+  .dots label:hover {background: var(--cor4);}
+  
+  #img1:checked ~ .m1 {
+    margin-left:0;
+  }
+  
+  #img2:checked ~ .m2 {
+    margin-left:-100%;
+  }
+  
+  #img3:checked ~ .m3 {
+    margin-left:-200%;
+  }
+  
+  #img4:checked ~ .m4 {
+    margin-left:-300%;
+  }
+
