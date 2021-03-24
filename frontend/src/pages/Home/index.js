@@ -1,12 +1,11 @@
+import SliderHome from "../../components/Slider";
 import "./styles.css";
 
 function Home() {
   return (
-    <div className="">
-      <header className="">
-       <h1>Hello World</h1>
-      </header>
-    </div>
+    <>
+    <SliderHome/>
+    </>
   );
 }
 
