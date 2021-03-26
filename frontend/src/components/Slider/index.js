@@ -4,6 +4,7 @@ import slider3 from '../../assets/img/slider-home/slider3.jpg'
 import slider4 from '../../assets/img/slider-home/slider4.jpg' 
 import "./style.css";
 
+
 const SliderHome = () => {
   return (
     <div class="slider">
@@ -38,3 +39,5 @@ const SliderHome = () => {
 };
 
 export default SliderHome;
+
+
