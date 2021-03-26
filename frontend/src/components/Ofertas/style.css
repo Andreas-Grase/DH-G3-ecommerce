@@ -17,6 +17,7 @@
 .titulo-promo {
     color: var(--cor2);
     font-size: 1.6rem;
+    font-weight: bold;
 }
 
 .slideshow-promo-container {
