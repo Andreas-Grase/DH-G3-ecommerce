@@ -59,6 +59,7 @@ main{
     display: flex;
     justify-content: center;
     margin: 5px;
+    margin-top: -115px;
   }
   
   .dots label {
