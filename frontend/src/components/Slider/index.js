@@ -9,7 +9,7 @@ const SliderHome = () => {
     <div class="slider">
       <div class="images">
         <input type="radio" name="slide" id="img1" checked></input>
-        <div class="text"></div>
+        {/* <div class="text"></div>//???? */}
         <input type="radio" name="slide" id="img2"></input>
         <input type="radio" name="slide" id="img3"></input>
         <input type="radio" name="slide" id="img4"></input>
@@ -26,12 +26,13 @@ const SliderHome = () => {
         <label for="img3"></label>
         <label for="img4"></label>
       </div>
-      <a class="prev" onclick="plusSlides(-1)">
+
+      {/* <a class="prev" onclick="plusSlides(-1)">
         &#10094;
       </a>
       <a class="next" onclick="plusSlides(1)">
         &#10095;
-      </a>
+      </a> */}
     </div>
   );
 };

@@ -1,9 +1,9 @@
-main{
+/* main{
     height: 100vh;
     display: flex;
     justify-content: center;
     padding: 0%;
-}
+} */
 
 .slider{
     position: relative;
@@ -11,26 +11,27 @@ main{
     overflow: hidden;
     
   }
-
+/* 
   .text{
       font-size: 20px;
-  }
+  } */
   
   .images {
     display: flex;
-    width: 100%;
+    min-width: 100vw;
+    min-width: 1200px; /*width: 100%;*/
   }
   
   .images img {
-    height:400px;
+    height:600px;
     width: 100%;
-    transition: all 0.15s ease;
+    transition: 2s ease-in-out;/* transition: all 0.15s ease; */
   }
   
   .images input{
     display: none;
   }
-
+/* 
   .prev, .next{
       cursor: pointer;
       position: absolute;
@@ -53,7 +54,7 @@ main{
 
   .prev:hover, .next:hover {
     background-color:var(--cor4);
-  }
+  } */
   
   .dots {
     display: flex;
@@ -68,8 +69,8 @@ main{
     border-radius: 50%;
     border: solid rgb(3, 0, 0) 3px;
     cursor: pointer;
-    transition: all 0.15s ease;
-    margin: 5px;
+    /* transition: all 0.15s ease; */
+    margin: 20px;
 
 }
 

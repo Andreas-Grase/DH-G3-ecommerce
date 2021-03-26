@@ -38,6 +38,15 @@
 }
 
 /* FIM TITULOS MARCAS*/
+
+.cards-e-btn {
+    width: 772px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 /* INICIO IMAGENS MARCAS*/
 .img-marcas {
     max-width: 100%;
@@ -45,10 +54,10 @@
     flex-flow: row wrap;
     min-width: 576px;
     padding: 10px;
-    justify-content: center;
 }
 
 .imagem {
+    /* border: 1px solid rebeccapurple; */
     /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 230 (flex-basis: auto (tamanho mínimo)) */
     flex: 1 1 230;
     margin: 10px;
@@ -94,20 +103,36 @@
 
 /* FIM IMAGENS MARCAS*/
 /* INICIO VER TODAS MARCAS */
+.btn-ver-marcas h6 {
+    padding: 4px;
+    margin: 0px;
+    font-size: 1.4rem;
+}
+
+.btn-ver-marcas img {
+    height: 80px;
+    width: 80px;
+    padding: 4px;
+    margin: 0px;
+}
+
 .btn-ver-marcas {
-    border: 1px solid var(--cor1);
-    border-radius: 10px;
-    text-align: center;
-    vertical-align: middle;
-    width: 100px;
+    background-color: var(--cor1);
+    border: 1px solid var(--cor3);
+    border-radius: 30px;
+    color: var(--cor3);
+    margin: 10px;
+    padding: 4px;
+    width: 160px;
+    height: 160px;
     text-transform: uppercase;
-    background-color: var(--cor2);
-    color: var(--cor1);
+    flex-direction: row;
+    justify-content: center;
 }
 
 .btn-ver-marcas:hover {
-    border: 1px solid var(--cor3);
-    background-color: var(--cor1);
-    color: var(--cor3);
+    border: 1px solid var(--cor1);
+    background-color: var(--cor2);
+    color: var(--cor1);
 
 }

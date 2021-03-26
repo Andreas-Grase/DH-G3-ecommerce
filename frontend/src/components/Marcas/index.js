@@ -1,4 +1,5 @@
 import "./style.css";
+import binoculares from '../../assets/icons/binoculares.svg'
 import getImages from '../../assets/img/marcas'
 const Marcas = () => {
   
@@ -10,6 +11,7 @@ const Marcas = () => {
         <h2>Nossas Marcas</h2>
         <h4>Encontre as melhores marcas</h4>
       </div>
+      <div className="cards-e-btn">
       <div className="img-marcas">
         <div className="imagem">
           <a href="">
@@ -95,7 +97,7 @@ const Marcas = () => {
             />
           </a>
         </div>
-        <div className="imagem">
+        {/* <div className="imagem">
           <a href="">
           <img
               className="frente"
@@ -150,14 +152,15 @@ const Marcas = () => {
               alt=""
             />
           </a>
-        </div>
+        </div> */}
       </div>
-      <button className="btn-ver-marcas" type="button">
-        <a href="">
-          <i className="fas fa-binoculars fa-3x"></i>
-          <h6>Ver todas as marcas</h6>
+      <a href="/">
+          <button type="button" className="btn-ver-marcas">
+            <img src={binoculares}></img>
+            <h6>Ver todas as marcas</h6>
+          </button>
         </a>
-      </button>
+      </div>
     </section>
   );
 };
