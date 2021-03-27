@@ -62,7 +62,7 @@ h1 {
 h2,
 h3 {
     color: var(--cor4);
-    margin: 24px auto 16px;
+    /* margin: 24px auto 16px; */
     width: fit-content;
 }
 
