@@ -69,7 +69,7 @@ const Ofertas = () => {
     // declaração do state
     // a primeira variável contém o valor do state
     // a segunda variável contém a função que irá alterar esse valor
-    const [slideAtual, setSlide] = useState(0)
+    const [slideAtual, setSlide] = useState(SlideOfertas)
 
     const setSlideMV = () => {
         setSlide(SlideMV)
