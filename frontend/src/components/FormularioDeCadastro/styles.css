@@ -1,0 +1,10 @@
+.container-form-cadastro {
+    background-color: grey;
+    margin:auto;
+}
+
+.barra-superior {
+    display: flex;
+    flex-flow: row nowrap;
+    width:50%;
+}
