@@ -2,18 +2,18 @@
     height: 100%;
     text-align: left;
     line-height: 150%;
+    box-sizing: border-box;
 }
 
 .page-row {
     display: table-row;
 }
 
-.mensagem {
-    font-weight: bold;
-    font-size: 18px;
+.titulo {
+    text-align: center;
 }
 
-.tela-carrinho {
+.container-tela-carrinho {
     box-sizing: border-box;
     padding-right: 15px;
     padding-left: 15px;
@@ -21,6 +21,8 @@
     margin-left: auto;
     background-attachment: fixed;
     display: block;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .lista-carrinho {
@@ -31,11 +33,25 @@
     background-color: wheat;
 }
 
+.produto-escolhido {
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-align: left;
+    width: 77px;
+    height: 77px;
+}
+
 hr {
     box-sizing: content-box;
 }
 
-.resumo-carrinho {
+.mensagem {
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+}
+
+.container-resumo-carrinho {
     box-sizing: border-box;
     padding-right: 15px;
     padding-left: 15px;
@@ -43,7 +59,8 @@ hr {
     margin-left: auto;
     background-attachment: fixed;
     display: block;
-    background-color: wheat;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .resumo {
@@ -92,4 +109,14 @@ hr {
     vertical-align: middle;
     padding: 6px 12px;
     cursor: pointer;
+}
+
+.d-grid gap-2 col-6 mx-auto {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+    padding: 15px;
+    align-items: center;
+    box-sizing: border-box;
+    text-size-adjust: 100%;
 }
