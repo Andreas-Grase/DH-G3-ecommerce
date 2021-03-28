@@ -5,6 +5,10 @@
     flex-direction: row;
 }
 
+.titulo {
+    margin-left: 10px;
+}
+
 .titulo-lista {
     background-color: #AF8048;
 }
