@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.finalizar-compras {
+    display: block;
+}
+
+.detalhes-da-compra {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    margin: 5px;
+    padding: 5px;
+}
+
+.detalhes-da-compra h2 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    margin: 5px;
+    padding: 5px;
+}
+
+.detalhes-da-compra h6 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    margin: 5px;
+    padding: 5px;
+}
+
+.endereco-entrega {
+    border: 1px;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 5px;
+    background-color: lightgray; 
+}
+
+.opcoes-frete {
+    border: 1px;
+    border-radius: 4px;
+    margin: 5px;
+    padding: 5px;
+    background-color:lightgray; 
+}
+
+.opcoes-de-pagamento {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    border: 1px solid #000;
+    margin: 5px;
+    padding: 5px;
+}
+
+.revise-sua-compra {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    border: 1px solid #000;
+    margin: 5px;
+    padding: 5px;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 80px;
+    padding: 0.5rem calc((100vw-1000px) / 2);
+    z-index: 10;
+
+}
+
+@media screen and (max-width: 768px) {
+    display: none;
+}
+
+.btn-continuar {
+    border-radius: 4px;
+    background: #256ce1;
+    padding: 10px 22px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
