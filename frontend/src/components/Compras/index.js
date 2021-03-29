@@ -1,6 +1,7 @@
 import "./style.css";
 import truck from "../../assets/img/carrinho/icon-truck.svg";
 import produto from "../../assets/img/carrinho/produto-carrinho.jpeg";
+import { NavLink } from "react-router-dom"
 
 const Compras = () => {
     return (
@@ -74,7 +75,9 @@ const Compras = () => {
                         </form>
                         <hr />
                         <div class="button-end">
-                            <button class="button-finalizar">Finalizar compra</button>
+                        <NavLink to="/shopping_cart/:finalizar_compras" className="btn-continuar">
+                            Confirmar a compra
+                        </NavLink>
                             <br />
                             <button class="button-continuar">Continuar comprando</button>
                         </div>
