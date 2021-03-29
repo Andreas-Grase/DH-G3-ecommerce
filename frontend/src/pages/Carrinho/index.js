@@ -14,12 +14,7 @@ import "./style.css";
 const Carrinho = () => {
     return (
       <>
-        <small>Este é o seu carrinho!</small>
-        <Nav>
-        <NavBtn>
-          <NavBtnLink to="/shopping__cart/:finalizar__compras">Finalizar Compras</NavBtnLink>
-        </NavBtn>
-      </Nav>
+        <Compras />
       </>
     );
   };
