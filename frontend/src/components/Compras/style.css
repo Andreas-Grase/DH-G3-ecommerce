@@ -6,7 +6,7 @@
 }
 
 .titulo {
-    margin-left: 10px;
+    margin-left: 11px;
 }
 
 .titulo-lista {
@@ -72,7 +72,7 @@
 
 .button-finalizar {
     border-radius: 4px;
-    background-color: #2450e0;
+    background-color: #AF8048;
     border: none;
     color: #FFFFFF;
     text-align: center;
@@ -85,7 +85,7 @@
 .button-continuar {
     border-radius: 4px;
     background-color:#FFFFFF;
-    border: 2px solid #2450e0;
+    border: 2px solid #AF8048;
     text-align: center;
     font-size: 14px;
     transition: all 0.5s;
@@ -109,7 +109,7 @@
 
 .btn-continuar {
     border-radius: 4px;
-    background: #256ce1;
+    background: #AF8048;
     padding: 10px 22px;
     color: #fff;
     border: none;
