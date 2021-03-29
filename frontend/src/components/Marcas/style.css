@@ -1,5 +1,5 @@
 .marcas {
-    display: flex;
+    /* display: flex; */
     flex-flow: row wrap;
     justify-content: center;
 }
@@ -12,8 +12,8 @@
     flex-flow: row wrap;
     flex: 1 1 auto;
     min-width: 576px;
-    margin: 10px auto;
-    padding: var(--padding);
+    margin: 5px auto;
+    padding: 5;
     align-items: center;
 }
 
@@ -32,7 +32,7 @@
     color: var(--cor1);
     font-weight: 400;
     border: 5px;
-    margin: 5px;
+    margin: 5px 5px 5px 10px;
     padding: 5px;
     text-align: left;
 }
@@ -40,11 +40,11 @@
 /* FIM TITULOS MARCAS*/
 
 .cards-e-btn {
-    width: 772px;
+    width: 620px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
+    margin: 0 auto;
 }
 
 /* INICIO IMAGENS MARCAS*/
@@ -61,8 +61,8 @@
     /* flex: 1 (flex-grow: 1 (expandir)) 1 (flex-shrink: 1 (diminuir)) 230 (flex-basis: auto (tamanho mínimo)) */
     flex: 1 1 230;
     margin: 10px;
-    width: 230px;
-    height: 230px;
+    width: 180px;
+    height: 180px;
     position: relative;
     /* overflow: hidden; */
     /* transition: opacity 500ms; */
@@ -105,13 +105,13 @@
 /* INICIO VER TODAS MARCAS */
 .btn-ver-marcas h6 {
     padding: 4px;
-    margin: 0px;
-    font-size: 1.4rem;
+    margin: 0px auto;
+    font-size: 0.8rem;
 }
 
 .btn-ver-marcas img {
-    height: 80px;
-    width: 80px;
+    height: 50px;
+    width: 50px;
     padding: 4px;
     margin: 0px;
 }
@@ -121,13 +121,12 @@
     border: 1px solid var(--cor3);
     border-radius: 30px;
     color: var(--cor3);
-    margin: 10px;
+    margin: 10px 10px 20px;
     padding: 4px;
-    width: 160px;
-    height: 160px;
+    width: 100px;
+    height: 100px;
     text-transform: uppercase;
-    flex-direction: row;
-    justify-content: center;
+   
 }
 
 .btn-ver-marcas:hover {

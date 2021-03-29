@@ -5,6 +5,7 @@ import slider4 from "../../assets/img/slider-home/slider4.jpg";
 import "./style.css";
 import React, { useState } from 'react';
 
+
 const SliderHome = () => {
   const [slideactive,setslideactive] = useState(1)
   function changeslider(value){
