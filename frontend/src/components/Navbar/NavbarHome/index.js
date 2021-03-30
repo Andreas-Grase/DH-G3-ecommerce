@@ -28,7 +28,7 @@ const NavbarHome = () => {
         </NavBtn> */}
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to="/cadastre-se">Entrar na conta</NavBtnLink>
+          <NavBtnLink to="/login">Entrar na conta</NavBtnLink>
         </NavBtn>
       </Nav>
     </>

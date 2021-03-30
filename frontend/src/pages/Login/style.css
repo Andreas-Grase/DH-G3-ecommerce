@@ -1,24 +1,22 @@
-body{
-    margin: 0;
-    padding:0;
-    background-image: url(./imagens/kit.jpg);
+.conteiner{
+    position: relative;
+    height: 600px;
+    background-image: url("../../assets/img/kit.jpg");
     background-size: cover;
-    font-family: sans-serif;
 }
 
 .login{
+   height: 450px;
    width: 320px;
-   height: 420px;
-   border: 2px solid #000;
+   border: 2px solid rgb(83, 65, 65);
    border-radius: 80px 0px 80px 0px;
-   color: #fff;
-   background-color: black;
-   top: 50%;
+   background-color: rgba(0, 0, 0, 0.664);
+   top: 40%;
    left: 50%;
    position: absolute;
-   transform: translate(-50%, -50%);
+   transform: translate(-50%, -36%);
    box-sizing: border-box;
-   padding: 60px 28px;
+   padding: 30px 28px;
 }
 
 .usuario{
@@ -43,6 +41,7 @@ h1{
     margin: 0;
     padding: 0;
     font-weight: bold;
+    color: rgb(149, 149, 149);
 }
 
 .login input{
@@ -56,19 +55,19 @@ h1{
     background: transparent;
     outline: none;
     height: 40px;
-    color: white;
+    color: rgb(149, 149, 149);
     font-size: 10px;
 }
 
-.login input[type="submit"]{
+ .login input[type="submit"]{
     border: none;
     outline: none;
     height: 35px;
     color: #000;
-    background: #fff;
+     background: #fff; /*cor do botao enviar */
     border-radius: 25px;
     transition: 0.2s;
-}
+} 
 
 .login input[type="submit"]:hover{
     cursor: pointer;
@@ -80,9 +79,9 @@ h1{
 .login a {
    font-weight: bold;
    text-decoration: none;
-   font-size: 12px;
+   font-size: 10px;
    line-height: 20px;
-   color: #4b4b4b;
+   color: grey;
    transition: 0.2s;
 }
 

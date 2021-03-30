@@ -3,6 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import Home from '../pages/Home'
 import Carrinho from '../pages/Carrinho'
 import FinalizarCompras from '../pages/Carrinho/FinalizarCompras'
+import Login from '../pages/Login'
 
 const Routes = () => {
   return (    
@@ -15,6 +16,7 @@ const Routes = () => {
         {/* <Route exact path="/categorias/:categoria?" component={Categoria}/> */}
         {/* <Route path="/contato" component={Contato}/> */}
         {/* <Route path="/sobre" component={Sobre}/> */}
+        <Route path="/login" component={Login} />
         <Route path="/" component={Home} />
       </Switch>
   )

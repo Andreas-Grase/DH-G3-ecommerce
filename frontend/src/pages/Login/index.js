@@ -4,7 +4,7 @@ import "./style.css"
 
 const Login = () => {
     return( 
-       
+       <div className="conteiner">
         <div className="login">
             <img src= {logo} className="usuario" width="100" height="100" alt=""/>
             <h1>Login</h1>
@@ -13,11 +13,12 @@ const Login = () => {
                 <input type="text" name="" placeholder="Insira seu nome de usuario"/>
                 <p>Senha:</p>
                 <input type="password" name="" placeholder="Insira sua senha"/>
-                <input type="subimit" name="" placeholder="login"/>
+                <input type="submit" name="" placeholder="login"/>
                 <a href="#">Esqueceu sua Senha ?</a><br/>
                 <a href="#">Ainda não possue uma conta?</a>
             </form>
         </div> 
+    </div>
     );
 };
  

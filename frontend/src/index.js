@@ -11,9 +11,9 @@ import './index.css';
 ReactDOM.render(
   <Router>
     <Header />
-    <NavbarHome />
+    <NavbarHome /> 
     <Routes />
-    <Footer />
+   <Footer /> 
   </Router>,
   document.getElementById('root')
 );
