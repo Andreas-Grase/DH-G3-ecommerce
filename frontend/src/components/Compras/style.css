@@ -3,6 +3,8 @@
     justify-content: space-evenly;
     padding: 40px;
     flex-direction: row;
+    border: 1px;
+    border-radius: 10px;
 }
 
 .titulo {
@@ -24,11 +26,15 @@
 .flex-item {
     flex-grow: 1;
     margin: 10px 30px 10px 100px;
+    border: 1px;
+    border-radius: 10px;
 }
 
 .container2 {
     background-color: #f7efe6;
-    padding: 7px;
+    padding: 15px;
+    border: 1px;
+    border-radius: 10px;
 }
 
 .mensagem2{
@@ -68,6 +74,7 @@
     flex-direction: column;
     display: flex;
     width: 200px;
+    margin-left: 100px;
 }
 
 .button-finalizar {
