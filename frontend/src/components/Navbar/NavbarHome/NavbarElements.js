@@ -68,7 +68,6 @@ export const NavBtn = styled.nav`
   justify-content: flex-end;
   width: 100vw;
 
-
   @media screen and (max-width: 768px) {
     display: none;
   }
