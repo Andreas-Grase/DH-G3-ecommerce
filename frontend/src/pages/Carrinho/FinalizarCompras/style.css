@@ -8,7 +8,7 @@
 }
 
 .finalizar-compras {
-    display: block;
+    /* display: block; */
 }
 
 .detalhes-da-compra {
@@ -37,35 +37,199 @@
 
 .endereco-entrega {
     border: 1px;
-    border-radius: 4px;
+    border-radius: 10px;
     margin: 5px;
     padding: 5px;
-    background-color: lightgray; 
+    height: 150px;
+    background-color: rgba(175,128,72, 0.31);
+    /* background-color: #af8048; */
+}
+
+.opcoes-frete {
+    border: #256ce1;
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgba(175,128,72, 0.31);
 }
 
 .opcoes-frete {
     border: 1px;
-    border-radius: 4px;
-    margin: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    vertical-align: middle;
+    background-color: rgba(175,128,72, 0.31);
+}
+
+.opcoes-frete > div:first-child {
+    border: 1px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    vertical-align: middle;
+    border-bottom: 1px solid #000;
+}
+
+.opcoes-frete > div:last-child {
+    border: 1px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    vertical-align: middle;
+}
+
+.ui-radio-element {
+    border: 1px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    vertical-align: middle;
     padding: 5px;
-    background-color:lightgray; 
+    margin: 5px;
+    height: 25px;
+    width: 25px;
+}
+.cart-package__shipping-box {
+    border: 1px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.cart-package__shipping-price {
+    border: 1px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
 }
 
 .opcoes-de-pagamento {
     display: flex;
-    flex: 1 1 auto;
     flex-flow: column wrap;
-    border: 1px solid #000;
+    border: 1px;
     margin: 5px;
     padding: 5px;
 }
 
-.revise-sua-compra {
-    display: flex;
-    flex: 1 1 auto;
-    flex-flow: column wrap;
-    border: 1px solid #000;
+.opcoes-de-pagamento h4 {
+    font-size: .8rem;
+    border: 1px;
     margin: 5px;
+    padding: 5px;
+}
+.pagamento {
+    background-color: rgba(175,128,72, 0.31);
+    border: 1px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items:flex-start;
+}
+
+.pagamento ul {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    border: 1px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.pagamento li {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    border: 1px;
+    margin: 50px;
+    padding: 5px;
+}
+
+.revise-sua-compra {
+    border: 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: rgba(175,128,72, 0.31);
+    margin: 30px 5px 130px;
+    padding: 5px;
+    height: 730px;
+    justify-content: space-between;
+}
+
+.revise-sua-compra > div:first-child {
+    width: 750px;
+    height: 362px;
+    margin: 30px 10px ;
+}
+
+@media screen and (max-width: 768px) {
+    .revise-sua-compra > div:first-child  {
+        width: auto;
+    }
+}
+
+.revise-sua-compra > div:last-child {
+    width: 435px;
+    height: 761px;
+}
+
+@media screen and (max-width: 768px) {
+    .revise-sua-compra > div:last-child {
+        width: auto;
+    }
+}
+
+.revise-sua-compra h3 {
+    font-size: 1.8rem;
+    border: 1px;
+    margin: 5px;
+    padding: 10px 5px;
+    
+}
+
+.revise-sua-compra h4 {
+    font-size: .8rem;
+    border: 1px;
+    margin: 5px;
+    padding: 10px 5px;
+}
+
+.prazo-de-entrega {
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px;
+    border-radius: 10px;
+    margin: 10px 5px;
+    padding: 10px 5px;
+    height: 150px;
+    background-color: rgba(175,128,72, 0.31);
+    /* background-color: #af8048; */
+}
+
+.produto-a-comprar {
+    border: 1px;
+    border-radius: 10px;
+    background-color: rgba(175,128,72, 0.31);
+    margin: -20px 50px;
+    padding: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.produto-a-comprar > div {
+    border: 1px;
+    margin: 20px 5px;
     padding: 5px;
 }
 
@@ -76,14 +240,17 @@
     height: 80px;
     padding: 0.5rem calc((100vw-1000px) / 2);
     z-index: 10;
+    margin: 5px;
 
 }
 
 @media screen and (max-width: 768px) {
-    display: none;
+    .btn {
+        display: none;
+    }
 }
 
-.btn-continuar {
+.btn-finalizar-compra {
     border-radius: 4px;
     background: #256ce1;
     padding: 10px 22px;
