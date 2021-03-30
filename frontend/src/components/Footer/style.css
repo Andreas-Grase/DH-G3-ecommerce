@@ -1,5 +1,6 @@
 .linha-footer {
     margin: 10px;
+    margin-top: 0;
     display: flex;
     display: flex;
     flex-flow: row wrap;
