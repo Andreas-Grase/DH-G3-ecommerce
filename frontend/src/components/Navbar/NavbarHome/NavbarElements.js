@@ -68,7 +68,6 @@ export const NavBtn = styled.nav`
   justify-content: flex-end;
   width: 100vw;
 
-
   @media screen and (max-width: 768px) {
     display: none;
   }
@@ -83,7 +82,7 @@ export const NavBtnLink = styled(Link)`
   outline: none;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
-  tex-decoration: none;
+  text-decoration: none;
 
   /*2nd Nav*/
   /* margin-left: 24px; */
