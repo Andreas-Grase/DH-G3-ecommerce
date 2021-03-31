@@ -4,12 +4,13 @@ import './style.css'
 
 const Produtos = () => {
     return (
-        <main className="bloque-produtos">
-            <section className="produtos-primeira-coluna">
+        <section className="bloque-produtos">
+            
+            <article className="produtos-primeira-coluna">
                 <MenuLateral />
-            </section>
+            </article>
 
-            <section className="produtos-segunda-coluna">
+            <article className="produtos-segunda-coluna">
                 
                 <div className="titulo-acessorios">
                     <h3>ACESSÓRIOS</h3>
@@ -38,11 +39,10 @@ const Produtos = () => {
                     <ListaProdutos />
                     <ListaProdutos />
                     <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
+                   
                 </div>
-            </section>      
-        </main>
+            </article>      
+        </section>
     )
 }
 

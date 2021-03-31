@@ -8,12 +8,13 @@ const ListaProdutos = () => {
         
         <article className="card">
           
-                <NavLink to="/produtos/:produto_detalhado" className="detalhes-do-produto">
-                    <img src={img1} alt="" />
-                    <p className="card-paragraph">Descrição</p>
-                    <p className="card-paragraph">Preço</p>
+                <NavLink to="/produtos/:produto_detalhado">
+                    <img src={img1} alt="" className="detalhes-do-produto" />
                 </NavLink>
-               
+                <div className="card-paragraph">
+                    <p>Descrição</p>
+                    <p>Preço</p>
+                </div>
                 <NavLink to="/shopping__cart" className="btn-adicionarAoCarrinho">
                     Adicionar ao carrinho &nbsp;<i class="fas fa-cart-plus"></i>       
                 </NavLink>

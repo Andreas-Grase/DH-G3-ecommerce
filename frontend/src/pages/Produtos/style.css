@@ -1,3 +1,7 @@
+.bloque-produtos {
+    display: flex;
+}
+
 .produtos-segunda-coluna {
     margin: 5px;
 }
@@ -18,11 +22,13 @@
 .produtos-segunda-coluna-inicio {
     margin: 10px 10px;
     background-color: #af8048;
+    min-width: 500px;
 }
 
 .produtos-segunda-coluna-fim {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 .opcoes-de-exibicao {
@@ -30,7 +36,7 @@
 }
 
 .numero-de-paginas {
-    margin-left: 0;
+    margin-left: 10px;
 }
 
 .numero-de-paginas> a:hover {
@@ -40,5 +46,9 @@
 }
 
 .filtrar-exibicao {
-    margin-right: 50px;
+    margin-right: 20px;
+}
+
+.filtrar-exibicao i:hover {
+    color: white;
 }
