@@ -1,0 +1,51 @@
+.menu-lateral{
+    border: solid 1px #ccc;
+    margin: 50px
+}
+
+.menu-lateral h3{
+    margin: 10px 5px;
+}
+
+.menu-lateral-fim{
+    border-top: solid 1px #ccc;;
+}
+
+.menu ul li {
+    width: 200px;
+    height: 35px;
+}
+
+.menu a {
+    padding: 5px;
+    display: block;
+}
+
+.menu a:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #af8048;
+}
+
+.abrir-submenu{
+    margin-right: 80px;
+}
+
+.menu ul ul{
+    position: absolute;
+    visibility: hidden;
+} 
+
+td{
+    width: 100px;
+    padding: 5px;
+}
+
+table td:hover{
+    background-color: #af8048;
+}
+
+table a:hover{
+    color: white;
+    text-decoration: none;
+}
