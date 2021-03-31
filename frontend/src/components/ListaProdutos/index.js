@@ -8,7 +8,7 @@ const ListaProdutos = () => {
         
         <article className="card">
           
-                <NavLink to="/produto" className="detalhes-do-produto">
+                <NavLink to="/produtos/:produto_detalhado" className="detalhes-do-produto">
                     <img src={img1} alt="" />
                     <p className="card-paragraph">Descrição</p>
                     <p className="card-paragraph">Preço</p>

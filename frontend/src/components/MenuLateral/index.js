@@ -6,7 +6,9 @@ const MenuLateral = () => {
 
         <section className="menu-lateral">
             <div className="menu-lateral-inicio">
-                <h3>FILTRO</h3>
+                <div className="menu-titulo">
+                    <h3>FILTRO</h3>
+                </div>
                 <nav className="menu">
                     <ul>
                         <li className="bt_menu">
@@ -66,23 +68,26 @@ const MenuLateral = () => {
             </div>
             
             <div className="menu-lateral-fim">
-                <h3>FILTRO</h3>
+                <div className="menu-titulo">
+                <br />
+                    <h3>FILTRO</h3>
+                </div>
                 <table>
                     <tr>
                         <td><a href="#">MARCA</a></td>
-                        <td><a href="#">MARCA</a></td>
+                        <td><a href="#"><span className="separador">|</span>MARCA</a></td>
                     </tr>
                     <tr>
                         <td><a href="#">MARCA</a></td>
-                        <td><a href="#">MARCA</a></td>
+                        <td><a href="#"><span className="separador">|</span>MARCA</a></td>
                     </tr>
                     <tr>
                         <td><a href="#">MARCA</a></td>
-                        <td><a href="#">MARCA</a></td>
+                        <td><a href="#"><span className="separador">|</span>MARCA</a></td>
                     </tr>
                     <tr>
                         <td><a href="#">MARCA</a></td>
-                        <td><a href="#">MARCA</a></td>
+                        <td><a href="#"><span className="separador">|</span>MARCA</a></td>
                     </tr>
                 </table>
             </div>

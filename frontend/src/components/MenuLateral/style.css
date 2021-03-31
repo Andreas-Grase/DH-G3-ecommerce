@@ -1,19 +1,17 @@
 .menu-lateral{
     border: solid 1px #ccc;
-    margin: 50px
+    margin: 5px 50px;
+    background-color: #f7efe6;
 }
 
 .menu-lateral h3{
     margin: 10px 5px;
 }
 
-.menu-lateral-fim{
-    border-top: solid 1px #ccc;;
-}
-
 .menu ul li {
     width: 200px;
     height: 35px;
+    border-bottom: solid 1px #ccc;
 }
 
 .menu a {
@@ -39,6 +37,16 @@
 td{
     width: 100px;
     padding: 5px;
+    border-top: solid 1px #ccc;;
+    border-bottom: solid 1px #ccc;
+}
+
+.separador {
+    height: 20px;
+    font-weight: lighter;
+    color: #ccc;
+    margin-right: 10px;
+    margin-left: -10px;
 }
 
 table td:hover{

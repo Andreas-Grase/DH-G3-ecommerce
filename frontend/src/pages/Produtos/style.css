@@ -1,0 +1,44 @@
+.produtos-segunda-coluna {
+    margin: 5px;
+}
+
+.menu-titulo {
+    margin: 20px 0px;
+}
+
+.bloque-produtos {
+    margin-top: 50px;
+}
+
+.titulo-acessorios {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.produtos-segunda-coluna-inicio {
+    margin: 10px 10px;
+    background-color: #af8048;
+}
+
+.produtos-segunda-coluna-fim {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.opcoes-de-exibicao {
+    display: flex;
+}
+
+.numero-de-paginas {
+    margin-left: 0;
+}
+
+.numero-de-paginas> a:hover {
+   color: white;
+   text-decoration: none;
+   font-weight: 500;
+}
+
+.filtrar-exibicao {
+    margin-right: 50px;
+}
