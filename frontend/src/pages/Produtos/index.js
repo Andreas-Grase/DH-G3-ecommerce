@@ -19,7 +19,7 @@ const Produtos = () => {
                 <div className="produtos-segunda-coluna-inicio">
                     <div className="opcoes-de-exibicao">
                         <p className="numero-de-paginas">Numero de paginas a exibir 
-                            <a href="" alt=""> 10 </a><span>/</span>
+                            <a href="" alt=""> 12 </a><span>/</span>
                             <a href="" alt=""> 25 </a><span>/</span>
                             <a href="" alt=""> TODO</a>
                         </p>
@@ -28,9 +28,12 @@ const Produtos = () => {
                         </p>
                     </div>
                 </div>
-        
-            
+                          
                 <div className="produtos-segunda-coluna-fim">
+                    <ListaProdutos />
+                    <ListaProdutos />
+                    <ListaProdutos />
+                    <ListaProdutos />
                     <ListaProdutos />
                     <ListaProdutos />
                     <ListaProdutos />
@@ -41,7 +44,13 @@ const Produtos = () => {
                     <ListaProdutos />
                    
                 </div>
-            </article>      
+                <div className="proxima-pagina">
+                    <h3><a href="" alt="">Próxima página</a></h3>
+                    <i class="fas fa-chevron-circle-right fa-2x"></i>
+                    {/* <i class="fas fa-chevron-right"></i>
+                    <i class="fas fa-chevron-right"></i> */}
+                </div>
+            </article>              
         </section>
     )
 }
