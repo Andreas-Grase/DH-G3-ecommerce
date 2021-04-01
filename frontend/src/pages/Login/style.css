@@ -35,6 +35,7 @@ h1{
     text-transform: uppercase;
     text-align: center;
     font-size: 25px;
+    color: #bfbfbf !important;
 }
 
 .login p{

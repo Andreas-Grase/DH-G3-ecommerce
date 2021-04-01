@@ -6,6 +6,7 @@ import Cadastro from '../pages/Cadastro'
 import FinalizarCompras from '../pages/Carrinho/FinalizarCompras'
 import Login from '../pages/Login'
 import Produtos from '../pages/Produtos'
+import PaginaMarcas from '../pages/PaginaMarcas'
 
 const Routes = () => {
   return (    
@@ -20,6 +21,7 @@ const Routes = () => {
         {/* <Route path="/contato" component={Contato}/> */}
         {/* <Route path="/sobre" component={Sobre}/> */}
         {/* <Route path="/produtos/:produto_detalhado" component={ProdutoDetalhado} */}
+        <Route path="/marcas" component={PaginaMarcas} />
         <Route path="/produtos" component={Produtos} />
         <Route path="/login" component={Login} />
         <Route path="/" component={Home} />

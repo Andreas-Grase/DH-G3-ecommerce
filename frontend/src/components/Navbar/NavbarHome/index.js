@@ -17,7 +17,6 @@ const NavbarHome = () => {
         <NavMenu>
           <NavLink id="coisa" exact to="/" activeStyle>Início</NavLink>
           <NavLink to="/sobre" activeStyle>Sobre</NavLink>
-          <NavLink to="/contato" activeStyle>Contato</NavLink>
           <NavLink to="/categorias" activeStyle>Categorias</NavLink>
           <NavLink to="/marcas" activeStyle>Marcas</NavLink>
           <NavLink to="/produtos" activeStyle>Produtos</NavLink>
