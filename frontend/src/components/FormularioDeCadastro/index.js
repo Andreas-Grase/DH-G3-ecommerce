@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import logo from "../../assets/icons/logo.svg"
+import logo from "../../assets/icons/logo-gris-claro.svg"
 import "./styles.css"
 
 const FormPasso1 = () => {
