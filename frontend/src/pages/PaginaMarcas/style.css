@@ -1,0 +1,7 @@
+.catalogo-de-marcas {
+    margin: 40px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
