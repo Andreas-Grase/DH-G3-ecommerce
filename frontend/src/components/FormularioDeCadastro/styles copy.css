@@ -8,8 +8,8 @@
 
 .container-interno {
     position: relative;
-    height: 450px;
-    width: 450px;
+    height: 500px;
+    width: 720px;
     border: 2px solid rgb(83, 65, 65);
     border-radius: 80px 0px 80px 0px;
     background-color: rgba(0, 0, 0, 0.664);
@@ -22,16 +22,17 @@
     border-radius: 50%;
     position: absolute;
     top: -50px;
-    left: 40%;
+    left: 44%;
 }
 
 .container-formulario {
     display: flex;
 }
 
-.lista-de-passos {
+.coluna-esquerda {
     display: flex;
     flex-direction: column;
+    justify-content: s;
 }
 
 .passo {
@@ -52,17 +53,11 @@
 }
 
 .formularioAtual {
-    margin: -10px 20px 0 40px ;
-    
+    flex-grow: 2;
+    margin: 10px 20px 0 40px ;
 }
 
-.form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-}
-
-.form p {
+.form p :not(:first-child) {
     margin: 0;
     padding: 0;
     font-weight: bold;
