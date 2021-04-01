@@ -1,0 +1,85 @@
+.container-externo {
+    display: flex;
+    align-items: center; 
+    height: 600px;
+    background-image: url("../../assets/img/kit.jpg");
+    background-size: cover;
+}
+
+.container-interno {
+    position: relative;
+    height: 500px;
+    width: 720px;
+    border: 2px solid rgb(83, 65, 65);
+    border-radius: 80px 0px 80px 0px;
+    background-color: rgba(0, 0, 0, 0.664);
+    margin: auto;
+    box-sizing: border-box;
+    padding: 30px 28px;
+}
+
+.icone-container-interno{
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 44%;
+}
+
+.container-formulario {
+    display: flex;
+}
+
+.coluna-esquerda {
+    display: flex;
+    flex-direction: column;
+    justify-content: s;
+}
+
+.passo {
+    margin: 0;
+    padding:5px;
+    box-shadow: 5px 5px 5px black;
+    border: 1px solid rgba(128, 128, 128, 0.300);
+}
+
+.passo h3 {
+    color: var(--cor3);
+    font-size: 1.0rem;
+}
+
+.passo p {
+    color: var(--cor1);
+    font-size:0.8rem;
+}
+
+.formularioAtual {
+    flex-grow: 2;
+    margin: 10px 20px 0 40px ;
+}
+
+.form p :not(:first-child) {
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    color: rgb(149, 149, 149);
+}
+
+.form input[type="text"], input[type="password"], input[type="email"] {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: rgb(149, 149, 149);
+    font-size: 10px;
+}
+
+ .form input[type="submit"]{
+    border: none;
+    outline: none;
+    height: 35px;
+    color: #000;
+     background: #fff; /*cor do botao enviar */
+    border-radius: 25px;
+    transition: 0.2s;
+} 

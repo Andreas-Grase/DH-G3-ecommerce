@@ -2,6 +2,7 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Home from '../pages/Home'
 import Carrinho from '../pages/Carrinho'
+import Cadastro from '../pages/Cadastro'
 import FinalizarCompras from '../pages/Carrinho/FinalizarCompras'
 import Login from '../pages/Login'
 import Produtos from '../pages/Produtos'
@@ -9,6 +10,7 @@ import Produtos from '../pages/Produtos'
 const Routes = () => {
   return (    
       <Switch>
+        <Route path="/cadastro" component={Cadastro} />
         <Route exact path="/shopping__cart/:finalizar__compras" component={FinalizarCompras}/>
         <Route path="/shopping__cart" component={Carrinho}/>
         {/* <Route exact path="/categorias/:categoria/:produtos/:promocoes" component={Promoções}/> */}
