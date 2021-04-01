@@ -4,6 +4,7 @@ import Home from '../pages/Home'
 import Carrinho from '../pages/Carrinho'
 import FinalizarCompras from '../pages/Carrinho/FinalizarCompras'
 import Login from '../pages/Login'
+import Produtos from '../pages/Produtos'
 
 const Routes = () => {
   return (    
@@ -16,6 +17,8 @@ const Routes = () => {
         {/* <Route exact path="/categorias/:categoria?" component={Categoria}/> */}
         {/* <Route path="/contato" component={Contato}/> */}
         {/* <Route path="/sobre" component={Sobre}/> */}
+        {/* <Route path="/produtos/:produto_detalhado" component={ProdutoDetalhado} */}
+        <Route path="/produtos" component={Produtos} />
         <Route path="/login" component={Login} />
         <Route path="/" component={Home} />
       </Switch>
