@@ -4,16 +4,25 @@ import { BrowserRouter as Router } from "react-router-dom";
 import Routes from "./routes";
 import Header from './components/Header';
 import NavbarHome from './components/Navbar/NavbarHome';
+import NavbarLogin from './components/Navbar/NavbarLogin';
+import NavbarDashboard from './components/Navbar/NavbarDashboard';
 import Footer from './components/Footer';
-import './index.css';
 
+const path = require('path')
 
 ReactDOM.render(
   <Router>
-    <Header />
-    <NavbarHome /> 
+    {
+      path !== '/login'? (
+        <>
+          <Header />
+          <NavbarHome /> 
+        </>) : null
+    }
     <Routes />
-   <Footer /> 
+    {
+      path !== 'login'? <Footer /> : null
+    }
   </Router>,
   document.getElementById('root')
 );

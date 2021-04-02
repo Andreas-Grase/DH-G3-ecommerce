@@ -7,6 +7,14 @@ import FinalizarCompras from '../pages/Carrinho/FinalizarCompras'
 import Login from '../pages/Login'
 import Produtos from '../pages/Produtos'
 import PaginaMarcas from '../pages/PaginaMarcas'
+import Dashboard from '../pages/Dashboard'
+import DashboardAdicionar from '../pages/DashboardAdicionar'
+import DashboardAtualizar from '../pages/DashboardAtualizar'
+import DashboardDeletar from '../pages/DashboardDeletar'
+import DashboardListar from '../pages/DashboardListar'
+import DashboardVer from '../pages/DashboardVer'
+
+
 
 const Routes = () => {
   return (    
@@ -23,6 +31,12 @@ const Routes = () => {
         {/* <Route path="/produtos/:produto_detalhado" component={ProdutoDetalhado} */}
         <Route path="/marcas" component={PaginaMarcas} />
         <Route path="/produtos" component={Produtos} />
+        <Route exact path="/dashboard/:atualizar_produtos" component={DashboardAtualizar} />
+        <Route exact path="/dashboard/:deletar_produtos" component={DashboardDeletar} />
+        <Route exact path="/dashboard/:adicionar_produtos" component={DashboardAdicionar} />
+        <Route exact path="/dashboard/:listar_produtos" component={DashboardListar} />
+        <Route exact path="/dashboard/:ver_produtos?" component={DashboardVer} />
+        <Route path="/dashboard" component={Dashboard} />
         <Route path="/login" component={Login} />
         <Route path="/" component={Home} />
       </Switch>
