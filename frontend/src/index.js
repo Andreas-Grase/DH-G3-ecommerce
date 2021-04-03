@@ -19,13 +19,12 @@ let path = object.pathname
 console.log(path) 
 
 ReactDOM.render(
-  <Router>
+  <Router forceRefresh>
     {
-      path === '/login' ? (
+      path === '/login' || path === '/cadastro' ? (
         <>
           <NavbarLogin /> 
           <Routes />
-          <Footer />
         </>
       ) : null
     }
@@ -54,7 +53,7 @@ ReactDOM.render(
       <DashboardAtualizar /> : null
     }
     {
-      path !== '/login' && path !== '/dashboard' && path !== '/dashboard/ver__produtos' && path !== '/dashboard/listar__produtos' && path !== '/dashboard/adicionar__produtos' && path !== '/dashboard/deletar__produtos' && path !== '/dashboard/atualizar__produtos'? (
+      path !== '/login' && path !== '/cadastro' && path !== '/dashboard' && path !== '/dashboard/ver__produtos' && path !== '/dashboard/listar__produtos' && path !== '/dashboard/adicionar__produtos' && path !== '/dashboard/deletar__produtos' && path !== '/dashboard/atualizar__produtos'? (
         <>
           <Header />
           <NavbarHome /> 
