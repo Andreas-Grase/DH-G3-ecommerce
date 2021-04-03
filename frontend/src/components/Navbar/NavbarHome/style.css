@@ -1,27 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
-
-* {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+.navbar {
+    background-color: black;
 }
 
-#textdecorationinicio  {
-    text-decoration: none;
-}
-#textdecorationsobre  {
-    text-decoration: none;
-}
-#textdecorationcategorias {
-    text-decoration: none;
-}
-#textdecorationmarcas  {
-    text-decoration: none;
-}
-#textdecorationprodutos  {
-    text-decoration: none;
-}
-#textdecorationpromocoes  {
-    text-decoration: none;
+.button {
+    height: 38px;
 }

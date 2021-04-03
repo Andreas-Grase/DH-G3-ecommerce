@@ -5,23 +5,63 @@ import Routes from "./routes";
 import Header from './components/Header';
 import NavbarHome from './components/Navbar/NavbarHome';
 import NavbarLogin from './components/Navbar/NavbarLogin';
-import NavbarDashboard from './components/Navbar/NavbarDashboard';
 import Footer from './components/Footer';
+import Dashboard from './pages/Dashboard';
+import DashboardAdicionar from './pages/DashboardAdicionar';
+import DashboardAtualizar from './pages/DashboardAtualizar';
+import DashboardDeletar from './pages/DashboardDeletar';
+import DashboardListar from './pages/DashboardListar';
+import DashboardVer from './pages/DashboardVer';
 
-const path = require('path')
+let url = (window.location.href); //window.location.href originally instead of this
+let object = new URL(url);
+let path = object.pathname
+console.log(path) 
 
 ReactDOM.render(
   <Router>
     {
-      path !== '/login'? (
+      path === '/login' ? (
+        <>
+          <NavbarLogin /> 
+          <Routes />
+          <Footer />
+        </>
+      ) : null
+    }
+    {
+      path === '/dashboard' ?
+        <Dashboard /> : null
+    }
+    {
+      path === '/dashboard/ver__produtos' ?
+      <DashboardVer /> : null
+    }
+    {
+      path === '/dashboard/listar__produtos' ?
+      <DashboardListar /> : null
+    }
+    {
+      path === '/dashboard/adicionar__produtos' ?
+      <DashboardAdicionar /> : null
+    }
+    {
+      path === '/dashboard/deletar__produtos' ?
+      <DashboardDeletar /> : null
+    }
+    {
+      path === '/dashboard/atualizar__produtos' ? 
+      <DashboardAtualizar /> : null
+    }
+    {
+      path !== '/login' && path !== '/dashboard' && path !== '/dashboard/ver__produtos' && path !== '/dashboard/listar__produtos' && path !== '/dashboard/adicionar__produtos' && path !== '/dashboard/deletar__produtos' && path !== '/dashboard/atualizar__produtos'? (
         <>
           <Header />
           <NavbarHome /> 
-        </>) : null
-    }
-    <Routes />
-    {
-      path !== 'login'? <Footer /> : null
+          <Routes />
+          <Footer />
+        </>
+      ) : null
     }
   </Router>,
   document.getElementById('root')

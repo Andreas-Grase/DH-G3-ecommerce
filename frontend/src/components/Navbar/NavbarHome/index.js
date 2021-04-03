@@ -1,36 +1,40 @@
 import { Link } from "react-router-dom";
 import {
   Nav,
-  NavLink,
-  Bars,
-  NavMenu,
-  NavBtn,
-  NavBtnLink,
-} from "./NavbarElements";
+  Navbar,
+  NavDropdown,
+  Form,
+  FormControl,
+  Button,
+} from "react-bootstrap";
 import "./style.css";
 
 const NavbarHome = () => {
   return (
-    <>
-      <Nav>
-        <Bars />
-        <NavMenu>
-          <NavLink id="textdecorationinicio" exact to="/" activeStyle>Início</NavLink>
-          <NavLink id="textdecorationsobre"  to="/sobre" activeStyle>Sobre</NavLink>
-          <NavLink id="textdecorationcategorias"  to="/categorias" activeStyle>Categorias</NavLink>
-          <NavLink id="textdecorationmarcas" to="/marcas" activeStyle>Marcas</NavLink>
-          <NavLink id="textdecorationprodutos" to="/produtos" activeStyle>Produtos</NavLink>
-          <NavLink id="textdecorationpromocoes" to="/promocoes" activeStyle>Promoções</NavLink>          
-          {/* 2nd Nav */}
-          {/* <NavBtn>
-          <NavBtnLink to="/cadastre-se">Cadastre-se</NavBtnLink>
-        </NavBtn> */}
-        </NavMenu>
-        <NavBtn>
-          <NavBtnLink to="/login">Entrar na conta</NavBtnLink>
-        </NavBtn>
-      </Nav>
-    </>
+    <Navbar className="navbar" variant="dark" expand="lg">
+      <Navbar.Brand href="/dashboard">Admin</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="mr-auto">
+          <Nav.Link href="/">Início</Nav.Link>
+          <Nav.Link href="/sobre">Sobre</Nav.Link>
+          <Nav.Link href="/produtos">Produtos</Nav.Link>
+          <Nav.Link href="/marcas">Marcas</Nav.Link>
+          <NavDropdown title="Categorias" id="basic-nav-dropdown">
+            <NavDropdown.Item href="/">Barbearia</NavDropdown.Item>
+            <NavDropdown.Item href="/">Cabelo</NavDropdown.Item>
+            <NavDropdown.Item href="/">Lançamentos</NavDropdown.Item>
+            <NavDropdown.Item href="/">Pele</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="/">Unhas</NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+        <Form inline size="sm">
+          {/* <FormControl type="text" placeholder="Produtos" className="mr-sm-2" /> */}
+          <Button href="/login" variant="outline-info" className="button">Entrar na conta</Button>
+        </Form>
+      </Navbar.Collapse>
+    </Navbar>
   );
 };
 export default NavbarHome;

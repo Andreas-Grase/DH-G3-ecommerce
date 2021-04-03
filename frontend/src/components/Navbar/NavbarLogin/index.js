@@ -25,12 +25,12 @@ const NavbarLogin = () => {
           <NavLink to="/promocoes" activeStyle>Promoções</NavLink>          
         </NavMenu> */}
           {/* 2nd Nav */}
-          <NavBtn>
+          {/* <NavBtn>
           <NavBtnLink to="/cadastro">Cadastre-se</NavBtnLink>
         </NavBtn>
         <NavBtn>
           <NavBtnLink to="/login">Entrar na conta</NavBtnLink>
-        </NavBtn>
+        </NavBtn> */}
       </Nav>
     </>
   );
