@@ -1,13 +1,14 @@
 import NavbarDashboard from '../../components/Navbar/NavbarDashboard';
-import MenuLateral from '../../components/Navbar/MenuLateral';
+import MenuLateral from '../../components/Navbar/MenuLateralDashboard';
 
-const Dashboard = () => {
+const DashboardVer = () => {
     return (
         <>
         <NavbarDashboard />
+        <h1>Ver Produtos</h1>
         <MenuLateral />
         </>
     )
 }
 
-export default Dashboard;
+export default DashboardVer;

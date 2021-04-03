@@ -31,11 +31,11 @@ const Routes = () => {
         {/* <Route path="/produtos/:produto_detalhado" component={ProdutoDetalhado} */}
         <Route path="/marcas" component={PaginaMarcas} />
         <Route path="/produtos" component={Produtos} />
-        <Route exact path="/dashboard/:atualizar_produtos" component={DashboardAtualizar} />
-        <Route exact path="/dashboard/:deletar_produtos" component={DashboardDeletar} />
-        <Route exact path="/dashboard/:adicionar_produtos" component={DashboardAdicionar} />
-        <Route exact path="/dashboard/:listar_produtos" component={DashboardListar} />
-        <Route exact path="/dashboard/:ver_produtos?" component={DashboardVer} />
+        <Route exact path="/dashboard/atualizar__produtos" component={DashboardAtualizar} />
+        <Route exact path="/dashboard/deletar__produtos" component={DashboardDeletar} />
+        <Route exact path="/dashboard/adicionar__produtos" component={DashboardAdicionar} />
+        <Route exact path="/dashboard/listar__produtos" component={DashboardListar} />
+        <Route exact path="/dashboard/ver__produtos" component={DashboardVer} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/login" component={Login} />
         <Route path="/" component={Home} />

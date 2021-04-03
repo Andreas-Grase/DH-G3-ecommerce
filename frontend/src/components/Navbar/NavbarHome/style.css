@@ -7,7 +7,21 @@
     padding: 0;
 }
 
-#coisa {
+#textdecorationinicio  {
     text-decoration: none;
 }
-
+#textdecorationsobre  {
+    text-decoration: none;
+}
+#textdecorationcategorias {
+    text-decoration: none;
+}
+#textdecorationmarcas  {
+    text-decoration: none;
+}
+#textdecorationprodutos  {
+    text-decoration: none;
+}
+#textdecorationpromocoes  {
+    text-decoration: none;
+}

@@ -1,2 +1,7 @@
-
+#titulo-dashboard >h1 {
+    color: red;
+    border: 1px;
+    margin: 5px;
+    padding: 5px;
+}
 

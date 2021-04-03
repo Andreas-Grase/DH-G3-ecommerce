@@ -15,12 +15,12 @@ const NavbarHome = () => {
       <Nav>
         <Bars />
         <NavMenu>
-          <NavLink id="coisa" exact to="/" activeStyle>Início</NavLink>
-          <NavLink to="/sobre" activeStyle>Sobre</NavLink>
-          <NavLink to="/categorias" activeStyle>Categorias</NavLink>
-          <NavLink to="/marcas" activeStyle>Marcas</NavLink>
-          <NavLink to="/produtos" activeStyle>Produtos</NavLink>
-          <NavLink to="/promocoes" activeStyle>Promoções</NavLink>          
+          <NavLink id="textdecorationinicio" exact to="/" activeStyle>Início</NavLink>
+          <NavLink id="textdecorationsobre"  to="/sobre" activeStyle>Sobre</NavLink>
+          <NavLink id="textdecorationcategorias"  to="/categorias" activeStyle>Categorias</NavLink>
+          <NavLink id="textdecorationmarcas" to="/marcas" activeStyle>Marcas</NavLink>
+          <NavLink id="textdecorationprodutos" to="/produtos" activeStyle>Produtos</NavLink>
+          <NavLink id="textdecorationpromocoes" to="/promocoes" activeStyle>Promoções</NavLink>          
           {/* 2nd Nav */}
           {/* <NavBtn>
           <NavBtnLink to="/cadastre-se">Cadastre-se</NavBtnLink>

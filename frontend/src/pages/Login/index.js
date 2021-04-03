@@ -7,7 +7,7 @@ const Login = () => {
        <div className="conteiner">
         <div className="login">
             <img src= {logo} className="usuario" width="100" height="100" alt=""/>
-            <h1>Login</h1>
+            <h1 className="titulo-login">Login</h1>
             <form>           
                 <p>Usuario:</p>
                 <input type="text" name="" placeholder="Insira seu nome de usuario"/>
