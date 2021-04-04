@@ -111,7 +111,9 @@
 }
 
 @media screen and (max-width: 768px) {
-    display: none;
+    .btn {
+        display: none;
+    }
 }
 
 .btn-continuar {

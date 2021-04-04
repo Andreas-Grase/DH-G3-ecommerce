@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.detalhes-da-compra {
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: column wrap;
+    margin: 5px;
+    padding: 5px;
+}
+
+.detalhes-da-compra h2 {
+    font-size: 1.8rem;
+    border: 1px;
+    margin: 5px;
+    padding: 10px 5px;
+}
+
+.detalhes-da-compra h6 {
+    font-size: .8rem;
+    border: 1px;
+    margin: 5px;
+    padding: 10px 5px;
+}
+
+.endereco-entrega p {
+    color: #fff;
+    border: 1px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.endereco-entrega {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    border: 1px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    height: 150px;
+    background-color: #AF8048;
+    /* background-color: #af8048; */
+}
+
+.opcoes-frete {
+    display: flex;
+    flex-flow: column nowrap;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    border: 1px;
+    background-color: #AF8048;
+    height: 150px;
+    justify-content: center;
+    padding: 25px 35px;
+}
+
+.opcoes-frete > div:first-child {
+    border: 1px;
+    border-radius: 4px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    vertical-align: middle;
+    border-bottom: 1px solid #000;
+    background: #fff;
+    height: 50px;
+}
+
+.opcoes-frete > div:last-child {
+    border: 1px;
+    border-radius: 4px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    vertical-align: middle;
+    background: #fff;
+    height: 50px;
+}
+
+.ui-radio-element {
+    border: 1px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    vertical-align: middle;
+    padding: 5px;
+    margin: 5px;
+    height: 25px;
+    width: 25px;
+}
+.cart-package__shipping-box {
+    border: 1px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.cart-package__shipping-price {
+    border: 1px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+#btn-continuar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    padding: 0.5rem calc((100vw-1000px) / 2);
+    z-index: 10;
+    margin: 5px;
+
+}
+
+@media screen and (max-width: 768px) {
+    #btn-continuar {
+        display: none;
+    }
+}
+
+#btn-continuar2 {
+    border-radius: 4px;
+    background: #AF8048;
+    padding: 10px 22px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+#btn-continuar2:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #AF8048;
+  }

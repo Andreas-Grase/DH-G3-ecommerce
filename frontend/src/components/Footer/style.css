@@ -1,51 +1,67 @@
-.linha-footer {
-    margin: 10px;
-    margin-top: 0;
-    display: flex;
+.footer {
     display: flex;
     flex-flow: row wrap;
 }
 
-.coluna-footer {
-    padding: 5px;
-    margin: 10px;
-
+.linha-footer {
+    margin: 5px 10px;
+    display: flex;
+    flex-basis: 100%;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: space-between;
 }
- .coluna-footer ul {
-     width: 180px;
- }
+
+.coluna-footer {
+    display: flex;
+    flex-flow: column wrap;
+    padding: 5px;
+    margin: 5px 10px;
+}
+
+.coluna-footer ul {
+    width: 180px;
+}
 
 .footer-logo {
-    margin: 10px;
-    width: 280px;
-    height: 170px;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 5px;
+    width: 103px;
+    height: 70px;
 }
 
 .footer-subrow-social {
-    margin-bottom: 25px; 
-    min-width: 160px;
+    display: flex;
+    flex: 1 0 100%;
+    flex-flow: row wrap;
 }
 
 .footer-subrow-newsletter {
     margin: 25px 0;
     line-height: 20px;
     margin-left: 0;
-    min-width: 400px; 
-    width: 400px;
 }
 
-footer  p {
-    color:  var(--cor1);
+.footer p {
+    color: var(--cor1);
     margin: 0;
 }
 
 .footer-nav {
     display: flex;
-    justify-content: flex-end;
+    flex-flow: row wrap;
 }
 
 .footer-subrow-social i {
     margin-right: 25px;
+}
+
+.tbox {
+    display: flex;
+    flex-flow: row wrap;
+    width: 400px;
+    align-items: center;
 }
 
 .tbox input {
@@ -60,6 +76,8 @@ footer  p {
 }
 
 #nome {
+    display: flex;
+    flex-flow: row wrap;
     width: 360px;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -89,42 +107,77 @@ footer  p {
 
 .contato {
     display: flex;
+    flex: 1 1 100%;
+    flex-flow: row wrap;
     justify-content: space-around;
-    min-width: 70%
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    margin: 0 10px;
 }
 
 .contato ul {
-    min-width: 250px
+    min-width: 250px;
 }
 
 .categorias {
-    min-width: 400px;
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: row wrap;
+    justify-content:left;
+    padding: 10px;
+    margin: 5px 10px;
+    border-bottom: 1px solid #fff;
 }
 
 .trans {
     display: flex;
+    flex: 1 1 100%;
+    flex-flow: row wrap;
     justify-content: space-between;
 }
 
+.cartoes {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.cartoes p {
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: row wrap;
+    /* width: 200px; */
+}
+
 .cartoes i {
+    display: flex;
+    flex-flow: row wrap;
     margin-right: 5px;
-    display: inline-block;
+}
+
+.ambiente-protegido {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.ambiente-protegido p {
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 
 .ambiente-protegido i {
-    margin-left: 10px;
-    display: inline-block;
+    display: flex;
+    flex-flow: row wrap;
+    margin-right: 5px;
 }
 
-.linha-footer > p {
-    margin: 0;
+.linha-footer>p {
+    display: flex;
+    flex: 1 1 100%;
+    flex-flow: column wrap;
+    background-color: var(--cor1);
     color: var(--cor2);
     text-align: center;
-    width: 100vw;
-    margin: 0;
-    background-color: var(--cor1);
-}
-
-.linha-footer-final {
-    margin: 0;
 }

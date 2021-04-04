@@ -12,11 +12,11 @@ import "./style.css";
 const NavbarHome = () => {
   return (
     <Navbar className="navbar" variant="dark" expand="lg">
-      <Navbar.Brand href="/dashboard">Admin</Navbar.Brand>
+      <Navbar.Brand href="/dashboard"><i class="fas fa-cog"></i></Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/">Início</Nav.Link>
+          <Nav.Link href="/contato">Contato</Nav.Link>
           <Nav.Link href="/sobre">Sobre</Nav.Link>
           <Nav.Link href="/produtos">Produtos</Nav.Link>
           <Nav.Link href="/marcas">Marcas</Nav.Link>
@@ -31,7 +31,7 @@ const NavbarHome = () => {
         </Nav>
         <Form inline size="sm">
           {/* <FormControl type="text" placeholder="Produtos" className="mr-sm-2" /> */}
-          <Button href="/login" variant="outline-info" className="button">Entrar na conta</Button>
+          <Button href="/login" variant="outline-light" className="button">Entrar na conta</Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>

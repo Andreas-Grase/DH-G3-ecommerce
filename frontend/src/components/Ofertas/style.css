@@ -26,14 +26,14 @@
 
 .slide-ofertas {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-around;
-    flex-flow: row nowrap;
 }
 
 .slide-mais-vendidos {
     display: flex;
     justify-content: space-around;
-    flex-flow: row nowrap;
+    flex-flow: row wrap;
 }
 
 .produto-slide-promo {
@@ -42,4 +42,9 @@
 
 .produto-slide-promo p{
     text-align: center;
+}
+
+.slide-promo-img {
+    width: 260px;
+    height: 260px;
 }

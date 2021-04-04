@@ -4,7 +4,7 @@
     /* flex-flow = flex-direction: row; flex-wrap: wrap; */
     flex-flow: row wrap;
     flex: 1 1 auto;
-    min-width: 576px;
+    /* min-width: 576px; */
     margin: 5px auto;
     padding: 5px;
     align-items: center;
@@ -33,7 +33,7 @@
 
 #produtos {
     text-align: center;
-    display: block;
+    display: flex;
     flex-flow: row wrap;
     background-color: white;
     margin: auto;

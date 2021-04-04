@@ -1,10 +1,13 @@
 #navbar__container {
     top: 0;
-    width: 100%
+    /* width: 100% */
 }
 
 #header__nav {
-    display: block;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 1 1 auto;
+    justify-content: space-between;
     width: 100%;
     background: var(--cor2);
 }
@@ -19,6 +22,7 @@
     margin: 0;
     border: 0;
     background: transparent;
+    width: 100%
 }
 
 #header__name {
@@ -120,7 +124,7 @@
 }
 
 #header__login__link {
-    color: var(--cor1);    
+    color: var(--cor1);
     font-size: 0.8rem;
     border-radius: 10px;
     text-decoration: none;
@@ -148,12 +152,13 @@
 
 @media screen and (max-width: 1250px) {
     #header__nav {
-        display: block;
+        display: flex;
         padding: 0;
+        width: 100%
     }
 
     #header__title {
-        display: inline-block;
+        display: flex;
         padding: 10px;
     }
 

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.revise-sua-compra {
+    border: 1px;
+    border-radius: 10px;
+    display: flex;
+    flex-flow: row nowrap;
+    background-color: #AF8048;
+    margin: 30px 5px 130px;
+    padding: 5px;
+    height: 730px;
+    justify-content: space-between;
+}
+
+.revise-sua-compra>div:first-child {
+    width: 750px;
+    height: 362px;
+    margin: 30px 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .revise-sua-compra>div:first-child {
+        width: auto;
+    }
+}
+
+.revise-sua-compra>div:last-child {
+    width: 435px;
+    height: 761px;
+}
+
+@media screen and (max-width: 768px) {
+    .revise-sua-compra>div:last-child {
+        width: auto;
+    }
+}
+
+.revise-sua-compra h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    border: 1px;
+    margin: 5px;
+    padding: 10px 5px;
+
+}
+
+.revise-sua-compra h6 {
+    font-size: .8rem;
+    color: #fff;
+    border: 1px;
+    margin: 5px;
+    padding: 10px 5px;
+}
+
+.endereco-entrega p {
+    border: 1px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.endereco-entrega2 {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    border: 1px;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 5px;
+    height: 150px;
+    background-color: #f7efe6;
+    /* background-color: #af8048; */
+}
+
+.prazo-de-entrega p {
+    border: 1px;
+    margin: 10px 5px;
+    padding: 10px 5px;
+}
+
+.prazo-de-entrega {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    border: 1px;
+    border-radius: 10px;
+    margin: 10px 5px;
+    padding: 10px 5px;
+    height: 150px;
+    background-color: #f7efe6;
+    /* background-color: #af8048; */
+}
+
+.produto-a-comprar {
+    border: 1px;
+    border-radius: 10px;
+    background-color: #fff;
+    margin: -20px 50px;
+    padding: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.25);
+}
+
+.produto-a-comprar>div {
+    border: 1px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.produto-a-comprar p {
+    border: 1px;
+    margin: 5px;
+    padding: 5px;
+}
+
+.descricao-produto {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+.descricao-produto p:first-child {
+    font-size: 1.8rem;
+    line-height: 2rem;
+
+}
+
+.descricao-valores {
+    display: flex;
+    flex-flow: column wrap;
+    width: 300px;
+}
+
+.valor-produto {
+    font-size: 1.2rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 5px;
+    border-top: 1px solid #000;
+}
+
+.valor-envio {
+    font-size: 1.2rem;
+    display: flex;
+    flex: 1 1 auto;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 1px solid #000;
+}
+
+.valor-total {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.valor-total p {
+    font-size: 1.4rem;
+}
+
+#btn-finalizar-compra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem calc((100vw-1000px) / 2);
+    z-index: 10;
+    margin: 5px;
+
+}
+
+@media screen and (max-width: 768px) {
+    #btn-finalizar-compra {
+        display: none;
+    }
+}
+
+#btn-finalizar-compra2 {
+    border-radius: 4px;
+    background: #AF8048;
+    padding: 10px 22px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+#btn-finalizar-compra2:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #AF8048;
+}

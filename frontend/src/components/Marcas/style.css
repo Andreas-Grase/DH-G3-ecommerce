@@ -79,29 +79,27 @@ p {
     font-size: 1rem;
    /* line-height: espaço entre linhas */
     line-height: 24px;
-    margin: 8px auto;
+    /* margin: 8px auto; */
 }
 
 /* FIM ESTILOS PADRÕES */
 
 
 .marcas {
-    /* display: flex; */
+    display: flex;
     flex-flow: row wrap;
-    justify-content: center;
-    background-color: white;
+    align-items: center;
 }
 
 /* INICIO TITULOS MARCAS */
 .titulo-marcas {
     background-color: var(--cor2);
     display: flex;
+    flex: 1 1 100%;
     /* flex-flow = flex-direction: row; flex-wrap: wrap; */
     flex-flow: row wrap;
-    flex: 1 1 auto;
-    min-width: 576px;
     margin: 5px auto;
-    padding: 5;
+    padding: 5px;
     align-items: center;
 }
 
@@ -128,9 +126,9 @@ p {
 /* FIM TITULOS MARCAS*/
 
 .cards-e-btn {
-    width: 620px;
+    max-width: 620px;
     display: flex;
-    flex-direction: column;
+    flex-flow: column wrap;
     align-items: center;
     margin: 0 auto;
 }
@@ -140,8 +138,8 @@ p {
     max-width: 100%;
     display: flex;
     flex-flow: row wrap;
-    min-width: 576px;
     padding: 10px;
+    justify-content: center;
 }
 
 .imagem {
@@ -205,10 +203,10 @@ p {
 }
 
 .btn-ver-marcas {
-    background-color: var(--cor1);
+    background-color: var(--cor3);
     border: 1px solid var(--cor3);
-    border-radius: 30px;
-    color: var(--cor3);
+    border-radius: 10px;
+    color: var(--cor1);
     margin: 10px 10px 20px;
     padding: 4px;
     width: 100px;
@@ -218,8 +216,8 @@ p {
 }
 
 .btn-ver-marcas:hover {
-    border: 1px solid var(--cor1);
-    background-color: var(--cor2);
-    color: var(--cor1);
+    border: none;
+    background-color: var(--cor1);
+    color: var(--cor3);
 
 }
