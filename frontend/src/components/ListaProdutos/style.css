@@ -24,3 +24,8 @@
 .detalhes-do-produto {
     padding: 0 20px;
 }
+
+.btn-adicionarAoCarrinho:hover {
+    text-decoration: none;
+    color: #b39672;
+}
