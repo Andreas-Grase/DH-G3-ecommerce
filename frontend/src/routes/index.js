@@ -9,12 +9,13 @@ import FinalizarCompras from '../pages/Carrinho/FinalizarCompras'
 import Login from '../pages/Login'
 import Produtos from '../pages/Produtos'
 import PaginaMarcas from '../pages/PaginaMarcas'
-import Dashboard from '../pages/Dashboard'
+import Dashboard from '../pages/DashboardLogin'
 import DashboardAdicionar from '../pages/DashboardAdicionar'
 import DashboardAtualizar from '../pages/DashboardAtualizar'
 import DashboardDeletar from '../pages/DashboardDeletar'
 import DashboardListar from '../pages/DashboardListar'
 import DashboardVer from '../pages/DashboardVer'
+import DashboardLogin from '../pages/DashboardLogin'
 
 
 
@@ -28,6 +29,7 @@ const Routes = () => {
         {/* <Route exact path="/categorias/:categoria/:marcas" component={Marcas}/> */}
         {/* <Route exact path="/categorias/:categoria?" component={Categoria}/> */}
         {/* <Route path="/produtos/:produto_detalhado" component={ProdutoDetalhado} */}
+        <Route exact path="/dashboard/login" component={DashboardLogin} />
         <Route exact path="/dashboard/atualizar__produtos" component={DashboardAtualizar} />
         <Route exact path="/dashboard/deletar__produtos" component={DashboardDeletar} />
         <Route exact path="/dashboard/adicionar__produtos" component={DashboardAdicionar} />

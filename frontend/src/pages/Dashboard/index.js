@@ -5,7 +5,7 @@ const Dashboard = () => {
     return (
         <>
         <NavbarDashboard />
-        <h1 id="titulo-dashboard">Você está na página principal do Dashboard</h1>
+        <h1>Você está no Dashboard</h1>
         <MenuLateral />
         </>
     )
