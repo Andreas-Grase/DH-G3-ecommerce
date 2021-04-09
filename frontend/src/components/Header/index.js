@@ -8,14 +8,14 @@ const Header = () => {
       <div id="header__nav">
         <div id="container">
           <div id="header__name">
-          <Link exact to="/">
+            <Link exact to="/">
                 <img
                     id="header-logo"
                     src={logo}
                     alt="Logo-Kabellos"
                 />
                 </Link>
-            </div>
+          </div>
           <div id="search__box">
             <input type="search" placeholder="Procure seus produtos" />
             <span class="fa fa-search"></span>

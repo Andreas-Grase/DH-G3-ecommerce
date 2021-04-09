@@ -93,7 +93,7 @@
 }
 
 #right__menu {
-    min-width: 225px;
+    width: 225px;
     justify-content: flex-end;
     align-items: center;
     flex: none;
@@ -116,11 +116,11 @@
 #header__saudacao {
     height: 100%;
     font-size: 0.8rem;
-    margin: 0;
-    padding: 5px;
     text-align: center;
     line-height: 0.5em;
     font-weight: 600;
+    margin-bottom: 5px;
+    padding: 0;
 }
 
 #header__login__link {
@@ -151,24 +151,50 @@
 
 
 @media screen and (max-width: 1250px) {
+    #container{
+        padding: 0 5px;
+        height: 65px;
+    }
+    
     #header__nav {
         display: flex;
+        justify-content: space-between;
         padding: 0;
-        width: 100%
+        max-width: 100vw;
     }
 
-    #header__title {
+    #header-logo {
         display: flex;
-        padding: 10px;
+        padding: 5px;
+        margin-right: 5px;
     }
 
     #search__box {
-        width: 60%;
+        width: fit-content;
         display: inline-flex;
         justify-content: center;
+        margin: 0 5px;
     }
 
     #search__box input {
-        width: 45%;
+        width: 60%;
     }
+
+    #right__menu{
+        width: fit-content;
+        
+    }
+
+    #header__login{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #header__saudacao,
+    #header__login__link,
+    #shopping__cart{
+        font-size: 0.6rem;
+    }
+
+    
 }

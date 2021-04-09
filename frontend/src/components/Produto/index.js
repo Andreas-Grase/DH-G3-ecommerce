@@ -26,7 +26,7 @@ const Produto = () => {
   window.addEventListener('resize', slideImage);
 
   return (
-    <main className="product-page">
+    <div className="product-page">
       <div className="card-wrapper">
         <div className="card">
           {/* card a esquerda */}
@@ -153,7 +153,7 @@ const Produto = () => {
             <a className="card-img" href="#">
               <img src={images[5]} alt="" />
             </a>
-            <p className="card-text"><span>OLeave- Aussie Hair Insurance</span> traz hidratação intensa e força para os fios, deixando o cabelo suave e com aroma incrível. Sua fórmula possui ingredientes exóticos: Aloe Vera Australiano, Alga Marinha, e Óleo de Jojoba, garantindo alta facilidade para desembaraçar, nutrir, amaciar e restaurar os cabelos. Além de trazer um aspecto incrível, deixa os cabelos macios e sedosos.</p>
+            <p className="card-text"><span>OL</span>eave- Aussie Hair Insurance traz hidratação intensa e força para os fios, deixando o cabelo suave e com aroma incrível. Sua fórmula possui ingredientes exóticos: Aloe Vera Australiano, Alga Marinha, e Óleo de Jojoba, garantindo alta facilidade para desembaraçar, nutrir, amaciar e restaurar os cabelos. Além de trazer um aspecto incrível, deixa os cabelos macios e sedosos.</p>
             <button type="button" className="card-btn">Compre</button>
           </div>
         </div>
@@ -185,7 +185,7 @@ const Produto = () => {
           </div>
         </div>
       </div>
-    </main>
+    </div>
   );
 };
 

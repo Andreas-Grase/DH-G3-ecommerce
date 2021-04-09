@@ -8,6 +8,7 @@ import Cadastro from '../pages/Cadastro'
 import FinalizarCompras from '../pages/Carrinho/FinalizarCompras'
 import Login from '../pages/Login'
 import Produtos from '../pages/Produtos'
+import Produto from '../pages/Produto'
 import PaginaMarcas from '../pages/PaginaMarcas'
 import Dashboard from '../pages/DashboardLogin'
 import DashboardAdicionar from '../pages/DashboardAdicionar'
@@ -40,6 +41,7 @@ const Routes = () => {
         <Route path="/login" component={Login} />
         <Route path="/marcas" component={PaginaMarcas} />
         <Route path="/produtos" component={Produtos} />
+        <Route path="/produto" component={Produto} />
         <Route path="/contato" component={Contato}/>
         <Route path="/sobre" component={Sobre}/>
         <Route path="/" component={Home} />
