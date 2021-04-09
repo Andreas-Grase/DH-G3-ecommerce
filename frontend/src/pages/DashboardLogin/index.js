@@ -3,7 +3,7 @@ import MenuLateral from '../../components/Navbar/MenuLateralDashboard';
 import AdminLogin from '../../components/AdminLogin'
 import './style.css'
 
-const Dashboard = () => {
+const DashboardLogin = () => {
     return (
         <>
             <div>
@@ -19,4 +19,4 @@ const Dashboard = () => {
     )
 }
 
-export default Dashboard;
+export default DashboardLogin;

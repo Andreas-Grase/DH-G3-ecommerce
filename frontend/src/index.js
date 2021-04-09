@@ -12,6 +12,7 @@ import DashboardAtualizar from './pages/DashboardAtualizar';
 import DashboardDeletar from './pages/DashboardDeletar';
 import DashboardListar from './pages/DashboardListar';
 import DashboardVer from './pages/DashboardVer';
+import DashboardLogin from './pages/DashboardLogin';
 
 let url = (window.location.href); //window.location.href originally instead of this
 let object = new URL(url);
@@ -31,6 +32,10 @@ ReactDOM.render(
     {
       path === '/dashboard' ?
         <Dashboard /> : null
+    }
+    {
+      path === '/dashboard/login' ?
+        <DashboardLogin /> : null
     }
     {
       path === '/dashboard/ver__produtos' ?
@@ -53,7 +58,7 @@ ReactDOM.render(
       <DashboardAtualizar /> : null
     }
     {
-      path !== '/login' && path !== '/cadastro' && path !== '/dashboard' && path !== '/dashboard/ver__produtos' && path !== '/dashboard/listar__produtos' && path !== '/dashboard/adicionar__produtos' && path !== '/dashboard/deletar__produtos' && path !== '/dashboard/atualizar__produtos'? (
+      path !== '/login' && path !== '/cadastro' && path !== '/dashboard' && path !== '/dashboard/login' && path !== '/dashboard/ver__produtos' && path !== '/dashboard/listar__produtos' && path !== '/dashboard/adicionar__produtos' && path !== '/dashboard/deletar__produtos' && path !== '/dashboard/atualizar__produtos'? (
         <>
           <Header />
           <NavbarHome /> 
