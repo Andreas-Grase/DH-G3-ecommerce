@@ -1,20 +1,24 @@
-import ListaProdutos from '../../components/ListaProdutos'
-import MenuLateral from '../../components/MenuLateral'
+// import MenuLateral from '../../components/MenuLateral'
+import { ProductProvider } from '../../components/ProdutosDOS/context';
+import ProductList from '../../components/ProdutosDOS/ProductList';
+import Dropdown from '../../components/Dropdown'
+
 import './style.css'
 
 const Produtos = () => {
     return (
-        <section className="bloque-produtos">
+        <div className="bloque-produtos">
             
-            <article className="produtos-primeira-coluna">
-                <MenuLateral />
-            </article>
+            <div className="produtos-primeira-coluna">
+         <Dropdown />
+                {/* <MenuLateral /> */}
+            </div>
 
-            <article className="produtos-segunda-coluna">
+            <div className="produtos-segunda-coluna">
                 
-                <div className="titulo-acessorios">
+                {/* <div className="titulo-acessorios">
                     <h3>ACESSÓRIOS</h3>
-                </div>
+                </div> */}
 
                 <div className="produtos-segunda-coluna-inicio">
                     <div className="opcoes-de-exibicao">
@@ -30,18 +34,9 @@ const Produtos = () => {
                 </div>
                           
                 <div className="produtos-segunda-coluna-fim">
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
+                <ProductProvider>
+                    <ProductList />
+                </ProductProvider>
                    
                 </div>
                 <div className="proxima-pagina">
@@ -50,8 +45,8 @@ const Produtos = () => {
                     {/* <i class="fas fa-chevron-right"></i>
                     <i class="fas fa-chevron-right"></i> */}
                 </div>
-            </article>              
-        </section>
+            </div>              
+        </div>
     )
 }
 
