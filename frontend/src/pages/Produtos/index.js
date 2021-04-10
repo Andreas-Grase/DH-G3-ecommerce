@@ -8,22 +8,21 @@ import './style.css'
 const Produtos = () => {
     return (
         <div className="bloque-produtos">
-            
-            <div className="produtos-primeira-coluna">
-         <Dropdown />
+            <nav className="produtos-primeira-coluna">
+                <Dropdown />
                 {/* <MenuLateral /> */}
-            </div>
+            </nav>
 
             <div className="produtos-segunda-coluna">
-                
+
                 {/* <div className="titulo-acessorios">
                     <h3>ACESSÓRIOS</h3>
                 </div> */}
 
                 <div className="produtos-segunda-coluna-inicio">
                     <div className="opcoes-de-exibicao">
-                        <p className="numero-de-paginas">Numero de paginas a exibir 
-                            <a href="" alt=""> 12 </a><span>/</span>
+                        <p className="numero-de-paginas">Numero de paginas a exibir
+                            <a href="" alt=""> 8 </a><span>/</span>
                             <a href="" alt=""> 25 </a><span>/</span>
                             <a href="" alt=""> TODO</a>
                         </p>
@@ -32,12 +31,12 @@ const Produtos = () => {
                         </p>
                     </div>
                 </div>
-                          
+
                 <div className="produtos-segunda-coluna-fim">
-                <ProductProvider>
-                    <ProductList />
-                </ProductProvider>
-                   
+                    <ProductProvider>
+                        <ProductList />
+                    </ProductProvider>
+
                 </div>
                 <div className="proxima-pagina">
                     <h3><a href="" alt="">Próxima página</a></h3>
@@ -45,7 +44,7 @@ const Produtos = () => {
                     {/* <i class="fas fa-chevron-right"></i>
                     <i class="fas fa-chevron-right"></i> */}
                 </div>
-            </div>              
+            </div>
         </div>
     )
 }
