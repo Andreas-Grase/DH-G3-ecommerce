@@ -74,7 +74,7 @@ const ProductWrapper = styled.div`
     transition: all 1s linear;
 }
 .img-container:hover .card-img-top{
-    transform:scale(1.2);
+    transform:scale(1.1);
 }
 .cart-btn{
     position: absolute;

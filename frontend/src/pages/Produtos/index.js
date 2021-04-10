@@ -8,10 +8,10 @@ import "./style.css";
 const Produtos = () => {
   return (
     <div className="bloque-produtos">
-      <div className="produtos-primeira-coluna">
+      <nav className="produtos-primeira-coluna">
         <Dropdown />
         {/* <MenuLateral /> */}
-      </div>
+      </nav>
 
       <div className="produtos-segunda-coluna">
         {/* <div className="titulo-acessorios">
@@ -24,7 +24,7 @@ const Produtos = () => {
               Numero de paginas a exibir
               <a href="" alt="">
                 {" "}
-                12{" "}
+                8{" "}
               </a>
               <span>/</span>
               <a href="" alt="">
