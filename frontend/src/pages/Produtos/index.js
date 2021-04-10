@@ -1,53 +1,74 @@
 // import MenuLateral from '../../components/MenuLateral'
-import { ProductProvider } from '../../components/ProdutosDOS/context';
-import ProductList from '../../components/ProdutosDOS/ProductList';
-import Dropdown from '../../components/Dropdown'
-
-import './style.css'
+import Dropdown from "../../components/Dropdown";
+import { ProductProvider } from "../../components/ProdutosDOS/context";
+import ProductList from "../../components/ProdutosDOS/ProductList";
+import Main from "../templates/Main";
+import "./style.css";
 
 const Produtos = () => {
-    return (
-        <div className="bloque-produtos">
-            
-            <div className="produtos-primeira-coluna">
-         <Dropdown />
-                {/* <MenuLateral /> */}
-            </div>
+  return (
+    <div className="bloque-produtos">
+      <div className="produtos-primeira-coluna">
+        <Dropdown />
+        {/* <MenuLateral /> */}
+      </div>
 
-            <div className="produtos-segunda-coluna">
-                
-                {/* <div className="titulo-acessorios">
+      <div className="produtos-segunda-coluna">
+        {/* <div className="titulo-acessorios">
                     <h3>ACESSÓRIOS</h3>
                 </div> */}
 
-                <div className="produtos-segunda-coluna-inicio">
-                    <div className="opcoes-de-exibicao">
-                        <p className="numero-de-paginas">Numero de paginas a exibir 
-                            <a href="" alt=""> 12 </a><span>/</span>
-                            <a href="" alt=""> 25 </a><span>/</span>
-                            <a href="" alt=""> TODO</a>
-                        </p>
-                        <p className="filtrar-exibicao">Ordenar por&nbsp;&nbsp;
-                            <a href="" alt=""><i class="fas fa-chevron-down"></i></a>
-                        </p>
-                    </div>
-                </div>
-                          
-                <div className="produtos-segunda-coluna-fim">
-                <ProductProvider>
-                    <ProductList />
-                </ProductProvider>
-                   
-                </div>
-                <div className="proxima-pagina">
-                    <h3><a href="" alt="">Próxima página</a></h3>
-                    <i class="fas fa-chevron-circle-right fa-2x"></i>
-                    {/* <i class="fas fa-chevron-right"></i>
-                    <i class="fas fa-chevron-right"></i> */}
-                </div>
-            </div>              
+        <div className="produtos-segunda-coluna-inicio">
+          <div className="opcoes-de-exibicao">
+            <p className="numero-de-paginas">
+              Numero de paginas a exibir
+              <a href="" alt="">
+                {" "}
+                12{" "}
+              </a>
+              <span>/</span>
+              <a href="" alt="">
+                {" "}
+                25{" "}
+              </a>
+              <span>/</span>
+              <a href="" alt="">
+                {" "}
+                TODO
+              </a>
+            </p>
+            <p className="filtrar-exibicao">
+              Ordenar por&nbsp;&nbsp;
+              <a href="" alt="">
+                <i class="fas fa-chevron-down"></i>
+              </a>
+            </p>
+          </div>
         </div>
-    )
-}
 
-export default Produtos
+        <div className="produtos-segunda-coluna-fim">
+          <ProductProvider>
+            <ProductList />
+          </ProductProvider>
+        </div>
+        <div className="proxima-pagina">
+          <h3>
+            <a href="" alt="">
+              Próxima página
+            </a>
+          </h3>
+          <i class="fas fa-chevron-circle-right fa-2x"></i>
+          {/* <i class="fas fa-chevron-right"></i>
+                    <i class="fas fa-chevron-right"></i> */}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const template = () => (
+  <Main>
+    <Produtos />
+  </Main>
+);
+export default template;
