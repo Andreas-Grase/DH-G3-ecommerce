@@ -1,0 +1,7 @@
+.admin-login > ul {
+    display: flex;
+    align-items: flex-start;
+}
+.cuadro-de-login-admin {
+    margin: 0 auto;
+}
