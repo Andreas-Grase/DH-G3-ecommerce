@@ -7,9 +7,16 @@
     margin: 5px 10px;
     display: flex;
     flex-basis: 100%;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
+}
+
+@media screen and (min-width: 544px) {
+    .linha-footer {
+        flex-direction: row;
+        justify-content: space-between;
+    }
 }
 
 .coluna-footer {
@@ -17,6 +24,7 @@
     flex-flow: column wrap;
     padding: 5px;
     margin: 5px 10px;
+
 }
 
 .coluna-footer ul {
@@ -26,7 +34,8 @@
 .footer-logo {
     display: flex;
     flex-flow: row wrap;
-    margin: 5px;
+    margin: 0 10px;
+    padding: 5px;
     width: 103px;
     height: 70px;
 }
@@ -50,8 +59,16 @@
 
 .footer-nav {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
 }
+
+@media screen and (min-width: 544px) {
+    .footer-nav {
+        flex-flow: row wrap;
+    }
+}
+
+
 
 .footer-subrow-social i {
     margin-right: 25px;
@@ -59,9 +76,17 @@
 
 .tbox {
     display: flex;
-    flex-flow: row wrap;
-    width: 400px;
-    align-items: center;
+    flex-flow: column wrap;
+    align-items: flex-start;
+    width: 200px;
+}
+
+@media screen and (min-width: 544px) {
+    .tbox {
+        display: flex;
+        flex-flow: row wrap;
+        width: 400px;
+    }
 }
 
 .tbox input {
@@ -72,20 +97,41 @@
     border-style: solid;
     border-color: rgb(161, 161, 161);
     border-width: 0.1em;
-    font-size: 0.8em
+    font-size: 0.8em;
+    margin-top: 15px;
+}
+
+@media screen and (min-width: 544px) {
+    .tbox input {
+        margin-top: 0px;
+    }
 }
 
 #nome {
     display: flex;
-    flex-flow: row wrap;
-    width: 360px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    flex-flow: column wrap;
+    width: 140px;
+}
+
+@media screen and (min-width: 544px) {
+    #nome {
+        display: flex;
+        flex-flow: row wrap;
+        width: 360px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
 }
 
 #email {
-    width: 200px;
+    width: 140px;
     margin-right: 15px
+}
+
+@media screen and (min-width: 544px) {
+    #email {
+        width: 200px;
+    }
 }
 
 .form__content__btn {
@@ -97,6 +143,13 @@
     border-width: 0.3em;
     border-color: rgb(201, 16, 16);
     font-size: 0.9em;
+    margin-top: 15px;
+}
+
+@media screen and (min-width: 544px) {
+    .form__content__btn {
+        margin-top: 0;
+    }
 }
 
 .form__content__btn:hover {
@@ -109,10 +162,16 @@
     display: flex;
     flex: 1 1 100%;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     border-top: 1px solid #fff;
     border-bottom: 1px solid #fff;
     margin: 0 10px;
+}
+
+@media screen and (min-width: 544px) {
+    .contato {
+        justify-content: space-between;
+    }
 }
 
 .contato ul {
@@ -123,8 +182,8 @@
     display: flex;
     flex: 1 1 100%;
     flex-flow: row wrap;
-    justify-content:left;
-    padding: 10px;
+    justify-content: left;
+    padding: 5px 15px;
     margin: 5px 10px;
     border-bottom: 1px solid #fff;
 }
@@ -139,6 +198,8 @@
 .cartoes {
     display: flex;
     flex-flow: row wrap;
+    margin: 5px 10px;
+    padding: 0 5px;
 }
 
 .cartoes p {
@@ -157,14 +218,16 @@
 .ambiente-protegido {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
+    margin: 5px 10px;
+    padding: 0 5px;
 }
 
 .ambiente-protegido p {
     display: flex;
     flex: 1 1 100%;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
 }
 
 .ambiente-protegido i {

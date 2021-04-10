@@ -1,0 +1,32 @@
+#btn-back {
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding: 0.5rem calc((100vw-1000px) / 2);
+    z-index: 10;
+    margin: 5px;
+
+}
+
+@media screen and (max-width: 768px) {
+    #btn-back {
+        display: none;
+    }
+}
+
+#back {
+    border-radius: 4px;
+    background: #AF8048;
+    padding: 10px 22px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
+}
+#back:hover {
+    transition: all 0.2s ease-in-out;
+    background: #fff;
+    color: #AF8048;
+  }

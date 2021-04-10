@@ -26,14 +26,14 @@ const NavbarDashboard = () => {
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           <Nav.Link href="/dashboard">Home</Nav.Link>
-          <Nav.Link href="/dashboard/listar__produtos">Listar Produtos</Nav.Link>
-          <Nav.Link href="/dashboard/ver__produtos">Ver Produtos</Nav.Link>
+          <Nav.Link href="/dashboard/produto/listar">Listar Produtos</Nav.Link>
+          <Nav.Link href="/dashboard/produto/ver/:id">Ver Produtos</Nav.Link>
           <NavDropdown title="Funções" id="basic-nav-dropdown">
-            <NavDropdown.Item href="/dashboard/adicionar__produtos">Adicionar</NavDropdown.Item>
-            <NavDropdown.Item href="/dashboard/deletar__produtos">
+            <NavDropdown.Item href="/dashboard/produto/adicionar">Adicionar</NavDropdown.Item>
+            <NavDropdown.Item href="/dashboard/produto/deletar/:id">
               Deletar
             </NavDropdown.Item>
-            <NavDropdown.Item href="/dashboard/atualizar__produtos">Atualizar</NavDropdown.Item>
+            <NavDropdown.Item href="/dashboard/produto/atualizar/:id">Atualizar</NavDropdown.Item>
             <NavDropdown.Divider />
             <NavDropdown.Item href="#action/3.4">
               Separated link

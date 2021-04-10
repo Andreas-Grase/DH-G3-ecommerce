@@ -11,11 +11,11 @@ const MenuLateral = () => {
       <Card.Header>Painel de Controle</Card.Header>
       <ListGroup variant="flush">
         <NavLink to="/dashboard" className="navlink">Página Inicial</NavLink>
-        <NavLink to="/dashboard/ver__produtos" className="navlink">Ver Produtos</NavLink>
-        <NavLink to="/dashboard/listar__produtos" className="navlink">Listar Produtos</NavLink>
-        <NavLink to="/dashboard/adicionar__produtos" className="navlink">Adicionar Produtos</NavLink>
-        <NavLink to="/dashboard/deletar__produtos" className="navlink">Deletar Produtos</NavLink>
-        <NavLink to="/dashboard/atualizar__produtos" className="navlink">Atualizar Produtos</NavLink>
+        <NavLink to="/dashboard/produto/ver/:id" className="navlink">Ver Produtos</NavLink>
+        <NavLink to="/dashboard/produto/listar" className="navlink">Listar Produtos</NavLink>
+        <NavLink to="/dashboard/produto/adicionar" className="navlink">Adicionar Produtos</NavLink>
+        <NavLink to="/dashboard/produto/deletar/:id" className="navlink">Deletar Produtos</NavLink>
+        <NavLink to="/dashboard/produto/atualizar/:id" className="navlink">Atualizar Produtos</NavLink>
       </ListGroup>
     </Card>
   );
