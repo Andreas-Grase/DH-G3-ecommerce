@@ -93,7 +93,6 @@
 }
 
 #right__menu {
-    min-width: 225px;
     justify-content: flex-end;
     align-items: center;
     flex: none;

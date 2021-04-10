@@ -28,7 +28,7 @@ const Header = () => {
                 </a>             
             </div>
             <Link to="/shopping__cart" id="shopping__cart">
-              <i class="fas fa-shopping-cart fa-2x"></i>
+              <i class="fas fa-shopping-cart"></i>
             </Link>
           </div>  
         </div>

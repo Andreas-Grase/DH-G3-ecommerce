@@ -1,0 +1,29 @@
+/* Extra small devices Portrait phones (<544px) - xs */
+/* @media only screen and (min-width: 544px) {
+    .responsive {
+        background-color: blue;
+    }
+} */
+
+/* Small devices Landscape phones (≥544px - <768px) - sm */
+/* @media only screen and (min-width: 768px) {
+    .responsive {
+        background-color: red;
+    }
+} */
+
+/* Medium devices Tablets (≥768px - <992px) - md */
+/* @media only screen and (min-width: 992px) {
+    .responsive {
+        background-color: yellow;
+    }
+} */
+
+/* Large devices Desktops (≥992px - <1200px) - lg */
+/* @media only screen and (min-width: 1200px) {
+    .responsive {
+        background-color: green;
+    }
+} */
+
+/* Extra large devices Desktops (≥1200px) - xl */

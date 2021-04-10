@@ -1,18 +1,17 @@
-import { NavLink } from "react-router-dom";
+import boleto from "../../../assets/img/finalizar-compras/boleto.png";
 import CartaoDeCredito from "../../../assets/img/finalizar-compras/CartaoDeCredito.png";
 import CartaoDeDebito from "../../../assets/img/finalizar-compras/CartaoDeDebito.png";
 import PIX from "../../../assets/img/finalizar-compras/PIX.png";
-import boleto from "../../../assets/img/finalizar-compras/boleto.png";
-import Ellipse9 from "../../../assets/img/finalizar-compras/Ellipse9.png";
-import Ellipse10 from "../../../assets/img/finalizar-compras/Ellipse10.png";
+import { NavComprasButton } from "../../Button";
 import "./style.css";
 
-const OpcoesDePagamento = () => {
+const OpcoesDePagamento = (props) => {
+  const { setActivePage } = props;
   return (
     <section className="finalizar-compras">
       <article className="opcoes-de-pagamento">
         <h6>Opções de pagamento</h6>
-        <div>
+        <div className="pagamentos">
           <ul className="pagamento">
             <img src={CartaoDeCredito} />
             <li>Cartão de crédito</li>
@@ -30,14 +29,16 @@ const OpcoesDePagamento = () => {
             <li>Boleto</li>
           </ul>
         </div>
-        <nav id="btn-continuar">
-          <NavLink to="/" id="btn-continuar2">
-            Voltar
-          </NavLink>
-          <NavLink to="/" id="btn-continuar2">
-            Continuar
-          </NavLink>
-        </nav>
+        <div className="buttons">
+          <NavComprasButton
+            titulo="Voltar"
+            executeFunction={() => setActivePage(0)}
+          />
+          <NavComprasButton
+            titulo="Continuar"
+            executeFunction={() => setActivePage(2)}
+          />
+        </div>
       </article>
     </section>
   );

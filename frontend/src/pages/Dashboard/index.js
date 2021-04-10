@@ -1,14 +1,16 @@
-import NavbarDashboard from '../../components/Navbar/NavbarDashboard';
-import MenuLateral from '../../components/Navbar/MenuLateralDashboard';
+import Admin from "../templates/Admin";
 
 const Dashboard = () => {
-    return (
-        <>
-        <NavbarDashboard />
-        <h1 id="titulo-dashboard">Você está na página principal do Dashboard</h1>
-        <MenuLateral />
-        </>
-    )
-}
+  return (
+    <>
+      <h1 id="titulo-dashboard">Dashboard: Admin</h1>
+    </>
+  );
+};
 
-export default Dashboard;
+const template = () => (
+  <Admin>
+    <Dashboard />
+  </Admin>
+);
+export default template;

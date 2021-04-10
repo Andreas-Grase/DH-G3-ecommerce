@@ -1,14 +1,16 @@
-import NavbarDashboard from '../../components/Navbar/NavbarDashboard';
-import MenuLateral from '../../components/Navbar/MenuLateralDashboard';
+import Admin from "../templates/Admin";
 
 const DashboardAtualizar = () => {
-    return (
-        <>
-        <NavbarDashboard />
-        <h1>Atualizar Produtos</h1>
-        <MenuLateral />
-        </>
-    )
-}
+  return (
+    <>
+      <h1>Dashboard: Atualizar Produtos</h1>
+    </>
+  );
+};
 
-export default DashboardAtualizar;
+const template = () => (
+  <Admin>
+    <DashboardAtualizar />
+  </Admin>
+);
+export default template;
