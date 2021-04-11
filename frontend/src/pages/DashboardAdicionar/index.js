@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import NavbarDashboard from '../../components/Navbar/NavbarDashboard';
 import MenuLateral from '../../components/Navbar/MenuLateralDashboard';
 import './style.css'
@@ -73,18 +72,7 @@ const DashboardAdicionar = () => {
         <MenuLateral />
         </>
     )
-}
-=======
-import Admin from "../templates/Admin";
-
-const DashboardAdicionar = () => {
-  return (
-    <>
-      <h1>Dashboard: Adicionar Produtos</h1>
-    </>
-  );
 };
->>>>>>> c7ccd4168e646bebe75444dff87f7481de11bd46
 
 const template = () => (
   <Admin>
