@@ -154,7 +154,7 @@ const Marcas = () => {
           </a>
         </div> */}
       </div>
-      <a href="/">
+      <a href="/marcas">
           <button type="button" className="btn-ver-marcas">
             <img src={binoculares}></img>
             <h6>Ver todas as marcas</h6>

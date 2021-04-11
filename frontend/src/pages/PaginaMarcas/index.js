@@ -1,4 +1,5 @@
 import MarcasDOS from "../../components/MarcasDOS"
+import Main from '../templates/Main'
 import './style.css'
 
 const PaginaMarcas = () => {
@@ -13,4 +14,9 @@ const PaginaMarcas = () => {
     )
 }
 
-export default PaginaMarcas
+const template = () => (
+    <Main>
+      <PaginaMarcas />
+    </Main>
+  );
+  export default template;

@@ -75,7 +75,7 @@ const Compras = () => {
                         </form>
                         <hr />
                         <div class="button-end">
-                        <NavLink to="/shopping__cart/:finalizar__compras" className="btn-continuar">
+                        <NavLink to="/shopping__cart/:finalizar__compras/:{id}" className="btn-continuar">
                             Confirmar a compra
                         </NavLink>
                             <br />

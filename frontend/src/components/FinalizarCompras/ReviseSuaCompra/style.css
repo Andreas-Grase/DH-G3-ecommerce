@@ -13,7 +13,7 @@
     display: flex;
     flex-flow: row nowrap;
     background-color: #AF8048;
-    margin: 30px 5px 130px;
+    margin: 30px 5px 30px;
     padding: 5px;
     height: 730px;
     justify-content: space-between;
@@ -174,38 +174,4 @@
 
 .valor-total p {
     font-size: 1.4rem;
-}
-
-#btn-finalizar-compra {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem calc((100vw-1000px) / 2);
-    z-index: 10;
-    margin: 5px;
-
-}
-
-@media screen and (max-width: 768px) {
-    #btn-finalizar-compra {
-        display: none;
-    }
-}
-
-#btn-finalizar-compra2 {
-    border-radius: 4px;
-    background: #AF8048;
-    padding: 10px 22px;
-    color: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-}
-
-#btn-finalizar-compra2:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #AF8048;
 }

@@ -114,36 +114,7 @@
     margin: 5px;
 }
 
-#btn-continuar {
+.buttons {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    height: 80px;
-    padding: 0.5rem calc((100vw-1000px) / 2);
-    z-index: 10;
-    margin: 5px;
-
 }
-
-@media screen and (max-width: 768px) {
-    #btn-continuar {
-        display: none;
-    }
-}
-
-#btn-continuar2 {
-    border-radius: 4px;
-    background: #AF8048;
-    padding: 10px 22px;
-    color: #fff;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-}
-#btn-continuar2:hover {
-    transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #AF8048;
-  }

@@ -1,4 +1,5 @@
-import "./style.css"; 
+import Main from "../templates/Main";
+import "./style.css";
 
 const Contato = () => {
   return (
@@ -8,4 +9,9 @@ const Contato = () => {
   );
 };
 
-export default Contato;
+const template = () => (
+  <Main>
+    <Contato />
+  </Main>
+);
+export default template;
