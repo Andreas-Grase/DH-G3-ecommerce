@@ -6,7 +6,7 @@ import './style.css'
 const DashboardAdicionar = () => {
     return (
         <>
-        <NavbarDashboard />
+        {/*<NavbarDashboard />*/}
         <div className = "container-flex">
             <div className = "header-section">
                 <div className = "add-icon">
