@@ -1,4 +1,5 @@
-import "./style.css"; 
+import Main from "../templates/Main";
+import "./style.css";
 
 const Sobre = () => {
   return (
@@ -8,4 +9,9 @@ const Sobre = () => {
   );
 };
 
-export default Sobre;
+const template = () => (
+  <Main>
+    <Sobre />
+  </Main>
+);
+export default template;

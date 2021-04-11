@@ -1,58 +1,74 @@
-import ListaProdutos from '../../components/ListaProdutos'
-import MenuLateral from '../../components/MenuLateral'
-import './style.css'
+// import MenuLateral from '../../components/MenuLateral'
+import Dropdown from "../../components/Dropdown";
+import { ProductProvider } from "../../components/ProdutosDOS/context";
+import ProductList from "../../components/ProdutosDOS/ProductList";
+import Main from "../templates/Main";
+import "./style.css";
 
 const Produtos = () => {
-    return (
-        <section className="bloque-produtos">
-            
-            <article className="produtos-primeira-coluna">
-                <MenuLateral />
-            </article>
+  return (
+    <div className="bloque-produtos">
+      <nav className="produtos-primeira-coluna">
+        <Dropdown />
+        {/* <MenuLateral /> */}
+      </nav>
 
-            <article className="produtos-segunda-coluna">
-                
-                <div className="titulo-acessorios">
+      <div className="produtos-segunda-coluna">
+        {/* <div className="titulo-acessorios">
                     <h3>ACESSÓRIOS</h3>
-                </div>
+                </div> */}
 
-                <div className="produtos-segunda-coluna-inicio">
-                    <div className="opcoes-de-exibicao">
-                        <p className="numero-de-paginas">Numero de paginas a exibir 
-                            <a href="" alt=""> 12 </a><span>/</span>
-                            <a href="" alt=""> 25 </a><span>/</span>
-                            <a href="" alt=""> TODO</a>
-                        </p>
-                        <p className="filtrar-exibicao">Ordenar por&nbsp;&nbsp;
-                            <a href="" alt=""><i class="fas fa-chevron-down"></i></a>
-                        </p>
-                    </div>
-                </div>
-                          
-                <div className="produtos-segunda-coluna-fim">
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                    <ListaProdutos />
-                   
-                </div>
-                <div className="proxima-pagina">
-                    <h3><a href="" alt="">Próxima página</a></h3>
-                    <i class="fas fa-chevron-circle-right fa-2x"></i>
-                    {/* <i class="fas fa-chevron-right"></i>
+        <div className="produtos-segunda-coluna-inicio">
+          <div className="opcoes-de-exibicao">
+            <p className="numero-de-paginas">
+              Numero de paginas a exibir
+              <a href="" alt="">
+                {" "}
+                8{" "}
+              </a>
+              <span>/</span>
+              <a href="" alt="">
+                {" "}
+                25{" "}
+              </a>
+              <span>/</span>
+              <a href="" alt="">
+                {" "}
+                TODO
+              </a>
+            </p>
+            <p className="filtrar-exibicao">
+              Ordenar por&nbsp;&nbsp;
+              <a href="" alt="">
+                <i class="fas fa-chevron-down"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div className="produtos-segunda-coluna-fim">
+          <ProductProvider>
+            <ProductList />
+          </ProductProvider>
+        </div>
+        <div className="proxima-pagina">
+          <h3>
+            <a href="" alt="">
+              Próxima página
+            </a>
+          </h3>
+          <i class="fas fa-chevron-circle-right fa-2x"></i>
+          {/* <i class="fas fa-chevron-right"></i>
                     <i class="fas fa-chevron-right"></i> */}
-                </div>
-            </article>              
-        </section>
-    )
-}
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default Produtos
+const template = () => (
+  <Main>
+    <Produtos />
+  </Main>
+);
+export default template;

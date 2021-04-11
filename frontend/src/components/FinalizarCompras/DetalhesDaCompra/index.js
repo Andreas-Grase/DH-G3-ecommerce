@@ -1,13 +1,12 @@
-import { NavLink } from "react-router-dom";
-import CartaoDeCredito from "../../../assets/img/finalizar-compras/CartaoDeCredito.png";
-import CartaoDeDebito from "../../../assets/img/finalizar-compras/CartaoDeDebito.png";
-import PIX from "../../../assets/img/finalizar-compras/PIX.png";
-import boleto from "../../../assets/img/finalizar-compras/boleto.png";
-import Ellipse9 from "../../../assets/img/finalizar-compras/Ellipse9.png";
+import { useHistory } from "react-router-dom";
 import Ellipse10 from "../../../assets/img/finalizar-compras/Ellipse10.png";
+import Ellipse9 from "../../../assets/img/finalizar-compras/Ellipse9.png";
+import { NavComprasButton } from "../../../components/Button";
 import "./style.css";
 
-const DetalhesDaCompra = () => {
+const DetalhesDaCompra = (props) => {
+  const { setActivePage } = props;
+  const history = useHistory();
   return (
     <section className="finalizar-compras">
       <article className="detalhes-da-compra">
@@ -21,7 +20,9 @@ const DetalhesDaCompra = () => {
         <div className="opcoes-frete">
           <div>
             <div className="cart-package__shipping-box">
-              <a href="/"><img src={Ellipse9} className="ui-radio-element" /></a>
+              <a href="/">
+                <img src={Ellipse9} className="ui-radio-element" />
+              </a>
               <div className="cart-package__shipping__title">
                 Chegará amanhã
               </div>
@@ -30,7 +31,9 @@ const DetalhesDaCompra = () => {
           </div>
           <div>
             <div className="cart-package__shipping-box">
-            <a href="/"><img src={Ellipse10} className="ui-radio-element" /></a>
+              <a href="/">
+                <img src={Ellipse10} className="ui-radio-element" />
+              </a>
               <div className="cart-package__shipping__title">
                 Chegará Segunda-feira, 29 de março
               </div>
@@ -38,14 +41,16 @@ const DetalhesDaCompra = () => {
             <div className="cart-package__shipping-price">R$ 11,50</div>
           </div>
         </div>
-        <nav id="btn-continuar">
-          <NavLink to="/" id="btn-continuar2">
-            Voltar
-          </NavLink>
-          <NavLink to="/" id="btn-continuar2">
-            Continuar
-          </NavLink>
-        </nav>
+        <div className="buttons">
+          <NavComprasButton
+            titulo="Voltar"
+            executeFunction={() => history.push("/shopping__cart")}
+          />
+          <NavComprasButton
+            titulo="Continuar"
+            executeFunction={() => setActivePage(1)}
+          />
+        </div>
       </article>
     </section>
   );

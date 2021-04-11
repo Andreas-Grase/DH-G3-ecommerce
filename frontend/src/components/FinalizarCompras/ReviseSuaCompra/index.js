@@ -6,9 +6,11 @@ import boleto from "../../../assets/img/finalizar-compras/boleto.png";
 import Ellipse9 from "../../../assets/img/finalizar-compras/Ellipse9.png";
 import Ellipse10 from "../../../assets/img/finalizar-compras/Ellipse10.png";
 import Produto from "../../../assets/img/finalizar-compras/Produto.png";
+import { NavComprasButton, EndButton } from "../../Button";
 import "./style.css";
 
-const ReviseSuaCompra = () => {
+const ReviseSuaCompra = (props) => {
+  const { setActivePage } = props;
   return (
     <section className="finalizar-compras">
       <article className="revise-sua-compra">
@@ -44,14 +46,14 @@ const ReviseSuaCompra = () => {
               <p>Você pagará</p>
               <p>R$ 110,00</p>
             </div>
-            <nav id="btn-finalizar-compra">
-              <NavLink to="/" id="btn-finalizar-compra2">
-                Finalizar a compra
-              </NavLink>
-            </nav>
+            <EndButton />
           </div>
         </div>
       </article>
+      <NavComprasButton
+        titulo="Voltar"
+        executeFunction={() => setActivePage(1)}
+      />
     </section>
   );
 };

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import NavbarDashboard from '../../components/Navbar/NavbarDashboard';
 import MenuLateral from '../../components/Navbar/MenuLateralDashboard';
 import './style.css'
@@ -73,5 +74,21 @@ const DashboardAdicionar = () => {
         </>
     )
 }
+=======
+import Admin from "../templates/Admin";
 
-export default DashboardAdicionar;
+const DashboardAdicionar = () => {
+  return (
+    <>
+      <h1>Dashboard: Adicionar Produtos</h1>
+    </>
+  );
+};
+>>>>>>> c7ccd4168e646bebe75444dff87f7481de11bd46
+
+const template = () => (
+  <Admin>
+    <DashboardAdicionar />
+  </Admin>
+);
+export default template;
