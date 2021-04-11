@@ -6,7 +6,6 @@ import './style.css'
 const DashboardAdicionar = () => {
     return (
         <>
-        {/*<NavbarDashboard />*/}
         <div className = "container-flex">
             <div className = "header-section">
                 <div className = "add-icon">
@@ -70,7 +69,6 @@ const DashboardAdicionar = () => {
             </div>
             <textarea rows = "4" cols = "50" className = "product-description" placeholder = "Insira aqui uma breve descrição do seu produto..." />
         </div>
-        <MenuLateral />
         </>
     )
 };
