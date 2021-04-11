@@ -93,10 +93,7 @@
 }
 
 #right__menu {
-<<<<<<< HEAD
     width: 225px;
-=======
->>>>>>> c277d8275713eda2ca4441089b187a53ca10b263
     justify-content: flex-end;
     align-items: center;
     flex: none;
