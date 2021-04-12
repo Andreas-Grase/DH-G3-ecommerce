@@ -2,6 +2,8 @@
     background-color: black;
 }
 
-.button {
+.nav-button {
     height: 38px;
+    background-color: #af8048;
+    border: none;
 }

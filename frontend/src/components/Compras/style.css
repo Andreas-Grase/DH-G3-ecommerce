@@ -1,8 +1,8 @@
 .flex-container {
     display: flex;
+    flex-flow: row wrap;
     justify-content: space-evenly;
     padding: 40px;
-    flex-direction: row;
     border: 1px;
     border-radius: 10px;
 }
@@ -71,10 +71,12 @@
 }
 
 .button-end {
-    flex-direction: column;
     display: flex;
+    flex-flow: column nowrap;
     width: 200px;
     margin-left: 100px;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .button-finalizar {
@@ -91,13 +93,14 @@
 
 .button-continuar {
     border-radius: 4px;
-    background-color:#FFFFFF;
-    border: 2px solid #AF8048;
-    text-align: center;
-    font-size: 14px;
-    transition: all 0.5s;
+    background: #AF8048;
+    padding: 10px 22px;
+    color: #fff;
+    border: none;
+    outline: none;
     cursor: pointer;
-    padding: 9px;
+    transition: all 0.2s ease-in-out;
+    text-decoration: none;
 }
 
 .btn {

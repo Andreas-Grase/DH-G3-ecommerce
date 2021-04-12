@@ -12,7 +12,7 @@
     border-radius: 10px;
     display: flex;
     flex-flow: row nowrap;
-    background-color: #AF8048;
+    background-color: rgba(175, 128, 72, 0.31);
     margin: 30px 5px 30px;
     padding: 5px;
     height: 730px;
@@ -44,16 +44,14 @@
 
 .revise-sua-compra h3 {
     font-size: 1.8rem;
-    color: #fff;
     border: 1px;
     margin: 5px;
     padding: 10px 5px;
 
 }
 
-.revise-sua-compra h6 {
+.revise-sua-compra h4 {
     font-size: .8rem;
-    color: #fff;
     border: 1px;
     margin: 5px;
     padding: 10px 5px;

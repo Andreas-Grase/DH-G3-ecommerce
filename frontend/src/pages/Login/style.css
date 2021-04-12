@@ -28,9 +28,9 @@
 
 .titulo-login{
     margin: 0;
-    padding-top: 0;
     padding-left: 0;
-    padding-bottom: 20px;
+    padding-top: 40px;
+    padding-bottom: 30px;
     letter-spacing: 10px;
     text-transform: uppercase;
     text-align: center;
@@ -72,7 +72,7 @@
 
 .login input[type="submit"]:hover{
     cursor: pointer;
-    background: #ff4d4d;
+    background: var(--cor3);
     transition: 0.2s;
 
 }
@@ -88,6 +88,6 @@
 
 .login a :hover{
     transition: 0.2s;
-    color:  #ff4d4d;
+    color: var(--cor3);
     
 }

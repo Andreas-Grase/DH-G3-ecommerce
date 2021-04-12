@@ -13,19 +13,19 @@ const Categorias = () => {
         <h4>Conheça nossas categorias</h4>
       </div>
       <div id="ladoalado">
-        <a href="shampoo.html">
+        <a href="/produtos">
           <img className="img-produtos1" src={barbearia} alt="shampoo" />
         </a>
-        <a href="condicionador.html">
+        <a href="/produtos">
           <img className="img-produtos" src={cabelo} alt="condicionador" />
         </a>
-        <a href="mascara.html">
+        <a href="/produtos">
           <img className="img-produtos1" src={lancamentos} alt="mascaras" />
         </a>
-        <a href="cremes">
+        <a href="/produtos">
           <img className="img-produtos" src={pele} alt="cremes" />
         </a>
-        <a href="barbearia">
+        <a href="/produtos">
           <img className="img-produtos1" src={unhas} alt="barbearia" />
         </a>
       </div>

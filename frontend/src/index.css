@@ -28,18 +28,7 @@ footer {
     color: var(--cor1);
 }
 
-/*header,
-aside,
-main,
-section,
-article,
-div,
-footer {
-    padding: var(--padding);
-} */
-
-ul,
-ol {
+ul, ol {
     list-style: none;
 }
 

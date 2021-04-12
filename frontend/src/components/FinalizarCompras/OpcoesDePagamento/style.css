@@ -15,7 +15,7 @@
     padding: 5px;
 }
 
-.opcoes-de-pagamento h6 {
+.opcoes-de-pagamento h3 {
     display: flex;
     flex: 1 0 100%;
     flex-flow: column nowrap;
@@ -26,7 +26,6 @@
 }
 
 .pagamentos {
-    color: #fff;
     display: flex;
     flex-flow: row wrap;
     margin: 5px;
@@ -34,7 +33,7 @@
 }
 
 .pagamento {
-    background-color: #AF8048;
+    background-color: rgba(175, 128, 72, 0.31);
     border: 1px;
     border-radius: 10px;
     margin: 5px;
@@ -45,6 +44,7 @@
     justify-content: center;
     height: 200px;
     width: 318px;
+    list-style: none;
 }
 
 .buttons {
