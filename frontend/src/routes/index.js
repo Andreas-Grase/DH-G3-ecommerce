@@ -14,6 +14,7 @@ import Home from '../pages/Home'
 import Login from '../pages/Login'
 import PaginaMarcas from '../pages/PaginaMarcas'
 import Produtos from '../pages/Produtos'
+import Produto from '../pages/Produto'
 import Sobre from '../pages/Sobre'
 import Categorias from '../pages/Categorias'
 
@@ -42,6 +43,7 @@ const Routes = () => {
         <Route path="/categorias/barbearia" component={Categorias} />
         <Route path="/categorias" component={Categorias} />
         <Route path="/marcas" component={PaginaMarcas} />
+        <Route exact path="/produtos/produto/:id" component={Produto} />
         <Route path="/produtos" component={Produtos} />
         <Route path="/contato" component={Contato}/>
         <Route path="/sobre" component={Sobre}/>
