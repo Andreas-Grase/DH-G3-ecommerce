@@ -28,7 +28,7 @@ const Produto = () => {
   return (
     <div className="product-page">
       <div className="card-wrapper">
-        <div className="card">
+        <div className="card-product">
           {/* card a esquerda */}
           <div className="product-imgs">
             <div className="img-display">
