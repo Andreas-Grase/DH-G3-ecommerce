@@ -10,7 +10,6 @@ const Produtos = () => {
     <div className="bloque-produtos">
       <nav className="produtos-primeira-coluna">
         <Dropdown />
-        {/* <MenuLateral /> */}
       </nav>
 
       <div className="produtos-segunda-coluna">
