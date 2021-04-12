@@ -1,2 +1,237 @@
+.container-flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    max-width: 40%;
+    float: right;
+    padding: 10px;
+    line-height: 1.5;
+    margin-right: 350px;
+}
 
+.header-section{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+.add-icon{
+    margin-left: 10px;
+}
+
+.title{
+    margin: 0 0 0 10px;
+    font-weight: 600;
+}
+
+.product-info{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 33,33%;
+    margin: 10px auto;
+}
+
+.add-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around; 
+    width: 40%;
+    margin: 10px;
+    padding: 15px;
+}
+
+.image-upload{
+    width: 200px;
+    height: 200px;
+    border: 1px solid #000;
+    margin: 5px auto;
+}
+
+.upload-btn{
+    width: 100px;
+    margin: auto;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.product{
+    box-sizing: border-box;
+    width: 60%;
+    margin: 10px;
+    justify-content: center;
+}
+
+.product-name{
+    width: 97%;
+    float: inline-start;
+    height: 25px;
+    margin: 0 auto;
+}
+
+.product-section{
+    box-sizing: border-box;
+}
+
+.price{
+    width: 45%;
+    float: left;
+    margin: 7px;
+}
+
+.price h3{
+    margin: 5px 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.discount h3{
+    margin: 5px 0;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.price-container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.icon-container{
+    width: 25px;
+    height: 22px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    text-align: center;
+}
+
+.icon-container span{
+    font-size: 0.8rem;
+}
+
+.preco{
+    width: 90%;
+    height: 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2)
+}
+
+.preco::placeholder{
+    text-align: right;
+}
+
+.data-inicio-desconto{
+    width: 90%;
+    height: 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0px;
+}
+
+.discount{
+    width: 45%;
+    float: left;
+    margin: 7px;
+}
+
+.preco-desconto{
+    width: 90%;
+    height: 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2)
+}
+
+.preco-desconto::placeholder{
+    text-align: right;
+}
+
+.discount-container{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 5px;
+}
+
+.data-final-desconto{
+    width: 90%;
+    height: 100%;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 0px;
+}
+
+.categories-container{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+    width: 100%;
+    margin: 10px auto;
+}
+
+.categories{
+    width: 100%;
+}
+
+option [disabled]{
+    text-align: center;
+}
+
+.description-container{
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+    width: 100%;
+}
+
+.product-description{
+    width: 99%;
+    height: 200px;
+    margin: 10px auto;
+    border: 1px solid #000;
+    border-radius: 5px;
+    line-height: 1.5;
+}
+
+.product-description::placeholder{
+    text-align: start;
+}
+
+@media screen and (max-width: 360px) {
+    .product-info{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+    }
+
+    .header-section{
+        max-height: 80px;
+        margin: 10px auto;
+    }
+
+    .title h1{
+        font-size: 1rem;
+    }
+
+    .add-img{ 
+        width: 100%;
+        margin: 10px;
+    }
+
+    .product{
+        width: 97%;
+    }
+}
 

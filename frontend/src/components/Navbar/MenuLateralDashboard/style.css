@@ -1,3 +1,10 @@
+.menu-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 20%;
+    margin: 20px;
+}
 .navlink {
     display: flex;
     flex-flow: column wrap;
