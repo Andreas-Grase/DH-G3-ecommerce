@@ -8,7 +8,7 @@ import './style.css'
 const MenuLateral = () => {
   return (
     <div className = "menu-wrapper">
-      <Card style={{ width: "18rem" }}>
+      <Card>
         <Card.Header>Painel de Controle</Card.Header>
         <ListGroup variant="flush">
           <NavLink to="/dashboard" className="navlink">Página Inicial</NavLink>
