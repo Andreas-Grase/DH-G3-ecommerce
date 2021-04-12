@@ -1,9 +1,10 @@
 import Admin from "../templates/Admin";
+import './style.css'
 
 const Dashboard = () => {
   return (
     <>
-      <h1 id="titulo-dashboard">Dashboard: Admin</h1>
+        
     </>
   );
 };
