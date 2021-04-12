@@ -3,7 +3,7 @@ import {
   ListGroup,
 } from "react-bootstrap";
 import { NavLink } from "react-router-dom"
-import style from './style.css'
+import './style.css'
 
 const MenuLateral = () => {
   return (

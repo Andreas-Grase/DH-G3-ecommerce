@@ -20,6 +20,10 @@
     font-weight: bold;
 }
 
+.titulo-promo:hover {
+    color: var(--cor1);
+}
+
 .slideshow-promo-container {
     margin: 0 auto;
 }

@@ -1,3 +1,4 @@
+import Main from "../templates/Main"
 import Produto from "../../components/Produto";
 
 const PaginaProduto = () => {
@@ -7,4 +8,9 @@ const PaginaProduto = () => {
     )
 };
 
-export default PaginaProduto;
+const template = () => (
+    <Main>
+      <PaginaProduto />
+    </Main>
+  );
+  export default template;

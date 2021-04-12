@@ -42,22 +42,22 @@ const Produto = () => {
             <div className="img-select">
               <div className="img-item">
                 <a href="#" data-id="1">
-                  <img src={images[0]} alt="shampoo image" />
+                  <img src={images[0]} alt="shampoo" />
                 </a>
               </div>
               <div className="img-item">
                 <a href="#" data-id="2">
-                  <img src={images[1]} alt="shampoo image" />
+                  <img src={images[1]} alt="shampoo" />
                 </a>
               </div>
               <div className="img-item">
                 <a href="#" data-id="3">
-                  <img src={images[2]} alt="shampoo image" />
+                  <img src={images[2]} alt="shampoo" />
                 </a>
               </div>
               <div className="img-item">
                 <a href="#" data-id="4">
-                  <img src={images[3]} alt="shampoo image" />
+                  <img src={images[3]} alt="shampoo" />
                 </a>
               </div>
             </div>

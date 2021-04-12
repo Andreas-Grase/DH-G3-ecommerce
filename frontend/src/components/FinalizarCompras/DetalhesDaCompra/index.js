@@ -1,6 +1,4 @@
 import { useHistory } from "react-router-dom";
-import Ellipse10 from "../../../assets/img/finalizar-compras/Ellipse10.png";
-import Ellipse9 from "../../../assets/img/finalizar-compras/Ellipse9.png";
 import { NavComprasButton } from "../../../components/Button";
 import "./style.css";
 

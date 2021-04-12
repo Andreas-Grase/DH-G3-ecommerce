@@ -1,5 +1,3 @@
-import NavbarDashboard from '../../components/Navbar/NavbarDashboard';
-import MenuLateral from '../../components/Navbar/MenuLateralDashboard';
 import Admin from "../templates/Admin"
 import './style.css'
 

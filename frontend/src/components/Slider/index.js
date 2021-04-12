@@ -52,12 +52,12 @@ const SliderHome = () => {
         <label onClick={() => changeslider(4)}></label>
       </div>
 
-      <a class="prev" onClick={sliderarrowback}>
+      <div class="prev" onClick={sliderarrowback}>
         &#10094;
-      </a>
-      <a class="next" onClick={sliderarrownext}>
+      </div>
+      <div class="next" onClick={sliderarrownext}>
         &#10095;
-      </a>
+      </div>
     </div>
   );
 };

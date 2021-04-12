@@ -13,19 +13,19 @@ const OpcoesDePagamento = (props) => {
         <h3>Opções de pagamento</h3>
         <div className="pagamentos">
           <ul className="pagamento">
-            <img src={CartaoDeCredito} />
+            <img src={CartaoDeCredito} alt="cartao-de-credito" />
             <li>Cartão de crédito</li>
           </ul>
           <ul className="pagamento">
-            <img src={CartaoDeDebito} />
+            <img src={CartaoDeDebito} alt="cartao-de-debito" />
             <li>Cartão de débito</li>
           </ul>
           <ul className="pagamento">
-            <img src={PIX} />
+            <img src={PIX} alt="pix" />
             <li>PIX</li>
           </ul>
           <ul className="pagamento">
-            <img src={boleto} />
+            <img src={boleto} alt="boleto"/>
             <li>Boleto</li>
           </ul>
         </div>

@@ -22,24 +22,24 @@ const Produtos = () => {
           <div className="opcoes-de-exibicao">
             <p className="numero-de-paginas">
               Numero de paginas a exibir
-              <a href="" alt="">
+              <a href="/" alt="8">
                 {" "}
                 8{" "}
               </a>
               <span>/</span>
-              <a href="" alt="">
+              <a href="/" alt="25">
                 {" "}
                 25{" "}
               </a>
               <span>/</span>
-              <a href="" alt="">
+              <a href="/" alt="todo">
                 {" "}
                 TODO
               </a>
             </p>
             <p className="filtrar-exibicao">
               Ordenar por&nbsp;&nbsp;
-              <a href="" alt="">
+              <a href="/" alt="ordenar">
                 <i class="fas fa-chevron-down"></i>
               </a>
             </p>
@@ -53,7 +53,7 @@ const Produtos = () => {
         </div>
         <div className="proxima-pagina">
           <h3>
-            <a href="" alt="">
+            <a href="/" alt="proxima-pagina">
               Próxima página
             </a>
           </h3>

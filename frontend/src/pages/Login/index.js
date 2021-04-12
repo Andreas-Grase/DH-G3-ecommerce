@@ -14,7 +14,7 @@ const Login = () => {
           <p>Senha:</p>
           <input type="password" name="" placeholder="Insira sua senha" />
           <input type="submit" name="" placeholder="login" />
-          <a href="#">Esqueceu sua Senha ?</a>
+          <a href="/">Esqueceu sua Senha ?</a>
           <br />
           <a href="/cadastro">Ainda não possue uma conta?</a>
         </form>

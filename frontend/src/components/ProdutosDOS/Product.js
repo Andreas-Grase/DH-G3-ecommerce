@@ -11,7 +11,7 @@ export default class Product extends Component {
                 <div className="card">
                     <div className="img-container p-10" onClick={console.log("you clicked me on the image container")
                     }>
-                        <Link to="/produto">
+                        <Link to="/produtos/produto/:id">
                             <img src={img} alt="product" className="card-img-top" />
                         </Link>
 

@@ -12,7 +12,7 @@ const MarcasDOS = () => {
         <div className="img-marcas">
           <div className="imagem">  
             <NavLink to="/produtos" className="">       
-              <a href="">
+              <a href="/">
                 <img
                   className="frente"
                   src={images[0].frente}
@@ -28,7 +28,7 @@ const MarcasDOS = () => {
           </div>
           <div className="imagem">
             <NavLink to="/produtos" className="">
-              <a href="">
+              <a href="/">
               <img
                   className="frente"
                   src={images[1].frente}
@@ -44,7 +44,7 @@ const MarcasDOS = () => {
           </div>
           <div className="imagem">
             <NavLink to="/produtos" className="">
-              <a href="">
+              <a href="/">
               <img
                   className="frente"
                   src={images[2].frente}
@@ -60,7 +60,7 @@ const MarcasDOS = () => {
           </div>
           <div className="imagem">
             <NavLink to="/produtos" className="">
-              <a href="">
+              <a href="/">
               <img
                   className="frente"
                   src={images[3].frente}
@@ -76,7 +76,7 @@ const MarcasDOS = () => {
           </div>
           <div className="imagem">
             <NavLink to="/produtos" className="">
-              <a href="">
+              <a href="/">
               <img
                   className="frente"
                   src={images[4].frente}
@@ -92,7 +92,7 @@ const MarcasDOS = () => {
           </div>
           <div className="imagem">
             <NavLink to="/produtos" className="">
-              <a href="">
+              <a href="/">
               <img
                   className="frente"
                   src={images[5].frente}

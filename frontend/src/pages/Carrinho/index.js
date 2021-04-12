@@ -12,7 +12,7 @@ const Carrinho = () => {
 
 const template = () => (
   <Main>
-    <Compras />
+    <Carrinho />
   </Main>
 );
 export default template;

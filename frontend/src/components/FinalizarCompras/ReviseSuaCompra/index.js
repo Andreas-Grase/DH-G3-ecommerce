@@ -20,7 +20,7 @@ const ReviseSuaCompra = (props) => {
           </div>
         </div>
         <div className="produto-a-comprar">
-          <img src={Produto} />
+          <img src={Produto} alt="produto-a-comprar"/>
           <div className="descricao-produto">
             <p>PACOTE DE PANOS LIMPADORES X 40</p>
             <p>Modelo: 6</p>

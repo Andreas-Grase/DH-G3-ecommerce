@@ -84,12 +84,12 @@ const Ofertas = () => {
 
             {/* botões */}
             <div className="container-botoes">
-                <a className="botao-ofertas" onClick={setSlideOfertas}>
+                <div className="botao-ofertas" onClick={setSlideOfertas}>
                     <h2 className="titulo-promo">Ofertas</h2>
-                </a>
-                <a className="botao-mv" onClick={setSlideMV}>
+                </div>
+                <div className="botao-mv" onClick={setSlideMV}>
                     <h2 className="titulo-promo">Mais Vendidos</h2>
-                </a>
+                </div>
             </div>
 
             {/* slideshow container */}
