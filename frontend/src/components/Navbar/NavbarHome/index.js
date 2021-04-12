@@ -35,7 +35,7 @@ export default class NavbarHome extends React.Component {
                 <Input type="text" id="usuario" />
               </FormGroup>
               <FormGroup>
-                <Label for="password">Senha:</Label>
+                <Label htmlFor="password">Senha:</Label>
                 <Input type="text" id="password" />
               </FormGroup>
               <FormGroup>
@@ -46,8 +46,8 @@ export default class NavbarHome extends React.Component {
               </FormGroup>
             </ModalBody>
             <ModalFooter>
-              <Button className="btn btn-primary button" href="/dashboard">Entrar</Button>
-              <Button className="btn btn-secondary button" onClick={this.abrirModal}>Sair</Button>
+              <Button className="btn btn-primary buttonNAV" href="/dashboard">Entrar</Button>
+              <Button className="btn btn-secondary buttonNAV" onClick={this.abrirModal}>Sair</Button>
             </ModalFooter>
             <div>
               <p className="forgot-password text-right mr-3">Esqueceu sua senha?<a href="#">&nbsp;Clique aqui</a></p>
@@ -72,7 +72,7 @@ export default class NavbarHome extends React.Component {
           </Nav>
           <Form inline size="sm">
             {/* <FormControl type="text" placeholder="Produtos" className="mr-sm-2" /> */}
-            <Button href="/login" variant="outline-light" className="button">Entrar na conta</Button>
+            <Button href="/login" variant="outline-light" className="buttonNAV">Entrar na conta</Button>
           </Form>
         </Navbar.Collapse>
       </Navbar>
