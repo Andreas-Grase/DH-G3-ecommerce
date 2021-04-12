@@ -3,10 +3,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     box-sizing: border-box;
-    max-width: 600px;
-    margin: 0 auto;
+    max-width: 40%;
+    float: right;
     padding: 10px;
     line-height: 1.5;
+    margin-right: 350px;
 }
 
 .header-section{

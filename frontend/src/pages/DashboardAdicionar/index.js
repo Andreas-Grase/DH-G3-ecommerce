@@ -3,6 +3,12 @@ import MenuLateral from '../../components/Navbar/MenuLateralDashboard';
 import Admin from "../templates/Admin"
 import './style.css'
 
+const template = () => (
+  <Admin>
+    <DashboardAdicionar />
+  </Admin>
+);
+
 const DashboardAdicionar = () => {
     return (
         <>
@@ -73,9 +79,5 @@ const DashboardAdicionar = () => {
     )
 };
 
-const template = () => (
-  <Admin>
-    <DashboardAdicionar />
-  </Admin>
-);
+
 export default template;
