@@ -1,10 +1,3 @@
- main{
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    padding: 0%;
-} 
-
 .slider{
     position: relative;
     max-width: 100%;
@@ -17,8 +10,7 @@
   
   .images {
     display: flex;
-    min-width: 100vw;
-    min-width: 1200px; 
+    min-width: 1200px;
   }
   
   .images img {

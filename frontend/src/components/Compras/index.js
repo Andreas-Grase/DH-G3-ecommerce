@@ -7,7 +7,7 @@ const Compras = () => {
     return (
         <main>
             <br />
-            <h4 class="titulo"> Este é o seu carrinho!</h4>
+            <h2 class="titulo"> Este é o seu carrinho!</h2>
             <div class="flex-container">
                 <div class="flex-item">
                     <table class="table align-middle">
@@ -79,7 +79,7 @@ const Compras = () => {
                             Confirmar a compra
                         </NavLink>
                             <br />
-                            <button class="button-continuar">Continuar comprando</button>
+                            <NavLink to="/produtos" class="button-continuar">Continuar comprando</NavLink>
                         </div>
                     </div>    
                 </div>    

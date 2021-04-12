@@ -1,12 +1,5 @@
-import { NavLink } from "react-router-dom";
-import CartaoDeCredito from "../../../assets/img/finalizar-compras/CartaoDeCredito.png";
-import CartaoDeDebito from "../../../assets/img/finalizar-compras/CartaoDeDebito.png";
-import PIX from "../../../assets/img/finalizar-compras/PIX.png";
-import boleto from "../../../assets/img/finalizar-compras/boleto.png";
-import Ellipse9 from "../../../assets/img/finalizar-compras/Ellipse9.png";
-import Ellipse10 from "../../../assets/img/finalizar-compras/Ellipse10.png";
 import Produto from "../../../assets/img/finalizar-compras/Produto.png";
-import { NavComprasButton, EndButton } from "../../Button";
+import { EndButton, NavComprasButton } from "../../Button";
 import "./style.css";
 
 const ReviseSuaCompra = (props) => {
@@ -16,7 +9,7 @@ const ReviseSuaCompra = (props) => {
       <article className="revise-sua-compra">
         <div>
           <h3>Revise e confirme sua compra</h3>
-          <h6>Detalhes do envio</h6>
+          <h4>Detalhes do envio</h4>
           <div className="endereco-entrega2">
             <p>Logradouro</p>
             <p>Compemento, Cidade, Estado, CEP</p>

@@ -28,18 +28,7 @@ footer {
     color: var(--cor1);
 }
 
-/*header,
-aside,
-main,
-section,
-article,
-div,
-footer {
-    padding: var(--padding);
-} */
-
-ul,
-ol {
+ul, ol {
     list-style: none;
 }
 
@@ -189,7 +178,7 @@ p {
 
 /* FIM IMAGENS MARCAS*/
 /* INICIO VER TODAS MARCAS */
-.btn-ver-marcas h6 {
+.btn-ver-marcas h5 {
     padding: 4px;
     margin: 0px auto;
     font-size: 0.8rem;
@@ -218,6 +207,6 @@ p {
 .btn-ver-marcas:hover {
     border: none;
     background-color: var(--cor1);
-    color: var(--cor3);
+    color: var(--cor2);
 
 }

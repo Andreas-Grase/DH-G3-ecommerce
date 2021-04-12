@@ -11,36 +11,32 @@ const DetalhesDaCompra = (props) => {
     <section className="finalizar-compras">
       <article className="detalhes-da-compra">
         <h2>Detalhes da Sua Compra</h2>
-        <h6>Detalhes do envio</h6>
+        <h3>Detalhes do envio</h3>
         <div className="endereco-entrega">
           <p>Logradouro</p>
           <p>Compemento, Cidade, Estado, CEP</p>
           <p>Nome</p>
         </div>
-        <div className="opcoes-frete">
-          <div>
-            <div className="cart-package__shipping-box">
-              <a href="/">
-                <img src={Ellipse9} className="ui-radio-element" />
-              </a>
-              <div className="cart-package__shipping__title">
-                Chegará amanhã
-              </div>
+        <form className="opcoes-frete">
+          <div className="frete1">
+            <div>
+              <input type="radio" id="value" />
+              <label for="" className="data-frete">
+                &nbsp;Chegará amanhã
+              </label>
             </div>
-            <div className="cart-package__shipping-price">R$ 150,99</div>
+            <label className="valor-frete">R$ 150,99</label>
           </div>
-          <div>
-            <div className="cart-package__shipping-box">
-              <a href="/">
-                <img src={Ellipse10} className="ui-radio-element" />
-              </a>
-              <div className="cart-package__shipping__title">
-                Chegará Segunda-feira, 29 de março
-              </div>
+          <div className="frete2">
+            <div>
+              <input type="radio" id="value" />
+              <label for="" className="data-frete">
+                &nbsp;Chegará Segunda-feira, 29 de março
+              </label>
             </div>
-            <div className="cart-package__shipping-price">R$ 11,50</div>
+            <label className="valor-frete">R$ 11,50</label>
           </div>
-        </div>
+        </form>
         <div className="buttons">
           <NavComprasButton
             titulo="Voltar"

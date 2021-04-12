@@ -15,6 +15,7 @@ import Login from '../pages/Login'
 import PaginaMarcas from '../pages/PaginaMarcas'
 import Produtos from '../pages/Produtos'
 import Sobre from '../pages/Sobre'
+import Categorias from '../pages/Categorias'
 
 const Routes = () => {
   return (    
@@ -34,6 +35,12 @@ const Routes = () => {
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/cadastro" component={Cadastro} />
         <Route path="/login" component={Login} />
+        <Route path="/categorias/unha" component={Categorias} />
+        <Route path="/categorias/pele" component={Categorias} />
+        <Route path="/categorias/lacamentos" component={Categorias} />
+        <Route path="/categorias/cabelo" component={Categorias} />
+        <Route path="/categorias/barbearia" component={Categorias} />
+        <Route path="/categorias" component={Categorias} />
         <Route path="/marcas" component={PaginaMarcas} />
         <Route path="/produtos" component={Produtos} />
         <Route path="/contato" component={Contato}/>

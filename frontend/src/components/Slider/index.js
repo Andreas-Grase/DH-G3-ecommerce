@@ -2,6 +2,10 @@ import slider1 from "../../assets/img/slider-home/slider1.jpg";
 import slider2 from "../../assets/img/slider-home/slider2.jpg";
 import slider3 from "../../assets/img/slider-home/slider3.jpg";
 import slider4 from "../../assets/img/slider-home/slider4.jpg";
+import slider11200 from "../../assets/img/slider-home/slider11200.jpg";
+import slider21200 from "../../assets/img/slider-home/slider21200.jpg";
+import slider31200 from "../../assets/img/slider-home/slider31200.jpg";
+import slider41200 from "../../assets/img/slider-home/slider41200.jpg";
 import "./style.css";
 import React, { useState } from 'react';
 
@@ -35,10 +39,10 @@ const SliderHome = () => {
         <input checked={slideactive===3} type="radio" name="slide" id="img3"></input>
         <input checked={slideactive===4} type="radio" name="slide" id="img4"></input>
 
-        <img src={slider1} class="m1" alt="img1"></img>
-        <img src={slider2} class="m2" alt="img2"></img>
-        <img src={slider3} class="m3" alt="img3"></img>
-        <img src={slider4} class="m4" alt="img4"></img>
+        <img src={slider1} srcset={slider11200} class="m1" alt="img1"></img>
+        <img src={slider2} srcset={slider21200} class="m2" alt="img2"></img>
+        <img src={slider3} srcset={slider31200} class="m3" alt="img3"></img>
+        <img src={slider4} srcset={slider41200} class="m4" alt="img4"></img>
       </div>
 
       <div class="dots">

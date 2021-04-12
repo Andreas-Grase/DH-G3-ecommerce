@@ -31,7 +31,7 @@ const NavbarHome = () => {
         </Nav>
         <Form inline size="sm">
           {/* <FormControl type="text" placeholder="Produtos" className="mr-sm-2" /> */}
-          <Button href="/login" variant="outline-light" className="button">Entrar na conta</Button>
+          <Button href="/login" variant="outline-light" className="nav-button">Entrar na conta</Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>

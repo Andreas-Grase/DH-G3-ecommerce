@@ -10,7 +10,7 @@ const OpcoesDePagamento = (props) => {
   return (
     <section className="finalizar-compras">
       <article className="opcoes-de-pagamento">
-        <h6>Opções de pagamento</h6>
+        <h3>Opções de pagamento</h3>
         <div className="pagamentos">
           <ul className="pagamento">
             <img src={CartaoDeCredito} />
