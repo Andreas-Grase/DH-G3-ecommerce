@@ -63,7 +63,7 @@ h3 {
     font-size: 1.1 rem;
 }
 
-p {
+.marcas p {
     color: var(--cor4);
     font-size: 1rem;
    /* line-height: espaço entre linhas */
