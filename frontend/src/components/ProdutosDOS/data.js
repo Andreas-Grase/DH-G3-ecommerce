@@ -26,7 +26,7 @@ export const storeProducts = [
     },
     {
       id: 3,
-      title: "Ganchos coloridos de metal",
+      title: "Ganchos coloridos",
       img: "img/product-3.jpg",
       price: 8,
       company: "GOODY",
@@ -50,7 +50,7 @@ export const storeProducts = [
     },
     {
       id: 5,
-      title: "Pinzas de plástico pequenas",
+      title: "Pinzas pequenas",
       img: "img/product-5.jpg",
       price: 24,
       company: "GOODY",
