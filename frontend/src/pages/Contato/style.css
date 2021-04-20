@@ -58,7 +58,7 @@ h3 {
     color: white;
 }
 
-input[type=submit] {
+.formulario input[type=submit] {
 	margin: 10px auto;
 	color: white;
 	border: 0;
@@ -72,14 +72,14 @@ input[type=submit] {
     background: #256eff;
 }
 
-input[type=email] {
+.formulario input[type=email] {
 	margin: 5px auto;
 	padding: 5px;
     background: white;
 }
 
 
-input[type=submit]:hover {
+.formulario input[type=submit]:hover {
 	background: #2196F3;
 }
 
@@ -89,7 +89,7 @@ input[type=submit]:hover {
     flex-direction: column;
 }
 
-.card{
+.card-contato{
     max-width: 300px;
     min-width: 150px;
     height: 150px;
@@ -107,6 +107,6 @@ input[type=submit]:hover {
     color: #bfbfbf;
 }
 
-.card i{
+.card-contato i{
     margin: 10px;
 }

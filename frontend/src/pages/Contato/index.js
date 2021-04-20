@@ -31,7 +31,7 @@ const Contato = () => {
             <br/>Sábado: 9h às 12h
             </span>
           </div>
-          <div className = "card">
+          <div className = "card-contato">
             <i class="fas fa-phone fa-2x"></i>
             <span>0800 XXXX-XXXX</span>
             <span>Segunda à Sexta: 9h às 17h
