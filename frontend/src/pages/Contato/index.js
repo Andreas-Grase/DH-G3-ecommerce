@@ -24,7 +24,7 @@ const Contato = () => {
           </div>	
         </form>
       </div>
-          <div className = "card">
+          <div className = "card-contato">
             <i class="fas fa-comments fa-2x"></i>
             <span>0800 XXXX-XXXX</span>
             <span>Segunda à Sexta: 9h às 17h
