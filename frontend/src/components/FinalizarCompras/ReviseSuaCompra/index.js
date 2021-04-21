@@ -19,7 +19,7 @@ const ReviseSuaCompra = (props) => {
             Prazo de entrega definido pelo frete escolhido
           </div>
         </div>
-        <div className="produto-a-comprar">
+        <div className="produto-a-comprar shadow">
           <img src={Produto} alt="produto-a-comprar"/>
           <div className="descricao-produto">
             <p>PACOTE DE PANOS LIMPADORES X 40</p>

@@ -16,7 +16,7 @@ const DetalhesDaCompra = (props) => {
           <p>Nome</p>
         </div>
         <form className="opcoes-frete">
-          <div className="frete1">
+          <div className="frete frete1 shadow">
             <div>
               <input type="radio" id="value" />
               <label for="" className="data-frete">
@@ -25,7 +25,7 @@ const DetalhesDaCompra = (props) => {
             </div>
             <label className="valor-frete">R$ 150,99</label>
           </div>
-          <div className="frete2">
+          <div className="frete frete2 shadow">
             <div>
               <input type="radio" id="value" />
               <label for="" className="data-frete">

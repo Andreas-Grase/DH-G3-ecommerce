@@ -11,23 +11,27 @@ const OpcoesDePagamento = (props) => {
     <section className="finalizar-compras">
       <article className="opcoes-de-pagamento">
         <h3>Opções de pagamento</h3>
-        <div className="pagamentos">
-          <ul className="pagamento">
+        <div className="pagamentos shadow">
+          <form className="pagamento">
+            <input type="radio" id="value" />
             <img src={CartaoDeCredito} alt="cartao-de-credito" />
-            <li>Cartão de crédito</li>
-          </ul>
-          <ul className="pagamento">
+            <label>Cartão de crédito</label>
+          </form>
+          <form className="pagamento">
+            <input type="radio" id="value" />
             <img src={CartaoDeDebito} alt="cartao-de-debito" />
-            <li>Cartão de débito</li>
-          </ul>
-          <ul className="pagamento">
+            <label>Cartão de débito</label>
+          </form>
+          <form className="pagamento">
+            <input type="radio" id="value" />
             <img src={PIX} alt="pix" />
-            <li>PIX</li>
-          </ul>
-          <ul className="pagamento">
-            <img src={boleto} alt="boleto"/>
-            <li>Boleto</li>
-          </ul>
+            <label>PIX</label>
+          </form>
+          <form className="pagamento">
+            <input type="radio" id="value" />
+            <img src={boleto} alt="boleto" />
+            <label>Boleto</label>
+          </form>
         </div>
         <div className="buttons">
           <NavComprasButton

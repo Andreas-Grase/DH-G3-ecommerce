@@ -40,13 +40,12 @@
 
 /* FIM TITULOS MARCAS*/
 
-/* .cards-e-btn {
-    width: 620px;
+.cards {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
-} */
+}
 
 /* INICIO IMAGENS MARCAS*/
 /* .img-marcas {

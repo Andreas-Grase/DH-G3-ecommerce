@@ -45,12 +45,12 @@ const Marcas = () => {
           <a href="/produtos">
           <img
               className="frente"
-              src={images[2].frente}
+              src={images[9].frente}
               alt="img2"
             />
             <img
               className="verso"
-              src={images[2].tras}
+              src={images[9].tras}
               alt="img2"
             />
           </a>
@@ -59,12 +59,12 @@ const Marcas = () => {
           <a href="/produtos">
           <img
               className="frente"
-              src={images[3].frente}
+              src={images[11].frente}
               alt="img2"
             />
             <img
               className="verso"
-              src={images[3].tras}
+              src={images[11].tras}
               alt="img3"
             />
           </a>
