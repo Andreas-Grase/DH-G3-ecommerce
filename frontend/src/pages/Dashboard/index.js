@@ -1,5 +1,6 @@
 import Admin from "../templates/Admin";
-import './style.css'
+import DashboardDeletar from "../DashboardDeletar";
+import './style.css';
 
 const Dashboard = () => {
   return (

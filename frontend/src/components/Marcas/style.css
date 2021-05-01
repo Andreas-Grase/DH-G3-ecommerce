@@ -192,8 +192,8 @@ h3 {
 }
 
 .btn-ver-marcas {
-    background-color: var(--cor1);
-    border: 1px solid var(--cor1);
+    background-color: var(--cor3);
+    border: 1px solid var(--cor3);
     border-radius: 10px;
     color: var(--cor2);
     margin: 10px 10px 20px;
@@ -206,7 +206,7 @@ h3 {
 
 .btn-ver-marcas:hover {
     border: none;
-    background-color: var(--cor3);
-    color: var(--cor1);
+    background-color: var(--cor1);
+    color: var(--cor3);
 
 }

@@ -1,6 +1,7 @@
 .about-container{
     background-image: url("../../assets/img/kit.jpg");
     background-size: cover;
+    background-color: #291810;
     display: column;
     margin: 0 auto;
     justify-content: center;

@@ -1,5 +1,5 @@
 import Produto from "../../../assets/img/finalizar-compras/Produto.png";
-import { EndButton, NavComprasButton } from "../../Button";
+import { EndButton, NavButton } from "../../Button";
 import "./style.css";
 
 const ReviseSuaCompra = (props) => {
@@ -43,7 +43,7 @@ const ReviseSuaCompra = (props) => {
           </div>
         </div>
       </article>
-      <NavComprasButton
+      <NavButton
         titulo="Voltar"
         executeFunction={() => setActivePage(1)}
       />

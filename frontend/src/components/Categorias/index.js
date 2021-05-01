@@ -1,8 +1,8 @@
-import barbearia from "../../assets/img/nossos-produtos/produtosBarbearia.png";
-import cabelo from "../../assets/img/nossos-produtos/produtosCabelo.png";
-import lancamentos from "../../assets/img/nossos-produtos/produtosLançamentos.png";
-import pele from "../../assets/img/nossos-produtos/produtosPele.png";
-import unhas from "../../assets/img/nossos-produtos/produtosUnhas.png";
+import barbearia from "../../assets/img/nossos-produtos/produtosBarbearia2.png";
+import cabelo from "../../assets/img/nossos-produtos/produtosCabelo2.png";
+import lancamentos from "../../assets/img/nossos-produtos/produtosLançamentos2.png";
+import pele from "../../assets/img/nossos-produtos/produtosPele2.png";
+import unhas from "../../assets/img/nossos-produtos/produtosUnhas2.png";
 import "./style.css";
 
 const Categorias = () => {

@@ -2,7 +2,7 @@ import boleto from "../../../assets/img/finalizar-compras/boleto.png";
 import CartaoDeCredito from "../../../assets/img/finalizar-compras/CartaoDeCredito.png";
 import CartaoDeDebito from "../../../assets/img/finalizar-compras/CartaoDeDebito.png";
 import PIX from "../../../assets/img/finalizar-compras/PIX.png";
-import { NavComprasButton } from "../../Button";
+import { NavButton } from "../../Button";
 import "./style.css";
 
 const OpcoesDePagamento = (props) => {
@@ -34,11 +34,11 @@ const OpcoesDePagamento = (props) => {
           </form>
         </div>
         <div className="buttons">
-          <NavComprasButton
+          <NavButton
             titulo="Voltar"
             executeFunction={() => setActivePage(0)}
           />
-          <NavComprasButton
+          <NavButton
             titulo="Continuar"
             executeFunction={() => setActivePage(2)}
           />

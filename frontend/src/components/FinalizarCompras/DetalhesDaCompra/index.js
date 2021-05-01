@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-import { NavComprasButton } from "../../../components/Button";
+import { NavButton } from "../../../components/Button";
 import "./style.css";
 
 const DetalhesDaCompra = (props) => {
@@ -36,11 +36,11 @@ const DetalhesDaCompra = (props) => {
           </div>
         </form>
         <div className="buttons">
-          <NavComprasButton
+          <NavButton
             titulo="Voltar"
             executeFunction={() => history.push("/shopping__cart")}
           />
-          <NavComprasButton
+          <NavButton
             titulo="Continuar"
             executeFunction={() => setActivePage(1)}
           />

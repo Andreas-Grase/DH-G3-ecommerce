@@ -1,6 +1,7 @@
 .grid-container{
     background-image: url("../../assets/img/kit.jpg");
     background-size: cover;
+    background-color: #291810;
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;

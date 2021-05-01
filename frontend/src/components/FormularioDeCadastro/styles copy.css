@@ -4,6 +4,7 @@
     height: 600px;
     background-image: url("../../assets/img/kit.jpg");
     background-size: cover;
+    background-color: #291810;
 }
 
 .container-interno {
