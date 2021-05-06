@@ -72,7 +72,7 @@ export default class NavbarHome extends React.Component {
           </Nav>
           <Form inline size="sm">
             {/* <FormControl type="text" placeholder="Produtos" className="mr-sm-2" /> */}
-            <Button href="/login" variant="outline-light" id="buttonNAV">Entrar na conta</Button>
+            <Button href="/login" id="buttonNAV">Entrar na conta</Button>
           </Form>
         </Navbar.Collapse>
       </Navbar>

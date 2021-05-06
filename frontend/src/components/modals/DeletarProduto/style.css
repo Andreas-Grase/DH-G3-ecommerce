@@ -1,16 +1,15 @@
+#myModal {
+    background: transparent;
+    margin-top: 30px;
+}
+
 .navbar {
     background-color: black;
 }
 
 #buttonNAV {
     height: 38px;
-    background-color:var(--cor3);
-    border: none;
-}
-
-#buttonNAV:hover {
-    color: var(--cor2);
-    background-color:var(--cor1);
+    background-color: #af8048;
     border: none;
 }
 

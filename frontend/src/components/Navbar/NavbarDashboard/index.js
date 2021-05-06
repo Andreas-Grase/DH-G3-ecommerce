@@ -25,7 +25,7 @@ const NavbarDashboard = () => {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          <Nav.Link href="/dashboard">Home</Nav.Link>
+          {/* <Nav.Link href="/dashboard">Home</Nav.Link>
           <Nav.Link href="/dashboard/produto/listar">Listar Produtos</Nav.Link>
           <Nav.Link href="/dashboard/produto/ver/:id">Ver Produtos</Nav.Link>
           <NavDropdown title="Funções" id="basic-nav-dropdown">
@@ -38,11 +38,11 @@ const NavbarDashboard = () => {
             <NavDropdown.Item href="#action/3.4">
               Separated link
             </NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
         </Nav>
         <Form inline size="sm">
-          <FormControl type="text" placeholder="Produtos" className="mr-sm-2" />
-          <Button style={{height:"38px"}} variant="outline-info">Produtos</Button>
+          <FormControl type="text" placeholder="Pesquisar" className="mr-sm-2" />
+          <Button style={{height:"38px"}} id="buttonNAV">Produtos</Button>
         </Form>
       </Navbar.Collapse>
     </Navbar>

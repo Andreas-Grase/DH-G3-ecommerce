@@ -5,11 +5,11 @@ import Carrinho from '../pages/Carrinho'
 import FinalizarCompras from '../pages/Carrinho/FinalizarCompras'
 import Contato from '../pages/Contato'
 import Dashboard from '../pages/Dashboard'
-import DashboardAdicionar from '../pages/DashboardAdicionar'
-import DashboardAtualizar from '../pages/DashboardAtualizar'
-import DashboardDeletar from '../pages/DashboardDeletar'
-import DashboardListar from '../pages/DashboardListar'
-import DashboardVer from '../pages/DashboardVer'
+// import DashboardAdicionar from '../pages/DashboardAdicionar'
+// import DashboardAtualizar from '../pages/DashboardAtualizar'
+// import DashboardDeletar from '../pages/DashboardDeletar'
+// import DashboardListar from '../pages/DashboardListar'
+// import DashboardVer from '../pages/DashboardVer'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
 import PaginaMarcas from '../pages/PaginaMarcas'
@@ -28,11 +28,11 @@ const Routes = () => {
         {/* <Route exact path="/categorias/:categoria/:marcas" component={Marcas}/> */}
         {/* <Route exact path="/categorias/:categoria?" component={Categoria}/> */}
         {/* <Route path="/produtos/:produto_detalhado" component={ProdutoDetalhado} */}  
-        <Route exact path="/dashboard/produto/atualizar/:id" component={DashboardAtualizar} />
-        <Route exact path="/dashboard/produto/deletar/:id" component={DashboardDeletar} />
-        <Route exact path="/dashboard/produto/adicionar" component={DashboardAdicionar} />
-        <Route exact path="/dashboard/produto/listar" component={DashboardListar} />
-        <Route exact path="/dashboard/produto/ver/:id" component={DashboardVer} />
+        {/* <Route exact path="/dashboard/produto/atualizar/:id" component={DashboardAtualizar} /> */}
+        {/* <Route exact path="/dashboard/produto/deletar/:id" component={DashboardDeletar} /> */}
+        {/* <Route exact path="/dashboard/produto/adicionar" component={DashboardAdicionar} /> */}
+        {/* <Route exact path="/dashboard/produto/listar" component={DashboardListar} /> */}
+        {/* <Route exact path="/dashboard/produto/ver/:id" component={DashboardVer} /> */}
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/cadastro" component={Cadastro} />
         <Route path="/login" component={Login} />
