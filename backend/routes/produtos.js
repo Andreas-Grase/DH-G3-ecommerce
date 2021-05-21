@@ -2,11 +2,11 @@ const express = require("express"),
   router = express.Router(),
   controller = require("../../backend/controllers/products");
 
-router.put("/update/:id", controller.update);
-router.delete("/delete/:id", controller.delete);
+router.get("/atualizar/:id", controller.update);
+router.get("/deletar/:id", controller.delete);
+router.get("/mostrar/:id", controller.show);
 router.get("/promo", controller.showPromo);
-router.post("/create", controller.create);
-router.get("/:id", controller.show);
+router.get("/criar", controller.create);
 router.get("/", controller.pesquisar);
 
 module.exports = router;

@@ -1,13 +1,8 @@
 const express = require('express'),
   router = express.Router(),
-  contato = require('./contato'),
-  produtos = require('./produtos'),
-  controller = require('../controllers/')
+  controller = require('../controllers/index')
 
-// router.get('/', controller.index)
-
-router.use('/contato', contato)
-router.use('/produtos', produtos)
+router.get('/pesquisar', controller.index)
 
 
 module.exports = router
