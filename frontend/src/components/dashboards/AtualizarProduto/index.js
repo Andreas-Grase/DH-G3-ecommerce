@@ -1,16 +1,14 @@
-import Admin from "../templates/Admin"
-import './style.css'
+import "./style.css";
 
-
-const DashboardAdicionar = () => {
-    return (
-        <>
-        <div className = "container-flex">
+const AtualizarProduto = () => {
+  return (
+    <>
+      <div className = "container-flex">
             <div className = "header-section">
                 <div className = "add-icon">
-                    <i class="fas fa-file-medical fa-2x" />
+                    <i class="fas fa-edit fa-2x" />
                 </div>
-                <h1 className = "title">Adicionar novo produto</h1>
+                <h1 className = "title">Atualizar produto</h1>
             </div>
             <div className = "product-info">
                 <div className = "add-img">
@@ -68,14 +66,8 @@ const DashboardAdicionar = () => {
             </div>
             <textarea rows = "4" cols = "50" className = "product-description" placeholder = "Insira aqui uma breve descrição do seu produto..." />
         </div>
-        </>
-    )
+    </>
+  );
 };
 
-const template = () => (
-  <Admin>
-    <DashboardAdicionar />
-  </Admin>
-);
-
-export default template;
+export default AtualizarProduto;

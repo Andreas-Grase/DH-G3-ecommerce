@@ -27,24 +27,44 @@
 
 .pagamentos {
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     margin: 5px;
     justify-content:space-around;
 }
 
 .pagamento {
     background-color: rgba(175, 128, 72, 0.31);
-    border: 1px;
-    border-radius: 10px;
-    margin: 5px;
     padding: 5px;
+    border-radius: 4px;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row wrap;
     align-items:center;
-    justify-content: center;
-    height: 200px;
-    width: 318px;
+    justify-content: left;
     list-style: none;
+    border-bottom: 1px solid #f7efe6;
+}
+
+.pagamento:last-child {
+    border-bottom: none;
+}
+
+.pagamento input {
+    margin: 12px;
+}
+
+.pagamento img {
+    width: 34px;
+    height: 34px;
+    margin: 12px;
+    
+}
+
+.pagamento label {
+    margin: 12px;
+}
+
+.pagamento:hover {
+    background-color: var(--cor1)
 }
 
 .buttons {

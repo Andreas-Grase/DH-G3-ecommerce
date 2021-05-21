@@ -1,5 +1,5 @@
 import Produto from "../../../assets/img/finalizar-compras/Produto.png";
-import { EndButton, NavComprasButton } from "../../Button";
+import { EndButton, NavButton } from "../../Button";
 import "./style.css";
 
 const ReviseSuaCompra = (props) => {
@@ -19,7 +19,7 @@ const ReviseSuaCompra = (props) => {
             Prazo de entrega definido pelo frete escolhido
           </div>
         </div>
-        <div className="produto-a-comprar">
+        <div className="produto-a-comprar shadow">
           <img src={Produto} alt="produto-a-comprar"/>
           <div className="descricao-produto">
             <p>PACOTE DE PANOS LIMPADORES X 40</p>
@@ -43,7 +43,7 @@ const ReviseSuaCompra = (props) => {
           </div>
         </div>
       </article>
-      <NavComprasButton
+      <NavButton
         titulo="Voltar"
         executeFunction={() => setActivePage(1)}
       />

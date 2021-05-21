@@ -46,8 +46,8 @@ export default class NavbarHome extends React.Component {
               </FormGroup>
             </ModalBody>
             <ModalFooter>
-              <Button className="btn btn-primary buttonNAV" href="/dashboard">Entrar</Button>
-              <Button className="btn btn-secondary buttonNAV" onClick={this.abrirModal}>Sair</Button>
+              <Button id="buttonNAV" className="btn btn-primary" href="/dashboard">Entrar</Button>
+              <Button id="buttonNAV" className="btn btn-secondary" onClick={this.abrirModal}>Sair</Button>
             </ModalFooter>
             <div>
               <p className="forgot-password text-right mr-3">Esqueceu sua senha?<a href="#">&nbsp;Clique aqui</a></p>
@@ -62,17 +62,17 @@ export default class NavbarHome extends React.Component {
             <Nav.Link href="/produtos">Produtos</Nav.Link>
             <Nav.Link href="/marcas">Marcas</Nav.Link>
             <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/">Barbearia</NavDropdown.Item>
-              <NavDropdown.Item href="/">Cabelo</NavDropdown.Item>
-              <NavDropdown.Item href="/">Lançamentos</NavDropdown.Item>
-              <NavDropdown.Item href="/">Pele</NavDropdown.Item>
+              <NavDropdown.Item href="/categorias/barbearia">Barbearia</NavDropdown.Item>
+              <NavDropdown.Item href="/categorias/cabelo">Cabelo</NavDropdown.Item>
+              <NavDropdown.Item href="/categorias/lacamentos">Lançamentos</NavDropdown.Item>
+              <NavDropdown.Item href="/categorias/pele">Pele</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="/">Unhas</NavDropdown.Item>
+              <NavDropdown.Item href="/categorias/unha">Unhas</NavDropdown.Item>
             </NavDropdown>
           </Nav>
           <Form inline size="sm">
             {/* <FormControl type="text" placeholder="Produtos" className="mr-sm-2" /> */}
-            <Button href="/login" variant="outline-light" className="buttonNAV">Entrar na conta</Button>
+            <Button href="/login" id="buttonNAV">Entrar na conta</Button>
           </Form>
         </Navbar.Collapse>
       </Navbar>

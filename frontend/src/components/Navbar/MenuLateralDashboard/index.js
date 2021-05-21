@@ -1,22 +1,28 @@
-import {
-  Card,
-  ListGroup,
-} from "react-bootstrap";
-import { NavLink } from "react-router-dom"
-import './style.css'
+import { Card, ListGroup } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
+import "./style.css";
 
-const MenuLateral = () => {
+const MenuLateral = (props) => {
+  const { setActivePage } = props;
   return (
-    <div className = "menu-wrapper">
+    <div className="menu-wrapper">
       <Card>
-        <Card.Header>Painel de Controle</Card.Header>
+        <Card.Header>
+          <b>Painel de Controle</b>
+        </Card.Header>
         <ListGroup variant="flush">
-          <NavLink to="/dashboard" className="navlink">Página Inicial</NavLink>
-          <NavLink to="/dashboard/produto/ver/:id" className="navlink">Ver Produtos</NavLink>
-          <NavLink to="/dashboard/produto/listar" className="navlink">Listar Produtos</NavLink>
-          <NavLink to="/dashboard/produto/adicionar" className="navlink">Adicionar Produtos</NavLink>
-          <NavLink to="/dashboard/produto/deletar/:id" className="navlink">Deletar Produtos</NavLink>
-          <NavLink to="/dashboard/produto/atualizar/:id" className="navlink">Atualizar Produtos</NavLink>
+          <NavLink to="#" onClick={() => setActivePage(0)} className="navlink">
+            Listar Produtos
+          </NavLink>
+          <NavLink to="#" onClick={() => setActivePage(1)} className="navlink">
+            Ver Produto
+          </NavLink>
+          <NavLink to="#" onClick={() => setActivePage(2)} className="navlink">
+            Adicionar Produto
+          </NavLink>
+          <NavLink to="#" onClick={() => setActivePage(3)} className="navlink">
+            Atualizar Produto
+          </NavLink>
         </ListGroup>
       </Card>
     </div>

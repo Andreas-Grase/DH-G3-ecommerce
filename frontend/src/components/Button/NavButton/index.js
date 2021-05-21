@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const NavComprasButton = (props) => {
+const NavButton = (props) => {
   const { titulo, executeFunction } = props;
   return (
     <nav id="btn-back">
@@ -12,4 +12,4 @@ const NavComprasButton = (props) => {
   );
 };
 
-export default NavComprasButton;
+export default NavButton;

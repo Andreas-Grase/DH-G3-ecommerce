@@ -60,7 +60,7 @@
     padding: 25px 35px;
 }
 
-.frete1 {
+.frete {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -70,23 +70,14 @@
     background: #fff;
     height: 50px;
     padding: 5px;
+}
+
+.frete input {
+    margin: 12px;
+}
+
+.frete1 {
     border-bottom: 1px solid #000;
-}
-
-.frete2 {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    border: 1px;
-    border-radius: 4px;
-    align-items: center;
-    background: #fff;
-    height: 50px;
-    padding: 5px;
-}
-
-.data-frete {
-    margin-left: auto;
 }
 
 .buttons {

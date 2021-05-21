@@ -1,4 +1,4 @@
-import NavComprasButton from './NavComprasButton'
+import NavButton from './NavButton'
 import EndButton from './EndButton'
 
-export {NavComprasButton, EndButton}
+export {NavButton, EndButton}
