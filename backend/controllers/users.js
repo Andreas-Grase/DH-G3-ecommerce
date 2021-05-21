@@ -1,11 +1,11 @@
 const controller = {
-    login: (req, res) => {res.send("Página Login")},
-    create: (req, res) => {res.send("Página Criar Usuário")},
-    forgot: (req, res) => {res.send("Página Esqueci a Senha")},
-    modify: (req, res) => {res.send("Página Modificar Usuário")},
-    delete: (req, res) => {res.send("Página Delete Usuário")},
-    show: (req, res) => {res.send("Página Mostrar Usuário")},
-    index: (req, res) => {res.send("Página Usuários")},
+    login: (req, res) => {res.send("<h1>Página login</h1>")},
+    create: (req, res) => {res.send("<h1>Página criar usuário</h1>")},
+    forgot: (req, res) => {res.send("<h1>Página esqueci a senha</h1>")},
+    modify: (req, res) => {res.send(`<h1>Página modificar usuário ${req.params.id}</h1>`)},
+    delete: (req, res) => {res.send(`<h1>Página deletar usuário ${req.params.id}</h1>`)},
+    show: (req, res) => {res.send(`<h1>Página mostrar usuário ${req.params.id}</h1>`)},
+    index: (req, res) => {res.send("<h1>Página usuários</h1>")},
   }
   
   module.exports = controller
