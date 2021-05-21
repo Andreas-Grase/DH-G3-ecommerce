@@ -44,7 +44,7 @@ h3 {
 .formulario label {
 	font-size: 0.85em;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     margin: 5px 30px;
     color: #bfbfbf;
 }
