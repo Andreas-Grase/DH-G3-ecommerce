@@ -1,30 +1,14 @@
-import React, { Component } from 'react'
-import Product from './Product';
-import Title from './Title';
-import {ProductConsumer} from './context';
+import React from 'react';
+import Product from "./Product";
+import "./style.css";
 
-export default class ProductList extends Component {
+const productList = () => {
     
-    render() {
-        return (
-            <React.Fragment>
-                <div>
-                    <div className="container">
-                        <Title name="Nossos" title="Acessórios"></Title>
+    return (
+      <div className="">
+        <Product />
+      </div>
+    )}
 
-                        <div className="row">
-                            <ProductConsumer>
-                                {value => {
-                                return value.products.map( product =>{
-                                    return <Product key={product.id} product={product} />
-                                });
-                                }}
-                            </ProductConsumer>
-                        </div>
-                    </div>
-                </div>
-            </React.Fragment>
-  
-        );
-    }
-}
+
+export default productList;

@@ -1,0 +1,20 @@
+#boton-carrito {
+    height: 50px;
+    color: white;
+    background-color: #af8048;
+    border: none;
+    padding: 0 50px;
+}
+
+.container-products {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  
+}
+
+.container-products .cardzinho {
+    padding: 30px 0px;
+}
