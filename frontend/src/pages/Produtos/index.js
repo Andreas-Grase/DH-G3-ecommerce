@@ -1,6 +1,5 @@
 // import MenuLateral from '../../components/MenuLateral'
 import Dropdown from "../../components/Dropdown";
-import { ProductProvider } from "../../components/ProdutosDOS/context";
 import ProductList from "../../components/ProdutosDOS/ProductList";
 import Main from "../templates/Main";
 import "./style.css";
@@ -46,9 +45,9 @@ const Produtos = () => {
         </div>
 
         <div className="produtos-segunda-coluna-fim">
-          <ProductProvider>
+      
             <ProductList />
-          </ProductProvider>
+         
         </div>
         <div className="proxima-pagina">
           <h3>
