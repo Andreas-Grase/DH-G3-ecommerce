@@ -5,25 +5,27 @@ import { Link } from "react-router-dom";
 
 export default class Product extends Component {
     render() {
-        const { id, title, img, price, inCart } = this.props.product;
+        const { nome, marca, quantidade, preco } = this.props.product;
         return (
             <ProductWrapper className="col-9 mx-auto col-md col-lg-3 my-3">
                 <div className="card mb-3">
                     <div className="img-container p-10" onClick={console.log("you clicked me on the image container")
                     }>
-                        <Link to="/produtos/produto/:id">
-                            <img src={img} alt="product" className="card-img-top" />
-                        </Link>
 
                     </div>
                     {/* Card Footer que deixou de ser footer para ir acima do carrito*/}
                     <div className="card-footer d-flex">
                         <p className=" mb-0">
-                            {title}
+                            {nome}
+                        </p>
+                        <p className=" mb-0">
+                            {marca}
+                        </p><p className=" mb-0">
+                            {quantidade}
                         </p>
                         <h5 className="font-weight-bold mb-0">
                             <span className="mr-1 ml-2">$</span>
-                            {price}
+                            {preco}
                         </h5>
                     </div>
                      <button
