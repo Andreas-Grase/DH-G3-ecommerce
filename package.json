@@ -1,0 +1,33 @@
+{
+  "name": "integracao-back-front",
+  "version": "1.0.0",
+  "description": "Projeto de e-commerce do Grupo 3 do curso Full Stack MEAN da DH",
+  "main": "index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "concurrently": "^6.2.0",
+    "react-icons": "^4.2.0",
+    "reactstrap": "^8.9.0",
+    "styled-components": "^5.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client": "npm start --prefix frontend",
+    "server": "npm start --prefix backend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "client-install": "npm install --prefix frontend",
+    "server-install": "npm install --prefix backend",
+    "install": "concurrently \"npm run server-install\" \"npm run client-install\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Andreas-Grase/DH-G3-ecommerce.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Andreas-Grase/DH-G3-ecommerce/issues"
+  },
+  "homepage": "https://github.com/Andreas-Grase/DH-G3-ecommerce#readme"
+}

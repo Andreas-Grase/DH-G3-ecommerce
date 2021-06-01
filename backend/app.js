@@ -1,6 +1,6 @@
 const express = require("express"),
   app = express();
-port = 3000;
+port = 5000;
 
 rotasContato = require("../backend/routes/contato"),
 rotasPesquisa = require("../backend/routes/index"),

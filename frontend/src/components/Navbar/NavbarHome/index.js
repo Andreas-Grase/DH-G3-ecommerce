@@ -46,7 +46,7 @@ export default class NavbarHome extends React.Component {
               </FormGroup>
             </ModalBody>
             <ModalFooter>
-              <Button id="buttonNAV" className="btn btn-primary" href="/dashboard">Entrar</Button>
+              <Button id="buttonNAV" className="btn btn-primary" href="/produtos/dashboard">Entrar</Button>
               <Button id="buttonNAV" className="btn btn-secondary" onClick={this.abrirModal}>Sair</Button>
             </ModalFooter>
             <div>

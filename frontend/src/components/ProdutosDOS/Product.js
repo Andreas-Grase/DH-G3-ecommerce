@@ -7,7 +7,6 @@ const Product = () => {
             <div className="container-products">
                 {storeProducts.map((data, key) => {
                     return (
-
                         <div key={key} className="cardzinho">
                             <h5>{data.title}</h5>
                             <a href=""><img src={data.img} alt="Detalhes do Produto" /></a>
