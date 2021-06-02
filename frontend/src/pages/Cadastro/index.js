@@ -21,22 +21,26 @@ const Cadastro = () => {
         />
         <h1>Cadastro</h1>
         <div className="formularioAtual">
-          <PainelPassos />
-          {passo === 0 ? (
-            <div>
-              <FormPasso1 setPasso={setPasso} />
-            </div>
-          ) : null}
-          {passo === 1 ? (
-            <div>
-              <FormPasso2 setPasso={setPasso} />
-            </div>
-          ) : null}
-          {passo === 2 ? (
-            <div>
-              <FormPasso3 setPasso={setPasso} />
-            </div>
-          ) : null}
+          <div className="painelPassos">
+            <PainelPassos />
+          </div>
+          <div className="passos">
+            {passo === 0 ? (
+              <div>
+                <FormPasso1 setPasso={setPasso} />
+              </div>
+            ) : null}
+            {passo === 1 ? (
+              <div>
+                <FormPasso2 setPasso={setPasso} />
+              </div>
+            ) : null}
+            {passo === 2 ? (
+              <div>
+                <FormPasso3 setPasso={setPasso} />
+              </div>
+            ) : null}
+          </div>
         </div>
       </div>
     </div>
