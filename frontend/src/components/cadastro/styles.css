@@ -1,31 +1,4 @@
-.container-externo {
-    display: flex;
-    align-items: center;
-    height: 600px;
-    background-image: url("../../assets/img/kit.jpg");
-    background-size: cover;
-    background-color: #291810;
-}
 
-.container-interno {
-    position: relative;
-    height: 600px;
-    width: 450px;
-    border: 2px solid rgb(83, 65, 65);
-    border-radius: 80px 0px 80px 0px;
-    background-color: rgba(0, 0, 0, 0.664);
-    margin: auto;
-    box-sizing: border-box;
-    padding: 30px 28px;
-    margin-bottom: 70px;
-}
-
-.icone-container-interno {
-    border-radius: 50%;
-    position: absolute;
-    top: -50px;
-    left: 40%;
-}
 
 .container-formulario {
     display: flex;
@@ -53,10 +26,6 @@
     font-size: 0.8rem;
 }
 
-.formularioAtual {
-    margin: -10px 20px 0 40px;
-
-}
 
 .form {
     display: flex;

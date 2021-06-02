@@ -4,10 +4,10 @@ import { Button } from "react-bootstrap";
 import { Modal, ModalFooter, ModalHeader } from "reactstrap";
 import "./style.css";
 
-const ModalDeletar = ({ product }) => {
+const ModalDeletar = ({ produtos }) => {
   return (
     <Modal id="myModal" isOpen={true}>
-      <ModalHeader>{`Deseja deletar o produto ${product.nome} de id ${product.id}?`}</ModalHeader>
+      <ModalHeader>{`Deseja deletar o produto ${produtos.nome} de id ${produtos.id}?`}</ModalHeader>
       <ModalFooter>
         <Button
           id="buttonNAV"
@@ -16,7 +16,7 @@ const ModalDeletar = ({ product }) => {
         >
           Sim
         </Button>
-        <Button id="buttonNAV" className="btn btn-secondary" href="/dashboard">
+        <Button id="buttonNAV" className="btn btn-secondary" href="/produtos/dashboard">
           Não
         </Button>
       </ModalFooter>

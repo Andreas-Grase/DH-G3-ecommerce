@@ -1,4 +1,4 @@
-import produtomarca1 from "../../../assets/img/marcas/produtomarca1.png";
+import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import React, { useState } from "react";
 import { Button } from "react-bootstrap";
@@ -11,11 +11,11 @@ import {
   ModalFooter,
   ModalHeader,
 } from "reactstrap";
-import axios from "axios";
+import produtomarca1 from "../../../assets/img/marcas/produtomarca1.png";
 import "./style.css";
 
 const ModalAtualizar = ({ produtos }) => {
-  const [id, setId] = useState(produtos.id);
+  const id = produtos.id;
   const [nome, setNome] = useState(produtos.nome);
   const [marca, setMarca] = useState(produtos.marca);
   const [quantidade, setQuantidade] = useState(produtos.quantidade);
@@ -91,7 +91,7 @@ const ModalAtualizar = ({ produtos }) => {
             <Button
               id="buttonNAV"
               className="btn btn-secondary"
-              href="/dashboard"
+              href="/produtos/dashboard"
             >
               Sair
             </Button>

@@ -9,9 +9,9 @@ const ListarProduto = ({ produtos }) => {
   const [isModalDeletarVisible, setIsModalDeletarVisible] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState({});
 
-  const openModalAtualizar = (id, nome, categoria, estoque, preco) => {
+  const openModalAtualizar = (id, nome, marca, quantidade, preco) => {
     setIsModalAtualizarVisible(true);
-    setSelectedProduct({ id, nome, categoria, estoque, preco });
+    setSelectedProduct({ id, nome, marca, quantidade, preco });
   };
 
   const openModalDeletar = (id, nome) => {
@@ -22,10 +22,10 @@ const ListarProduto = ({ produtos }) => {
   return (
     <div style={{ width: "80%", margin: "5px" }}>
       {isModalAtualizarVisible ? (
-        <ModalAtualizar product={selectedProduct} />
+        <ModalAtualizar produtos={selectedProduct} />
       ) : null}
       {isModalDeletarVisible ? (
-        <ModalDeletar product={selectedProduct} />
+        <ModalDeletar produtos={selectedProduct} />
       ) : null}
       <div className="header-section">
         <div className="add-icon">
@@ -40,7 +40,7 @@ const ListarProduto = ({ produtos }) => {
               <th scope="col">ID</th>
               <th scope="col">Produto</th>
               <th scope="col">Marca</th>
-              <th scope="col">Qauntidade</th>
+              <th scope="col">Quantidade</th>
               <th scope="col">Preço</th>
               <th scope="col">id_categoria</th>
               <th scope="col" className="col-btn">

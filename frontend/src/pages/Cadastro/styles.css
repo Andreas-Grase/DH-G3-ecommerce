@@ -1,0 +1,40 @@
+.container-externo {
+    background-image: url("../../assets/img/kit.jpg");
+    position: relative;
+    height: 600px;
+    /* background-image: url(/static/media/kit.9f00f23d.jpg); */
+    background-size: cover;
+    background-color: #291810;
+}
+
+.container-interno {
+    height: 450px;
+    width: 320px;
+    border: 2px solid rgb(83, 65, 65);
+    border-radius: 80px 0px 80px 0px;
+    background-color: rgba(0, 0, 0, 0.664);
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -36%);
+    box-sizing: border-box;
+    padding: 30px 28px;
+}
+
+.container-interno h1 {
+    flex: 1 0 100%;
+    flex-flow: row wrap;
+}
+
+.icone-container-interno {
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 40%;
+}
+
+.formularioAtual {
+    display: flex;
+    margin: auto;
+
+}
