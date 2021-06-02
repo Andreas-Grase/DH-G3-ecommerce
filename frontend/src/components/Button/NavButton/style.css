@@ -8,11 +8,11 @@
 
 }
 
-@media screen and (max-width: 768px) {
+/* @media screen and (max-width: 768px) {
     #btn-back {
         display: none;
     }
-}
+} */
 
 #back {
     border-radius: 4px;
@@ -25,8 +25,9 @@
     transition: all 0.2s ease-in-out;
     text-decoration: none;
 }
+
 #back:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
     color: #AF8048;
-  }
+}
