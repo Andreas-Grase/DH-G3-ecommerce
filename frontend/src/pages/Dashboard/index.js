@@ -38,10 +38,10 @@ const Dashboard = () => {
       ) : null}
       {activePage === 1 ? <VerProduto setActivePage={setActivePage} /> : null}
       {activePage === 2 ? (
-        <AdicionarProduto setActivePage={setActivePage} />
+        <AdicionarProduto setActivePage={setActivePage} produtos={data.produtos} />
       ) : null}
       {activePage === 3 ? (
-        <AtualizarProduto setActivePage={setActivePage} />
+        <AtualizarProduto setActivePage={setActivePage} produtos={data.produtos} />
       ) : null}
     </div>
   );

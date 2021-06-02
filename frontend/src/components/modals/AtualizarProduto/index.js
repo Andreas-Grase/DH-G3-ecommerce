@@ -14,17 +14,24 @@ import {
 import axios from "axios";
 import "./style.css";
 
-const ModalAtualizar = ({ product }) => {
-  const [id, setId] = useState(product.id);
-  const [nome, setNome] = useState(product.nome);
-  const [categoria, setCategoria] = useState(product.categoria);
-  const [estoque, setEstoque] = useState(product.estoque);
-  const [preco, setPreco] = useState(product.preco);
+const ModalAtualizar = ({ produtos }) => {
+  const [id, setId] = useState(produtos.id);
+  const [nome, setNome] = useState(produtos.nome);
+  const [marca, setMarca] = useState(produtos.marca);
+  const [quantidade, setQuantidade] = useState(produtos.quantidade);
+  const [preco, setPreco] = useState(produtos.preco);
 
-  const handleUpdate = async () => {};
+  const handleUpdate = async () => {
+    try {
+      const response = await axios.post(`/produtos/${id}`);
+      handleUpdate(response.data);
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <Modal id="myModal" isOpen={true}>
-      <ModalHeader>{`Atualizar produto ${product.nome} de id ${product.id}`}</ModalHeader>
+      <ModalHeader>{`Atualizar produto ${produtos.nome} de id ${produtos.id}`}</ModalHeader>
       <div className="modal-container">
         <div id="add-img">
           <img
@@ -50,8 +57,8 @@ const ModalAtualizar = ({ product }) => {
               <Input
                 type="text"
                 id="categoria"
-                value={categoria}
-                onChange={(e) => setCategoria(e.target.value)}
+                value={marca}
+                onChange={(e) => setMarca(e.target.value)}
               />
             </FormGroup>
             <FormGroup>
@@ -59,8 +66,8 @@ const ModalAtualizar = ({ product }) => {
               <Input
                 type="text"
                 id="estoque"
-                value={estoque}
-                onChange={(e) => setEstoque(e.target.value)}
+                value={quantidade}
+                onChange={(e) => setQuantidade(e.target.value)}
               />
             </FormGroup>
             <FormGroup>

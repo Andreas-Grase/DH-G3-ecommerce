@@ -1,6 +1,6 @@
 .container-externo {
     display: flex;
-    align-items: center; 
+    align-items: center;
     height: 600px;
     background-image: url("../../assets/img/kit.jpg");
     background-size: cover;
@@ -20,7 +20,7 @@
     margin-bottom: 70px;
 }
 
-.icone-container-interno{
+.icone-container-interno {
     border-radius: 50%;
     position: absolute;
     top: -50px;
@@ -38,7 +38,7 @@
 
 .passo {
     margin: 0;
-    padding:5px;
+    padding: 5px;
     box-shadow: 5px 5px 5px black;
     border: 1px solid rgba(128, 128, 128, 0.300);
 }
@@ -50,12 +50,12 @@
 
 .passo p {
     color: var(--cor1);
-    font-size:0.8rem;
+    font-size: 0.8rem;
 }
 
 .formularioAtual {
-    margin: -10px 20px 0 40px ;
-    
+    margin: -10px 20px 0 40px;
+
 }
 
 .form {
@@ -71,7 +71,9 @@
     color: rgb(149, 149, 149);
 }
 
-.form input[type="text"], input[type="password"], input[type="email"] {
+.form input[type="text"],
+input[type="password"],
+input[type="email"] {
     border: none;
     border-bottom: 1px solid white;
     background: transparent;
@@ -81,12 +83,13 @@
     font-size: 10px;
 }
 
- .form input[type="submit"]{
+.form input[type="submit"] {
     border: none;
     outline: none;
     height: 35px;
     color: #000;
-     background: #fff; /*cor do botao enviar */
+    background: #fff;
+    /*cor do botao enviar */
     border-radius: 25px;
     transition: 0.2s;
-} 
+}
