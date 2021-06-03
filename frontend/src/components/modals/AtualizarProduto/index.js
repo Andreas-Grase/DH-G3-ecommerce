@@ -91,7 +91,7 @@ const ModalAtualizar = ({ produtos }) => {
             <Button
               id="buttonNAV"
               className="btn btn-secondary"
-              href="/produtos/dashboard"
+              href="/dashboard"
             >
               Sair
             </Button>

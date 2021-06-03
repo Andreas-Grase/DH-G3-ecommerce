@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     width: 150px;
+    margin: 5px;
 }
 
 .passo {
@@ -35,8 +36,6 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 0 auto;
-    justify-content: center;
 }
 
 .form h2 {
@@ -44,8 +43,9 @@
     flex: 1 1 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-bottom: 20px;
-    justify-content: center;
+    margin: 0 5px 5px;
+    padding: 10px 5px 5px;
+    /* justify-content: center; */
 }
 
 .form p {
@@ -56,7 +56,8 @@
 }
 
 .form div {
-    margin: 0 50px 0 0;
+    margin: 0 5px;
+    padding: 0 5px;
 }
 
 .form input[type="text"],
@@ -66,18 +67,23 @@ input[type="email"] {
     border-bottom: 1px solid white;
     background: transparent;
     outline: none;
-    height: 40px;
+    height: 25px;
+    width: 255px;
     color: rgb(149, 149, 149);
-    font-size: 10px;
+    font-size: 0.8rem;
 }
 
-.form input[type="submit"] {
-    border: none;
-    outline: none;
-    height: 35px;
-    color: #000;
-    background: #fff;
-    /*cor do botao enviar */
-    border-radius: 25px;
-    transition: 0.2s;
+#form_numero {
+    height: 25px;
+    width: 85px;
+}
+
+#form_complemento {
+    height: 25px;
+    width: 200px;
+}
+
+#form_bairro {
+    height: 25px;
+    width: 200px;
 }

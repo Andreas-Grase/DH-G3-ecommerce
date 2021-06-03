@@ -33,7 +33,7 @@ const Routes = () => {
         {/* <Route exact path="/dashboard/produto/adicionar" component={DashboardAdicionar} /> */}
         {/* <Route exact path="/dashboard/produto/listar" component={DashboardListar} /> */}
         {/* <Route exact path="/dashboard/produto/ver/:id" component={DashboardVer} /> */}
-        <Route path="/produtos/dashboard" component={Dashboard} />
+        <Route path="/dashboard" component={Dashboard} />
         <Route path="/cadastro" component={Cadastro} />
         <Route path="/login" component={Login} />
         <Route path="/categorias/unha" component={Categorias} />

@@ -4,7 +4,7 @@
     height: 80px;
     padding: 0.5rem calc((100vw-1000px) / 2);
     z-index: 10;
-    margin: 5px;
+    margin: 5px 20px;
 
 }
 

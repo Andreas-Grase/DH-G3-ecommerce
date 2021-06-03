@@ -10,14 +10,16 @@ const FormPasso3 = (props) => {
     <div>
       <form className="form">
         <h2 className="titulo-do-form-do-passo">Email de confirmação</h2>
-        <p>
-          Você receberá um e-mail para confirmar seu cadastro. Acesse-o para
-          ativar a sua conta.
-        </p>
+        <div>
+          <p>
+            Você receberá um e-mail para confirmar seu cadastro. Acesse-o para
+            ativar a sua conta.
+          </p>
+        </div>
       </form>
       <div className="buttons">
-      <NavButton titulo="voltar" executeFunction={() => setPasso(1)} />
-      <NavButton titulo="Próximo" executeFunction={() => history.push("/")} />
+        <NavButton titulo="voltar" executeFunction={() => setPasso(1)} />
+        <NavButton titulo="Próximo" executeFunction={() => history.push("/")} />
       </div>
     </div>
   );

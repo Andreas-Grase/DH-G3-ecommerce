@@ -8,29 +8,33 @@ const FormPasso2 = (props) => {
     <div>
       <form className="form">
         <h2 className="titulo-do-form-do-passo">Seu endereço</h2>
-        <div>
+        <div >
         <p>CEP</p>
-        <input type="text" name="" placeholder="Seu cep" />
+        <input type="text" name="" placeholder="Seu cep" className="form_cep" />
         </div>
-        <div>
+        <div >
         <p>Rua</p>
-        <input type="text" name="" placeholder="Sua rua" />
+        <input type="text" name="" placeholder="Sua rua" className="form_rua" />
         </div>
-        <div>
+        <div >
+        <p>Número</p>
+        <input type="text" name="" placeholder="Número" id="form_numero" />
+        </div>
+        <div >
         <p>Complemento</p>
-        <input type="text" name="" placeholder="Complemento" />
+        <input type="text" name="" placeholder="Complemento" id="form_complemento" />
         </div>
-        <div>
+        <div >
         <p>Bairro</p>
-        <input type="text" name="" placeholder="Seu bairro" />
+        <input type="text" name="" placeholder="Seu bairro" id="form_bairro"/>
         </div>
-        <div>
+        <div >
         <p>Cidade</p>
-        <input type="text" name="" placeholder="Sua cidade" />
+        <input type="text" name="" placeholder="Sua cidade" className="form_cidade" />
         </div>
-        <div>
+        <div >
         <p>Estado</p>
-        <input type="text" name="" placeholder="Seu estado" />
+        <input type="text" name="" placeholder="Seu estado" className="form_estado"/>
         </div>
       </form>
       <div className="buttons">

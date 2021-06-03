@@ -12,17 +12,17 @@ const Dashboard = () => {
   const [activePage, setActivePage] = useState(0);
   const [data, setData] = useState({ produtos: [] });
   useEffect(() => {
-    // fetch("/produtos/dashboard")
+    // fetch("/produtos")
     //   .then((res) => res.json())
     //   .then((res) => setData(res));
 
     // axios
-    //   .get("/produtos/dashboard")
+    //   .get("/produtos")
     //   .then((res) => setData(res.data))
     //   .catch((error) => console.log(error));
     const getData = async () => {
       try {
-        const response = await axios.get("/produtos/dashboard");
+        const response = await axios.get("/produtos");
         setData(response.data);
       } catch (error) {
         console.log(error);
