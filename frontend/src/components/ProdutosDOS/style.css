@@ -5,6 +5,7 @@
     border: none;
     padding: 0 50px;
 }
+
 #boton-carrito:hover {
     color: black;
     background-color: #af814871;
@@ -16,7 +17,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
-  
+
 }
 
 .container-products .cardzinho {
@@ -30,16 +31,16 @@
     transition: all 1s linear;
 }
 
-.cardzinho:hover{
-        border:0.04rem solid rgba(0,0,0,0.2);
-        box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.2);
+.cardzinho:hover {
+    border: 0.04rem solid rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.2);
 }
 
 .cardzinho:hover img {
     transform: scale(1.1, 1.1);
 }
 
-img {
+.cardzinho img {
     margin: 8px;
     transition: all 1s linear;
 }

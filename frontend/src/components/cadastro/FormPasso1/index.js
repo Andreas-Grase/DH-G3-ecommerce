@@ -8,12 +8,20 @@ const FormPasso1 = (props) => {
     <div>
       <form className="form">
         <h2 className="titulo-do-form-do-passo">Seu acesso</h2>
-        <p>Coloque seu usuário:</p>
-        <input type="text" name="" placeholder="Seu nome de usuario" />
-        <p>Coloque seu email:</p>
-        <input type="email" name="" placeholder="Seu email" />
-        <p>Crie uma senha:</p>
-        <input type="password" name="" placeholde="Sua senha" />
+        <div>
+          <div>
+            <p>Coloque seu usuário:</p>
+            <input type="text" name="" placeholder="Seu nome de usuario" />
+          </div>
+          <div>
+            <p>Coloque seu email:</p>
+            <input type="email" name="" placeholder="Seu email" />
+          </div>
+          <div>
+            <p>Crie uma senha:</p>
+            <input type="password" name="" placeholde="Sua senha" />
+          </div>
+        </div>
       </form>
       <NavButton
         className="botao-proximo"

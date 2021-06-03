@@ -13,7 +13,6 @@ const PainelPassos = () => {
           </div>
           <div className="passo">
             <h3>Passo 3</h3>
-
             <p>Email de confirmação</p>
           </div>
         </div>

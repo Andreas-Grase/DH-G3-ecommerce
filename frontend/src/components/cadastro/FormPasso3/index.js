@@ -15,8 +15,10 @@ const FormPasso3 = (props) => {
           ativar a sua conta.
         </p>
       </form>
+      <div className="buttons">
       <NavButton titulo="voltar" executeFunction={() => setPasso(1)} />
       <NavButton titulo="Próximo" executeFunction={() => history.push("/")} />
+      </div>
     </div>
   );
 };

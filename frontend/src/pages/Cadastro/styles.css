@@ -5,11 +5,12 @@
     /* background-image: url(/static/media/kit.9f00f23d.jpg); */
     background-size: cover;
     background-color: #291810;
+    height: 800px;
 }
 
 .container-interno {
-    height: 450px;
-    width: 320px;
+    height: 550px;
+    width: 600px;
     border: 2px solid rgb(83, 65, 65);
     border-radius: 80px 0px 80px 0px;
     background-color: rgba(0, 0, 0, 0.664);
@@ -36,13 +37,23 @@
 .formularioAtual {
     display: flex;
     margin: auto;
-
 }
 
-.painlePassos {
-    margin: 20px
+.painelPassos>div {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin: 20px;
 }
 
 .passos {
-    margin: 20px
+    display: flex;
+    margin: 10px;
+}
+
+.passos>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
 }
