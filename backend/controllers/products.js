@@ -68,8 +68,24 @@ const controller = {
   showPromo: (req, res) => {
     res.send("<h1>Página de promoções</h1>");
   },
-  create: (req, res) => {
-    res.send("<h1>Criar produto</h1>");
+  create: async (req, res, next) => {
+    try {
+      const { nome, marca, quantidade, preco } = req.body;
+
+      const produto = await Produto.create({
+        nome,
+        marca,
+        quantidade,
+        preco,
+      });
+      if (produto) {
+        res.redirect("/produtos");
+      } else {
+        res.status(500).send("Ops... Algo de errado não deu certo!");
+      }
+    } catch (error) {
+      res.status(400).json({ message: "Algo de errado não está certo" });
+    }
   },
   update: (req, res) => {
     res.send(`<h1>Atualizar produto ${req.params.id}</h1>`);
