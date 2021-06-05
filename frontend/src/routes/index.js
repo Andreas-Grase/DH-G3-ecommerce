@@ -45,12 +45,12 @@ const Routes = () => {
       <Route path="/categorias/cabelo" component={Categorias} />
       <Route path="/categorias/barbearia" component={Categorias} />
       <Route exact path="/produtos/produto/:id" component={Produto} />
+      <Route path="/produtos/dashboard" component={Dashboard} />
       <Route path="/categorias" component={Categorias} />
       <Route path="/marcas" component={PaginaMarcas} />
       <Route path="/produtos" component={Produtos} />
       <Route path="/contato" component={Contato} />
       <Route path="/sobre" component={Sobre} />
-      <Route path="/dashboard" component={Dashboard} />
       <Route path="/usuarios" component={ListUser} />
       <Route path="/login" component={Login} />
       <Route path="/" component={Home} />
