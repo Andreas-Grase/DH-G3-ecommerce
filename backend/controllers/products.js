@@ -27,9 +27,41 @@ const controller = {
       orderDirection: order[0][1],
     });
   },
-  index: (req, res) => {
-    res.send("<h1>Página produtos</h1>");
+  index: async (req, res, next) => {
+    const { id } = req.params,
+      produto = await Produto.findOne({ where: { id } });
+    if (produto) {
+      return req.query.edit === "edit"
+        ? res.json({
+            produtos,
+            total,
+            page,
+            pages: Math.ceil(total / limit),
+            orderParam: order[0][0],
+            orderDirection: order[0][1],
+          })
+        : res.json({
+            produtos: [produto],
+            total,
+            page,
+            pages: Math.ceil(total / limit),
+            orderParam: order[0][0],
+            orderDirection: order[0][1],
+          });
+    } else {
+      res
+        .status(500)
+        .send(`Ops... houve algum erro ao buscar pelo produto de id ${id}`);
+    }
   },
+  addProduto: async (req, res, next) => {
+    res.render("addProduto", {
+      title: "Página de Registro de Usuário",
+      subtitle:
+        "Preencha o formulário e cadastre-o clicando em 'Adicionar Usuário'",
+    });
+  },
+
   show: (req, res) => {
     res.send(`<h1>Página produto ${req.params.id}</h1>`);
   },
@@ -42,8 +74,12 @@ const controller = {
   update: (req, res) => {
     res.send(`<h1>Atualizar produto ${req.params.id}</h1>`);
   },
-  delete: (req, res) => {
-    res.send(`<h1>Excluir produto ${req.params.id}</h1>`);
+  delete: async (req, res) => {
+    const { id } = req.params,
+      produto = await Produto.destroy({
+        where: { id },
+        force: true,
+      });
   },
 };
 

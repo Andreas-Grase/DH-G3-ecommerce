@@ -31,10 +31,6 @@ module.exports = (sequelize, DataType) => {
         type: DataType.DATE,
         unique: true,
       },
-      senha: {
-        type: DataType.STRING,
-        allowNull: false,
-      },
       id_endereco: {
         type: DataType.INTEGER.UNSIGNED,
       },

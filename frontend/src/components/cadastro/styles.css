@@ -48,7 +48,7 @@
     /* justify-content: center; */
 }
 
-.form p {
+.form label {
     margin: 10px 0 0;
     padding: 0;
     font-weight: bold;
@@ -56,6 +56,8 @@
 }
 
 .form div {
+    display: flex;
+    flex-flow: column;
     margin: 0 5px;
     padding: 0 5px;
 }

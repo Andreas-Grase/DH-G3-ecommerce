@@ -1,0 +1,37 @@
+:root {
+    --amarelo: #ffc400;
+    --azul: #00B7FF;
+    --branco: #fff;
+    --chumbo: #3e3e3e;
+    --cinza: #eee;
+    --preto: #000;
+    --vermelho: #ff0055;
+}
+
+.hidden {
+    background-color: transparent;
+    color: transparent;
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    max-height: 0;
+    max-width: 0;
+    opacity: 0;
+    padding: 0;
+    visibility: hidden;
+    width: 0;
+}
+
+.main-section__title {
+    font-size: 24px;
+}
+
+.main-section__subtitle {
+    color: var(--chumbo);
+    font-size: 20px;
+}
+
+.main-section__description {
+    color: var(--chumbo);
+    font-size: 16px;
+}
