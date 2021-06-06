@@ -15,7 +15,7 @@ import produtomarca1 from "../../../assets/img/marcas/produtomarca1.png";
 import "./style.css";
 
 const ModalAtualizar = ({ produtos }) => {
-  const id = produtos.id;
+  const [id] = produtos.id;
   const [nome, setNome] = useState(produtos.nome);
   const [marca, setMarca] = useState(produtos.marca);
   const [quantidade, setQuantidade] = useState(produtos.quantidade);
