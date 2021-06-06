@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import ListUser from "../pages/ListUser";
 import Cadastro from "../pages/Cadastro";
 import Carrinho from "../pages/Carrinho";
 import FinalizarCompras from "../pages/Carrinho/FinalizarCompras";
@@ -45,13 +44,12 @@ const Routes = () => {
       <Route path="/categorias/cabelo" component={Categorias} />
       <Route path="/categorias/barbearia" component={Categorias} />
       <Route exact path="/produtos/produto/:id" component={Produto} />
-      <Route path="/produtos/dashboard" component={Dashboard} />
+      <Route path="/dashboard" component={Dashboard} />
       <Route path="/categorias" component={Categorias} />
       <Route path="/marcas" component={PaginaMarcas} />
       <Route path="/produtos" component={Produtos} />
       <Route path="/contato" component={Contato} />
       <Route path="/sobre" component={Sobre} />
-      <Route path="/usuarios" component={ListUser} />
       <Route path="/login" component={Login} />
       <Route path="/" component={Home} />
     </Switch>

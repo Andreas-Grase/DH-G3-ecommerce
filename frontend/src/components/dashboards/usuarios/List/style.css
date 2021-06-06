@@ -109,3 +109,17 @@
     background-color: var(--chumbo);
     color: var(--vermelho);
 }
+
+.main-section__title {
+    font-size: 24px;
+}
+
+.main-section__subtitle {
+    color: var(--chumbo);
+    font-size: 20px;
+}
+
+.main-section__description {
+    color: var(--chumbo);
+    font-size: 16px;
+}

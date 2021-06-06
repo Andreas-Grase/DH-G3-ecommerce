@@ -13,7 +13,7 @@ const AdicionarProduto = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("/produtos/dashboard", {
+      const response = await axios.post("/produtos", {
         nome: nome,
         marca: marca,
         quantidade: quantidade,
@@ -148,7 +148,7 @@ const AdicionarProduto = () => {
           <button className="back">Adicionar Produto</button>
         </div>
       </form>
-      <div className="categories-container">
+      {/* <div className="categories-container">
         <select className="categories">
           <option value="" disabled selected>
             Categorias
@@ -160,7 +160,7 @@ const AdicionarProduto = () => {
           <option value="">Unhas</option>
         </select>
       </div>
-      {/* <textarea
+      <textarea
         rows="4"
         cols="50"
         className="product-description"
