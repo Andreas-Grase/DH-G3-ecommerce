@@ -1,7 +1,7 @@
 import "bootstrap/dist/css/bootstrap.css";
 import React, { useState } from "react";
-import ModalAtualizar from "../../../components/modals/AtualizarProduto";
-import ModalDeletar from "../../../components/modals/DeletarProduto";
+import ModalAtualizar from "../../../../components/modals/AtualizarProduto";
+import ModalDeletar from "../../../../components/modals/DeletarProduto";
 import "./style.css";
 
 const ListarProduto = ({ produtos }) => {

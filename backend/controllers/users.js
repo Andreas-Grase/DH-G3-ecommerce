@@ -1,3 +1,5 @@
+const db = require("../models");
+
 const Sequelize = require("sequelize"),
   { Usuario } = require("../models"),
   { Op } = Sequelize;
@@ -27,10 +29,27 @@ const controller = {
       orderDirection: order[0][1],
     });
   },
-  login: (req, res) => {
-    res.send("<h1>Página login</h1>");
+  index: async (req, res, next) => {
+    const { id } = req.params;
+    const usuario = await Usuario.findOne({ where: { id } });
+    if (usuario) {
+      return req.query.edit === "edit"
+        ? res.json({
+            usuario,
+          })
+        : res.json({
+            usuarios: [usuario],
+          });
+    } else {
+      res
+        .status(500)
+        .send(`Ops... houve algum erro ao buscar pelo usuário de id ${id}`);
+    }
   },
-  create: async (req, res, next) => {
+  addUser: async (req, res, next) => {
+    res.send("Página de Registro de Usuário");
+  },
+  register: async (req, res, next) => {
     try {
       const { primeiro_nome, sobrenome, email, senha, cpf, aniversario } =
         req.body;
@@ -54,17 +73,72 @@ const controller = {
       res.status(400).json({ message: "Algo de errado não está certo" });
     }
   },
+  update: async (req, res, next) => {
+    const { id } = req.params,
+      { primeiro_nome, sobrenome, email, senha, cpf, aniversario } = req.body,
+      usuario = await Usuario.update(
+        { primeiro_nome, sobrenome, email, senha, cpf, aniversario },
+        { where: { id } }
+      );
+    if (usuario) {
+      res.redirect("/usuarios");
+    } else {
+      res.status(500).send("Ops... Algo de errado não deu certo!");
+    }
+  },
+  delete: async (req, res, next) => {
+    const { id } = req.params,
+      usuario = await Usuario.destroy({
+        where: { id },
+      });
+    if (usuario) {
+      res.redirect("/usuarios");
+    } else {
+      res.status(500).send("Ops... Algo de errado não deu certo!");
+    }
+  },
+  search: async (req, res, next) => {
+    let { searchParam, searchValue } = await req.body;
+    if (!searchParam || !searchValue)
+      searchParam = await req.params.searchParam;
+    if (!searchValue) searchValue = await req.params.searchValue;
+
+    let whereClause = {};
+    whereClause[searchParam] = { [Op.like]: `%${searchValue}%` };
+
+    const { page = 1, limit = 10, orderBy } = await req.query,
+      order = orderResults(orderBy);
+
+    const { count: total, rows: usuarios } = await Usuario.findAndCountAll({
+      where: whereClause,
+      order,
+      limit,
+      offset: (page - 1) * limit,
+    }).catch(function (err) {
+      res
+        .status(400)
+        .send(
+          `<main><h1>Ops... por favor, verifique sua busca.</h1><div><b>Erro 400 | Bad Request: </b><pre>${err}</pre></div></main>`
+        );
+    });
+    if (usuarios) {
+      res.json({
+        usuarios,
+        total,
+        page,
+        pages: Math.ceil(total / limit),
+        orderParam: order[0][0],
+        orderDirection: order[0][1],
+      });
+    } else {
+      res.status(500).send(`Ops... houve algum erro em nossa busca`);
+    }
+  },
+  login: (req, res) => {
+    res.send("<h1>Página login</h1>");
+  },
   forgot: (req, res) => {
     res.send("<h1>Página esqueci a senha</h1>");
-  },
-  update: (req, res) => {
-    res.send(`<h1>Página modificar usuário ${req.params.id}</h1>`);
-  },
-  delete: (req, res) => {
-    res.send(`<h1>Página deletar usuário ${req.params.id}</h1>`);
-  },
-  show: (req, res) => {
-    res.send(`<h1>Página mostrar usuário ${req.params.id}</h1>`);
   },
 };
 
