@@ -7,9 +7,7 @@ const MenuLateral = (props) => {
   return (
     <div className="menu-wrapper">
       <div class="list-group">
-        <a href="#" class="list-group-item-dark active">
-          Produtos
-        </a>
+        <div class="list-group-item-dark active">Produtos</div>
         <a href="#" class="list-group-item" onClick={() => setActivePage(0)}>
           Listar
         </a>
@@ -22,16 +20,14 @@ const MenuLateral = (props) => {
       </div>
 
       <div class="list-group">
-        <a href="#" class="list-group-item-dark active">
-          Usuários
-        </a>
+        <div class="list-group-item-dark active">Usuários</div>
         <a href="#" class="list-group-item" onClick={() => setActivePage(3)}>
           Listar
         </a>
         <a href="#" class="list-group-item" onClick={() => setActivePage(4)}>
           Ver
         </a>
-        <a href="#" class="list-group-item" onClick={() => setActivePage(5)} >
+        <a href="#" class="list-group-item" onClick={() => setActivePage(5)}>
           Adicionar
         </a>
       </div>

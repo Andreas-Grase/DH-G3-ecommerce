@@ -1,11 +1,11 @@
 :root {
-    --amarelo: #ffc400;
-    --azul: #00B7FF;
+    --amarelo: #EEA425;
+    --azul: #5893A6;
     --branco: #fff;
     --chumbo: #3e3e3e;
     --cinza: #eee;
     --preto: #000;
-    --vermelho: #ff0055;
+    --vermelho: #A00B0B;
 }
 
 .hidden {
@@ -67,7 +67,7 @@
     padding-bottom: 16px;
 }
 
-.users__table [class*="--btn"] {
+[class*="--btn"] {
     border: none;
     display: inline-block;
     font-weight: bolder;
@@ -76,36 +76,36 @@
     padding: 6px 12px;
 }
 
-.users__table [class*="--btn"]:hover {
+[class*="--btn"]:hover {
     cursor: pointer;
 }
 
-.users__table .user__see--btn {
+.user__see--btn {
     background-color: var(--azul);
     color: var(--branco);
 }
 
-.users__table .user__see--btn:hover {
+.user__see--btn:hover {
     background-color: var(--chumbo);
     color: var(--azul);
 }
 
-.users__table .user__edit--btn {
+.user__edit--btn {
     background-color: var(--amarelo);
     color: var(--chumbo);
 }
 
-.users__table .user__edit--btn:hover {
+.user__edit--btn:hover {
     background-color: var(--chumbo);
     color: var(--amarelo);
 }
 
-.users__table .user__delete--btn {
+.user__delete--btn {
     background-color: var(--vermelho);
     color: var(--branco);
 }
 
-.users__table .user__delete--btn:hover {
+.user__delete--btn:hover {
     background-color: var(--chumbo);
     color: var(--vermelho);
 }
