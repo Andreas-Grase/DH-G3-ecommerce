@@ -1,0 +1,60 @@
+.container-externo {
+    background-image: url("../../assets/img/kit.jpg");
+    position: relative;
+    height: 600px;
+    /* background-image: url(/static/media/kit.9f00f23d.jpg); */
+    background-size: cover;
+    background-color: #291810;
+    height: 600px;
+}
+
+.container-interno {
+    height: 500px;
+    width: 800px;
+    border: 2px solid rgb(83, 65, 65);
+    border-radius: 80px 0px 80px 0px;
+    background-color: rgba(0, 0, 0, 0.664);
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -36%);
+    box-sizing: border-box;
+    padding: 40px 15px;
+}
+
+.container-interno h1 {
+    flex: 1 0 100%;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.icone-container-interno {
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: 44%;
+}
+
+.formularioAtual {
+    display: flex;
+    margin: auto;
+}
+
+.painelPassos>div {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin: 20px;
+}
+
+.passos {
+    display: flex;
+    margin: 10px;
+}
+
+.passos>div {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center;
+    margin: 0 auto; */
+}

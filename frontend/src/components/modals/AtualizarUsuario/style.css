@@ -1,0 +1,49 @@
+#myModal {
+    background: transparent;
+}
+
+.modal-container {
+    Display: flex;
+
+}
+
+.navbar {
+    background-color: black;
+}
+
+#buttonNAV {
+    height: 38px;
+    background-color: #af8048;
+    border: none;
+}
+
+.boton-administrador {
+    color: white;
+    background: none;
+    border: none;
+    margin-right: 15px;
+}
+
+#add-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px;
+    margin: 8px;
+}
+
+.modal-body{
+    padding: 4px;
+    margin: 4px;
+}
+
+.modal-footer{
+    justify-content: center;
+}
+
+#upload-btn{
+    margin: 4px;
+    padding: 4px;
+    width: 100px;
+    font-weight: 700
+}

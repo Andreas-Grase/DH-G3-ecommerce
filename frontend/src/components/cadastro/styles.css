@@ -1,0 +1,91 @@
+.container-formulario {
+    display: flex;
+}
+
+.lista-de-passos {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin: 5px;
+}
+
+.passo {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 5px;
+    box-shadow: 5px 5px 5px black;
+    border: 1px solid rgba(128, 128, 128, 0.300);
+    justify-content: center;
+    width: 150px;
+}
+
+.passo h3 {
+    color: var(--cor3);
+    font-size: 1.0rem;
+}
+
+.passo p {
+    color: var(--cor1);
+    font-size: 0.8rem;
+    text-align: center;
+}
+
+
+.form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.form h2 {
+    display: flex;
+    flex: 1 1 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 5px 5px;
+    padding: 10px 5px 5px;
+    /* justify-content: center; */
+}
+
+.form label {
+    margin: 10px 0 0;
+    padding: 0;
+    font-weight: bold;
+    color: rgb(149, 149, 149);
+}
+
+.form div {
+    display: flex;
+    flex-flow: column;
+    margin: 0 5px;
+    padding: 0 5px;
+}
+
+.form input[type="text"],
+input[type="password"],
+input[type="email"] {
+    border: none;
+    border-bottom: 1px solid white;
+    background: transparent;
+    outline: none;
+    height: 25px;
+    width: 255px;
+    color: rgb(149, 149, 149);
+    font-size: 0.8rem;
+}
+
+#form_numero {
+    height: 25px;
+    width: 85px;
+}
+
+#form_complemento {
+    height: 25px;
+    width: 200px;
+}
+
+#form_bairro {
+    height: 25px;
+    width: 200px;
+}

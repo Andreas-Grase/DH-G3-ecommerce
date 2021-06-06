@@ -1,11 +1,14 @@
-const express = require('express')
-const router = express.Router()
-const controller = require('../controllers/users')
+const express = require("express");
+const router = express.Router();
+const controller = require("../controllers/users");
 
-router.get('/criar', controller.create)
-router.get('/modificar/:id', controller.modify)
-router.get('/deletar/:id', controller.delete)
-router.get('/mostrar/:id', controller.show)
-router.get('/', controller.index)
+router.post('/search/:searchParam/:searchValue', controller.search)
+router.get('/search/:searchParam/:searchValue', controller.search)
+router.get('/add', controller.addUser)
+router.post('/:id/delete', controller.delete)
+router.get('/:id', controller.index)
+router.post('/:id', controller.update)
+router.get('/', controller.list)
+router.post('/', controller.register)
 
-module.exports = router
+module.exports = router;

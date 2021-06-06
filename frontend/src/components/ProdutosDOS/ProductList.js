@@ -1,30 +1,31 @@
-import React, { Component } from 'react'
-import Product from './Product';
-import Title from './Title';
-import {ProductConsumer} from './context';
+import axios from "axios";
+import Product from "./Product";
+import React, { useState, useEffect } from "react";
+import "./style.css";
 
-export default class ProductList extends Component {
-    
-    render() {
-        return (
-            <React.Fragment>
-                <div>
-                    <div className="container">
-                        <Title name="Nossos" title="Acessórios"></Title>
+const ProductList = () => {
+  const [data, setData] = useState({ produtos: [] });
+  useEffect(() => {
+    // fetch("/produtos")
+    //   .then((res) => res.json())
+    //   .then((res) => setData(res));
 
-                        <div className="row">
-                            <ProductConsumer>
-                                {value => {
-                                return value.products.map( product =>{
-                                    return <Product key={product.id} product={product} />
-                                });
-                                }}
-                            </ProductConsumer>
-                        </div>
-                    </div>
-                </div>
-            </React.Fragment>
-  
-        );
-    }
-}
+    // axios.get("/produtos").then((res) => setData(res.data));
+    const getData = async () => {
+      try {
+        const response = await axios.get("/produtos");
+        setData(response.data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getData();
+  }, []);
+  return (
+    <div className="">
+      <Product produtos={data.produtos} />
+    </div>
+  );
+};
+
+export default ProductList;

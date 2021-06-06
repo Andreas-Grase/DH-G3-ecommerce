@@ -7,7 +7,7 @@ const Sobre = () => {
     <div className="about-container">
       <div className="sobre-nos">
         <div className="logo-container">
-          <img src={logo} className="logo" width="100" height="100" />
+          <img src={logo} alt="" className="logo" width="100" height="100" />
         </div>
         <h1 className="titulo-sobre-nos">Sobre nós</h1>
         <div className="sobre-texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse egestas commodo leo vel placerat. Phasellus in feugiat ligula. Ut egestas pharetra purus, eu pellentesque tellus luctus at. Phasellus eu scelerisque nulla. Nullam vitae risus lobortis, imperdiet sapien ut, placerat enim. Integer scelerisque, nibh eget dapibus consequat, augue massa facilisis nibh, eu viverra est metus varius mauris. Nullam ornare, neque eget convallis sodales, massa orci facilisis diam, nec fringilla odio diam vitae nulla. Sed tempor quam eget velit pharetra efficitur.
