@@ -4,11 +4,12 @@ import Cadastro from "../pages/Cadastro";
 import Carrinho from "../pages/Carrinho";
 import FinalizarCompras from "../pages/Carrinho/FinalizarCompras";
 import Contato from "../pages/Contato";
-import Dashboard from "../pages/Dashboard";
-// import DashboardAdicionar from '../pages/DashboardAdicionar'
 // import DashboardAtualizar from '../pages/DashboardAtualizar'
 // import DashboardDeletar from '../pages/DashboardDeletar'
-// import DashboardListar from '../pages/DashboardListar'
+import Listar from "../pages/dashboard/ListarProduto";
+import ListarUsuario from "../pages/dashboard/ListarUsuario";
+import AdicionarUsuario from "../pages/dashboard/AdicionarUsuario";
+import Criar from "../pages/dashboard/CriarProduto";
 // import DashboardVer from '../pages/DashboardVer'
 import Home from "../pages/Home";
 import Login from "../pages/Login";
@@ -34,23 +35,28 @@ const Routes = () => {
       {/* <Route path="/produtos/:produto_detalhado" component={ProdutoDetalhado} */}
       {/* <Route exact path="/dashboard/produto/atualizar/:id" component={DashboardAtualizar} /> */}
       {/* <Route exact path="/dashboard/produto/deletar/:id" component={DashboardDeletar} /> */}
-      {/* <Route exact path="/dashboard/produto/adicionar" component={DashboardAdicionar} /> */}
-      {/* <Route exact path="/dashboard/produto/listar" component={DashboardListar} /> */}
+      <Route exact path="/dashboard/produto/criar" component={Criar} />
+      <Route exact path="/dashboard/produto/listar" component={Listar} />
+      <Route exact path="/dashboard/usuario/listar" component={ListarUsuario} />
+      <Route
+        exact
+        path="/dashboard/usuario/adicionar"
+        component={AdicionarUsuario}
+      />
       {/* <Route exact path="/dashboard/produto/ver/:id" component={DashboardVer} /> */}
-      <Route path="/usuarios/cadastro" component={Cadastro} />
       <Route path="/categorias/unha" component={Categorias} />
       <Route path="/categorias/pele" component={Categorias} />
       <Route path="/categorias/lacamentos" component={Categorias} />
       <Route path="/categorias/cabelo" component={Categorias} />
       <Route path="/categorias/barbearia" component={Categorias} />
       <Route exact path="/produtos/produto/:id" component={Produto} />
-      <Route path="/dashboard" component={Dashboard} />
       <Route path="/categorias" component={Categorias} />
       <Route path="/marcas" component={PaginaMarcas} />
       <Route path="/produtos" component={Produtos} />
       <Route path="/contato" component={Contato} />
       <Route path="/sobre" component={Sobre} />
       <Route path="/login" component={Login} />
+      <Route path="/cadastro" component={Cadastro} />
       <Route path="/" component={Home} />
     </Switch>
   );

@@ -9,6 +9,7 @@ const AdicionarProduto = () => {
   const [quantidade, setQuantidade] = useState("");
   const [preco, setPreco] = useState("");
   const [id_categoria, setId_categoria] = useState("");
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,6 +23,7 @@ const AdicionarProduto = () => {
       });
       //   window.location.pathname = "/produtos";
       //   history.push("/produtos");
+      history.push("listar");
       console.log(response);
     } catch (error) {
       if (error.response.data) alert(error.response.data.message);

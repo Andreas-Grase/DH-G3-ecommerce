@@ -29,7 +29,7 @@ module.exports = (sequelize, DataType) => {
       },
       aniversario: {
         type: DataType.DATE,
-        unique: true,
+        allowNull: false,
       },
       id_endereco: {
         type: DataType.INTEGER.UNSIGNED,

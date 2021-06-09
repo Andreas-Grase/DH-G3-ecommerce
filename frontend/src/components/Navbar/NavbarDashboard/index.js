@@ -21,13 +21,13 @@ const NavbarDashboard = () => {
           className="d-inline-block align-top"
         />
       </Navbar.Brand>
-      <Navbar.Brand href="/dashboard">Admin</Navbar.Brand>
+      <Navbar.Brand href="#">Admin</Navbar.Brand>
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
-          {/* <Nav.Link href="/dashboard">Home</Nav.Link>
-          <Nav.Link href="/dashboard/produto/listar">Listar Produtos</Nav.Link>
-          <Nav.Link href="/dashboard/produto/ver/:id">Ver Produtos</Nav.Link>
+          <Nav.Link href="/dashboard">Produtos</Nav.Link>
+          <Nav.Link href="/dashboard/produto/listar">Usuários</Nav.Link>
+          {/* <Nav.Link href="/dashboard/produto/ver/:id">Ver Produtos</Nav.Link>
           <NavDropdown title="Funções" id="basic-nav-dropdown">
             <NavDropdown.Item href="/dashboard/produto/adicionar">Adicionar</NavDropdown.Item>
             <NavDropdown.Item href="/dashboard/produto/deletar/:id">

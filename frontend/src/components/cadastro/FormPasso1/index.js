@@ -28,7 +28,7 @@ const FormPasso1 = (props) => {
         aniversario,
       });
       //   window.location.pathname = "/usuarios";
-      // history.push("/usuarios");
+      history.push("dashboard/usuario/listar");
       console.log(response);
     } catch (error) {
       if (error.response.data) alert(error.response.data.message);

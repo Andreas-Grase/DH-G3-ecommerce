@@ -53,7 +53,7 @@ export default class NavbarHome extends React.Component {
             <Button
               id="buttonNAV"
               className="btn btn-primary"
-              href="/dashboard"
+              href="/dashboard/produto/listar"
             >
               Entrar
             </Button>

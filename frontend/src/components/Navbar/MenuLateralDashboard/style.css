@@ -32,3 +32,11 @@
         width: 95%;
     }
  }
+
+ .list-group-item-dark {
+     padding: 12px 20px;
+ }
+
+ .list-group-item {
+     text-decoration: none;
+ }
