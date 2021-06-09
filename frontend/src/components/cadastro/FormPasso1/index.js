@@ -27,7 +27,7 @@ const FormPasso1 = (props) => {
         cpf,
         aniversario,
       });
-      //   window.location.pathname = "/usuarios";
+      //   window.location.pathname = "dashboard/usuario/listar";
       history.push("dashboard/usuario/listar");
       console.log(response);
     } catch (error) {
