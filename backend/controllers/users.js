@@ -3,7 +3,7 @@ const db = require("../models");
 const Sequelize = require("sequelize"),
   { Usuario } = require("../models"),
   { Op } = Sequelize;
-// const bcrypt = require("../helpers/bcrypt");
+const bcrypt = require("../helpers/bcrypt");
 
 const orderResults = (orderByParam = "id_ASC") => {
   const orderParam = orderByParam.split("_")[0],
@@ -13,7 +13,7 @@ const orderResults = (orderByParam = "id_ASC") => {
 
 const controller = {
   list: async (req, res, next) => {
-    const { page = 1, limit = 10, orderBy } = await req.query,
+    const { page = 1, limit = 20, orderBy } = await req.query,
       order = orderResults(orderBy);
     const { count: total, rows: usuarios } = await Usuario.findAndCountAll({
       order,
@@ -51,25 +51,27 @@ const controller = {
   },
   register: async (req, res, next) => {
     try {
+      console.log(req.body);
       const { primeiro_nome, sobrenome, email, senha, cpf, aniversario } =
-        req.body;
-      // id_funcao = email.indexOf("@diament.com.br") === -1 ? 2 : 1,
-      // senhaHash = await bcrypt.generateHash(senha);
+          req.body,
+        // id_funcao = email.indexOf("@diament.com.br") === -1 ? 2 : 1,
+        senhaHash = await bcrypt.generateHash(senha);
 
       const usuario = await Usuario.create({
         primeiro_nome,
         sobrenome,
         email,
-        senha,
+        senha: senhaHash,
         cpf,
         aniversario,
       });
       if (usuario) {
-        res.redirect("/usuarios");
+        res.status(200).json({ usuario });
       } else {
         res.status(500).send("Ops... Algo de errado não deu certo!");
       }
     } catch (error) {
+      console.log(error);
       res.status(400).json({ message: "Algo de errado não está certo" });
     }
   },
@@ -86,15 +88,16 @@ const controller = {
       res.status(500).send("Ops... Algo de errado não deu certo!");
     }
   },
-  delete: async (req, res, next) => {
-    const { id } = req.params,
-      usuario = await Usuario.destroy({
+  delete:  async (req, res, next) => {
+    console.log("controller delete");
+    try {
+      const { id } = req.params;
+      await Usuario.destroy({
         where: { id },
       });
-    if (usuario) {
-      res.redirect("/usuarios");
-    } else {
-      res.status(500).send("Ops... Algo de errado não deu certo!");
+      res.status(200).json({ message: "Usuario deletado" });
+    } catch (error) {
+      console.log(error);
     }
   },
   search: async (req, res, next) => {

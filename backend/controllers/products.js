@@ -70,32 +70,40 @@ const controller = {
   },
   create: async (req, res, next) => {
     try {
-      const { nome, marca, quantidade, preco } = req.body;
+      console.log(req.body);
+      const { nome, marca, quantidade, preco, id_categoria } = req.body;
 
       const produto = await Produto.create({
-        nome,
-        marca,
-        quantidade,
-        preco,
+        nome: nome,
+        marca: marca,
+        quantidade: quantidade,
+        preco: preco,
+        id_categoria: id_categoria,
       });
       if (produto) {
-        res.redirect("/produtos");
+        res.status(200).json({ produto });
       } else {
         res.status(500).send("Ops... Algo de errado não deu certo!");
       }
     } catch (error) {
+      console.log(error);
       res.status(400).json({ message: "Algo de errado não está certo" });
     }
   },
   update: (req, res) => {
     res.send(`<h1>Atualizar produto ${req.params.id}</h1>`);
   },
-  delete: async (req, res) => {
-    const { id } = req.params,
-      produto = await Produto.destroy({
+  delete: async (req, res, next) => {
+    console.log("controller delete");
+    try {
+      const { id } = req.params;
+      await Produto.destroy({
         where: { id },
-        force: true,
       });
+      res.status(200).json({ message: "Produto deletado" });
+    } catch (error) {
+      console.log(error);
+    }
   },
 };
 

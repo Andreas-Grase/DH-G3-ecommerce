@@ -1,4 +1,4 @@
-.conteiner{
+.conteiner {
     position: relative;
     height: 600px;
     background-image: url("../../assets/img/kit.jpg");
@@ -6,28 +6,28 @@
     background-color: #291810;
 }
 
-.login{
-   height: 450px;
-   width: 320px;
-   border: 2px solid rgb(83, 65, 65);
-   border-radius: 80px 0px 80px 0px;
-   background-color: rgba(0, 0, 0, 0.664);
-   top: 40%;
-   left: 50%;
-   position: absolute;
-   transform: translate(-50%, -36%);
-   box-sizing: border-box;
-   padding: 30px 28px;
+.login {
+    height: 450px;
+    width: 320px;
+    border: 2px solid rgb(83, 65, 65);
+    border-radius: 80px 0px 80px 0px;
+    background-color: rgba(0, 0, 0, 0.664);
+    top: 40%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -36%);
+    box-sizing: border-box;
+    padding: 30px 28px;
 }
 
-.usuario{
+.usuario {
     border-radius: 50%;
     position: absolute;
     top: -50px;
     left: 112px;
 }
 
-.titulo-login{
+.titulo-login {
     margin: 0;
     padding-left: 0;
     padding-top: 40px;
@@ -39,19 +39,20 @@
     color: #bfbfbf !important;
 }
 
-.login p{
+.login p {
     margin: 0;
     padding: 0;
     font-weight: bold;
     color: rgb(149, 149, 149);
 }
 
-.login input{
+.login input {
     width: 100%;
     margin-bottom: 21px;
 }
 
-.login input[type="text"], input[type="password"]{
+.login input[type="email"],
+input[type="password"] {
     border: none;
     border-bottom: 1px solid white;
     background: transparent;
@@ -61,17 +62,24 @@
     font-size: 10px;
 }
 
- .login input[type="submit"]{
+.btn__login {
+    display: flex
+}
+
+.btn__login button {
     border: none;
     outline: none;
     height: 35px;
+    width: 250px;
     color: #000;
-     background: #fff; /*cor do botao enviar */
+    background: #fff;
+    /*cor do botao enviar */
     border-radius: 25px;
     transition: 0.2s;
-} 
+    margin: 0 auto;
+}
 
-.login input[type="submit"]:hover{
+.btn__login button:hover {
     cursor: pointer;
     background: var(--cor3);
     transition: 0.2s;
@@ -79,16 +87,16 @@
 }
 
 .login a {
-   font-weight: bold;
-   text-decoration: none;
-   font-size: 10px;
-   line-height: 20px;
-   color: grey;
-   transition: 0.2s;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 10px;
+    line-height: 20px;
+    color: grey;
+    transition: 0.2s;
 }
 
-.login a :hover{
+.login a :hover {
     transition: 0.2s;
     color: var(--cor3);
-    
+
 }

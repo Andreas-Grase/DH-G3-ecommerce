@@ -123,13 +123,13 @@
     }
 }
 
-#email {
+#email-footer {
     width: 140px;
     margin-right: 15px
 }
 
 @media screen and (min-width: 544px) {
-    #email {
+    #email-footer {
         width: 200px;
     }
 }

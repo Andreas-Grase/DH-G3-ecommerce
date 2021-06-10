@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import ModalAtualizar from "../../../../components/modals/AtualizarUsuario";
 import ModalDeletar from "../../../../components/modals/DeletarUsuario";
 import "./style.css";
 
-const List = ({ usuarios }) => {
+const List = () => {
   const [isModalAtualizarVisible, setIsModalAtualizarVisible] = useState(false);
   const [isModalDeletarVisible, setIsModalDeletarVisible] = useState(false);
   const [selectedUser, setSelectedUser] = useState({});
+  const [usuarios, setUsuarios] = useState([]);
 
   const openModalAtualizar = (
     id,
@@ -29,27 +31,52 @@ const List = ({ usuarios }) => {
     });
   };
 
+  const getDataUsers = async () => {
+    try {
+      const response = await axios.get("/usuarios");
+      setUsuarios(response.data.usuarios);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  useEffect(() => {
+    // fetch("/produtos")
+    //   .then((res) => res.json())
+    //   .then((res) => setData(res));
+
+    // axios
+    //   .get("/produtos")
+    //   .then((res) => setData(res.data))
+    //   .catch((error) => console.log(error));
+    getDataUsers();
+  }, []);
+
   const openModalDeletar = (id, primeiro_nome) => {
     setIsModalDeletarVisible(true);
     setSelectedUser({ id, primeiro_nome });
   };
+  const handleDeleteSuccess = () => {
+    setIsModalDeletarVisible(false);
+    getDataUsers();
+  };
   return (
-    <section className="table-container">
-      <div style={{ width: "80%", margin: "5px" }}>
-        {isModalAtualizarVisible ? (
-          <ModalAtualizar usuarios={selectedUser} />
-        ) : null}
-        {isModalDeletarVisible ? (
-          <ModalDeletar usuarios={selectedUser} />
-        ) : null}
-        <div className="header-section">
-          <div className="add-icon">
-            <i class="fas fa-list-alt fa-2x" />
-          </div>
-          <h1 className="title">Lista de Usuários</h1>
+    <section style={{ width: "100%", margin: "5px" }}>
+      {isModalAtualizarVisible ? (
+        <ModalAtualizar usuarios={selectedUser} />
+      ) : null}
+      {isModalDeletarVisible ? (
+        <ModalDeletar
+          usuarios={selectedUser}
+          handleSuccess={handleDeleteSuccess}
+        />
+      ) : null}
+      <div className="header-section-list">
+        <div className="list-icon">
+          <i class="fas fa-list-alt fa-2x" />
         </div>
+        <h1 className="title">Lista de Usuários</h1>
       </div>
-      <table class="table table-striped">
+      <table class="table table-striped table-container">
         <thead>
           <tr className="colunas">
             <th>ID</th>
@@ -97,7 +124,9 @@ const List = ({ usuarios }) => {
                   {usuario.id_regra}
                 </td> */}
               <td>
-                <button className="btn-update"><i class="fas fa-eye"></i></button>
+                <button className="btn-update">
+                  <i class="fas fa-eye"></i>
+                </button>
               </td>
               <td>
                 <button

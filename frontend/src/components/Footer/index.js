@@ -40,7 +40,7 @@ const Footer = () => {
                 type="text"
                 className="form__content__input"
                 name="email"
-                id="email"
+                id="email-footer"
                 value="Insira seu e-mail"
               />
               <button className="form__content__btn">Quero desconto!</button>

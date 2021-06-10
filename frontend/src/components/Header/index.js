@@ -19,7 +19,7 @@ const Header = () => {
           <div id="right__menu">
             <div id="header__login">
               <div id="header__saudacao">Olá, visitante</div>
-              <a id="header__login__link" href="/usuarios/cadastro">
+              <a id="header__login__link" href="/cadastro">
                 Cadastre-se
               </a>
             </div>

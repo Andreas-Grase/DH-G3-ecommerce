@@ -3,7 +3,7 @@ const express = require("express"),
   controller = require("../../backend/controllers/products");
 
 router.get("/promo", controller.showPromo);
-router.post("/:id/delete", controller.delete);
+router.delete("/:id", controller.delete);
 // router.get("/:id", controller.show);
 router.get("/:id", controller.index);
 // router.post("/:id", controller.update);
