@@ -13,10 +13,11 @@
     vertical-align: middle;
 }
 
-.clounas{
+/* .colunas{
     display: flex;
     justify-content: center;
-}
+    overflow-wrap: break-word;
+} */
 
 
 .btn-wrapper{
