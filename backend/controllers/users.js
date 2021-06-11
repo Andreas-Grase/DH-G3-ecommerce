@@ -2,8 +2,10 @@ const db = require("../models");
 
 const Sequelize = require("sequelize"),
   { Usuario } = require("../models"),
+  { Endereco } = require("../models"),
   { Op } = Sequelize;
 const bcrypt = require("../helpers/bcrypt");
+// const jwt = require("../helpers/jwt");
 
 const orderResults = (orderByParam = "id_ASC") => {
   const orderParam = orderByParam.split("_")[0],
@@ -49,12 +51,17 @@ const controller = {
   addUser: async (req, res, next) => {
     res.send("Página de Registro de Usuário");
   },
-  register: async (req, res, next) => {
+  registerUser: async (req, res, next) => {
     try {
       console.log(req.body);
       const { primeiro_nome, sobrenome, email, senha, cpf, aniversario } =
           req.body,
-        // id_funcao = email.indexOf("@diament.com.br") === -1 ? 2 : 1,
+        id_regra =
+          email.indexOf("staff@kabellos.com.br") > 0
+            ? 3
+            : email.indexOf("@kabellos.com.br") > 0
+            ? 1
+            : 2,
         senhaHash = await bcrypt.generateHash(senha);
 
       const usuario = await Usuario.create({
@@ -64,6 +71,7 @@ const controller = {
         senha: senhaHash,
         cpf,
         aniversario,
+        id_regra,
       });
       if (usuario) {
         res.status(200).json({ usuario });
@@ -75,11 +83,40 @@ const controller = {
       res.status(400).json({ message: "Algo de errado não está certo" });
     }
   },
+  registerAddress: async (req, res, next) => {
+    try {
+      const { cep, rua, numero, complemto, bairro, cidade, uf } = req.body;
+
+      const endereco = await Endereco.create({
+        cep,
+        rua,
+        numero,
+        complemto,
+        bairro,
+        cidade,
+        uf,
+      });
+      if (endereco) {
+        res.status(200).json({ endereco });
+      } else {
+        res.status(500).send("Ops... Algo de errado não deu certo!");
+      }
+    } catch (error) {
+      console.log(error);
+      res.status(400).json({ message: "Algo de errado não está certo" });
+    }
+  },
   update: async (req, res, next) => {
     const { id } = req.params,
       { primeiro_nome, sobrenome, email, senha, cpf, aniversario } = req.body,
+      id_regra =
+        email.indexOf("staff@kabellos.com.br") > 0
+          ? 3
+          : email.indexOf("@kabellos.com.br") > 0
+          ? 1
+          : 2,
       usuario = await Usuario.update(
-        { primeiro_nome, sobrenome, email, senha, cpf, aniversario },
+        { primeiro_nome, sobrenome, email, senha, cpf, aniversario, id_regra },
         { where: { id } }
       );
     if (usuario) {
@@ -88,7 +125,7 @@ const controller = {
       res.status(500).send("Ops... Algo de errado não deu certo!");
     }
   },
-  delete:  async (req, res, next) => {
+  delete: async (req, res, next) => {
     console.log("controller delete");
     try {
       const { id } = req.params;
@@ -137,7 +174,22 @@ const controller = {
       res.status(500).send(`Ops... houve algum erro em nossa busca`);
     }
   },
-  login: (req, res) => {
+  login: async (req, res, next) => {
+    const { email, senha } = req.body;
+    if (!email || !senha)
+      res.status(400).json({ message: "Email ou senha incorreto1" });
+    let usuario = await Usuario.findOne({ where: { email } });
+    if (usuario === null)
+      res.status(400).json({ message: "Email ou senha incorreto2" });
+    let verificaSenha = await bcrypt.compareHash(senha, usuario.senha);
+    // let verificaSenha = true
+    console.log(verificaSenha);
+    console.log(senha);
+    console.log(usuario.senha);
+    if (!verificaSenha)
+      res.status(400).json({ message: "Email ou senha incorreto3" });
+    // let token = jwt.generateToken(usuario.id);
+    // console.log(token);
     res.send("<h1>Página login</h1>");
   },
   forgot: (req, res) => {

@@ -10,27 +10,6 @@ const List = () => {
   const [selectedUser, setSelectedUser] = useState({});
   const [usuarios, setUsuarios] = useState([]);
 
-  const openModalAtualizar = (
-    id,
-    primeiro_nome,
-    sobrenome,
-    email,
-    senha,
-    cpf,
-    aniversario
-  ) => {
-    setIsModalAtualizarVisible(true);
-    setSelectedUser({
-      id,
-      primeiro_nome,
-      sobrenome,
-      email,
-      senha,
-      cpf,
-      aniversario,
-    });
-  };
-
   const getDataUsers = async () => {
     try {
       const response = await axios.get("/usuarios");
@@ -51,6 +30,33 @@ const List = () => {
     getDataUsers();
   }, []);
 
+  const openModalAtualizar = (
+    id,
+    primeiro_nome,
+    sobrenome,
+    email,
+    senha,
+    cpf,
+    aniversario,
+    id_regra
+  ) => {
+    setIsModalAtualizarVisible(true);
+    setSelectedUser({
+      id,
+      primeiro_nome,
+      sobrenome,
+      email,
+      senha,
+      cpf,
+      aniversario,
+      id_regra,
+    });
+  };
+  const handleAddSuccess = () => {
+    setIsModalAtualizarVisible(false);
+    getDataUsers();
+  };
+
   const openModalDeletar = (id, primeiro_nome) => {
     setIsModalDeletarVisible(true);
     setSelectedUser({ id, primeiro_nome });
@@ -60,9 +66,12 @@ const List = () => {
     getDataUsers();
   };
   return (
-    <section style={{ width: "100%", margin: "5px" }}>
+    <section className="container-usuarios-list">
       {isModalAtualizarVisible ? (
-        <ModalAtualizar usuarios={selectedUser} />
+        <ModalAtualizar
+          usuarios={selectedUser}
+          handleSuccess={handleAddSuccess}
+        />
       ) : null}
       {isModalDeletarVisible ? (
         <ModalDeletar
@@ -76,7 +85,8 @@ const List = () => {
         </div>
         <h1 className="title">Lista de Usuários</h1>
       </div>
-      <table class="table table-striped table-container">
+      <div className="table-container">
+      <table className="table table-striped">
         <thead>
           <tr className="colunas">
             <th>ID</th>
@@ -86,8 +96,8 @@ const List = () => {
             <th>Senha</th>
             <th>CPF</th>
             <th>Aniversário</th>
-            {/* <th>Id_Endereço</th>
-              <th>Id_Regra</th> */}
+            {/* <th>Id_Endereço</th> */}
+            <th>Id_Regra</th>
             <th>Ver</th>
             <th>Editar</th>
             <th>Excluir</th>
@@ -119,10 +129,10 @@ const List = () => {
               </td>
               {/* <td className="user__id_endereco" data-title="id_endereco">
                   {usuario.id_endereco}
-                </td>
-                <td className="user__id_regra" data-title="id_regra">
-                  {usuario.id_regra}
                 </td> */}
+              <td className="user__id_regra" data-title="id_regra">
+                {usuario.id_regra}
+              </td>
               <td>
                 <button className="btn-update">
                   <i class="fas fa-eye"></i>
@@ -134,9 +144,12 @@ const List = () => {
                     openModalAtualizar(
                       `${usuario.id}`,
                       `${usuario.primeiro_nome}`,
-                      `${usuario.marca}`,
-                      `${usuario.quantidade}`,
-                      `${usuario.preco}`
+                      `${usuario.sobrenome}`,
+                      `${usuario.email}`,
+                      `${usuario.senha}`,
+                      `${usuario.cpf}`,
+                      // `${usuario.id_endereco}`,
+                      `${usuario.id_regra}`
                     )
                   }
                   type="btn"
@@ -163,6 +176,7 @@ const List = () => {
           ))}
         </tbody>
       </table>
+      </div>
     </section>
   );
 };
