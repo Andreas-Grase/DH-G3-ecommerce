@@ -5,7 +5,7 @@ const Sequelize = require("sequelize"),
   { Endereco } = require("../models"),
   { Op } = Sequelize;
 const bcrypt = require("../helpers/bcrypt");
-// const jwt = require("../helpers/jwt");
+const jwt = require("../helpers/jwt");
 
 const orderResults = (orderByParam = "id_ASC") => {
   const orderParam = orderByParam.split("_")[0],
@@ -15,6 +15,7 @@ const orderResults = (orderByParam = "id_ASC") => {
 
 const controller = {
   list: async (req, res, next) => {
+    console.log(req.user);
     const { page = 1, limit = 20, orderBy } = await req.query,
       order = orderResults(orderBy);
     const { count: total, rows: usuarios } = await Usuario.findAndCountAll({
@@ -177,20 +178,25 @@ const controller = {
   login: async (req, res, next) => {
     const { email, senha } = req.body;
     if (!email || !senha)
-      res.status(400).json({ message: "Email ou senha incorreto1" });
+      res.status(400).json({ message: "Email ou senha incorreto" });
     let usuario = await Usuario.findOne({ where: { email } });
     if (usuario === null)
-      res.status(400).json({ message: "Email ou senha incorreto2" });
+      res.status(400).json({ message: "Email ou senha incorreto" });
     let verificaSenha = await bcrypt.compareHash(senha, usuario.senha);
     // let verificaSenha = true
-    console.log(verificaSenha);
-    console.log(senha);
-    console.log(usuario.senha);
+    // console.log(verificaSenha);
+    // console.log(senha);
+    // console.log(usuario.senha);
     if (!verificaSenha)
-      res.status(400).json({ message: "Email ou senha incorreto3" });
-    // let token = jwt.generateToken(usuario.id);
-    // console.log(token);
-    res.send("<h1>Página login</h1>");
+      res.status(400).json({ message: "Email ou senha incorreto" });
+    let token = jwt.generateToken(usuario.id);
+    usuario = usuario.toJSON();
+    delete usuario.senha;
+    res.status(200).json({
+      message: "Login realizado com sucesso",
+      token,
+      usuario,
+    });
   },
   forgot: (req, res) => {
     res.send("<h1>Página esqueci a senha</h1>");
