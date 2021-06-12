@@ -82,7 +82,7 @@ const ListarProduto = () => {
           <tbody>
             {produtos.map((produto, idx) => (
               <tr key={idx} id={`produto${produto.id}`}>
-                <th scope="row">{produto.id}</th>
+                <td scope="row">{produto.id}</td>
                 <td>{produto.nome}</td>
                 <td>{produto.marca}</td>
                 <td>{produto.quantidade}</td>
