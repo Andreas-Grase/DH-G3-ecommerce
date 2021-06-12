@@ -23,118 +23,61 @@
 }
 
 .container-usuarios-list {
-    display: flex;
     width: 80%;
     margin: 5px;
 }
 
 .table {
-    display: flex;
-    width: 100vw;
     table-layout: fixed;
+    width: 100%;
 }
 
-.users__table {
-    font-weight: bold;
-    margin: 24px auto;
-}
+@media screen and (max-width: 768px) {
+    .users__table {
+        font-weight: bold;
+        margin: 24px auto;
+    }
 
-.users__table th,
-.users__table td {
-    padding: 6px 12px;
-    flex-flow: column wrap;
-}
+    .users__table th,
+    .users__table td {
+        padding: 6px 12px;
+        flex-flow: column wrap;
+    }
 
-.users__table td {
-    display: flex;
-}
+    .users__table td {
+        display: flex;
+    }
 
-.users__table td:not(:nth-child(n+7))::before {
-    content: attr(data-title) ": ";
-    font-weight: bolder;
-}
+    .users__table td:not(:nth-child(n+7))::before {
+        content: attr(data-title) ": ";
+        font-weight: bolder;
+    }
 
-.users__table thead {
-    background-color: var(--azul);
-    color: var(--branco);
-}
+    .users__table thead {
+        background-color: var(--azul);
+        color: var(--branco);
+    }
 
-.users__table thead tr th:first-child {
-    color: transparent;
-    font-size: 0;
-}
+    .users__table thead tr th:first-child {
+        color: transparent;
+        font-size: 0;
+    }
 
-.users__table thead tr th:first-child::before {
-    color: var(--branco);
-    content: 'Usuários';
-    font-size: 16px;
-}
+    .users__table thead tr th:first-child::before {
+        color: var(--branco);
+        content: 'Usuários';
+        font-size: 16px;
+    }
 
-.users__table thead tr th:not(:first-child) {
-    display: none;
-}
+    .users__table thead tr th:not(:first-child) {
+        display: none;
+    }
 
-.users__table tbody tr td:last-child {
-    border-bottom: 1px solid var(--cinza);
-    margin-bottom: 16px;
-    padding-bottom: 16px;
-}
-
-[class*="--btn"] {
-    border: none;
-    display: inline-block;
-    font-weight: bolder;
-    text-align: center;
-    margin: auto;
-    padding: 6px 12px;
-}
-
-[class*="--btn"]:hover {
-    cursor: pointer;
-}
-
-.user__see--btn {
-    background-color: var(--azul);
-    color: var(--branco);
-}
-
-.user__see--btn:hover {
-    background-color: var(--chumbo);
-    color: var(--azul);
-}
-
-.user__edit--btn {
-    background-color: var(--amarelo);
-    color: var(--chumbo);
-}
-
-.user__edit--btn:hover {
-    background-color: var(--chumbo);
-    color: var(--amarelo);
-}
-
-.user__delete--btn {
-    background-color: var(--vermelho);
-    color: var(--branco);
-}
-
-.user__delete--btn:hover {
-    background-color: var(--chumbo);
-    color: var(--vermelho);
-}
-
-.main-section__title {
-    font-size: 24px;
-}
-
-.main-section__subtitle {
-    color: var(--chumbo);
-    font-size: 20px;
-}
-
-.main-section__description {
-    color: var(--chumbo);
-    font-size: 16px;
+    .users__table tbody tr td:last-child {
+        border-bottom: 1px solid var(--cinza);
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+    }
 }
 
 .header-section-list {
@@ -151,4 +94,28 @@
 
 .list-icon {
     margin-left: 10px;
+}
+
+.user__id,
+.user__name,
+.user__lastname,
+.user__email,
+.user__pass,
+.user__cpf,
+.user__aniversario,
+.user__id_endereco,
+.user__id_regra {
+    padding: auto;
+    text-align: center;
+    font-size: 1rem;
+    word-wrap: break-word;
+}
+
+.user__btn_eye .user__btn_update .user__btn_delete {
+    word-wrap: normal;
+    width: 20px;
+}
+
+.colunas {
+    /* text-align: justify; */
 }

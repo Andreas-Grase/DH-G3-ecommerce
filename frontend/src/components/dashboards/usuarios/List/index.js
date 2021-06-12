@@ -86,27 +86,27 @@ const List = () => {
         <h1 className="title">Lista de Usuários</h1>
       </div>
       <div className="table-container">
-      <table className="table table-striped">
+      <table className="table table-striped users__table">
         <thead>
           <tr className="colunas">
-            <th>ID</th>
-            <th>Nome</th>
-            <th>Sobrenome</th>
-            <th>Email</th>
-            <th>Senha</th>
-            <th>CPF</th>
-            <th>Aniversário</th>
-            {/* <th>Id_Endereço</th> */}
-            <th>Id_Regra</th>
-            <th>Ver</th>
-            <th>Editar</th>
-            <th>Excluir</th>
+            <th className="user__id" scope="col">ID</th>
+            <th className="user__name" scope="col">Nome</th>
+            <th className="user__lastname" scope="col">Sobrenome</th>
+            <th className="user__email" scope="col">Email</th>
+            <th className="user__pass" scope="col">Senha</th>
+            <th className="user__cpf" scope="col">CPF</th>
+            <th className="user__aniversario" scope="col">Aniversário</th>
+            {/* <th className="user__id_endereco" scope="col">Id_Endereço</th> */}
+            <th className="user__id_regra" scope="col">Id_Regra</th>
+            <th className="user__btn_eye" scope="col">Ver</th>
+            <th className="user__btn_update" scope="col">Editar</th>
+            <th className="user__btn_delete" scope="col">Excluir</th>
           </tr>
         </thead>
         <tbody>
           {usuarios.map((usuario, idx) => (
-            <tr id={`user${usuario.id}`} className="user">
-              <td className="user__id" data-title="ID">
+            <tr className="colunas" key={idx} id={`user${usuario.id}`} className="user">
+              <td scope="row" className="user__id" data-title="ID">
                 {usuario.id}
               </td>
               <td className="user__name" data-title="Nome">
@@ -133,12 +133,12 @@ const List = () => {
               <td className="user__id_regra" data-title="id_regra">
                 {usuario.id_regra}
               </td>
-              <td>
+              <td className="user__btn_eye">
                 <button className="btn-update">
                   <i class="fas fa-eye"></i>
                 </button>
               </td>
-              <td>
+              <td className="user__btn_update">
                 <button
                   onClick={() =>
                     openModalAtualizar(
@@ -158,7 +158,7 @@ const List = () => {
                   <i class="fas fa-sync"></i>
                 </button>
               </td>
-              <td>
+              <td className="user__btn_delete">
                 <button
                   onClick={() =>
                     openModalDeletar(

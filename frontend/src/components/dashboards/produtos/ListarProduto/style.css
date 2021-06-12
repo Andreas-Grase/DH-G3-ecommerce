@@ -1,4 +1,4 @@
-.table-container{
+.table-container {
     display: flex;
     flex-flow: row wrap;
     width: 100%;
@@ -8,7 +8,8 @@
     margin: 10px;
 }
 
-.table td, .table th{
+.table td,
+.table th {
     padding: 0.4rem 0.3rem;
     vertical-align: middle;
 }
@@ -20,54 +21,56 @@
 } */
 
 
-.btn-wrapper{
+.btn-wrapper {
     display: flex;
     justify-content: center;
 }
 
-.btn-update{
-    display:flex;
+.btn-update {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height:15px;
-    width:15px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
     background-color: blue;
     transition: 0.4s;
     padding: 10px;
 }
 
-.btn-delete{
-    display:flex;
+.btn-delete {
+    display: flex;
     justify-content: center;
     align-items: center;
-    height:15px;
-    width:15px;
+    height: 15px;
+    width: 15px;
     border-radius: 50%;
     background-color: red;
     transition: 0.4s;
     padding: 10px;
 }
 
-.btn-update:hover{
-    border:whitesmoke;
+.btn-update:hover {
+    border: whitesmoke;
 }
 
-.btn-delete:hover{
-    border:whitesmoke;
+.btn-delete:hover {
+    border: whitesmoke;
 }
 
-th{
+/* th {
     padding: auto 10px;
     text-align: center;
     font-size: 1rem;
+    word-wrap: break-word;
 }
 
-td{
+td {
     padding: auto;
     text-align: center;
     font-size: 1rem;
-}
+    word-wrap: break-word;
+} */
 
 td i {
     color: white;
@@ -76,18 +79,17 @@ td i {
 }
 
 
-@media screen and (max-width: 768px){
-    .table-container{
+@media screen and (max-width: 768px) {
+    .table-container {
         display: block;
         position: absolute;
-        top: 380px;
+        top: 450px;
         width: 100%;
         margin: 15px auto;
         padding: 15px 0;
     }
 
-    .col-btn{
+    .col-btn {
         width: 20px;
     }
 }
-

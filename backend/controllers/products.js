@@ -54,6 +54,43 @@ const controller = {
         .send(`Ops... houve algum erro ao buscar pelo produto de id ${id}`);
     }
   },
+  search: async (req, res, next) => {
+    let { searchParam, searchValue } = await req.body;
+    if (!searchParam || !searchValue)
+      searchParam = await req.params.searchParam;
+    if (!searchValue) searchValue = await req.params.searchValue;
+
+    let whereClause = {};
+    whereClause[searchParam] = { [Op.like]: `%${searchValue}%` };
+
+    const { page = 1, limit = 10, orderBy } = await req.query,
+      order = orderResults(orderBy);
+
+    const { count: total, rows: produtos } = await Produto.findAndCountAll({
+      where: whereClause,
+      order,
+      limit,
+      offset: (page - 1) * limit,
+    }).catch(function (err) {
+      res
+        .status(400)
+        .json({ message: "Ops... houve algum erro em nossa busca" });
+    });
+    if (produtos) {
+      res.json({
+        produtos,
+        total,
+        page,
+        pages: Math.ceil(total / limit),
+        orderParam: order[0][0],
+        orderDirection: order[0][1],
+      });
+    } else {
+      res
+        .status(500)
+        .json({ message: "Ops... houve algum erro em nossa busca" });
+    }
+  },
   addProduto: async (req, res, next) => {
     res.render("addProduto", {
       title: "Página de Registro de Usuário",
@@ -61,7 +98,6 @@ const controller = {
         "Preencha o formulário e cadastre-o clicando em 'Adicionar Usuário'",
     });
   },
-
   show: (req, res) => {
     res.send(`<h1>Página produto ${req.params.id}</h1>`);
   },
@@ -90,8 +126,23 @@ const controller = {
       res.status(400).json({ message: "Algo de errado não está certo" });
     }
   },
-  update: (req, res) => {
-    res.send(`<h1>Atualizar produto ${req.params.id}</h1>`);
+  update: async (req, res, next) => {
+    const { id } = req.params,
+      { nome, marca, quantidade, preco } = req.body,
+      produto = await Produto.update(
+        {
+          nome,
+          marca,
+          quantidade,
+          preco,
+        },
+        { where: { id } }
+      );
+    if (produto) {
+      res.json({ message: "sucesso" });
+    } else {
+      res.status(500).send("Ops... Algo de errado não deu certo!");
+    }
   },
   delete: async (req, res, next) => {
     console.log("controller delete");

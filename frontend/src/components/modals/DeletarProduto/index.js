@@ -30,11 +30,7 @@ const ModalDeletar = ({ produtos, handleSuccess }) => {
             Sim
           </Button>
         </form>
-        <Button
-          id="buttonNAV"
-          className="btn btn-secondary"
-          href="dashboard/produto/listar"
-        >
+        <Button id="buttonNAV" className="btn btn-secondary">
           Não
         </Button>
       </ModalFooter>
