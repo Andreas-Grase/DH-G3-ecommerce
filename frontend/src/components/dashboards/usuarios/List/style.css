@@ -28,6 +28,8 @@
 }
 
 .table {
+    /* display: flex;
+    flex-flow: column wrap; */
     table-layout: fixed;
     width: 100%;
 }
@@ -109,6 +111,7 @@
     text-align: center;
     font-size: 1rem;
     word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 .user__btn_eye .user__btn_update .user__btn_delete {

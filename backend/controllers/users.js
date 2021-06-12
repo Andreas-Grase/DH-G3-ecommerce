@@ -77,11 +77,11 @@ const controller = {
       if (usuario) {
         res.status(200).json({ usuario });
       } else {
-        res.status(500).send("Ops... Algo de errado não deu certo!");
+        res.status(500).send("Usuário já cadastrado, acesse página de login.");
       }
     } catch (error) {
       console.log(error);
-      res.status(400).json({ message: "Algo de errado não está certo" });
+      res.status(400).json({ message: "Usuário já cadastrado, acesse página de login." });
     }
   },
   registerAddress: async (req, res, next) => {
