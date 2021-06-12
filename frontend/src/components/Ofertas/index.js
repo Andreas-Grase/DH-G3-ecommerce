@@ -95,13 +95,17 @@ const Ofertas = () => {
             </div>
 
             {/* botões */}
-            <div className="container-botoes">
-                <Button className="botao-ofertas" onClick={setSlideOfertas}>
-                    <h2 className="titulo-promo">Ofertas</h2>
-                </Button>
-                <Button className="botao-mv" onClick={setSlideMV}>
-                    <h2 className="titulo-promo">Mais Vendidos</h2>
-                </Button>
+            <div className="buttons-ofertas">
+                <nav id="btn-back">
+                    <button id="back" onClick={setSlideOfertas}>
+                    Ofertas
+                    </button>
+                </nav>
+                <nav id="btn-back">
+                    <button id="back" onClick={setSlideMV}>
+                        Mais Vendidos
+                    </button>
+                </nav>
             </div>
 
         </section>

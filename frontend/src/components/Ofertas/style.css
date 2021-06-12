@@ -59,26 +59,7 @@
     height: 180px;
 }
 
-.container-botoes {
-    display: flex;
-    flex-direction: row;
+.buttons-ofertas {
+    display:flex;
     justify-content: center;
-    margin: 30px 0 30px 0;
-}
-
-.botao-ofertas, .botao-mv {
-    height: 38px;
-    background-color:var(--cor3);
-    border: none;
-    margin: 10px
-}
-
-.titulo-promo {
-    color: var(--cor2);
-    font-size: 1.6rem;
-    font-weight: bold;
-}
-
-.titulo-promo:hover {
-    color: var(--cor1);
 }
