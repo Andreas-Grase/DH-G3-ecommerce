@@ -14,7 +14,7 @@ import {
 import produtomarca1 from "../../../assets/img/marcas/produtomarca1.png";
 import "./style.css";
 
-const ModalAtualizar = ({ produtos }) => {
+const ModalAtualizar = ({ produtos, handleSuccess }) => {
   const [id] = produtos.id;
   const [nome, setNome] = useState(produtos.nome);
   const [marca, setMarca] = useState(produtos.marca);
@@ -23,8 +23,14 @@ const ModalAtualizar = ({ produtos }) => {
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.post(`/produtos/${id}`);
-      handleUpdate(response.data);
+      const response = await axios.put(`/produtos/${id}`, {
+        nome,
+        marca,
+        quantidade,
+        preco,
+      });
+      handleSuccess();
+      console.log(response);
     } catch (error) {
       console.log(error);
     }
@@ -91,7 +97,7 @@ const ModalAtualizar = ({ produtos }) => {
             <Button
               id="buttonNAV"
               className="btn btn-secondary"
-              href="/dashboard"
+              onClick={handleSuccess}
             >
               Sair
             </Button>

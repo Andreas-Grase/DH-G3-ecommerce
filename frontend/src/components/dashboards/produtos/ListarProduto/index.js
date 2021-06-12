@@ -43,10 +43,14 @@ const ListarProduto = () => {
     setIsModalDeletarVisible(false);
     getData();
   };
+  const handleUpdateSuccess = () => {
+    setIsModalAtualizarVisible(false);
+    getData();
+  };
   return (
     <div style={{ width: "80%", margin: "5px" }}>
       {isModalAtualizarVisible ? (
-        <ModalAtualizar produtos={selectedProduct} />
+        <ModalAtualizar produtos={selectedProduct} handleSuccess={handleUpdateSuccess}/>
       ) : null}
       {isModalDeletarVisible ? (
         <ModalDeletar produtos={selectedProduct} handleSuccess={handleDeleteSuccess} />
@@ -77,7 +81,7 @@ const ListarProduto = () => {
           </thead>
           <tbody>
             {produtos.map((produto, idx) => (
-              <tr id={`produto${produto.id}`}>
+              <tr key={idx} id={`produto${produto.id}`}>
                 <th scope="row">{produto.id}</th>
                 <td>{produto.nome}</td>
                 <td>{produto.marca}</td>

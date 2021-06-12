@@ -122,11 +122,7 @@ const ModalAtualizar = ({ usuarios }) => {
             >
               Atualizar
             </Button>
-            <Button
-              id="buttonNAV"
-              className="btn btn-secondary"
-              href="/dashboard"
-            >
+            <Button id="buttonNAV" className="btn btn-secondary">
               Sair
             </Button>
           </ModalFooter>

@@ -86,7 +86,7 @@ const List = () => {
         <h1 className="title">Lista de Usuários</h1>
       </div>
       <div className="table-container">
-      <table className="table table-striped">
+      <table className="table table-striped header-section-list">
         <thead>
           <tr className="colunas">
             <th>ID</th>
@@ -105,7 +105,7 @@ const List = () => {
         </thead>
         <tbody>
           {usuarios.map((usuario, idx) => (
-            <tr id={`user${usuario.id}`} className="user">
+            <tr key={idx} id={`user${usuario.id}`} className="user">
               <td className="user__id" data-title="ID">
                 {usuario.id}
               </td>
