@@ -1,3 +1,4 @@
+import { Button } from "react-bootstrap";
 import produto1 from '../../assets/img/ofertas/produto1.png'
 import produto2 from '../../assets/img/ofertas/produto2.png'
 import produto3 from '../../assets/img/ofertas/produto3.png'
@@ -12,26 +13,26 @@ const SlideOfertas = () => {
     return (
         <div className="slide-ofertas">
 
-            <div className="produto-slide-promo">
+            <a href="/produtos" className="produto-slide-promo">
                 <img class="slide-promo-img" src={produto1} alt="shampoo" />
                 <p>Marca: <strong>Head and Shoulders</strong></p>
                 <p>Produto: <strong>Cabelos lisos 3000</strong></p>
                 <p>Preço: <strong>R$ 499,99</strong></p>
-            </div>
+            </a>
 
-            <div class="produto-slide-promo">
+            <a href="/produtos" class="produto-slide-promo">
                 <img class="slide-promo-img" src={produto2} alt="shampoo" />
                 <p>Marca: <strong>Head and Shoulders</strong></p>
                 <p>Produto: <strong>Cabelos lisos 3000</strong></p>
                 <p>Preço: <strong>R$ 499,99</strong></p>
-            </div>
+            </a>
 
-            <div class="produto-slide-promo">
+            <a href="/produtos" class="produto-slide-promo">
                 <img class="slide-promo-img" src={produto3} alt="shampoo" />
                 <p>Marca: <strong>Head and Shoulders</strong></p>
                 <p>Produto: <strong>Cabelos lisos 3000</strong></p>
                 <p>Preço: <strong>R$ 499,99</strong></p>
-            </div>
+            </a>
 
         </div>
     )
@@ -40,24 +41,24 @@ const SlideOfertas = () => {
 const SlideMV = () => {
     return (
         <div className="slide-mais-vendidos">
-            <div className="produto-slide-promo">
+            <a href="/produtos" className="produto-slide-promo">
                 <img className="slide-promo-img" src={produto4} alt="shampoo" />
                 <p>Marca: <strong>Head and Shoulders</strong></p>
                 <p>Produto: <strong>Cabelos lisos 3000</strong></p>
                 <p>Preço: <strong>R$ 499,99</strong></p>
-            </div>
-            <div className="produto-slide-promo">
+            </a>
+            <a href="/produtos" className="produto-slide-promo">
                 <img className="slide-promo-img" src={produto5} alt="shampoo" />
                 <p>Marca: <strong>Head and Shoulders</strong></p>
                 <p>Produto: <strong>Cabelos lisos 3000</strong></p>
                 <p>Preço: <strong>R$ 499,99</strong></p>
-            </div>
-            <div className="produto-slide-promo">
+            </a>
+            <a href="/produtos" className="produto-slide-promo">
                 <img className="slide-promo-img" src={produto6} alt="shampoo" />
                 <p>Marca: <strong>Head and Shoulders</strong></p>
                 <p>Produto: <strong>Cabelos lisos 3000</strong></p>
                 <p>Preço: <strong>R$ 499,99</strong></p>
-            </div>
+            </a>
         </div>
     )
 }
@@ -82,19 +83,25 @@ const Ofertas = () => {
     return (
         <section className="promo">
 
-            {/* botões */}
-            <div className="container-botoes">
-                <div className="botao-ofertas" onClick={setSlideOfertas}>
-                    <h2 className="titulo-promo">Ofertas</h2>
-                </div>
-                <div className="botao-mv" onClick={setSlideMV}>
-                    <h2 className="titulo-promo">Mais Vendidos</h2>
-                </div>
+            {/* titulo */}
+            <div className="titulo-ofertas">
+                <h2>Nossas Ofertas</h2>
+                <h4>Encontre nossos produtos mais vendidos</h4>
             </div>
 
             {/* slideshow container */}
             <div className="slideshow-promo-container">
                 {slideAtual}
+            </div>
+
+            {/* botões */}
+            <div className="container-botoes">
+                <Button className="botao-ofertas" onClick={setSlideOfertas}>
+                    <h2 className="titulo-promo">Ofertas</h2>
+                </Button>
+                <Button className="botao-mv" onClick={setSlideMV}>
+                    <h2 className="titulo-promo">Mais Vendidos</h2>
+                </Button>
             </div>
 
         </section>
