@@ -77,6 +77,9 @@ const ListarProduto = () => {
               <th scope="col">Quantidade</th>
               <th scope="col">Preço</th>
               <th scope="col">id_categoria</th>
+              <th className="user__btn_eye" scope="col">
+                Ver
+              </th>
               <th scope="col" className="col-btn">
                 Atualizar
               </th>
@@ -94,6 +97,11 @@ const ListarProduto = () => {
                 <td>{produto.quantidade}</td>
                 <td>{produto.preco}</td>
                 <td>{produto.id_categoria}</td>
+                <td className="user__btn_eye">
+                  <button className="btn-update">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                </td>
                 <td>
                   <div className="btn-wrapper">
                     <button
