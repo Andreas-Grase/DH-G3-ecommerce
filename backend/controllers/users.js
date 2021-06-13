@@ -15,7 +15,7 @@ const orderResults = (orderByParam = "id_ASC") => {
 
 const controller = {
   list: async (req, res, next) => {
-    console.log(req.user);
+    // console.log(req.usuario);
     const { page = 1, limit = 20, orderBy } = await req.query,
       order = orderResults(orderBy);
     const { count: total, rows: usuarios } = await Usuario.findAndCountAll({

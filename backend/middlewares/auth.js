@@ -7,12 +7,12 @@ module.exports = async (req, res, next) => {
   const [, token] = authHeader.split(" ");
   try {
     const decoded = verifyToken(token);
-    console.log(decoded);
+    // console.log(decoded);
     const { sub } = decoded;
-    console.log(sub);
-    req.user = {
-        id: sub,
-    }
+    // console.log(sub);
+    req.usuario = {
+      id: sub,
+    };
     return next();
   } catch (error) {
     return res.status(403).json({ message: "Você não possui autorização" });

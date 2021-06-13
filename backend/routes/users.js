@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const controller = require("../controllers/users"),
   authMiddleware = require("../middlewares/auth"),
-  isAdminMiddleware = require("../middlewares/auth");
+  isAdminMiddleware = require("../middlewares/isAdmin");
 
 router.post("/search/:searchParam/:searchValue", controller.search);
 router.get("/search/:searchParam/:searchValue", controller.search);
