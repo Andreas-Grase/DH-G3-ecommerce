@@ -50,37 +50,49 @@ const ModalAtualizar = ({ produtos, handleSuccess }) => {
         <div className="modal-body">
           <ModalBody>
             <FormGroup>
-              <Label htmlFor="password">Produto:</Label>
+              <Label htmlFor="nome">Produto:</Label>
               <Input
                 type="text"
-                id="categoria"
+                name="nome"
+                id="nome"
+                required
+                placeholder="Nome Produto"
                 value={nome}
                 onChange={(e) => setNome(e.target.value)}
               />
             </FormGroup>
             <FormGroup>
-              <Label htmlFor="password">Categoria:</Label>
+              <Label htmlFor="marca">Marca:</Label>
               <Input
                 type="text"
-                id="categoria"
+                name="marca"
+                id="marca"
+                required
+                placeholder="Marca"
                 value={marca}
                 onChange={(e) => setMarca(e.target.value)}
               />
             </FormGroup>
             <FormGroup>
-              <Label htmlFor="password">Estoque:</Label>
+              <Label htmlFor="quantidade">Quantidade:</Label>
               <Input
                 type="text"
-                id="estoque"
+                name="quantidade"
+                id="quantidade"
+                required
+                placeholder="Quantidade"
                 value={quantidade}
                 onChange={(e) => setQuantidade(e.target.value)}
               />
             </FormGroup>
             <FormGroup>
-              <Label htmlFor="password">Preço:</Label>
+              <Label htmlFor="preco">Preço:</Label>
               <Input
                 type="text"
+                name="preco"
                 id="preco"
+                required
+                placeholder="Preco"
                 value={preco}
                 onChange={(e) => setPreco(e.target.value)}
               />

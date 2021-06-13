@@ -33,7 +33,7 @@ const Footer = () => {
                 type="text"
                 className="form__content__input"
                 name="nome"
-                id="nome"
+                id="nome-footer"
                 value="Insira seu nome"
               />
               <input

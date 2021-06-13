@@ -1,3 +1,5 @@
+const db = require("../models");
+
 const Sequelize = require("sequelize"),
   { Produto } = require("../models"),
   { Op } = Sequelize;
@@ -11,7 +13,7 @@ const orderResults = (orderByParam = "id_ASC") => {
 
 const controller = {
   list: async (req, res) => {
-    const { page = 1, limit = 10, orderBy } = await req.query,
+    const { page = 1, limit = 20, orderBy } = await req.query,
       order = orderResults(orderBy);
     const { count: total, rows: produtos } = await Produto.findAndCountAll({
       order,
