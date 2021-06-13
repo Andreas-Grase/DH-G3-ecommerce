@@ -11,7 +11,7 @@ router.post("/endereco", controller.registerAddress);
 router.post("/login", controller.login);
 router.delete("/:id", controller.delete);
 router.get("/:id", controller.index);
-router.post("/:id", controller.update);
+router.put("/:id", controller.update);
 router.get("/", /*authMiddleware, isAdminMiddleware,*/ controller.list);
 router.post("/", controller.registerUser);
 

@@ -50,10 +50,16 @@ const ListarProduto = () => {
   return (
     <div style={{ width: "80%", margin: "5px" }}>
       {isModalAtualizarVisible ? (
-        <ModalAtualizar produtos={selectedProduct} handleSuccess={handleUpdateSuccess}/>
+        <ModalAtualizar
+          produtos={selectedProduct}
+          handleSuccess={handleUpdateSuccess}
+        />
       ) : null}
       {isModalDeletarVisible ? (
-        <ModalDeletar produtos={selectedProduct} handleSuccess={handleDeleteSuccess} />
+        <ModalDeletar
+          produtos={selectedProduct}
+          handleSuccess={handleDeleteSuccess}
+        />
       ) : null}
       <div className="header-section">
         <div className="add-icon">

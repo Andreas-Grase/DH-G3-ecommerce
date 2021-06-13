@@ -109,7 +109,7 @@ const controller = {
   },
   update: async (req, res, next) => {
     const { id } = req.params,
-      { primeiro_nome, sobrenome, email, senha, cpf, aniversario } = req.body,
+      { primeiro_nome, sobrenome, email, senha, cpf, aniversario, id_endereco } = req.body,
       id_regra =
         email.indexOf("staff@kabellos.com.br") > 0
           ? 3
@@ -121,7 +121,7 @@ const controller = {
         { where: { id } }
       );
     if (usuario) {
-      res.redirect("/usuarios");
+      res.json({ message: "sucesso" });
     } else {
       res.status(500).send("Ops... Algo de errado não deu certo!");
     }
