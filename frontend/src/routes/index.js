@@ -29,7 +29,28 @@ const Routes = () => {
   }, []);
   return (
     <Switch>
-      <Route path="/shopping__cart" component={Carrinho} />
+      {token ? (
+        <>
+          <Route
+            exact
+            path="/shopping__cart/:finalizar__compras/:id"
+            component={FinalizarCompras}
+          />
+          <Route path="/shopping__cart" component={Carrinho} />
+          <Route exact path="/dashboard/produto/criar" component={Criar} />
+          <Route exact path="/dashboard/produto/listar" component={Listar} />
+          <Route
+            exact
+            path="/dashboard/usuario/listar"
+            component={ListarUsuario}
+          />
+          <Route
+            exact
+            path="/dashboard/usuario/adicionar"
+            component={AdicionarUsuario}
+          />
+        </>
+      ) : null}
       <Route path="/categorias/unha" component={Categorias} />
       <Route path="/categorias/pele" component={Categorias} />
       <Route path="/categorias/lacamentos" component={Categorias} />
@@ -44,27 +65,6 @@ const Routes = () => {
       <Route path="/cadastro" component={Cadastro} />
       <Route path="/login" component={Login} />
       <Route path="/" component={Home} />
-      {token ? (
-        <>
-          <Route exact path="/dashboard/produto/criar" component={Criar} />
-          <Route exact path="/dashboard/produto/listar" component={Listar} />
-          <Route
-            exact
-            path="/dashboard/usuario/listar"
-            component={ListarUsuario}
-          />
-          <Route
-            exact
-            path="/dashboard/usuario/adicionar"
-            component={AdicionarUsuario}
-          />
-          <Route
-            exact
-            path="/shopping__cart/:finalizar__compras/:id"
-            component={FinalizarCompras}
-          />
-        </>
-      ) : null}
     </Switch>
   );
 };

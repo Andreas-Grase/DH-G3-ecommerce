@@ -147,21 +147,26 @@ const controller = {
     }
   },
   update: async (req, res, next) => {
-    const { id } = req.params,
-      { nome, marca, quantidade, preco } = req.body,
-      produto = await Produto.update(
-        {
-          nome,
-          marca,
-          quantidade,
-          preco,
-        },
-        { where: { id } }
-      );
-    if (produto) {
-      res.json({ message: "sucesso" });
-    } else {
-      res.status(500).send("Ops... Algo de errado não deu certo!");
+    try {
+      const { id } = req.params,
+        { nome, marca, quantidade, preco } = req.body,
+        produto = await Produto.update(
+          {
+            nome,
+            marca,
+            quantidade,
+            preco,
+          },
+          { where: { id } }
+        );
+      if (produto) {
+        res.json({ message: "sucesso" });
+      } else {
+        res.status(500).send("Ops... Algo de errado não deu certo!");
+      }      
+    } catch (error) {
+      console.log(error);
+      res.status(400).json({ message: "Algo de errado não está certo" });
     }
   },
   delete: async (req, res, next) => {

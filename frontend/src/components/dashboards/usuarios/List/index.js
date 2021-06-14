@@ -59,8 +59,8 @@ const List = () => {
     getDataUsers();
   }, []);
 
-  const handleDeleteSuccess = () => {
-    setIsModalDeletarVisible(false);
+    const handleDeleteSuccess = () => {
+      setIsModalDeletarVisible(false);
     getDataUsers();
   };
   const handleUpdateSuccess = () => {

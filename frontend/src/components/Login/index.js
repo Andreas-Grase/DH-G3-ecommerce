@@ -1,22 +1,27 @@
-import api from "../../services/api"
+import api from "../../services/api";
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import logo from "../../assets/icons/logo-gris-claro.svg";
-import {setToken} from "../../helpers/session"
+import { setToken } from "../../helpers/session";
 import "./style.css";
 
 const Login = () => {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
+  const history = useHistory();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
       const response = await api.post("usuarios/login", { email, senha });
       const token = response.data.token;
       setToken(token);
+      history.push("/")
     } catch (error) {
       console.log(error);
     }
   };
+
+
   return (
     <div className="conteiner">
       <div className="login">
