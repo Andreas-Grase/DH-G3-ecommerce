@@ -1,15 +1,22 @@
 import axios from "axios";
 import "bootstrap/dist/css/bootstrap.css";
 import React, { useState, useEffect } from "react";
+import ModalVer from "../../../../components/modals/VerProduto"
 import ModalAtualizar from "../../../../components/modals/AtualizarProduto";
 import ModalDeletar from "../../../../components/modals/DeletarProduto";
 import "./style.css";
 
 const ListarProduto = () => {
+  const [isModalVerVisible, setIsModalVerVisible] = useState(false);
   const [isModalAtualizarVisible, setIsModalAtualizarVisible] = useState(false);
   const [isModalDeletarVisible, setIsModalDeletarVisible] = useState(false);
   const [selectedProduct, setSelectedProduct] = useState({});
   const [produtos, setProdutos] = useState([]);
+
+  const openModalVer = (id, nome, marca, quantidade, preco) => {
+    setIsModalVerVisible(true);
+    setSelectedProduct({ id, nome, marca, quantidade, preco });
+  };
 
   const openModalAtualizar = (id, nome, marca, quantidade, preco) => {
     setIsModalAtualizarVisible(true);
@@ -39,6 +46,10 @@ const ListarProduto = () => {
     //   .catch((error) => console.log(error));
     getData();
   }, []);
+  const handleViewSuccess = () => {
+    setIsModalVerVisible(false);
+    getData();
+  };
   const handleDeleteSuccess = () => {
     setIsModalDeletarVisible(false);
     getData();
@@ -49,6 +60,12 @@ const ListarProduto = () => {
   };
   return (
     <div style={{ width: "80%", margin: "5px" }}>
+      {isModalVerVisible ? (
+        <ModalVer
+          produtos={selectedProduct}
+          handleSuccess={handleViewSuccess}
+        />
+      ) : null}
       {isModalAtualizarVisible ? (
         <ModalAtualizar
           produtos={selectedProduct}
@@ -77,6 +94,9 @@ const ListarProduto = () => {
               <th scope="col">Quantidade</th>
               <th scope="col">Preço</th>
               <th scope="col">id_categoria</th>
+              <th className="user__btn_eye" scope="col">
+                Ver
+              </th>
               <th scope="col" className="col-btn">
                 Atualizar
               </th>
@@ -94,6 +114,25 @@ const ListarProduto = () => {
                 <td>{produto.quantidade}</td>
                 <td>{produto.preco}</td>
                 <td>{produto.id_categoria}</td>
+                <td className="user__btn_eye">
+                  <div className="btn-wrapper">
+                    <button
+                      onClick={() =>
+                        openModalVer(
+                          `${produto.id}`,
+                          `${produto.nome}`,
+                          `${produto.marca}`,
+                          `${produto.quantidade}`,
+                          `${produto.preco}`
+                        )
+                      }
+                      type="btn"
+                      className="btn-view"
+                    >
+                      <i class="fas fa-eye"></i>
+                    </button>
+                  </div>
+                </td>
                 <td>
                   <div className="btn-wrapper">
                     <button
@@ -113,18 +152,16 @@ const ListarProduto = () => {
                     </button>
                   </div>
                 </td>
-                <td>
-                  <div className="btn-wrapper">
-                    <button
-                      onClick={() =>
-                        openModalDeletar(`${produto.id}`, `${produto.nome}`)
-                      }
+                <td className="btn-wrapper">
+                  <button
+                    onClick={() =>
+                      openModalDeletar(`${produto.id}`, `${produto.nome}`)
+                    }
                       type="btn"
                       className="btn-delete"
                     >
-                      <i class="far fa-trash-alt"></i>
-                    </button>
-                  </div>
+                    <i class="far fa-trash-alt"></i>
+                  </button>
                 </td>
               </tr>
             ))}

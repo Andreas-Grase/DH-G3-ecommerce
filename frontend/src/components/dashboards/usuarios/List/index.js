@@ -81,7 +81,7 @@ const List = () => {
           handleSuccess={handleDeleteSuccess}
         />
       ) : null}
-      <div className="header-section-list">
+      <div className="header-section">
         <div className="list-icon">
           <i class="fas fa-list-alt fa-2x" />
         </div>
@@ -91,38 +91,38 @@ const List = () => {
         <table className="table table-striped users__table">
           <thead>
             <tr className="colunas">
-              <th className="user__id" scope="col">
+              <th scope="col">
                 ID
               </th>
-              <th className="user__name" scope="col">
+              <th scope="col">
                 Nome
               </th>
-              <th className="user__lastname" scope="col">
+              <th  scope="col">
                 Sobrenome
               </th>
-              <th className="user__email" scope="col">
+              <th  scope="col">
                 Email
               </th>
-              <th className="user__pass" scope="col">
+              <th  scope="col">
                 Senha
               </th>
-              <th className="user__cpf" scope="col">
+              <th  scope="col">
                 CPF
               </th>
-              <th className="user__aniversario" scope="col">
+              <th scope="col">
                 Aniversário
               </th>
               {/* <th className="user__id_endereco" scope="col">Id_Endereço</th> */}
-              <th className="user__id_regra" scope="col">
+              <th  scope="col">
                 Id_Regra
               </th>
-              <th className="user__btn_eye" scope="col">
+              <th  scope="col">
                 Ver
               </th>
-              <th className="user__btn_update" scope="col">
+              <th  scope="col">
                 Editar
               </th>
-              <th className="user__btn_delete" scope="col">
+              <th scope="col">
                 Excluir
               </th>
             </tr>
@@ -162,44 +162,50 @@ const List = () => {
                 <td className="user__id_regra" data-title="id_regra">
                   {usuario.id_regra}
                 </td>
-                <td className="user__btn_eye">
-                  <button className="btn-update">
-                    <i class="fas fa-eye"></i>
-                  </button>
+                <td>
+                  <div className="btn-wrapper">
+                    <button className="btn-update">
+                      <i class="fas fa-eye"></i>
+                    </button>
+                   </div> 
                 </td>
-                <td className="user__btn_update">
-                  <button
-                    onClick={() =>
-                      openModalAtualizar(
-                        `${usuario.id}`,
-                        `${usuario.primeiro_nome}`,
-                        `${usuario.sobrenome}`,
-                        `${usuario.email}`,
-                        `${usuario.senha}`,
-                        `${usuario.cpf}`,
-                        // `${usuario.id_endereco}`,
-                        `${usuario.id_regra}`
-                      )
-                    }
-                    type="btn"
-                    className="btn-update"
-                  >
+                <td>
+                  <div className="btn-wrapper">
+                    <button
+                      onClick={() =>
+                       openModalAtualizar(
+                          `${usuario.id}`,
+                          `${usuario.primeiro_nome}`,
+                          `${usuario.sobrenome}`,
+                          `${usuario.email}`,
+                          `${usuario.senha}`,
+                          `${usuario.cpf}`,
+                          // `${usuario.id_endereco}`,
+                          `${usuario.id_regra}`
+                        )
+                      }
+                      type="btn"
+                      className="btn-update"
+                    >
                     <i class="fas fa-sync"></i>
-                  </button>
+                    </button>
+                  </div>    
                 </td>
-                <td className="user__btn_delete">
-                  <button
-                    onClick={() =>
-                      openModalDeletar(
-                        `${usuario.id}`,
-                        `${usuario.primeiro_nome}`
-                      )
-                    }
-                    type="btn"
-                    className="btn-delete"
-                  >
+                <td>
+                  <div className="btn-wrapper">
+                    <button
+                      onClick={() =>
+                        openModalDeletar(
+                          `${usuario.id}`,
+                          `${usuario.primeiro_nome}`
+                        )
+                      }
+                      type="btn"
+                      className="btn-delete"
+                    >
                     <i class="far fa-trash-alt"></i>
-                  </button>
+                    </button>
+                  </div>  
                 </td>
               </tr>
             ))}

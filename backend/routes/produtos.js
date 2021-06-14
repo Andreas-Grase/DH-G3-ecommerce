@@ -4,7 +4,7 @@ const express = require("express"),
 
 router.get("/promo", controller.showPromo);
 router.delete("/:id", controller.delete);
-// router.get("/:id", controller.show);
+router.get("/:id", controller.view);
 router.post("/search", controller.search);
 router.get("/:id", controller.index);
 router.put("/:id", controller.update);
