@@ -94,7 +94,7 @@ const AdicionarProduto = () => {
             <div nameClass="product-info"></div>
             <div className="product-section">
               <div className="price">
-                <h3>Preço</h3>
+                <h3>Preço:</h3>
                 <div className="price-container">
                   <div className="icon-container">
                     <i class="fas fa-dollar-sign fa-1.5x" />
@@ -147,7 +147,7 @@ const AdicionarProduto = () => {
           </div>
         </div>
         <div className="btn-back">
-          <button className="back">Adicionar Produto</button>
+          <button id="back">Adicionar Produto</button>
         </div>
       </form>
       {/* <div className="categories-container">
