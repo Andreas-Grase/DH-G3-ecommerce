@@ -29,31 +29,42 @@ const Routes = () => {
   }, []);
   return (
     <Switch>
-        <Route path="/shopping__cart" component={Carrinho} />
-        {token ? (
-          <>
-            <Route exact path="/dashboard/produto/criar" component={Criar} />
-            <Route exact path="/dashboard/produto/listar" component={Listar} />
-            <Route exact path="/dashboard/usuario/listar" component={ListarUsuario} />
-            <Route exact path="/dashboard/usuario/adicionar" component={AdicionarUsuario} />
-            <Route exact path="/shopping__cart/:finalizar__compras/:id" component={FinalizarCompras} />
-          </>
-        ) : (
-            <Route path="/login" component={Login} />
-        )}
-        <Route path="/categorias/unha" component={Categorias} />
-        <Route path="/categorias/pele" component={Categorias} />
-        <Route path="/categorias/lacamentos" component={Categorias} />
-        <Route path="/categorias/cabelo" component={Categorias} />
-        <Route path="/categorias/barbearia" component={Categorias} />
-        <Route exact path="/produtos/produto/:id" component={Produto} />
-        <Route path="/categorias" component={Categorias} />
-        <Route path="/marcas" component={PaginaMarcas} />
-        <Route path="/produtos" component={Produtos} />
-        <Route path="/contato" component={Contato} />
-        <Route path="/sobre" component={Sobre} />
-        <Route path="/cadastro" component={Cadastro} />
-        <Route path="/" component={Home} />
+      <Route path="/shopping__cart" component={Carrinho} />
+      <Route path="/categorias/unha" component={Categorias} />
+      <Route path="/categorias/pele" component={Categorias} />
+      <Route path="/categorias/lacamentos" component={Categorias} />
+      <Route path="/categorias/cabelo" component={Categorias} />
+      <Route path="/categorias/barbearia" component={Categorias} />
+      <Route exact path="/produtos/produto/:id" component={Produto} />
+      <Route path="/categorias" component={Categorias} />
+      <Route path="/marcas" component={PaginaMarcas} />
+      <Route path="/produtos" component={Produtos} />
+      <Route path="/contato" component={Contato} />
+      <Route path="/sobre" component={Sobre} />
+      <Route path="/cadastro" component={Cadastro} />
+      <Route path="/login" component={Login} />
+      <Route path="/" component={Home} />
+      {token ? (
+        <>
+          <Route exact path="/dashboard/produto/criar" component={Criar} />
+          <Route exact path="/dashboard/produto/listar" component={Listar} />
+          <Route
+            exact
+            path="/dashboard/usuario/listar"
+            component={ListarUsuario}
+          />
+          <Route
+            exact
+            path="/dashboard/usuario/adicionar"
+            component={AdicionarUsuario}
+          />
+          <Route
+            exact
+            path="/shopping__cart/:finalizar__compras/:id"
+            component={FinalizarCompras}
+          />
+        </>
+      ) : null}
     </Switch>
   );
 };
