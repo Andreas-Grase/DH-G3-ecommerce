@@ -10,8 +10,6 @@
     margin: 10px auto;
 }
 
-
-
 .table {
     /* display: flex;
     flex-flow: column wrap; */
@@ -80,100 +78,119 @@ td i {
     font-size: 10px;
     text-decoration: none;
 }
-/* 
 
-.table-container {
-    display: flex;
-    flex-flow: row wrap;
+
+.hidden {
+    background-color: transparent;
+    color: transparent;
+    height: 0;
+    line-height: 0;
+    margin: 0;
+    max-height: 0;
+    max-width: 0;
+    opacity: 0;
+    padding: 0;
+    visibility: hidden;
+    width: 0;
+}
+
+.container-usuarios-list {
+    width: 80%;
+    margin: 5px;
+}
+
+.table {
+    /* display: flex;
+    flex-flow: column wrap; */
+    table-layout: fixed;
     width: 100%;
-    padding: 10px;
-    float: right;
-    padding: 10px;
-    margin: 10px;
 }
 
-.table td,
-.table th {
-    padding: 0.4rem 0.3rem;
-    vertical-align: middle;
+@media screen and (max-width: 768px) {
+    .users__table {
+        font-weight: bold;
+        margin: 24px auto;
+    }
+
+    .users__table th,
+    .users__table td {
+        padding: 6px 12px;
+        flex-flow: column wrap;
+    }
+
+    .users__table td {
+        display: flex;
+    }
+
+    .users__table td:not(:nth-child(n+7))::before {
+        content: attr(data-title) ": ";
+        font-weight: bolder;
+    }
+
+    .users__table thead {
+        background-color: var(--azul);
+        color: var(--branco);
+    }
+
+    .users__table thead tr th:first-child {
+        color: transparent;
+        font-size: 0;
+    }
+
+    .users__table thead tr th:first-child::before {
+        color: var(--branco);
+        content: 'Usuários';
+        font-size: 16px;
+    }
+
+    .users__table thead tr th:not(:first-child) {
+        display: none;
+    }
+
+    .users__table tbody tr td:last-child {
+        border-bottom: 1px solid var(--cinza);
+        margin-bottom: 16px;
+        padding-bottom: 16px;
+    }
 }
 
-/* .colunas{
+.header-section-list {
+    width: 100%;
     display: flex;
-    justify-content: center;
-    overflow-wrap: break-word;
-} 
-
-
-.btn-wrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.btn-update {
-    display: flex;
-    justify-content: center;
+    flex: 1 0 auto;
+    flex-direction: row;
     align-items: center;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: blue;
-    transition: 0.4s;
-    padding: 10px;
+    max-height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px auto;
 }
 
-.btn-delete {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: red;
-    transition: 0.4s;
-    padding: 10px;
+.list-icon {
+    margin-left: 10px;
 }
 
-.btn-update:hover {
-    border: whitesmoke;
-}
-
-.btn-delete:hover {
-    border: whitesmoke;
-}
-
-/* th {
-    padding: auto 10px;
-    text-align: center;
-    font-size: 1rem;
-    word-wrap: break-word;
-}
-
-td {
+.user__id,
+.user__name,
+.user__lastname,
+.user__email,
+.user__pass,
+.user__cpf,
+.user__aniversario,
+.user__id_endereco,
+.user__id_regra {
     padding: auto;
     text-align: center;
     font-size: 1rem;
     word-wrap: break-word;
-} 
-
-td i {
-    color: white;
-    font-size: 10px;
-    text-decoration: none;
+    overflow-wrap: break-word;
 }
 
+.user_btn_eye .userbtn_update .user_btn_delete {
+    word-wrap: normal;
+    width: 20px;
+}
 
-@media screen and (max-width: 768px) {
-    .table-container {
-        display: block;
-        position: absolute;
-        top: 450px;
-        width: 100%;
-        margin: 15px auto;
-        padding: 15px 0;
-    }
-
-    .col-btn {
-        width: 20px;
-    }
-} */
+.colunas {
+    /* text-align: justify; */
+}
