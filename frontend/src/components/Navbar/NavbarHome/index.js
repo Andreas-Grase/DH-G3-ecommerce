@@ -83,20 +83,6 @@ const NavbarHome = () => {
             <Nav.Link href="/sobre">Sobre</Nav.Link>
             <Nav.Link href="/produtos">Produtos</Nav.Link>
             <Nav.Link href="/marcas">Marcas</Nav.Link>
-            <NavDropdown title="Categorias" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/categorias/barbearia">
-                Barbearia
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/categorias/cabelo">
-                Cabelo
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/categorias/lacamentos">
-                Lançamentos
-              </NavDropdown.Item>
-              <NavDropdown.Item href="/categorias/pele">Pele</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="/categorias/unha">Unhas</NavDropdown.Item>
-            </NavDropdown>
           </Nav>
           {!token ? (
           <Form inline size="sm">
