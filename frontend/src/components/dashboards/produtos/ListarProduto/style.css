@@ -1,3 +1,87 @@
+.header-section {
+    width: 100%;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    align-items: center;
+    max-height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px auto;
+}
+
+
+
+.table {
+    /* display: flex;
+    flex-flow: column wrap; */
+    table-layout: fixed;
+    width: 100%;
+}
+
+.colunas {
+    padding: auto;
+    text-align: center;
+    font-size: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.btn-view, 
+.btn-update,
+.btn-delete {
+    word-wrap: normal;
+    width: 20px;
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.btn-update, .btn-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: blue;
+    transition: 0.4s;
+    padding: 10px;
+}
+
+.btn-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: red;
+    transition: 0.4s;
+    padding: 10px;
+}
+
+.btn-update:hover {
+    border: whitesmoke;
+}
+
+.btn-delete:hover {
+    border: whitesmoke;
+}
+
+.btn-view:hover {
+    border: whitesmoke;
+}
+
+td i {
+    color: white;
+    font-size: 10px;
+    text-decoration: none;
+}
+/* 
+
 .table-container {
     display: flex;
     flex-flow: row wrap;
@@ -18,7 +102,7 @@
     display: flex;
     justify-content: center;
     overflow-wrap: break-word;
-} */
+} 
 
 
 .btn-wrapper {
@@ -70,7 +154,7 @@ td {
     text-align: center;
     font-size: 1rem;
     word-wrap: break-word;
-} */
+} 
 
 td i {
     color: white;
@@ -92,4 +176,4 @@ td i {
     .col-btn {
         width: 20px;
     }
-}
+} */

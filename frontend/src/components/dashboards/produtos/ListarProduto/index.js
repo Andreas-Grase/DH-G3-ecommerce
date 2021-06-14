@@ -127,7 +127,7 @@ const ListarProduto = () => {
                         )
                       }
                       type="btn"
-                      className="btn-update"
+                      className="btn-view"
                     >
                       <i class="fas fa-eye"></i>
                     </button>
@@ -152,18 +152,16 @@ const ListarProduto = () => {
                     </button>
                   </div>
                 </td>
-                <td>
-                  <div className="btn-wrapper">
-                    <button
-                      onClick={() =>
-                        openModalDeletar(`${produto.id}`, `${produto.nome}`)
-                      }
+                <td className="btn-wrapper">
+                  <button
+                    onClick={() =>
+                      openModalDeletar(`${produto.id}`, `${produto.nome}`)
+                    }
                       type="btn"
                       className="btn-delete"
                     >
-                      <i class="far fa-trash-alt"></i>
-                    </button>
-                  </div>
+                    <i class="far fa-trash-alt"></i>
+                  </button>
                 </td>
               </tr>
             ))}
