@@ -1,7 +1,7 @@
 .container-flex{
     display: flex;
-    flex-flow: row wrap;
-    width: 60%;
+    flex-flow: column wrap;
+    width: 100%;
     line-height: 1.5;
     float: right;
     margin: 5px;
@@ -44,21 +44,6 @@
     padding: 15px;
 }
 
-.image-upload{
-    width: 200px;
-    height: 200px;
-    border: 1px solid #000;
-    margin: 5px auto;
-}
-
-.upload-btn{
-    width: 100px;
-    margin: auto;
-    font-weight: 700;
-    cursor: pointer;
-    padding: 4px;
-}
-
 .product{
     box-sizing: border-box;
     width: 100%;
@@ -68,16 +53,16 @@
 
 .product-name{
     width: 100%;
-    float: inline-start;
     height: 25px;
-    margin: 0 auto;
+    margin: 10px auto;
 }
 
 .product-section{
     box-sizing: border-box;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: center;
+    width:100%;
 }
 
 .price{
@@ -87,12 +72,6 @@
 }
 
 .price h3{
-    margin: 5px 0;
-    font-weight: 400;
-    font-size: 0.9rem;
-}
-
-.discount h3{
     margin: 5px 0;
     font-weight: 400;
     font-size: 0.9rem;
@@ -121,7 +100,7 @@
 }
 
 .preco{
-    width: 80%;
+    width: 100%;
     height: 100%;
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
@@ -141,41 +120,6 @@
     padding: 0px;
 }
 
-.discount{
-    width: 45%;
-    float: left;
-    margin: 5px;
-}
-
-.preco-desconto{
-    width: 80%;
-    height: 100%;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border: 1px solid rgba(0, 0, 0, 0.2)
-}
-
-.preco-desconto::placeholder{
-    text-align: right;
-}
-
-.discount-container{
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 5px;
-    height: 25px;
-}
-
-.data-final-desconto{
-    width: 80%;
-    height: 100%;
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    padding: 0px;
-}
-
 .categories-container{
     display: flex;
     flex-direction: row;
@@ -185,32 +129,19 @@
     margin: 10px auto;
 }
 
-.categories{
+.id_categoria{
     width: 100%;
+    margin: 10px auto;
 }
 
 option [disabled]{
     text-align: center;
 }
 
-.description-container{
+.btn-back{
     display: flex;
-    flex-direction: row;
-    flex-flow: wrap;
-    width: 100%;
-}
-
-.product-description{
-    width: 99%;
-    height: 200px;
-    margin: 10px auto;
-    border: 1px solid #000;
-    border-radius: 5px;
-    line-height: 1.5;
-}
-
-.product-description::placeholder{
-    text-align: start;
+    justify-content: center;   
+    margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -219,7 +150,7 @@ option [disabled]{
        flex-flow: row wrap;
        align-items: center;
        position: absolute;
-       top: 380px;
+       top: 450px;
        margin: 10px auto;
        width: 100%;
        float: left;
@@ -227,13 +158,8 @@ option [disabled]{
 
    .product-info{
        display: block;
-       width: 100%;
+       width: 80%;
        align-items: center;
-   }
-
-   .product-section{
-       justify-content: center;
-       width: 100%;
    }
 
    .product{
@@ -246,7 +172,7 @@ option [disabled]{
    }
    
    .product-name{
-       margin: 0 auto;
+       margin: 10px auto;
    }
 
    .add-img{
@@ -256,5 +182,14 @@ option [disabled]{
 
    .product-description{
        width: 100%;
+   }
+
+   .preco{
+       width: 80%;
+   }
+
+   .btn-back{
+       display: flex;
+       justify-content: center;
    }
 }

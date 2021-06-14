@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "./style.css"
 
 const AdicionarUsuario = () => {
   const [primeiro_nome, setPrimeiro_nome] = useState("");
@@ -33,86 +34,95 @@ const AdicionarUsuario = () => {
     }
   };
   return (
-    <form className="form" onSubmit={handleSubmit}>
-      <h2 className="titulo-do-form-do-passo">Seu acesso</h2>
-      <div className="form__primeiro_nome">
-        <label htmlFor="primeiro_nome">Coloque seu nome:</label>
+    <div className="container-flex">
+    <form className="form-add" onSubmit={handleSubmit}>
+      <div className="header-section">
+      <div className="add-icon">
+        <i class="fas fa-file-medical fa-2x" />
+      </div>
+      <h2 className="title">Adicionar Usuário</h2>
+      </div>
+      <div className="form__section__dashboard">
+      <div className="primeiro_nome">
+        <label id="tag" htmlFor="primeiro_nome">Nome:</label>
         <input
           type="text"
           name="primeiro_nome"
-          id="primeiro_nome"
+          id="primeiro_nome_dashboard"
           required
-          placeholder="Seu nome"
+          placeholder="Nome"
           value={primeiro_nome}
           onChange={(e) => {
             setPrimeiro_nome(e.target.value);
           }}
         />
       </div>
-      <div className="form__sobrenome">
-        <label htmlFor="sobrenome">Coloque seu sobrenome:</label>
+      <div className="form__sobrenome__dashboard">
+        <label id="tag" htmlFor="sobrenome">Sobrenome:</label>
         <input
           type="text"
           name="sobrenome"
-          id="sobrenome"
+          id="sobrenome_dashboard"
           required
-          placeholder="Seu sbrenome"
+          placeholder="Sobrenome"
           value={sobrenome}
           onChange={(e) => setSobrenome(e.target.value)}
         />
       </div>
-      <div className="form__cpf">
-        <label htmlFor="cpf">Coloque seu CPF:</label>
+      <div className="form__cpf__dashboard">
+        <label id="tag" htmlFor="cpf">CPF:</label>
         <input
           type="text"
           name="cpf"
-          id="cpf"
+          id="cpf_dashboard"
           required
           placeholder="Seu CPF"
           value={cpf}
           onChange={(e) => setCpf(e.target.value)}
         />
       </div>
-      <div className="form__aniversario">
-        <label htmlFor="aniversario">Coloque sua data de aniverário:</label>
+      <div className="form__aniversario__dashboard">
+        <label id="tag" htmlFor="aniversario">Data de Aniverário:</label>
         <input
           type="date"
           name="aniversario"
-          id="aniversario"
+          id="aniversario_dashboard"
           required
-          placeholder="Seu aniversário"
+          placeholder="Aniversário"
           value={aniversario}
           onChange={(e) => setAniversario(e.target.value)}
         />
       </div>
-      <div className="form__email">
-        <label htmlFor="email">Coloque seu email:</label>
+      <div className="form__email__dashboard">
+        <label id="tag" htmlFor="email">E-mail:</label>
         <input
           type="email"
           name="email"
-          id="email"
+          id="email_dashboard"
           required
-          placeholder="Seu email"
+          placeholder="E-mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
       </div>
-      <div className="form__senha">
-        <label htmlFor="senha">Crie uma senha:</label>
+      <div className="form__senha__dashboard">
+        <label id="tag" htmlFor="senha">Senha:</label>
         <input
           type="password"
           name="senha"
-          id="senha"
+          id="senha_dashboard"
           required
-          placeholde="Sua senha"
+          placeholde="Senha"
           value={senha}
           onChange={(e) => setSenha(e.target.value)}
         />
       </div>
-      <div id="btn-back">
+      <div className="btn-back">
         <button id="back">Salvar</button>
       </div>
+      </div>
     </form>
+    </div>
   );
 };
 
