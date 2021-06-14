@@ -14,7 +14,7 @@ import {
 import produtomarca1 from "../../../assets/img/marcas/produtomarca1.png";
 import "./style.css";
 
-const ModalAtualizar = ({ usuarios }) => {
+const ModalAtualizar = ({ usuarios, handleSuccess }) => {
   const id = usuarios.id;
   const [primeiro_nome, setPrimeiro_nome] = useState(usuarios.primeiro_nome);
   const [sobrenome, setSobrenome] = useState(usuarios.sobrenome);
@@ -25,8 +25,15 @@ const ModalAtualizar = ({ usuarios }) => {
 
   const handleUpdate = async () => {
     try {
-      const response = await axios.post(`/usuarios/${id}`);
-      handleUpdate(response.data);
+      const response = await axios.put(`/usuarios/${id}`, {
+        primeiro_nome,
+        sobrenome,
+        email,
+        senha,
+        cpf,
+        aniversario,
+      });
+      handleSuccess();
     } catch (error) {
       console.log(error);
     }
@@ -122,7 +129,11 @@ const ModalAtualizar = ({ usuarios }) => {
             >
               Atualizar
             </Button>
-            <Button id="buttonNAV" className="btn btn-secondary">
+            <Button
+              id="buttonNAV"
+              className="btn btn-secondary"
+              onClick={handleSuccess}
+            >
               Sair
             </Button>
           </ModalFooter>

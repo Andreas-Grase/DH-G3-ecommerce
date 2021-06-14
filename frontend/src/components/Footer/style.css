@@ -107,14 +107,14 @@
     }
 }
 
-#nome {
+#nome-footer {
     display: flex;
     flex-flow: column wrap;
     width: 140px;
 }
 
 @media screen and (min-width: 544px) {
-    #nome {
+    #nome-footer {
         display: flex;
         flex-flow: row wrap;
         width: 360px;

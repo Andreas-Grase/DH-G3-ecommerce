@@ -15,7 +15,7 @@ const orderResults = (orderByParam = "id_ASC") => {
 
 const controller = {
   list: async (req, res, next) => {
-    console.log(req.user);
+    // console.log(req.usuario);
     const { page = 1, limit = 20, orderBy } = await req.query,
       order = orderResults(orderBy);
     const { count: total, rows: usuarios } = await Usuario.findAndCountAll({
@@ -77,11 +77,11 @@ const controller = {
       if (usuario) {
         res.status(200).json({ usuario });
       } else {
-        res.status(500).send("Ops... Algo de errado não deu certo!");
+        res.status(500).send("Usuário já cadastrado, acesse página de login.");
       }
     } catch (error) {
       console.log(error);
-      res.status(400).json({ message: "Algo de errado não está certo" });
+      res.status(400).json({ message: "Usuário já cadastrado, acesse página de login." });
     }
   },
   registerAddress: async (req, res, next) => {
@@ -109,7 +109,7 @@ const controller = {
   },
   update: async (req, res, next) => {
     const { id } = req.params,
-      { primeiro_nome, sobrenome, email, senha, cpf, aniversario } = req.body,
+      { primeiro_nome, sobrenome, email, senha, cpf, aniversario, id_endereco } = req.body,
       id_regra =
         email.indexOf("staff@kabellos.com.br") > 0
           ? 3
@@ -121,7 +121,7 @@ const controller = {
         { where: { id } }
       );
     if (usuario) {
-      res.redirect("/usuarios");
+      res.json({ message: "sucesso" });
     } else {
       res.status(500).send("Ops... Algo de errado não deu certo!");
     }

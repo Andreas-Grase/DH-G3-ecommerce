@@ -14,7 +14,7 @@ import {
 import produtomarca1 from "../../../assets/img/marcas/produtomarca1.png";
 import "./style.css";
 
-const ModalAtualizar = ({ produtos, handleSuccess }) => {
+const ModalVer = ({ produtos, handleSuccess }) => {
   const [id] = produtos.id;
   const [nome, setNome] = useState(produtos.nome);
   const [marca, setMarca] = useState(produtos.marca);
@@ -37,7 +37,7 @@ const ModalAtualizar = ({ produtos, handleSuccess }) => {
   };
   return (
     <Modal id="myModal" isOpen={true}>
-      <ModalHeader>{`Atualizar produto ${produtos.nome} de id ${produtos.id}`}</ModalHeader>
+      <ModalHeader>{`Ver produto ${produtos.nome} de id ${produtos.id}`}</ModalHeader>
       <div className="modal-container">
         <div id="add-img">
           <img
@@ -45,8 +45,7 @@ const ModalAtualizar = ({ produtos, handleSuccess }) => {
             src={produtomarca1}
             alt="produto-atualizado"
           />
-          <button id="upload-btn">Upload</button>
-        </div>
+        </div>  
         <div className="modal-body">
           <ModalBody>
             <FormGroup>
@@ -101,13 +100,6 @@ const ModalAtualizar = ({ produtos, handleSuccess }) => {
           <ModalFooter className="modal-footer">
             <Button
               id="buttonNAV"
-              className="btn btn-primary"
-              onClick={handleUpdate}
-            >
-              Atualizar
-            </Button>
-            <Button
-              id="buttonNAV"
               className="btn btn-secondary"
               onClick={handleSuccess}
             >
@@ -120,4 +112,4 @@ const ModalAtualizar = ({ produtos, handleSuccess }) => {
   );
 };
 
-export default ModalAtualizar;
+export default ModalVer;

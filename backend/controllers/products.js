@@ -1,3 +1,5 @@
+const db = require("../models");
+
 const Sequelize = require("sequelize"),
   { Produto } = require("../models"),
   { Op } = Sequelize;
@@ -11,7 +13,7 @@ const orderResults = (orderByParam = "id_ASC") => {
 
 const controller = {
   list: async (req, res) => {
-    const { page = 1, limit = 10, orderBy } = await req.query,
+    const { page = 1, limit = 20, orderBy } = await req.query,
       order = orderResults(orderBy);
     const { count: total, rows: produtos } = await Produto.findAndCountAll({
       order,
@@ -124,6 +126,24 @@ const controller = {
     } catch (error) {
       console.log(error);
       res.status(400).json({ message: "Algo de errado não está certo" });
+    }
+  },
+  view: async (req, res, next) => {
+    const { id } = req.params,
+      { nome, marca, quantidade, preco } = req.body,
+      produto = await Produto.view(
+        {
+          nome,
+          marca,
+          quantidade,
+          preco,
+        },
+        { where: { id } }
+      );
+    if (produto) {
+      res.json({ message: "sucesso" });
+    } else {
+      res.status(500).send("Ops... Algo de errado não deu certo!");
     }
   },
   update: async (req, res, next) => {
