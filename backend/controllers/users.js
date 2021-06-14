@@ -198,6 +198,9 @@ const controller = {
       usuario,
     });
   },
+  isAdmin: async (req, res) => {
+    res.json({message: "É administrador"})
+  },
   forgot: (req, res) => {
     res.send("<h1>Página esqueci a senha</h1>");
   },
