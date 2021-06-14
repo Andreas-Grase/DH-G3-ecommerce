@@ -7,9 +7,9 @@ module.exports = async (req, res, next) => {
   const [, token] = authHeader.split(" ");
   try {
     const decoded = verifyToken(token);
-    // console.log(decoded);
+    console.log(decoded);
     const { sub } = decoded;
-    // console.log(sub);
+    console.log(sub);
     req.usuario = {
       id: sub,
     };

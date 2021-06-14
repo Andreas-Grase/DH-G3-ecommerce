@@ -21,9 +21,9 @@ const MenuLateral = () => {
         <a href="/dashboard/usuario/listar" className="list-group-item">
           Listar
         </a>
-        <a href="#" className="list-group-item">
+        {/* <a href="#" className="list-group-item">
           Ver
-        </a>
+        </a> */}
         <a href="/dashboard/usuario/adicionar" className="list-group-item">
           Adicionar
         </a>

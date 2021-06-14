@@ -73,12 +73,12 @@ const Produtos = () => {
               />
               <span class="fa fa-search" onClick={handleSearch}></span>
             </div>
-            <p className="filtrar-exibicao">
+            {/* <p className="filtrar-exibicao">
               Ordenar por&nbsp;&nbsp;
               <a href="/" alt="ordenar">
                 <i class="fas fa-chevron-down"></i>
               </a>
-            </p>
+            </p> */}
           </div>
         </div>
 

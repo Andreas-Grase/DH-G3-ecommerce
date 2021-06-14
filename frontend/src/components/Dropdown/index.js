@@ -21,7 +21,7 @@ const Dropdown = () => {
 
   return (
     <div class="card">
-      <div class="card-header">CATEGORIA</div>
+      <div class="card-header"><b>CATEGORIA</b></div>
       <nav class="list-group list-group-flush">
         <a className="list-group-item"  onClick={handleSearch}>
           Cabelo
