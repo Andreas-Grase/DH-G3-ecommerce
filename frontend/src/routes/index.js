@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Route, Switch } from "react-router-dom";
 import Cadastro from "../pages/Cadastro";
 import Carrinho from "../pages/Carrinho";
@@ -18,16 +18,18 @@ import Produtos from "../pages/Produtos";
 import Produto from "../pages/Produto";
 import Sobre from "../pages/Sobre";
 import Categorias from "../pages/Categorias";
+import {getToken} from "../helpers/session"
 
 const Routes = () => {
+  const [token, setToken] = useState("");
+  const [isAdmin, setIsAdmin] = useState(false);
+  useEffect(() => {
+    setToken(getToken);
+    setIsAdmin(isAdmin);
+  }, []);
   return (
     <Switch>
-      <Route
-        exact
-        path="/shopping__cart/:finalizar__compras/:id"
-        component={FinalizarCompras}
-      />
-      <Route path="/shopping__cart" component={Carrinho} />
+    <>
       {/* <Route exact path="/categorias/:categoria/:produtos/:promocoes" component={Promoções}/> */}
       {/* <Route exact path="/categorias/:categoria/:produtos" component={Produtos}/> */}
       {/* <Route exact path="/categorias/:categoria/:marcas" component={Marcas}/> */}
@@ -35,15 +37,24 @@ const Routes = () => {
       {/* <Route path="/produtos/:produto_detalhado" component={ProdutoDetalhado} */}
       {/* <Route exact path="/dashboard/produto/atualizar/:id" component={DashboardAtualizar} /> */}
       {/* <Route exact path="/dashboard/produto/deletar/:id" component={DashboardDeletar} /> */}
+      {isAdmin ? (
+        <>
+
+        </>
+      ): null}
+      <Route path="/shopping__cart" component={Carrinho} />
+      {token? (
+        <>
       <Route exact path="/dashboard/produto/criar" component={Criar} />
       <Route exact path="/dashboard/produto/listar" component={Listar} />
       <Route exact path="/dashboard/usuario/listar" component={ListarUsuario} />
-      <Route
-        exact
-        path="/dashboard/usuario/adicionar"
-        component={AdicionarUsuario}
-      />
+      <Route exact path="/dashboard/usuario/adicionar" component={AdicionarUsuario} />
       {/* <Route exact path="/dashboard/produto/ver/:id" component={DashboardVer} /> */}
+      <Route exact path="/shopping__cart/:finalizar__compras/:id" component={FinalizarCompras} />
+      </>
+      ): (
+        <Route path="/login" component={Login} />
+      )}
       <Route path="/categorias/unha" component={Categorias} />
       <Route path="/categorias/pele" component={Categorias} />
       <Route path="/categorias/lacamentos" component={Categorias} />
@@ -55,9 +66,9 @@ const Routes = () => {
       <Route path="/produtos" component={Produtos} />
       <Route path="/contato" component={Contato} />
       <Route path="/sobre" component={Sobre} />
-      <Route path="/login" component={Login} />
       <Route path="/cadastro" component={Cadastro} />
       <Route path="/" component={Home} />
+      </>
     </Switch>
   );
 };

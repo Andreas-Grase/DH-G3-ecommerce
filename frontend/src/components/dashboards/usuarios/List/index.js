@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
+import api from "../../../../services/api"
 import ModalAtualizar from "../../../../components/modals/AtualizarUsuario";
 import ModalDeletar from "../../../../components/modals/DeletarUsuario";
+import { getToken } from "../../../../helpers/session";
 import "./style.css";
 
 const List = () => {
@@ -10,9 +11,27 @@ const List = () => {
   const [selectedUser, setSelectedUser] = useState({});
   const [usuarios, setUsuarios] = useState([]);
 
-  const openModalAtualizar = ( id, primeiro_nome, sobrenome, email, senha, cpf, aniversario, id_regra ) => {
+  const openModalAtualizar = (
+    id,
+    primeiro_nome,
+    sobrenome,
+    email,
+    senha,
+    cpf,
+    aniversario,
+    id_regra
+  ) => {
     setIsModalAtualizarVisible(true);
-    setSelectedUser({ id, primeiro_nome, sobrenome, email, senha, cpf, aniversario, id_regra, });
+    setSelectedUser({
+      id,
+      primeiro_nome,
+      sobrenome,
+      email,
+      senha,
+      cpf,
+      aniversario,
+      id_regra,
+    });
   };
   const openModalDeletar = (id, primeiro_nome) => {
     setIsModalDeletarVisible(true);
@@ -21,7 +40,8 @@ const List = () => {
 
   const getDataUsers = async () => {
     try {
-      const response = await axios.get("/usuarios");
+      const response = await api.get("/usuarios");
+      console.log(response);
       setUsuarios(response.data.usuarios);
     } catch (error) {
       console.log(error);

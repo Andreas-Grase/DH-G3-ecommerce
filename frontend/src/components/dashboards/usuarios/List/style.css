@@ -48,6 +48,9 @@
 
     .users__table td {
         display: flex;
+        justify-content: center;
+        align-items:center;
+        /* overflow: hidden; */
     }
 
     .users__table td:not(:nth-child(n+7))::before {

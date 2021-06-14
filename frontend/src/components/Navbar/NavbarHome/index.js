@@ -10,26 +10,30 @@ import {
   Label,
 } from "reactstrap";
 import "bootstrap/dist/css/bootstrap.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { removeToken, getToken } from "../../../helpers/session";
 
-export default class NavbarHome extends React.Component {
-  state = {
-    abierto: false,
+
+const NavbarHome = () => {
+  const [token, setToken] = useState("");
+  useEffect(() => {
+    setToken(getToken);
+  }, []);
+
+  const [abrirModal, setAbrirModal] = useState(false)
+
+  const handleSuccess = () => {
+    setAbrirModal(false);
   };
 
-  abrirModal = () => {
-    this.setState({ abierto: !this.state.abierto });
-  };
-
-  render() {
     return (
       <Navbar className="navbar" variant="dark" expand="lg">
         {/* Botão de Configuração na Home para abrir Modal pra Cadastro de Administrador   */}
-        <button onClick={this.abrirModal} className="boton-administrador">
+        <button onClick={setAbrirModal} className="boton-administrador">
           <i className="fas fa-cog"></i>
         </button>
         {/* Modal pra Cadastro de Administrador   */}
-        <Modal isOpen={this.state.abierto}>
+        <Modal isOpen={abrirModal}>
           <ModalHeader>Iniciar Sessão como Administrador</ModalHeader>
           <ModalBody>
             <FormGroup>
@@ -60,7 +64,7 @@ export default class NavbarHome extends React.Component {
             <Button
               id="buttonNAV"
               className="btn btn-secondary"
-              onClick={this.abrirModal}
+              onClick={handleSuccess}
             >
               Sair
             </Button>
@@ -94,14 +98,17 @@ export default class NavbarHome extends React.Component {
               <NavDropdown.Item href="/categorias/unha">Unhas</NavDropdown.Item>
             </NavDropdown>
           </Nav>
+          {!token ? (
           <Form inline size="sm">
             {/* <FormControl type="text" placeholder="Produtos" className="mr-sm-2" /> */}
             <Button href="/login" id="buttonNAV">
               Entrar na conta
             </Button>
           </Form>
+          ) : null}
         </Navbar.Collapse>
       </Navbar>
     );
-  }
 }
+
+export default NavbarHome
