@@ -70,18 +70,20 @@ h3 {
 	display: inline-block;
     cursor: pointer;
     color: var(--cor1);
-    background: #256eff;
+    background: #af8048;
 }
 
 .formulario input[type=email] {
 	margin: 5px auto;
 	padding: 5px;
     background: white;
+    /* width: 90%;
+    height: 36px */
 }
 
 
 .formulario input[type=submit]:hover {
-	background: #2196F3;
+	background: #af8048;
 }
 
 .center {

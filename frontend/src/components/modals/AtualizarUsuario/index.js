@@ -45,7 +45,7 @@ const ModalAtualizar = ({ usuarios, handleSuccess }) => {
         <div className="modal-body">
           <ModalBody>
             <FormGroup>
-              <Label htmlFor="primeiro_nome">nome:</Label>
+              <Label htmlFor="primeiro_nome">Nome:</Label>
               <Input
                 type="text"
                 name="primeiro_nome"
@@ -59,7 +59,7 @@ const ModalAtualizar = ({ usuarios, handleSuccess }) => {
               />
             </FormGroup>
             <FormGroup>
-              <Label htmlFor="sobrenome">sobrenome:</Label>
+              <Label htmlFor="sobrenome">Sobrenome:</Label>
               <Input
                 type="text"
                 name="sobrenome"

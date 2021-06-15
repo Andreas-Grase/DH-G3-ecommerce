@@ -47,6 +47,9 @@ const AdicionarProduto = () => {
       <form className="container-flex" onSubmit={handleSubmit}>
         <div className="product-info">
           <div className="product">
+            <label htmlFor="nome">
+              Produto:
+            </label>
             <input
               type="text"
               name="nome"
@@ -58,6 +61,9 @@ const AdicionarProduto = () => {
                 setNome(e.target.value);
               }}
             />
+            <label htmlFor="marca">
+              Marca:
+            </label>
             <input
               type="text"
               name="marca"
@@ -69,6 +75,9 @@ const AdicionarProduto = () => {
                 setMarca(e.target.value);
               }}
             />
+            <label htmlFor="quantidade">
+              Quantidade:
+            </label>
             <input
               type="text"
               name="quantidade"
@@ -80,6 +89,9 @@ const AdicionarProduto = () => {
                 setQuantidade(e.target.value);
               }}
             />
+            <label htmlFor="id_categoria">
+              ID Categoria:
+            </label>
             <input
               type="text"
               name="id_categoria"
