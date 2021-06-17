@@ -14,10 +14,9 @@ const FormPasso1 = (props) => {
   const [aniversario, setAniversario] = useState("");
   const history = useHistory();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async () => {
     // alert("Você submeteu o form");
-    e.preventDefault();
-    console.log("entrando");
+    // console.log("entrando");
     try {
       const response = await axios.post("/usuarios", {
         primeiro_nome,
@@ -27,8 +26,9 @@ const FormPasso1 = (props) => {
         cpf,
         aniversario,
       });
-      //   window.location.pathname = "/usuarios";
-      // history.push("/usuarios");
+      setPasso(1);
+      //   window.location.pathname = "dashboard/usuario/listar";
+      // history.push("dashboard/usuario/listar");
       console.log(response);
     } catch (error) {
       if (error.response.data) alert(error.response.data.message);
@@ -37,7 +37,7 @@ const FormPasso1 = (props) => {
   };
   return (
     <div>
-      <form className="form" onSubmit={handleSubmit}>
+      <form className="form">
         <h2 className="titulo-do-form-do-passo">Seu acesso</h2>
         <div className="form__primeiro_nome">
           <label htmlFor="primeiro_nome">Coloque seu nome:</label>
@@ -113,14 +113,14 @@ const FormPasso1 = (props) => {
             onChange={(e) => setSenha(e.target.value)}
           />
         </div>
-        <div id="btn-back">
+        {/* <div id="btn-back">
           <button id="back">Salvar</button>
-        </div>
+        </div> */}
       </form>
       <NavButton
         className="botao-proximo"
         titulo="Próximo"
-        executeFunction={() => setPasso(1)}
+        executeFunction={() => handleSubmit()}
       />
     </div>
   );

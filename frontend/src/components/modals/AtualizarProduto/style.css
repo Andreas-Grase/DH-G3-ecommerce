@@ -32,6 +32,11 @@
     margin: 8px;
 }
 
+.image-upload {
+    height: 200px;
+    width: 200px;
+}
+
 .modal-body{
     padding: 4px;
     margin: 4px;

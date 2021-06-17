@@ -1,0 +1,95 @@
+.container-flex{
+    display: flex;
+}
+
+.form-add{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    width: 50%;
+    line-height: 1.5;
+    margin: 0 5px;
+}
+
+.header-section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.add-icon{
+    margin-left: 10px;
+}
+
+.title{
+    margin: 0 0 0 10px;
+    font-weight: 600;
+}
+
+.form_section{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#primeiro_nome_dashboard,
+#sobrenome_dashboard,
+#cpf_dashboard,
+#aniversario_dashboard,
+#email_dashboard,
+#senha_dashboard {
+    width: 60%;
+    margin: 5px auto;
+    display: flex;
+    justify-content: center;
+    border: solid 1px black;
+}
+
+#tag {
+    margin: 2px 120px;
+}
+
+.btn-back{
+    width: 60%;
+    margin-top: 10px;
+    margin: 0 auto;
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+    .container-flex{
+        top: 450px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .form-add,
+    .form-section{
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .btn-back{
+        width: 100%;
+        margin: 10px auto;
+    }
+
+    #tag{
+        margin: 5px auto;
+    }
+
+    #primeiro_nome_dashboard,
+    #sobrenome_dashboard,
+    #cpf_dashboard,
+    #aniversario_dashboard,
+    #email_dashboard,
+    #senha_dashboard {
+        width: 100%;
+}
+}

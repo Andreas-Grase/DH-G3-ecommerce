@@ -20,6 +20,7 @@
 
 .opcoes-de-exibicao {
     display: flex;
+    justify-content: center;
 } 
 
 .numero-de-paginas {
@@ -32,6 +33,16 @@
    color: white;
    text-decoration: none;
    font-weight: 500;
+}
+
+.search__box_produtos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    min-width: 0px;
+    margin: 10px;
+    height: 35px;
+    line-height: 35px;
 }
 
 .filtrar-exibicao {

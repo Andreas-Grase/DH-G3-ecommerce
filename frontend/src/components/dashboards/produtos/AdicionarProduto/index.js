@@ -9,6 +9,7 @@ const AdicionarProduto = () => {
   const [quantidade, setQuantidade] = useState("");
   const [preco, setPreco] = useState("");
   const [id_categoria, setId_categoria] = useState("");
+  const history = useHistory();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,6 +23,7 @@ const AdicionarProduto = () => {
       });
       //   window.location.pathname = "/produtos";
       //   history.push("/produtos");
+      history.push("listar");
       console.log(response);
     } catch (error) {
       if (error.response.data) alert(error.response.data.message);
@@ -45,6 +47,9 @@ const AdicionarProduto = () => {
       <form className="container-flex" onSubmit={handleSubmit}>
         <div className="product-info">
           <div className="product">
+            <label htmlFor="nome">
+              Produto:
+            </label>
             <input
               type="text"
               name="nome"
@@ -56,6 +61,9 @@ const AdicionarProduto = () => {
                 setNome(e.target.value);
               }}
             />
+            <label htmlFor="marca">
+              Marca:
+            </label>
             <input
               type="text"
               name="marca"
@@ -67,6 +75,9 @@ const AdicionarProduto = () => {
                 setMarca(e.target.value);
               }}
             />
+            <label htmlFor="quantidade">
+              Quantidade:
+            </label>
             <input
               type="text"
               name="quantidade"
@@ -78,6 +89,9 @@ const AdicionarProduto = () => {
                 setQuantidade(e.target.value);
               }}
             />
+            <label htmlFor="id_categoria">
+              ID Categoria:
+            </label>
             <input
               type="text"
               name="id_categoria"
@@ -92,7 +106,7 @@ const AdicionarProduto = () => {
             <div nameClass="product-info"></div>
             <div className="product-section">
               <div className="price">
-                <h3>Preço</h3>
+                <h3>Preço:</h3>
                 <div className="price-container">
                   <div className="icon-container">
                     <i class="fas fa-dollar-sign fa-1.5x" />
@@ -145,7 +159,7 @@ const AdicionarProduto = () => {
           </div>
         </div>
         <div className="btn-back">
-          <button className="back">Adicionar Produto</button>
+          <button id="back">Adicionar Produto</button>
         </div>
       </form>
       {/* <div className="categories-container">

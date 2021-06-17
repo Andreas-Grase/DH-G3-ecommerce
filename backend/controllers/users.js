@@ -2,8 +2,10 @@ const db = require("../models");
 
 const Sequelize = require("sequelize"),
   { Usuario } = require("../models"),
+  { Endereco } = require("../models"),
   { Op } = Sequelize;
-// const bcrypt = require("../helpers/bcrypt");
+const bcrypt = require("../helpers/bcrypt");
+const jwt = require("../helpers/jwt");
 
 const orderResults = (orderByParam = "id_ASC") => {
   const orderParam = orderByParam.split("_")[0],
@@ -13,7 +15,8 @@ const orderResults = (orderByParam = "id_ASC") => {
 
 const controller = {
   list: async (req, res, next) => {
-    const { page = 1, limit = 10, orderBy } = await req.query,
+    // console.log(req.usuario);
+    const { page = 1, limit = 20, orderBy } = await req.query,
       order = orderResults(orderBy);
     const { count: total, rows: usuarios } = await Usuario.findAndCountAll({
       order,
@@ -49,52 +52,90 @@ const controller = {
   addUser: async (req, res, next) => {
     res.send("Página de Registro de Usuário");
   },
-  register: async (req, res, next) => {
+  registerUser: async (req, res, next) => {
     try {
+      console.log(req.body);
       const { primeiro_nome, sobrenome, email, senha, cpf, aniversario } =
-        req.body;
-      // id_funcao = email.indexOf("@diament.com.br") === -1 ? 2 : 1,
-      // senhaHash = await bcrypt.generateHash(senha);
+          req.body,
+        id_regra =
+          email.indexOf("staff@kabellos.com.br") > 0
+            ? 3
+            : email.indexOf("@kabellos.com.br") > 0
+            ? 1
+            : 2,
+        senhaHash = await bcrypt.generateHash(senha);
 
       const usuario = await Usuario.create({
         primeiro_nome,
         sobrenome,
         email,
-        senha,
+        senha: senhaHash,
         cpf,
         aniversario,
+        id_regra,
       });
       if (usuario) {
-        res.redirect("/usuarios");
+        res.status(200).json({ usuario });
+      } else {
+        res.status(500).send("Usuário já cadastrado, acesse página de login.");
+      }
+    } catch (error) {
+      console.log(error);
+      res.status(400).json({ message: "Usuário já cadastrado, acesse página de login." });
+    }
+  },
+  registerAddress: async (req, res, next) => {
+    try {
+      const { cep, rua, numero, complemto, bairro, cidade, uf } = req.body;
+
+      const endereco = await Endereco.create({
+        cep,
+        rua,
+        numero,
+        complemto,
+        bairro,
+        cidade,
+        uf,
+      });
+      if (endereco) {
+        res.status(200).json({ endereco });
       } else {
         res.status(500).send("Ops... Algo de errado não deu certo!");
       }
     } catch (error) {
+      console.log(error);
       res.status(400).json({ message: "Algo de errado não está certo" });
     }
   },
   update: async (req, res, next) => {
     const { id } = req.params,
-      { primeiro_nome, sobrenome, email, senha, cpf, aniversario } = req.body,
+      { primeiro_nome, sobrenome, email, senha, cpf, aniversario, id_endereco } = req.body,
+      id_regra =
+        email.indexOf("staff@kabellos.com.br") > 0
+          ? 3
+          : email.indexOf("@kabellos.com.br") > 0
+          ? 1
+          : 2,
       usuario = await Usuario.update(
-        { primeiro_nome, sobrenome, email, senha, cpf, aniversario },
+        { primeiro_nome, sobrenome, email, senha, cpf, aniversario, id_regra },
         { where: { id } }
       );
     if (usuario) {
-      res.redirect("/usuarios");
+      res.json({ message: "sucesso" });
     } else {
       res.status(500).send("Ops... Algo de errado não deu certo!");
     }
   },
   delete: async (req, res, next) => {
-    const { id } = req.params,
-      usuario = await Usuario.destroy({
+    console.log("controller delete");
+    try {
+      const { id } = req.params;
+      await Usuario.destroy({
         where: { id },
       });
-    if (usuario) {
-      res.redirect("/usuarios");
-    } else {
-      res.status(500).send("Ops... Algo de errado não deu certo!");
+      res.status(200).json({ message: "Usuario deletado" });
+    } catch (error) {
+      console.log(error);
     }
   },
   search: async (req, res, next) => {
@@ -134,8 +175,31 @@ const controller = {
       res.status(500).send(`Ops... houve algum erro em nossa busca`);
     }
   },
-  login: (req, res) => {
-    res.send("<h1>Página login</h1>");
+  login: async (req, res, next) => {
+    const { email, senha } = req.body;
+    if (!email || !senha)
+      res.status(400).json({ message: "Email ou senha incorreto" });
+    let usuario = await Usuario.findOne({ where: { email } });
+    if (usuario === null)
+      res.status(400).json({ message: "Email ou senha incorreto" });
+    let verificaSenha = await bcrypt.compareHash(senha, usuario.senha);
+    // let verificaSenha = true
+    // console.log(verificaSenha);
+    // console.log(senha);
+    // console.log(usuario.senha);
+    if (!verificaSenha)
+      res.status(400).json({ message: "Email ou senha incorreto" });
+    let token = jwt.generateToken(usuario.id);
+    usuario = usuario.toJSON();
+    delete usuario.senha;
+    res.status(200).json({
+      message: "Login realizado com sucesso",
+      token,
+      usuario,
+    });
+  },
+  isAdmin: async (req, res) => {
+    res.json({message: "É administrador"})
   },
   forgot: (req, res) => {
     res.send("<h1>Página esqueci a senha</h1>");

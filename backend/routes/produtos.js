@@ -3,10 +3,11 @@ const express = require("express"),
   controller = require("../../backend/controllers/products");
 
 router.get("/promo", controller.showPromo);
-router.post("/:id/delete", controller.delete);
-// router.get("/:id", controller.show);
+router.delete("/:id", controller.delete);
+router.get("/:id", controller.view);
+router.post("/search", controller.search);
 router.get("/:id", controller.index);
-// router.post("/:id", controller.update);
+router.put("/:id", controller.update);
 router.post("/", controller.create);
 router.get("/", controller.list);
 

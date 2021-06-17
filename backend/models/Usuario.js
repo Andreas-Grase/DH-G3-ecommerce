@@ -18,6 +18,7 @@ module.exports = (sequelize, DataType) => {
       email: {
         type: DataType.STRING,
         allowNull: false,
+        unique: true,
       },
       senha: {
         type: DataType.STRING,
@@ -25,11 +26,12 @@ module.exports = (sequelize, DataType) => {
       },
       cpf: {
         type: DataType.STRING,
+        allowNull: false,
         unique: true,
       },
       aniversario: {
         type: DataType.DATE,
-        unique: true,
+        allowNull: false,
       },
       id_endereco: {
         type: DataType.INTEGER.UNSIGNED,

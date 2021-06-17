@@ -1,125 +1,80 @@
-:root {
-    --amarelo: #EEA425;
-    --azul: #5893A6;
-    --branco: #fff;
-    --chumbo: #3e3e3e;
-    --cinza: #eee;
-    --preto: #000;
-    --vermelho: #A00B0B;
+.header-section {
+    width: 100%;
+    display: flex;
+    flex: 1 0 auto;
+    flex-direction: row;
+    align-items: center;
+    max-height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    margin: 10px auto;
 }
 
-.hidden {
-    background-color: transparent;
-    color: transparent;
-    height: 0;
-    line-height: 0;
-    margin: 0;
-    max-height: 0;
-    max-width: 0;
-    opacity: 0;
-    padding: 0;
-    visibility: hidden;
-    width: 0;
+.table {
+    /* display: flex;
+    flex-flow: column wrap; */
+    table-layout: fixed;
+    width: 100%;
 }
 
-.users__table {
-    font-weight: bold;
-    margin: 24px auto;
-}
-
-.users__table th,
-.users__table td {
-    padding: 6px 12px;
-}
-
-.users__table td {
-    display: block;
-}
-
-.users__table td:not(:nth-child(n+7))::before {
-    content: attr(data-title) ": ";
-    font-weight: bolder;
-}
-
-.users__table thead {
-    background-color: var(--azul);
-    color: var(--branco);
-}
-
-.users__table thead tr th:first-child {
-    color: transparent;
-    font-size: 0;
-}
-
-.users__table thead tr th:first-child::before {
-    color: var(--branco);
-    content: 'Usuários';
-    font-size: 16px;
-}
-
-.users__table thead tr th:not(:first-child) {
-    display: none;
-}
-
-.users__table tbody tr td:last-child {
-    border-bottom: 1px solid var(--cinza);
-    margin-bottom: 16px;
-    padding-bottom: 16px;
-}
-
-[class*="--btn"] {
-    border: none;
-    display: inline-block;
-    font-weight: bolder;
+.colunas {
+    padding: auto;
     text-align: center;
-    margin: auto;
-    padding: 6px 12px;
+    font-size: 1rem;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
-[class*="--btn"]:hover {
-    cursor: pointer;
+.btn-view, 
+.btn-update,
+.btn-delete {
+    word-wrap: normal;
+    width: 20px;
 }
 
-.user__see--btn {
-    background-color: var(--azul);
-    color: var(--branco);
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
 }
 
-.user__see--btn:hover {
-    background-color: var(--chumbo);
-    color: var(--azul);
+.btn-update, .btn-view {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: blue;
+    transition: 0.4s;
+    padding: 10px;
 }
 
-.user__edit--btn {
-    background-color: var(--amarelo);
-    color: var(--chumbo);
+.btn-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: red;
+    transition: 0.4s;
+    padding: 10px;
 }
 
-.user__edit--btn:hover {
-    background-color: var(--chumbo);
-    color: var(--amarelo);
+.btn-update:hover {
+    border: whitesmoke;
 }
 
-.user__delete--btn {
-    background-color: var(--vermelho);
-    color: var(--branco);
+.btn-delete:hover {
+    border: whitesmoke;
 }
 
-.user__delete--btn:hover {
-    background-color: var(--chumbo);
-    color: var(--vermelho);
+.btn-view:hover {
+    border: whitesmoke;
 }
 
-.main-section__title {
-    font-size: 24px;
-}
-
-.main-section__subtitle {
-    color: var(--chumbo);
-    font-size: 20px;
-}
-
-.main-section__description {
-    color: var(--chumbo);
-    font-size: 16px;
+td i {
+    color: white;
+    font-size: 10px;
+    text-decoration: none;
 }

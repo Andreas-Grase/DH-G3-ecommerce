@@ -2,9 +2,7 @@ import "./style.css";
 import binoculares from '../../assets/icons/binoculares.svg'
 import getImages from '../../assets/img/marcas'
 const Marcas = () => {
-  
   const images = getImages()
-  
   return (
     <section className="marcas">
       <div className="titulo-marcas">
